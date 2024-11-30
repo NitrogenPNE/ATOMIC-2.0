@@ -1,27 +1,37 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-// All Rights Reserved.
-//
-// Module: Ledger Manager for ATOMIC Blockchain
-//
-// Description:
-// Provides an interface for logging shard-related operations and metadata to the
-// ATOMIC blockchain. Ensures tamper-proof auditing and secure recording of shard
-// activities across all HQNodes and their connected networks.
-//
-// Enhancements:
-// - Integration with neutron, proton, and electron metadata.
-// - Compliance logging with atomic hierarchy.
-// - Improved tamper-proofing and traceability.
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ * All Rights Reserved.
+ *
+ * Module: Ledger Manager for ATOMIC Blockchain
+ *
+ * Description:
+ * Provides an interface for logging shard-related operations and metadata to the
+ * ATOMIC blockchain. Ensures tamper-proof auditing and secure recording of shard
+ * and token-related activities, incorporating Proof-of-Access (PoA) and token verification.
+ *
+ * Enhancements:
+ * - Token validation integration for shard and token ledger updates.
+ * - Secure logging of shard operations with PoA compliance.
+ * - Retrieval of atomic-level shard details.
+ *
+ * Dependencies:
+ * - SmartContracts/LedgerContract.js: Blockchain ledger interaction utilities.
+ * - tokenValidation.js: Validates tokens for Proof-of-Access.
+ * - logger.js: Centralized logging utilities.
+ *
+ * Author: Shawn Blackmore
+ * -------------------------------------------------------------------------------
+ */
 
 const fs = require("fs-extra");
 const path = require("path");
 const { createBlockchainEntry, verifyBlockchainEntry } = require("../../SmartContracts/LedgerContract");
+const { validateToken } = require("../../TokenManagement/tokenValidation");
 const { logInfo, logError } = require("../../Utilities/logger");
 
 // Paths to blockchain ledger files
@@ -37,14 +47,24 @@ const LEDGER_PATH = path.resolve(__dirname, "../../Ledgers/Blockchain");
 })();
 
 /**
- * Logs shard creation details into the blockchain ledger with atomic metadata.
+ * Logs shard creation details into the blockchain ledger with atomic metadata and token validation.
+ * @param {string} tokenId - Token ID associated with the operation.
+ * @param {string} encryptedToken - Encrypted token for Proof-of-Access validation.
  * @param {string} address - Node or user address associated with the shard.
  * @param {Array} atomicData - Array of atomic data (neutrons, protons, electrons).
  * @returns {Promise<void>} - Resolves after logging.
  */
-async function logShardCreation(address, atomicData) {
+async function logShardCreation(tokenId, encryptedToken, address, atomicData) {
     try {
+        console.log("Validating token for shard creation...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
+
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
+
         const logData = {
+            tokenId,
             address,
             timestamp: new Date().toISOString(),
             atomCount: atomicData.length,
@@ -73,14 +93,24 @@ async function logShardCreation(address, atomicData) {
 }
 
 /**
- * Logs shard metadata details into the blockchain ledger, including particle hierarchy.
+ * Logs shard metadata details into the blockchain ledger, with token validation and particle hierarchy.
+ * @param {string} tokenId - Token ID associated with the operation.
+ * @param {string} encryptedToken - Encrypted token for Proof-of-Access validation.
  * @param {string} address - Node or user address.
  * @param {Object} shardMetadata - Metadata about shard frequencies or distributions.
  * @returns {Promise<void>} - Resolves after logging.
  */
-async function logShardMetadata(address, shardMetadata) {
+async function logShardMetadata(tokenId, encryptedToken, address, shardMetadata) {
     try {
+        console.log("Validating token for shard metadata logging...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
+
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
+
         const logData = {
+            tokenId,
             address,
             timestamp: new Date().toISOString(),
             shardMetadata,
@@ -168,5 +198,6 @@ module.exports = {
 
 // ------------------------------------------------------------------------------
 // End of Module: Ledger Manager for ATOMIC Blockchain
-// Version: 2.0.0 | Updated: 2024-11-28
+// Version: 3.0.0 | Updated: 2024-11-29
+// Enhancements: Integrated token verification for Proof-of-Access (PoA).
 // ------------------------------------------------------------------------------
