@@ -1,0 +1,35 @@
+{
+    "templates": {
+        "networkSummary": "Network Summary (as of {timestamp}):\n- Throughput: {throughput} transactions/sec\n- Active Nodes: {activeNodes}/{totalNodes}\n- Total Transactions Processed: {totalTransactions}",
+        "nodePerformance": "Node {nodeId} Performance:\n- CPU Usage: {cpuUsage}%\n- Memory Usage: {memoryUsage}%\n- Latency: {latency}ms\n- Status: {status}",
+        "systemHealth": "System Health Report (as of {timestamp}):\n- Total Nodes: {totalNodes}\n- Active Nodes: {activeNodes}\n- Average Latency: {avgLatency}ms\n- Alerts: {alertsCount} active alerts"
+    },
+    "placeholders": {
+        "timestamp": "The timestamp when the summary was generated.",
+        "throughput": "The transaction throughput of the network.",
+        "activeNodes": "The number of nodes currently active in the network.",
+        "totalNodes": "The total number of nodes in the network.",
+        "totalTransactions": "The total number of transactions processed by the network.",
+        "nodeId": "The ID of a specific node.",
+        "cpuUsage": "The percentage of CPU usage for a node.",
+        "memoryUsage": "The percentage of memory usage for a node.",
+        "latency": "The latency of a node in milliseconds.",
+        "status": "The operational status of a node (e.g., Active, Inactive, Error).",
+        "avgLatency": "The average latency across all nodes.",
+        "alertsCount": "The number of active alerts in the system."
+    },
+    "examples": [
+        {
+            "template": "networkSummary",
+            "example": "Network Summary (as of 2023-11-28T10:00:00Z):\n- Throughput: 1,200 transactions/sec\n- Active Nodes: 15/20\n- Total Transactions Processed: 25,000,000"
+        },
+        {
+            "template": "nodePerformance",
+            "example": "Node Node-7 Performance:\n- CPU Usage: 85%\n- Memory Usage: 70%\n- Latency: 150ms\n- Status: Active"
+        },
+        {
+            "template": "systemHealth",
+            "example": "System Health Report (as of 2023-11-28T10:00:00Z):\n- Total Nodes: 20\n- Active Nodes: 18\n- Average Latency: 120ms\n- Alerts: 2 active alerts"
+        }
+    ]
+}

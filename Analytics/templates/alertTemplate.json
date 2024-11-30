@@ -1,0 +1,13 @@
+{
+    "template": "[{level}] Alert: {issue} detected on Node {nodeId}. Immediate action required.",
+    "placeholders": {
+        "level": "The severity of the alert (e.g., Info, Warning, Critical).",
+        "issue": "The specific issue or event that triggered the alert.",
+        "nodeId": "The ID of the node where the issue occurred (if applicable)."
+    },
+    "examples": [
+        "[Critical] Alert: High CPU usage detected on Node Node-12. Immediate action required.",
+        "[Warning] Alert: Node Node-5 is experiencing slow response times.",
+        "[Info] Alert: Routine maintenance scheduled for Node Node-8."
+    ]
+}
