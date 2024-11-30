@@ -5,10 +5,11 @@
 // ATOMIC (Advanced Technologies Optimizing Integrated Chains)
 // Copyright (c) 2023 ATOMIC, Ltd.
 //
-// Module: Blockchain Node (Adapted for ATOMIC)
+// Module: Blockchain Node (Proof-of-Access Enabled)
 //
 // Description:
-// Implements ATOMIC's blockchain functionality with shard and token ledger integration.
+// Implements ATOMIC's blockchain functionality with token ledger integration
+// and Proof-of-Access (PoA) enforcement for token validation.
 //
 // Author: Shawn Blackmore
 // ------------------------------------------------------------------------------
@@ -17,8 +18,9 @@ const ShardBlock = require("./Block");
 const { validateShardIntegrity, validateAtomicStructure, validateBounce } = require("../Monitoring/shardValidator");
 const { broadcastShardBlock, discoverPeers } = require("./networkManager");
 const { executeQuantumConsensus } = require("./quantumConsensus");
-const { logTransaction: logShardTransaction } = require("../../Pricing/Blockchain/tokenTransactionLedger");
+const { logTransaction: logTokenTransaction } = require("../../Pricing/Blockchain/tokenTransactionLedger");
 const { logTokenActivity } = require("../../Pricing/Blockchain/carbonTokenLedger");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
 class BlockchainNode {
     constructor(nodeId, nodeType) {
@@ -37,29 +39,58 @@ class BlockchainNode {
         console.log(`Initializing ${this.nodeType} node: ${this.nodeId}...`);
         this.blockchain = []; // Load from persistent storage if required
         this.peers = await discoverPeers(this.nodeId, this.nodeType);
+
+        // Validate token on node initialization
+        if (!this.validateNodeToken()) {
+            throw new Error("Node token validation failed. Initialization aborted.");
+        }
+
         console.log(`Connected to ${this.peers.length} peers.`);
     }
 
     /**
-     * Adds a shard to the pending pool after validating its structure.
-     * @param {Object} shard - The shard to be added.
+     * Validates the node's token for Proof-of-Access.
+     * @returns {boolean} - True if token is valid, false otherwise.
      */
-    addShard(shard) {
-        if (validateShardIntegrity(shard) && validateAtomicStructure(shard)) {
-            this.pendingShards.push(shard);
+    validateNodeToken() {
+        const tokenId = this.nodeId; // Assume node ID corresponds to token ID
+        const tokenMetadata = this.tokens[tokenId];
 
-            // Log shard allocation in the shard ledger
-            logShardTransaction({
-                shardId: shard.id,
-                action: "Add",
-                nodeId: this.nodeId,
-                metadata: shard.metadata,
-            });
-
-            console.log(`Shard added to pool: ${shard.id}`);
-        } else {
-            console.warn("Invalid shard rejected.");
+        if (!tokenMetadata) {
+            console.warn(`Token for node ${this.nodeId} is missing.`);
+            return false;
         }
+
+        const { valid, error } = validateToken(tokenId, tokenMetadata.encryptedToken);
+        if (!valid) {
+            console.error(`Token validation failed for node ${this.nodeId}: ${error}`);
+            return false;
+        }
+
+        console.log(`Token validated successfully for node ${this.nodeId}.`);
+        return true;
+    }
+
+    /**
+     * Validates a token during consensus participation.
+     * @param {string} tokenId - The token to validate.
+     * @returns {boolean} - True if token is valid, false otherwise.
+     */
+    validateConsensusToken(tokenId) {
+        const tokenMetadata = this.tokens[tokenId];
+        if (!tokenMetadata) {
+            console.warn(`Token ${tokenId} is not registered with this node.`);
+            return false;
+        }
+
+        const { valid, error } = validateToken(tokenId, tokenMetadata.encryptedToken);
+        if (!valid) {
+            console.error(`Consensus token validation failed: ${error}`);
+            return false;
+        }
+
+        console.log(`Consensus token validated successfully: ${tokenId}`);
+        return true;
     }
 
     /**
@@ -111,7 +142,7 @@ class BlockchainNode {
             this.blockchain.push(newBlock);
 
             // Log shard block to shard ledger
-            logShardTransaction({
+            logTokenTransaction({
                 blockHash: newBlock.hash,
                 action: "Process",
                 nodeId: this.nodeId,
@@ -158,9 +189,18 @@ class BlockchainNode {
 
     /**
      * Starts the quantum-resistant consensus process.
+     * Enforces token validation for all participating nodes.
      */
     async startConsensus() {
         console.log("Starting quantum-resistant consensus process...");
+
+        for (const peer of this.peers) {
+            if (!this.validateConsensusToken(peer.tokenId)) {
+                console.warn(`Peer ${peer.nodeId} failed token validation. Excluded from consensus.`);
+                continue;
+            }
+        }
+
         const result = await executeQuantumConsensus(this.blockchain, this.peers);
         if (result.success) {
             console.log("Consensus achieved.");
