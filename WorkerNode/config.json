@@ -1,0 +1,6 @@
+{
+  "role": "WorkerNode",
+  "shardPaths": [ "/Shards/bitShards", "/Shards/byteShards" ],
+  "resources": 4096,
+  "encryption": "quantum-resistant"
+}
