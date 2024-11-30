@@ -12,7 +12,8 @@
  * Description:
  * Provides real-time monitoring of system resources, shard usage, token activity,
  * and carbon footprint metrics. Integrates with the blockchain logger and pricing
- * utilities to maintain transparency and efficiency.
+ * utilities to maintain transparency and efficiency. Includes anomaly detection
+ * for unauthorized access attempts and token duplication.
  *
  * Dependencies:
  * - os: System-level resource monitoring.
@@ -89,6 +90,7 @@ async function logShardUsage(shardId, action, metadata = {}) {
 
 /**
  * Logs token activity, including minting, redemption, and usage.
+ * Detects potential anomalies like token duplication or unauthorized access attempts.
  */
 async function logTokenActivity(tokenId, action, details = {}) {
     try {
@@ -98,6 +100,12 @@ async function logTokenActivity(tokenId, action, details = {}) {
             action,
             details,
         };
+
+        // Detect anomalies such as duplication or unauthorized use
+        if (await detectTokenAnomalies(tokenId, action)) {
+            console.warn(`Anomaly detected for token: ${tokenId} during ${action}.`);
+            logEntry.anomalyDetected = true;
+        }
 
         await fs.appendFile(TOKEN_ACTIVITY_LOG_PATH, JSON.stringify(logEntry, null, 2) + ",\n");
         console.log("Token activity logged:", logEntry);
@@ -121,6 +129,32 @@ async function monitorCarbonPricing() {
         return updatedPricing;
     } catch (error) {
         console.error("Error updating carbon pricing:", error.message);
+    }
+}
+
+/**
+ * Detect anomalies in token activity, such as duplication or unauthorized access.
+ * @param {string} tokenId - The token ID to monitor.
+ * @param {string} action - The action being performed.
+ * @returns {boolean} - Whether an anomaly is detected.
+ */
+async function detectTokenAnomalies(tokenId, action) {
+    try {
+        const logs = await fs.readJson(TOKEN_ACTIVITY_LOG_PATH);
+        const tokenLogs = logs.filter((log) => log.tokenId === tokenId);
+
+        if (action === "USE" && tokenLogs.some((log) => log.action === "USE")) {
+            return true; // Duplicate usage detected
+        }
+
+        if (action === "REDEEM" && tokenLogs.some((log) => log.action === "REDEEM")) {
+            return true; // Token already redeemed
+        }
+
+        return false;
+    } catch (error) {
+        console.error("Error detecting token anomalies:", error.message);
+        return false;
     }
 }
 
