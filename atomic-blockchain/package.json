@@ -1,0 +1,86 @@
+{
+    "name": "atomic-blockchain",
+    "version": "1.1.0",
+    "description": "ATOMIC Blockchain - Decentralized, quantum-resistant blockchain with atomic-level sharding.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node -r dotenv/config index.js",
+        "dev": "nodemon -r dotenv/config index.js",
+        "test": "jest --coverage",
+        "lint": "eslint .",
+        "build": "webpack --config webpack.config.js",
+        "generate-keys": "node scripts/generateKeys.js",
+        "deploy-contract": "node scripts/deployContract.js",
+        "migrate-data": "node scripts/migrateData.js",
+        "prepare": "husky install"
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atomic-ltd/atomic-blockchain.git"
+    },
+    "keywords": [
+        "blockchain",
+        "quantum-resistant",
+        "sharding",
+        "atomic",
+        "neutron",
+        "proton",
+        "electron",
+        "secure"
+    ],
+    "author": "ATOMIC, Ltd.",
+    "license": "ATOMIC-Limited-1.0",
+    "dependencies": {
+        "libsodium-wrappers": "^0.7.15",
+        "@tensorflow/tfjs-node": "^4.2.0",
+        "dotenv": "^16.0.3",
+        "express": "^4.18.2",
+        "fs-extra": "^11.1.1",
+        "lodash": "^4.17.21",
+        "uuid": "^9.0.0",
+        "winston": "^3.9.0",
+        "winston-daily-rotate-file": "^4.7.1",
+        "prom-client": "^14.0.1",
+        "body-parser": "^1.20.2",
+        "helmet": "^6.1.1",
+        "cors": "^2.8.5",
+        "express-rate-limit": "^6.10.0",
+        "yargs": "^17.7.2"
+    },
+    "devDependencies": {
+        "eslint": "^8.47.0",
+        "eslint-config-airbnb-base": "^15.0.0",
+        "eslint-plugin-import": "^2.28.0",
+        "jest": "^29.7.0",
+        "nodemon": "^2.0.22",
+        "webpack": "^5.88.1",
+        "webpack-cli": "^5.1.4",
+        "husky": "^8.0.0",
+        "lint-staged": "^13.2.0"
+    },
+    "engines": {
+        "node": ">=18.0.0 <20.0.0",
+        "npm": ">=8.0.0 <10.0.0"
+    },
+    "eslintConfig": {
+        "extends": "airbnb-base",
+        "env": {
+            "node": true,
+            "jest": true
+        },
+        "rules": {
+            "no-console": "off",
+            "indent": [ "error", 2 ],
+            "linebreak-style": [ "error", "unix" ],
+            "quotes": [ "error", "double" ],
+            "semi": [ "error", "always" ]
+        }
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "collectCoverage": true,
+        "coverageDirectory": "./coverage",
+        "coverageReporters": [ "json", "lcov", "text", "clover" ],
+        "testMatch": [ "**/__tests__/**/*.js?(x)", "**/?(*.)+(spec|test).js?(x)" ]
+    }
+}
