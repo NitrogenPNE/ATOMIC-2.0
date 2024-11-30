@@ -1,0 +1,35 @@
+{
+    "contractName": "TokenContract",
+        "version": "1.0.0",
+            "author": "ATOMIC Ltd.",
+                "description": "A template for creating token contracts.",
+                    "state": {
+        "totalSupply": 1000000,
+            "balances": { }
+    },
+    "functions": [
+        {
+            "name": "mint",
+            "parameters": [
+                { "name": "recipient", "type": "string" },
+                { "name": "amount", "type": "number" }
+            ],
+            "returns": "bool",
+            "description": "Mints new tokens to the specified recipient."
+        },
+        {
+            "name": "transfer",
+            "parameters": [
+                { "name": "from", "type": "string" },
+                { "name": "to", "type": "string" },
+                { "name": "amount", "type": "number" }
+            ],
+            "returns": "bool",
+            "description": "Transfers tokens between accounts."
+        }
+    ],
+        "permissions": {
+        "owner": ["mint", "transfer"],
+            "public": ["transfer"]
+    }
+}

@@ -1,0 +1,42 @@
+{
+    "contractName": "AccessControlContract",
+        "version": "1.0.0",
+            "author": "ATOMIC Ltd.",
+                "description": "A template for managing role-based access control.",
+                    "state": {
+        "roles": { }
+    },
+    "functions": [
+        {
+            "name": "grantRole",
+            "parameters": [
+                { "name": "role", "type": "string" },
+                { "name": "account", "type": "string" }
+            ],
+            "returns": "bool",
+            "description": "Grants a role to an account."
+        },
+        {
+            "name": "revokeRole",
+            "parameters": [
+                { "name": "role", "type": "string" },
+                { "name": "account", "type": "string" }
+            ],
+            "returns": "bool",
+            "description": "Revokes a role from an account."
+        },
+        {
+            "name": "checkRole",
+            "parameters": [
+                { "name": "role", "type": "string" },
+                { "name": "account", "type": "string" }
+            ],
+            "returns": "bool",
+            "description": "Checks if an account has a specific role."
+        }
+    ],
+        "permissions": {
+        "owner": ["grantRole", "revokeRole", "checkRole"],
+            "public": ["checkRole"]
+    }
+}

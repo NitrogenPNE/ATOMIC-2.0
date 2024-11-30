@@ -1,0 +1,26 @@
+{
+    "contractName": "DefaultContract",
+        "version": "1.0.0",
+            "author": "ATOMIC Ltd.",
+                "description": "A default template for generic smart contracts.",
+                    "functions": [
+                        {
+                            "name": "initialize",
+                            "parameters": [],
+                            "returns": "bool",
+                            "description": "Initializes the contract."
+                        },
+                        {
+                            "name": "execute",
+                            "parameters": [
+                                { "name": "action", "type": "string" }
+                            ],
+                            "returns": "bool",
+                            "description": "Executes a predefined action."
+                        }
+                    ],
+                        "permissions": {
+        "owner": ["initialize", "execute"],
+            "public": ["execute"]
+    }
+}
