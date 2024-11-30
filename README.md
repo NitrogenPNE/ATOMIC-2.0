@@ -74,6 +74,7 @@ Node Performance: Higher-performing nodes receive additional tokens for greater 
 Network Demand: Tokens are minted to scale with the network's operational load.
 
 5. PoA Implementation: Key Use Cases
+
 5.1 Shard Retrieval for Decentralized Applications (DApps)
 End-users retrieve data by presenting a valid token. The system:
 
