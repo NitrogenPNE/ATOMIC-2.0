@@ -1,35 +1,35 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Validation Utilities (Enhanced)
-//
-// Description:
-// Enhanced validation for transactions, blocks, shards, and nodes in ATOMIC.
-// Includes atomic structure validation (neutrons, protons, electrons),
-// quantum-safe mechanisms, and detailed integrity checks.
-//
-// Enhancements:
-// - Atomic structure validation (neutrons, protons, electrons).
-// - Detailed error reporting and logging.
-// - Performance optimizations with caching and parallel processing.
-// - Quantum-resistant validation for node authorization.
-//
-// Dependencies:
-// - crypto: For hash and signature validation.
-// - lodash: For advanced schema validation.
-// - storageManager.js: For shard validation and retrieval.
-// - loggingUtils.js: For detailed structured logging.
-//
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ *
+ * Module: Validation Utilities (Enhanced with Token Validation)
+ *
+ * Description:
+ * Enhanced validation for transactions, blocks, shards, nodes, and tokens in ATOMIC.
+ * Includes atomic structure validation (neutrons, protons, electrons),
+ * quantum-safe mechanisms, and detailed integrity checks.
+ *
+ * Enhancements:
+ * - Token validation with ownership checks.
+ * - Cryptographic verification for integrity.
+ * - Comprehensive logging for traceability.
+ *
+ * Dependencies:
+ * - crypto: For hash and signature validation.
+ * - lodash: For advanced schema validation.
+ * - loggingUtils.js: For detailed structured logging.
+ *
+ * -------------------------------------------------------------------------------
+ */
 
 const crypto = require("crypto");
 const _ = require("lodash");
 const { logOperation, logError } = require("./loggingUtils");
-const { retrieveShard } = require("./storageManager");
+const { decryptToken, verifyTokenSignature } = require("../Utilities/encryptionUtils");
 
 // **Validation Schemas**
 const SCHEMAS = {
@@ -50,11 +50,16 @@ const SCHEMAS = {
         nonce: "number",
     },
     shard: {
-        type: "string", // Type: neutron, proton, electron
+        type: "string", // neutron, proton, electron
         id: "string",
         metadata: "object",
         dataHash: "string",
         redundancyLevel: "number",
+    },
+    token: {
+        tokenId: "string",
+        owner: "string",
+        signature: "string",
     },
 };
 
@@ -173,28 +178,27 @@ function validateShard(shard) {
 }
 
 /**
- * Validate node identity and authorization with quantum-safe signatures.
- * @param {Object} node - The node information.
- * @param {string} signature - Authorization signature.
- * @returns {boolean} - Whether the node is authorized.
+ * Validate a token's integrity and ownership.
+ * @param {Object} token - The token object to validate.
+ * @returns {boolean} - Whether the token is valid.
  */
-function validateNode(node, signature) {
-    logOperation("Validating node identity...", { nodeId: node.id });
+function validateToken(token) {
+    logOperation("Validating token...", { tokenId: token.tokenId });
 
-    const message = `NODE_AUTH:${node.id}`;
-    const isValidSignature = crypto.verify(
-        "sha256",
-        Buffer.from(message),
-        { key: node.publicKey, padding: crypto.constants.RSA_PKCS1_PSS_PADDING },
-        Buffer.from(signature, "hex")
-    );
-
-    if (!isValidSignature) {
-        logError("Node authorization failed.", { nodeId: node.id });
+    if (!validateSchema(token, SCHEMAS.token)) {
+        logError("Token schema validation failed.", { token });
         return false;
     }
 
-    logOperation("Node identity validated successfully.", { nodeId: node.id });
+    const tokenData = `${token.tokenId}${token.owner}`;
+    const isSignatureValid = verifyTokenSignature(tokenData, token.signature, token.owner);
+
+    if (!isSignatureValid) {
+        logError("Invalid token signature.", { tokenId: token.tokenId });
+        return false;
+    }
+
+    logOperation("Token validated successfully.", { tokenId: token.tokenId });
     return true;
 }
 
@@ -202,5 +206,5 @@ module.exports = {
     validateTransaction,
     validateBlock,
     validateShard,
-    validateNode,
+    validateToken,
 };
