@@ -23,7 +23,7 @@
 const crypto = require("crypto");
 const { validateTransactionSchema } = require("../utils/validationUtils");
 const { signData, verifySignature, encryptPayload, decryptPayload } = require("../utils/cryptoUtils");
-const { validateToken } = require("../Pricing/TokenManagement/tokenValidation");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
 // **Transaction Configuration**
 const TRANSACTION_CONFIG = {
@@ -96,7 +96,7 @@ class Transaction {
     /**
      * Validate the transaction against blockchain rules, shard constraints,
      * token validation, and atomic-level validation.
-     * @returns {boolean} - True if the transaction is valid, false otherwise.
+     * @returns {Promise<boolean>} - True if the transaction is valid, false otherwise.
      */
     async validate() {
         if (!validateTransactionSchema(this)) {
@@ -184,47 +184,6 @@ class Transaction {
     }
 }
 
-/**
- * Create a new transaction with encrypted payloads and token details.
- * @param {Array<Object>} inputs - Array of transaction inputs.
- * @param {Array<Object>} outputs - Array of transaction outputs.
- * @param {Object} shardMetadata - Metadata for sharding.
- * @param {Object} tokenDetails - Token metadata for Proof-of-Access validation.
- * @param {string} militaryClassification - Optional military classification.
- * @returns {Transaction} - New transaction instance.
- */
-function createTransaction(inputs, outputs, shardMetadata = {}, tokenDetails = {}, militaryClassification = "UNCLASSIFIED") {
-    console.log("Creating new transaction...");
-    const transaction = new Transaction(inputs, outputs, shardMetadata, tokenDetails, militaryClassification);
-    transaction.id = transaction.computeHash(); // Assign unique ID
-    return transaction;
-}
-
-/**
- * Serialize a transaction into JSON format for storage or transmission.
- * @param {Transaction} transaction - Transaction to serialize.
- * @returns {string} - Serialized JSON string.
- */
-function serializeTransaction(transaction) {
-    return JSON.stringify(transaction);
-}
-
-/**
- * Deserialize a JSON string into a transaction object.
- * @param {string} serializedTransaction - JSON string representing the transaction.
- * @returns {Transaction} - Deserialized transaction instance.
- */
-function deserializeTransaction(serializedTransaction) {
-    const { inputs, outputs, shardMetadata, tokenDetails, timestamp, militaryClassification } = JSON.parse(serializedTransaction);
-    const transaction = new Transaction(inputs, outputs, shardMetadata, tokenDetails, militaryClassification);
-    transaction.timestamp = timestamp;
-    transaction.id = transaction.computeHash();
-    return transaction;
-}
-
 module.exports = {
     Transaction,
-    createTransaction,
-    serializeTransaction,
-    deserializeTransaction,
 };
