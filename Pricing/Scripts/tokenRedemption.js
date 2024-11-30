@@ -1,28 +1,31 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Token Redemption
-//
-// Description:
-// Handles the redemption of tokens, ensuring secure validation, ledger updates,
-// and compliance with the ATOMIC token-per-node model.
-//
-// Dependencies:
-// - tokenValidation.js: Validates the token authenticity and usage.
-// - fs-extra: For managing token metadata.
-// - path: For directory management.
-// - carbonTokenLedger.js: Logs redemption transactions securely.
-//
-// Author: Shawn Blackmore
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ * All Rights Reserved.
+ *
+ * Module: Token Redemption
+ *
+ * Description:
+ * Manages token redemption for Proof-of-Access operations, ensuring secure validation,
+ * ledger updates, and traceability within the ATOMIC ecosystem.
+ *
+ * Dependencies:
+ * - tokenValidation.js: Validates the token authenticity and integrity.
+ * - fs-extra: For managing token metadata and history.
+ * - path: For directory management.
+ * - carbonTokenLedger.js: Logs redemption transactions securely.
+ *
+ * Author: Shawn Blackmore
+ * -------------------------------------------------------------------------------
+ */
 
 const fs = require("fs-extra");
 const path = require("path");
-const { validate } = require("../TokenManagement/tokenValidation");
+const { validateToken } = require("../TokenManagement/tokenValidation");
 const { recordTokenTransaction } = require("../Blockchain/carbonTokenLedger");
 
 // Config paths
@@ -39,10 +42,10 @@ const tokenUsageHistoryPath = path.resolve(__dirname, "../Data/tokenUsageHistory
 async function redeemToken(tokenId, encryptedToken, nodeId) {
     try {
         console.log("Validating token for redemption...");
-        const isValid = await validate(tokenId, encryptedToken);
+        const validationResult = await validateToken(tokenId, encryptedToken);
 
-        if (!isValid) {
-            throw new Error("Token validation failed. Redemption cannot proceed.");
+        if (!validationResult.valid) {
+            throw new Error(`Token validation failed: ${validationResult.error}`);
         }
 
         console.log("Loading token metadata...");
