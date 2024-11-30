@@ -1,0 +1,27 @@
+{
+    "currentCarbonPricing": {
+        "region": "Canada",
+        "pricePerKgCO2": 65.00,
+        "currency": "CAD",
+        "lastUpdated": "2024-11-29T00:00:00Z"
+    },
+    "historicalCarbonPricing": [
+        {
+            "date": "2024-11-28",
+            "pricePerKgCO2": 65.00
+        },
+        {
+            "date": "2024-11-27",
+            "pricePerKgCO2": 64.50
+        },
+        {
+            "date": "2024-11-26",
+            "pricePerKgCO2": 64.00
+        },
+        {
+            "date": "2024-11-25",
+            "pricePerKgCO2": 63.75
+        }
+    ],
+    "notes": "Current carbon pricing reflects government-regulated rates for CO2 emissions in Canada. Historical pricing data is included for trend analysis and forecasting."
+}

@@ -1,0 +1,52 @@
+{
+    "metadata": {
+        "description": "Historical data on token usage, including minting, redemption, and allocation.",
+        "totalTokensMinted": 500000,
+        "totalTokensRedeemed": 150000,
+        "totalTokensInCirculation": 350000,
+        "lastUpdated": "2024-11-29T00:00:00Z"
+    },
+    "usageHistory": [
+        {
+            "transactionId": "txn-0001",
+            "timestamp": "2024-11-28T10:30:00Z",
+            "userId": "user-12345",
+            "action": "mint",
+            "tokens": 10000,
+            "notes": "Initial minting for user subscription."
+        },
+        {
+            "transactionId": "txn-0002",
+            "timestamp": "2024-11-28T11:00:00Z",
+            "userId": "user-67890",
+            "action": "redeem",
+            "tokens": 5000,
+            "notes": "Tokens redeemed for shard allocation."
+        },
+        {
+            "transactionId": "txn-0003",
+            "timestamp": "2024-11-28T12:15:00Z",
+            "userId": "user-12345",
+            "action": "allocate",
+            "tokens": 8000,
+            "shardId": "shard-001",
+            "notes": "Tokens allocated for shard storage."
+        },
+        {
+            "transactionId": "txn-0004",
+            "timestamp": "2024-11-28T13:45:00Z",
+            "userId": "user-23456",
+            "action": "mint",
+            "tokens": 20000,
+            "notes": "Minted for corporate storage needs."
+        },
+        {
+            "transactionId": "txn-0005",
+            "timestamp": "2024-11-28T15:20:00Z",
+            "userId": "user-67890",
+            "action": "redeem",
+            "tokens": 10000,
+            "notes": "Redemption for shard renewal."
+        }
+    ]
+}

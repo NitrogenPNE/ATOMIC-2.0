@@ -1,0 +1,29 @@
+{
+    "tokenMetadata": {
+        "totalTokensMinted": 5000000000,
+        "tokensInCirculation": 2500000000,
+        "tokenEncryption": {
+            "encryptionAlgorithm": "RSA-4096",
+            "encryptionStatus": "Enabled",
+            "publicKeyPath": "C:/ATOMIC-SecureStorage/ATOMIC 2.0/Pricing/Config/encryptionKeys/publicKey.pem",
+            "privateKeyPath": "C:/ATOMIC-SecureStorage/ATOMIC 2.0/Pricing/Config/encryptionKeys/privateKey.pem"
+        },
+        "tokenDetails": {
+            "unit": "ATOM",
+            "decimals": 6,
+            "description": "ATOM tokens represent prepaid data shards, linked to carbon emission costs and savings."
+        },
+        "tokenStatus": {
+            "activeTokens": 2000000000,
+            "redeemedTokens": 500000000,
+            "reservedTokens": 500000000,
+            "inactiveTokens": 0
+        },
+        "lastMinting": {
+            "timestamp": "2024-11-29T00:00:00Z",
+            "numberMinted": 100000000,
+            "mintingReason": "Market demand increase"
+        }
+    },
+    "notes": "Metadata tracks all token-related details, including encryption and minting history."
+}

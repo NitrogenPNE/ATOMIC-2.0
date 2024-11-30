@@ -1,0 +1,33 @@
+{
+    "timestamp": "2024-11-29T17:00:00Z",
+        "marketData": {
+        "currentCarbonPrice": 65.0,
+            "pricingTrends": [
+                { "date": "2024-11-01", "price": 64.5 },
+                { "date": "2024-11-15", "price": 65.0 }
+            ]
+    },
+    "tokenDemandRisks": {
+        "totalDemand": 150000,
+            "highVolatilityPeriods": 2,
+                "volatilityDetails": [
+                    { "date": "2024-11-25", "demandChange": 12000 },
+                    { "date": "2024-11-28", "demandChange": -15000 }
+                ]
+    },
+    "shardAllocationRisks": {
+        "totalShards": 500,
+            "overAllocated": 3,
+                "underUtilized": 5,
+                    "details": {
+            "overAllocatedNodes": [
+                { "nodeId": "NodeX", "usage": 95 },
+                { "nodeId": "NodeY", "usage": 93 }
+            ],
+                "underUtilizedNodes": [
+                    { "nodeId": "NodeZ", "usage": 8 }
+                ]
+        }
+    },
+    "aiInsights": "Token demand volatility observed. Shard over-allocation detected..."
+}

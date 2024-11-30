@@ -1,0 +1,56 @@
+{
+    "tokenConfig": {
+        "tokensPerNode": 1,
+            "tokenRebateMechanism": {
+            "standardRebatePerNode": 0.25,
+                "rebateUnit": "CAD",
+                    "description": "Rebate applied per node operation based on carbon savings compared to traditional systems."
+        },
+        "carbonEmissionPerNode": {
+            "value": 150.00,
+                "unit": "grams",
+                    "description": "Carbon emissions generated per node operation per bounce."
+        },
+        "energyConsumptionPerNode": {
+            "value": 0.15,
+                "unit": "kWh",
+                    "description": "Average energy consumption for a node operation."
+        },
+        "nodeLimitPerToken": {
+            "value": 1,
+                "description": "Each token supports one node within the network."
+        },
+        "regionalFactors": {
+            "defaultMultiplier": 1.0,
+                "regionalMultipliers": {
+                "Canada": 1.0,
+                    "USA": 0.95,
+                        "EU": 1.1
+            },
+            "description": "Multipliers applied based on regional carbon and energy metrics."
+        }
+    },
+    "pricingThresholds": {
+        "priceAlertHigh": 100.00,
+            "priceAlertLow": 30.00,
+                "description": "Thresholds for token price fluctuation alerts."
+    },
+    "updateFrequency": {
+        "carbonPricing": {
+            "value": 24,
+                "unit": "hours",
+                    "description": "Frequency of updates to carbon pricing data."
+        },
+        "energyConsumption": {
+            "value": 7,
+                "unit": "days",
+                    "description": "Frequency of updates to energy consumption data."
+        },
+        "rebateMechanism": {
+            "value": 30,
+                "unit": "days",
+                    "description": "Frequency of rebate adjustments."
+        }
+    },
+    "notes": "This configuration defines token parameters, carbon and energy metrics, rebate mechanisms, and regional factors for pricing."
+}

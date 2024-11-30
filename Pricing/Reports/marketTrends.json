@@ -1,0 +1,19 @@
+{
+    "timestamp": "2024-11-29T16:30:42.614Z",
+        "marketData": {
+        "currentCarbonPrice": 65.0,
+            "pricingTrends": [
+                { "date": "2024-11-01", "price": 64.5 },
+                { "date": "2024-11-15", "price": 65.0 }
+            ]
+    },
+    "tokenTrends": {
+        "totalUsage": 150000,
+            "averageDailyUsage": 5000,
+                "usageByDate": [
+                    { "date": "2024-11-28", "tokensUsed": 5200 },
+                    { "date": "2024-11-29", "tokensUsed": 4800 }
+                ]
+    },
+    "aiInsights": "Token demand is growing steadily..."
+}

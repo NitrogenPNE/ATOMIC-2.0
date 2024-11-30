@@ -1,0 +1,39 @@
+{
+    "shareClasses": {
+        "ClassA": {
+            "basePrice": 14.86,
+            "votingRights": 10,
+            "premium": 15,
+            "description": "Class A shares with primary governance control and enhanced voting rights."
+        },
+        "ClassB": {
+            "basePrice": 12.27,
+            "votingRights": 1,
+            "discount": -5,
+            "description": "Class B shares with standard voting rights and balanced financial returns."
+        },
+        "ClassC": {
+            "basePrice": 11.63,
+            "votingRights": 0,
+            "discount": -10,
+            "description": "Class C shares for financial returns only, with no voting rights."
+        },
+        "ClassD": {
+            "basePrice": 11.63,
+            "votingRights": 0.1,
+            "discount": -10,
+            "description": "Class D shares for limited governance participation through crowdfunding."
+        }
+    },
+    "baseCalculation": {
+        "referencePrice": 12.92,
+        "currency": "CAD",
+        "description": "Weighted average share price used as the baseline for adjustments."
+    },
+    "adjustmentRules": {
+        "premiumCalculation": "basePrice * (1 + premium/100)",
+        "discountCalculation": "basePrice * (1 + discount/100)",
+        "description": "Rules for calculating final share prices based on premiums or discounts."
+    },
+    "notes": "This configuration file defines share classes, their attributes, and the rules for price adjustments."
+}

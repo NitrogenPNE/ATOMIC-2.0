@@ -1,0 +1,43 @@
+{
+    "currentCarbonPrice": {
+        "value": 65.00,
+        "currency": "CAD",
+        "source": "Canadian Government Carbon Pricing",
+        "lastUpdated": "2024-11-29T00:00:00Z"
+    },
+    "fallbackCarbonPrice": {
+        "value": 60.00,
+        "currency": "CAD",
+        "reason": "Default fallback in case of API failure or unavailability."
+    },
+    "updateFrequency": {
+        "value": 24,
+        "unit": "hours",
+        "description": "Frequency at which carbon pricing data is fetched from external APIs."
+    },
+    "regionalSettings": {
+        "primaryRegion": "Canada",
+        "carbonPricingAPI": "https://api.canadiancarbonpricing.ca/v1/latest",
+        "allowedRegions": [ "Canada", "USA", "EU" ],
+        "currencyConversionAPI": "https://api.exchangeratesapi.io/latest",
+        "currencyBase": "CAD"
+    },
+    "thresholds": {
+        "priceAlertHigh": 100.00,
+        "priceAlertLow": 30.00,
+        "currencyFluctuationTolerance": 5.00
+    },
+    "rebates": {
+        "ecoFriendly": {
+            "value": 5.00,
+            "unit": "CAD",
+            "description": "Rebate for eco-friendly data practices."
+        },
+        "bulkUsage": {
+            "value": 2.50,
+            "unit": "CAD",
+            "description": "Rebate applied for bulk token or node usage."
+        }
+    },
+    "notes": "This configuration file contains settings for carbon pricing, regional constraints, and fallback mechanisms to ensure stability and accuracy in token pricing calculations."
+}
