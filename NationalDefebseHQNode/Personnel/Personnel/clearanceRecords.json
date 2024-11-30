@@ -1,0 +1,27 @@
+{
+    "userId-001": {
+        "level": "Tier 5",
+            "description": "Top Secret - Highest Security Clearance",
+                "updatedAt": "2024-11-24T10:00:00Z"
+    },
+    "userId-002": {
+        "level": "Tier 4",
+            "description": "Secret - High Security Clearance",
+                "updatedAt": "2024-11-23T15:30:00Z"
+    },
+    "userId-003": {
+        "level": "Tier 3",
+            "description": "Confidential - Medium Security Clearance",
+                "updatedAt": "2024-11-22T08:45:00Z"
+    },
+    "userId-004": {
+        "level": "Tier 2",
+            "description": "Restricted - Low Security Clearance",
+                "updatedAt": "2024-11-21T12:30:00Z"
+    },
+    "userId-005": {
+        "level": "Tier 1",
+            "description": "Unclassified - Minimal Security Clearance",
+                "updatedAt": "2024-11-20T09:00:00Z"
+    }
+}
