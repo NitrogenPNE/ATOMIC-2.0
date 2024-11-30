@@ -73,7 +73,7 @@ class ShardBlock {
 
     /**
      * Validates the block's structure, shard metadata, token, and integrity.
-     * @returns {boolean} - True if the block is valid, false otherwise.
+     * @returns {Promise<boolean>} - True if the block is valid, false otherwise.
      */
     async isValid() {
         if (!validateBlockStructure(this)) {
@@ -99,6 +99,7 @@ class ShardBlock {
 
     /**
      * Finalizes the block by validating and recalculating its hash.
+     * @returns {Promise<void>}
      */
     async finalizeBlock() {
         console.log("Finalizing block...");
