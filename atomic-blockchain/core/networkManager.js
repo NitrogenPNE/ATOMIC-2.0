@@ -21,9 +21,10 @@
 
 const WebSocket = require("ws");
 const winston = require("winston");
-const { encryptMessage, decryptMessage } = require("../utils/quantumCrypto");
-const { validateMessage, validatePeer, validateShardMetadata } = require("../utils/validationUtils");
-const { discoverPeers } = require("./peerDiscovery");
+const { encryptMessage, decryptMessage } = require("../utils/quantumCryptoUtils");
+const { validateMessage, validatePeer } = require("../utils/validationUtils");
+const { validateToken } = require("../TokenManagement/tokenValidation");
+const { discoverPeers } = require("./peerNetwork");
 
 // **Logger Setup**
 const logger = winston.createLogger({
@@ -42,13 +43,13 @@ const logger = winston.createLogger({
 const NETWORK_CONFIG = {
     port: process.env.NETWORK_PORT || 6000,
     maxPeers: 50,
-    heartbeatInterval: 30000,
+    heartbeatInterval: 30000, // 30 seconds
     authorizedPeers: ["ws://hq.supernode.local:7000", "ws://corp.node1.local:7001"],
 };
 
 // **Peer Management**
-const peers = new Map(); // Stores active peers
-let hqSupernode = null; // HQ Supernode connection
+const peers = new Map();
+let hqSupernode = null;
 
 /**
  * Start the network manager.
@@ -90,11 +91,11 @@ async function discoverAndConnectPeers() {
     logger.info("Discovering peers...");
     const discoveredPeers = await discoverPeers();
 
-    discoveredPeers.forEach((peer) => {
+    for (const peer of discoveredPeers) {
         if (!peers.has(peer) && validatePeer(peer, NETWORK_CONFIG.authorizedPeers)) {
             connectToPeer(peer);
         }
-    });
+    }
 }
 
 /**
@@ -105,8 +106,13 @@ function connectToPeer(peerAddress) {
     try {
         const socket = new WebSocket(peerAddress);
 
-        socket.on("open", () => {
+        socket.on("open", async () => {
             logger.info(`Connected to peer: ${peerAddress}`);
+            if (!(await validatePeerToken(peerAddress))) {
+                logger.warn(`Peer ${peerAddress} failed token validation.`);
+                socket.close();
+                return;
+            }
             peers.set(peerAddress, socket);
         });
 
@@ -115,6 +121,24 @@ function connectToPeer(peerAddress) {
         socket.on("error", (error) => logger.error(`Error with peer ${peerAddress}:`, error));
     } catch (error) {
         logger.error(`Failed to connect to peer ${peerAddress}:`, error);
+    }
+}
+
+/**
+ * Validate token of a peer.
+ * @param {string} peerAddress - Address of the peer.
+ * @returns {Promise<boolean>} - True if the token is valid, false otherwise.
+ */
+async function validatePeerToken(peerAddress) {
+    try {
+        logger.info(`Validating token for peer: ${peerAddress}`);
+        const tokenId = await getTokenIdFromPeer(peerAddress);
+        const encryptedToken = await getEncryptedTokenFromPeer(peerAddress);
+        const validation = await validateToken(tokenId, encryptedToken);
+        return validation.valid;
+    } catch (error) {
+        logger.error(`Token validation failed for peer ${peerAddress}:`, error.message);
+        return false;
     }
 }
 
@@ -158,35 +182,6 @@ function handleMessage(socket, data) {
 }
 
 /**
- * Handle shard request messages.
- * @param {WebSocket} socket - WebSocket connection.
- * @param {Object} payload - Shard request payload with atomic metadata.
- */
-function handleShardRequest(socket, payload) {
-    logger.info(`Received shard request for: ${payload.shardId}`);
-    // Logic to fetch shard with protons, neutrons, and electrons
-}
-
-/**
- * Handle shard bounce messages.
- * @param {WebSocket} socket - WebSocket connection.
- * @param {Object} payload - Shard bounce payload with redundancy and bounce rates.
- */
-function handleShardBounce(socket, payload) {
-    logger.info(`Shard bounce received for: ${payload.shardId}`);
-    // Logic to validate and process bounced shards
-}
-
-/**
- * Handle peer disconnection.
- * @param {string} peerAddress - Address of the disconnected peer.
- */
-function handleDisconnect(peerAddress) {
-    logger.warn(`Peer disconnected: ${peerAddress}`);
-    peers.delete(peerAddress);
-}
-
-/**
  * Start periodic heartbeat checks for peer health.
  */
 function startHeartbeat() {
@@ -198,23 +193,6 @@ function startHeartbeat() {
             }
         });
     }, NETWORK_CONFIG.heartbeatInterval);
-}
-
-/**
- * Synchronize corporate nodes with the HQ supernode.
- */
-function synchronizeWithHQ() {
-    if (!hqSupernode || hqSupernode.readyState !== WebSocket.OPEN) {
-        logger.warn("HQ supernode connection is not available.");
-        return;
-    }
-
-    const syncMessage = encryptMessage(JSON.stringify({ type: "SYNC_REQUEST", data: "Synchronization data" }));
-    hqSupernode.send(syncMessage, (error) => {
-        if (error) {
-            logger.error("Failed to synchronize with HQ supernode:", error);
-        }
-    });
 }
 
 /**
