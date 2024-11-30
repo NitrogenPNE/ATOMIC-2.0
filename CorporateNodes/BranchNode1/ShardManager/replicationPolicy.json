@@ -1,0 +1,26 @@
+{
+    "replicationPolicyId": "BranchNode1ReplicationPolicy",
+    "description": "Defines data replication rules for BranchNode1",
+    "replicationEnabled": true,
+    "replicationFactor": 3,
+    "primaryNode": "BranchNode1",
+    "replicaNodes": [
+        "CorporateHQNode",
+        "BranchNode2",
+        "DepartmentNode1"
+    ],
+    "replicationIntervalMinutes": 15,
+    "conflictResolution": {
+        "strategy": "latest-write-wins",
+        "auditTrail": true
+    },
+    "failover": {
+        "enabled": true,
+        "fallbackNodes": [ "BranchNode3", "CorporateHQNode" ]
+    },
+    "monitoring": {
+        "alerts": true,
+        "alertThresholdFailures": 5,
+        "alertRecipient": "admin@branchoffice1.com"
+    }
+}

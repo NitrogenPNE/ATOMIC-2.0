@@ -1,0 +1,27 @@
+{
+    "nodeId": "BranchNode1",
+    "host": "127.0.0.1",
+    "port": 8080,
+    "maxConnections": 50,
+    "timeout": 30000,
+    "retryInterval": 5000,
+    "secureConnection": true,
+    "encryption": {
+        "enabled": true,
+        "algorithm": "aes-256-cbc",
+        "key": "YOUR_ENCRYPTION_KEY_HERE",
+        "iv": "YOUR_INITIALIZATION_VECTOR"
+    },
+    "peerNodes": [
+        {
+            "nodeId": "CorporateHQNode",
+            "host": "192.168.1.1",
+            "port": 8081
+        },
+        {
+            "nodeId": "BranchNode2",
+            "host": "192.168.1.2",
+            "port": 8082
+        }
+    ]
+}

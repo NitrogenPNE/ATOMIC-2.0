@@ -1,0 +1,40 @@
+{
+    "nodeId": "BranchNode1",
+    "nodeType": "Branch",
+    "location": "Branch Office 1",
+    "adminContact": {
+        "name": "John Doe",
+        "email": "admin@branchoffice1.com",
+        "phone": "+1234567890"
+    },
+    "storage": {
+        "capacityGB": 500,
+        "usedGB": 0,
+        "replicationFactor": 3
+    },
+    "shardPolicy": {
+        "enabled": true,
+        "shardSizeMB": 64,
+        "replicationNodes": [ "CorporateHQNode", "BranchNode2" ]
+    },
+    "security": {
+        "authentication": "OAuth2",
+        "encryption": {
+            "enabled": true,
+            "algorithm": "aes-256-cbc",
+            "keyRotationPeriodDays": 30
+        }
+    },
+    "logging": {
+        "level": "INFO",
+        "logFile": "C:/ATOMIC 2.0/CorporateNodes/BranchNode1/logs/branchNode1.log"
+    },
+    "api": {
+        "enabled": true,
+        "port": 8080,
+        "rateLimit": {
+            "requestsPerMinute": 1000,
+            "burstLimit": 1500
+        }
+    }
+}
