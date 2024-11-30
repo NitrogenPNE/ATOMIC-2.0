@@ -1,0 +1,1 @@
+// Placeholder validation script content.
