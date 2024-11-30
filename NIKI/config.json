@@ -1,0 +1,179 @@
+{
+    "application": {
+        "name": "NIKI",
+        "version": "2.1.0",
+        "role": "NIKI AI Supernode",
+        "description": "Advanced AI-powered node for secure task scheduling, shard management, quantum security, and NATO-compatible communications in the ATOMIC ecosystem.",
+        "author": "ATOMIC Ltd.",
+        "license": "ATOMIC-Limited-1.0"
+    },
+    "sharding": {
+        "enabled": true,
+        "shardPaths": {
+            "bitShards": "/Data/Shards/bitShards",
+            "byteShards": "/Data/Shards/byteShards",
+            "kbShards": "/Data/Shards/kbShards",
+            "mbShards": "/Data/Shards/mbShards",
+            "gbShards": "/Data/Shards/gbShards",
+            "tbShards": "/Data/Shards/tbShards"
+        },
+        "resources": {
+            "maxMemoryMB": 8192,
+            "maxCpuCores": 8,
+            "resourceAllocationStrategy": "dynamic",
+            "nodePriority": "balanced"
+        },
+        "dynamicBounceRates": true
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyManagement": {
+                "publicKeyPath": "/Config/encryptionKeys/publicKey.pem",
+                "privateKeyPath": "/Config/encryptionKeys/privateKey.pem",
+                "rsaPublicKeyPath": "/Config/encryptionKeys/rsaPublicKey.pem",
+                "rsaPrivateKeyPath": "/Config/encryptionKeys/rsaPrivateKey.pem",
+                "qkdSharedKeys": "/Config/qkdKeys"
+            }
+        },
+        "tamperDetection": {
+            "enabled": true,
+            "threshold": 0.85
+        },
+        "anomalyDetection": {
+            "enabled": true,
+            "models": [ "tamperDetectionModel", "shardAnomalyModel" ]
+        },
+        "zeroTrustPolicy": {
+            "enabled": true,
+            "validateEveryTransaction": true,
+            "auditFrequency": "daily"
+        }
+    },
+    "communication": {
+        "natoProtocol": {
+            "enabled": true,
+            "endpoint": "https://198.51.100.5:8000/nato",
+            "messageFormat": "STANAG 4586",
+            "encryption": "hybrid",
+            "retryStrategy": {
+                "maxRetries": 5,
+                "retryDelayMS": 2000
+            }
+        },
+        "qkd": {
+            "enabled": true,
+            "keyExchangeFrequency": "hourly",
+            "errorDetection": true,
+            "tamperResponse": "terminate-connection"
+        }
+    },
+    "logging": {
+        "level": "info",
+        "logFilePath": "/Logs/niki.log",
+        "logFormat": "json",
+        "enableConsoleLogging": true,
+        "rotateLogs": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxFileSizeMB": 50,
+            "retainDays": 30
+        }
+    },
+    "api": {
+        "endpoint": "https://api.atomic.ca/niki",
+        "timeout": 10000,
+        "retryStrategy": {
+            "maxRetries": 3,
+            "retryDelay": 2000
+        }
+    },
+    "models": {
+        "shardPredictionModel": {
+            "path": "/AI/Models/shardPredictionModel.tfmodel",
+            "inputFeatures": [ "dataSize", "bounceRate", "historicalLoad" ],
+            "outputLabel": "nextNode",
+            "optimization": {
+                "learningRate": 0.001,
+                "dropoutRate": 0.2,
+                "regularization": "l2"
+            }
+        },
+        "tamperDetectionModel": {
+            "path": "/AI/Models/tamperDetectionModel.tfmodel",
+            "inputFeatures": [ "bounceRate", "frequency", "dataSize", "expectedNode" ],
+            "outputLabel": "isTampered"
+        },
+        "taskSchedulerModel": {
+            "path": "/AI/Models/taskSchedulerModel.tfmodel",
+            "inputFeatures": [ "cpuUsage", "memoryUsage", "taskPriority", "latency" ],
+            "outputLabel": "optimalNode"
+        }
+    },
+    "training": {
+        "dataPaths": {
+            "shardPrediction": "/AI/Training/trainingData.json",
+            "tamperDetection": "/AI/Training/tamperTrainingData.json",
+            "taskScheduling": "/AI/Training/taskTrainingData.json"
+        },
+        "hyperparameters": {
+            "epochs": 50,
+            "batchSize": 32,
+            "validationSplit": 0.2,
+            "earlyStopping": {
+                "enabled": true,
+                "patience": 5
+            }
+        }
+    },
+    "monitoring": {
+        "system": {
+            "metrics": [ "cpuLoad", "memoryUsage", "networkLatency", "qkdStatus" ],
+            "refreshInterval": 5000
+        },
+        "anomalies": {
+            "enabled": true,
+            "alertThreshold": 0.9,
+            "logFilePath": "/Data/Logs/anomalyLogs.json"
+        },
+        "diagnostics": {
+            "enabled": true,
+            "reportFrequency": "hourly",
+            "reportPath": "/Logs/Monitoring/diagnosticReport.json"
+        }
+    },
+    "taskScheduler": {
+        "enabled": true,
+        "resourceAllocator": {
+            "strategy": "load-balanced",
+            "cpuWeight": 0.4,
+            "memoryWeight": 0.6,
+            "latencyThreshold": 100
+        },
+        "priorityLevels": [ "high", "medium", "low" ],
+        "defaultPriority": "medium",
+        "failover": {
+            "enabled": true,
+            "replicaNodes": 2,
+            "retryDelayMS": 1000,
+            "maxAttempts": 3
+        }
+    },
+    "dependencies": {
+        "libsodium-wrappers": "^0.7.10",
+        "node-rsa": "^1.1.1",
+        "winston": "^3.3.3",
+        "tensorflow/tfjs-node": "^4.2.0",
+        "fs-extra": "^10.0.0",
+        "lodash": "^4.17.21",
+        "https": "^1.0.0"
+    },
+    "node": {
+        "id": "NIKI-001",
+        "role": "AI Supernode",
+        "location": "HQ Datacenter",
+        "maxConnections": 2000,
+        "heartbeatInterval": 3000
+    }
+}

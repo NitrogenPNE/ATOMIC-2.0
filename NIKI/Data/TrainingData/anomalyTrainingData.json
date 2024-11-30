@@ -1,0 +1,132 @@
+[
+    {
+        "shard": {
+            "bounceRate": 10,
+            "size": 512,
+            "latency": 20
+        },
+        "system": {
+            "cpuLoad": 30,
+            "memoryUsed": 2048,
+            "memoryFree": 1024
+        },
+        "anomalyType": 0
+    },
+    {
+        "shard": {
+            "bounceRate": 90,
+            "size": 2048,
+            "latency": 200
+        },
+        "system": {
+            "cpuLoad": 80,
+            "memoryUsed": 4096,
+            "memoryFree": 512
+        },
+        "anomalyType": 1
+    },
+    {
+        "shard": {
+            "bounceRate": 5,
+            "size": 256,
+            "latency": 10
+        },
+        "system": {
+            "cpuLoad": 20,
+            "memoryUsed": 1024,
+            "memoryFree": 3072
+        },
+        "anomalyType": 0
+    },
+    {
+        "shard": {
+            "bounceRate": 70,
+            "size": 1024,
+            "latency": 150
+        },
+        "system": {
+            "cpuLoad": 70,
+            "memoryUsed": 3072,
+            "memoryFree": 1024
+        },
+        "anomalyType": 1
+    },
+    {
+        "shard": {
+            "bounceRate": 15,
+            "size": 768,
+            "latency": 30
+        },
+        "system": {
+            "cpuLoad": 35,
+            "memoryUsed": 1536,
+            "memoryFree": 2560
+        },
+        "anomalyType": 0
+    },
+    {
+        "shard": {
+            "bounceRate": 95,
+            "size": 4096,
+            "latency": 250
+        },
+        "system": {
+            "cpuLoad": 95,
+            "memoryUsed": 6144,
+            "memoryFree": 256
+        },
+        "anomalyType": 1
+    },
+    {
+        "shard": {
+            "bounceRate": 8,
+            "size": 128,
+            "latency": 5
+        },
+        "system": {
+            "cpuLoad": 15,
+            "memoryUsed": 512,
+            "memoryFree": 3584
+        },
+        "anomalyType": 0
+    },
+    {
+        "shard": {
+            "bounceRate": 85,
+            "size": 1024,
+            "latency": 180
+        },
+        "system": {
+            "cpuLoad": 75,
+            "memoryUsed": 4096,
+            "memoryFree": 512
+        },
+        "anomalyType": 1
+    },
+    {
+        "shard": {
+            "bounceRate": 12,
+            "size": 640,
+            "latency": 25
+        },
+        "system": {
+            "cpuLoad": 25,
+            "memoryUsed": 2048,
+            "memoryFree": 2048
+        },
+        "anomalyType": 0
+    },
+    {
+        "shard": {
+            "bounceRate": 75,
+            "size": 3072,
+            "latency": 210
+        },
+        "system": {
+            "cpuLoad": 85,
+            "memoryUsed": 5120,
+            "memoryFree": 1024
+        },
+        "anomalyType": 1
+    }
+]

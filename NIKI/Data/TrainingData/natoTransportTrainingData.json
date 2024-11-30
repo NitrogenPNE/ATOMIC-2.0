@@ -1,0 +1,110 @@
+[
+    {
+        "latency": 120,
+        "retries": 0,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 512,
+        "nodeLoad": 30,
+        "anomaly": 0
+    },
+    {
+        "latency": 350,
+        "retries": 2,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 1024,
+        "nodeLoad": 70,
+        "anomaly": 1
+    },
+    {
+        "latency": 200,
+        "retries": 1,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 768,
+        "nodeLoad": 40,
+        "anomaly": 0
+    },
+    {
+        "latency": 500,
+        "retries": 3,
+        "isEncrypted": 0,
+        "signatureValid": 0,
+        "messageSize": 2048,
+        "nodeLoad": 85,
+        "anomaly": 1
+    },
+    {
+        "latency": 100,
+        "retries": 0,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 256,
+        "nodeLoad": 20,
+        "anomaly": 0
+    },
+    {
+        "latency": 450,
+        "retries": 2,
+        "isEncrypted": 1,
+        "signatureValid": 0,
+        "messageSize": 1500,
+        "nodeLoad": 75,
+        "anomaly": 1
+    },
+    {
+        "latency": 180,
+        "retries": 0,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 512,
+        "nodeLoad": 35,
+        "anomaly": 0
+    },
+    {
+        "latency": 400,
+        "retries": 3,
+        "isEncrypted": 0,
+        "signatureValid": 0,
+        "messageSize": 2048,
+        "nodeLoad": 90,
+        "anomaly": 1
+    },
+    {
+        "latency": 150,
+        "retries": 1,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 768,
+        "nodeLoad": 25,
+        "anomaly": 0
+    },
+    {
+        "latency": 300,
+        "retries": 2,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 1024,
+        "nodeLoad": 60,
+        "anomaly": 1
+    },
+    {
+        "latency": 130,
+        "retries": 0,
+        "isEncrypted": 1,
+        "signatureValid": 1,
+        "messageSize": 256,
+        "nodeLoad": 15,
+        "anomaly": 0
+    },
+    {
+        "latency": 550,
+        "retries": 3,
+        "isEncrypted": 0,
+        "signatureValid": 0,
+        "messageSize": 4096,
+        "nodeLoad": 95,
+        "anomaly": 1
+    }
+]

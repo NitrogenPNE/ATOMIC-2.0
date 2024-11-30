@@ -1,0 +1,112 @@
+[
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 4096
+        },
+        "isValid": 1
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 2048,
+            "privateKeyLength": 2048
+        },
+        "isValid": 1
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 128,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 4096
+        },
+        "isValid": 0
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 512,
+            "privateKeyLength": 512
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 4096
+        },
+        "isValid": 1
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 128
+        },
+        "rsa": {
+            "publicKeyLength": 2048,
+            "privateKeyLength": 2048
+        },
+        "isValid": 0
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 1024
+        },
+        "isValid": 0
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 4096
+        },
+        "isValid": 1
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 128,
+            "privateKeyLength": 128
+        },
+        "rsa": {
+            "publicKeyLength": 1024,
+            "privateKeyLength": 1024
+        },
+        "isValid": 0
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 512,
+            "privateKeyLength": 512
+        },
+        "rsa": {
+            "publicKeyLength": 4096,
+            "privateKeyLength": 4096
+        },
+        "isValid": 1
+    },
+    {
+        "lattice": {
+            "publicKeyLength": 256,
+            "privateKeyLength": 256
+        },
+        "rsa": {
+            "publicKeyLength": 2048,
+            "privateKeyLength": 2048
+        },
+        "isValid": 1
+    }
+]

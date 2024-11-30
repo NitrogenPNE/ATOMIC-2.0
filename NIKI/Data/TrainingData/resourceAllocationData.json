@@ -1,0 +1,142 @@
+[
+    {
+        "task": {
+            "priority": 5,
+            "requiredCpu": 4,
+            "requiredMemory": 2048,
+            "maxLatency": 50
+        },
+        "node": {
+            "availableCpu": 16,
+            "availableMemory": 16384,
+            "latency": 30
+        },
+        "allocationScore": 0.95
+    },
+    {
+        "task": {
+            "priority": 4,
+            "requiredCpu": 2,
+            "requiredMemory": 1024,
+            "maxLatency": 100
+        },
+        "node": {
+            "availableCpu": 8,
+            "availableMemory": 8192,
+            "latency": 20
+        },
+        "allocationScore": 0.9
+    },
+    {
+        "task": {
+            "priority": 3,
+            "requiredCpu": 1,
+            "requiredMemory": 512,
+            "maxLatency": 75
+        },
+        "node": {
+            "availableCpu": 4,
+            "availableMemory": 4096,
+            "latency": 50
+        },
+        "allocationScore": 0.85
+    },
+    {
+        "task": {
+            "priority": 2,
+            "requiredCpu": 6,
+            "requiredMemory": 4096,
+            "maxLatency": 20
+        },
+        "node": {
+            "availableCpu": 10,
+            "availableMemory": 8192,
+            "latency": 15
+        },
+        "allocationScore": 0.8
+    },
+    {
+        "task": {
+            "priority": 1,
+            "requiredCpu": 3,
+            "requiredMemory": 1536,
+            "maxLatency": 60
+        },
+        "node": {
+            "availableCpu": 5,
+            "availableMemory": 6144,
+            "latency": 40
+        },
+        "allocationScore": 0.7
+    },
+    {
+        "task": {
+            "priority": 5,
+            "requiredCpu": 8,
+            "requiredMemory": 8192,
+            "maxLatency": 10
+        },
+        "node": {
+            "availableCpu": 12,
+            "availableMemory": 12288,
+            "latency": 8
+        },
+        "allocationScore": 0.97
+    },
+    {
+        "task": {
+            "priority": 2,
+            "requiredCpu": 2,
+            "requiredMemory": 1024,
+            "maxLatency": 90
+        },
+        "node": {
+            "availableCpu": 6,
+            "availableMemory": 4096,
+            "latency": 70
+        },
+        "allocationScore": 0.75
+    },
+    {
+        "task": {
+            "priority": 4,
+            "requiredCpu": 10,
+            "requiredMemory": 10240,
+            "maxLatency": 25
+        },
+        "node": {
+            "availableCpu": 20,
+            "availableMemory": 32768,
+            "latency": 15
+        },
+        "allocationScore": 0.92
+    },
+    {
+        "task": {
+            "priority": 3,
+            "requiredCpu": 4,
+            "requiredMemory": 3072,
+            "maxLatency": 30
+        },
+        "node": {
+            "availableCpu": 12,
+            "availableMemory": 16384,
+            "latency": 25
+        },
+        "allocationScore": 0.88
+    },
+    {
+        "task": {
+            "priority": 1,
+            "requiredCpu": 1,
+            "requiredMemory": 256,
+            "maxLatency": 150
+        },
+        "node": {
+            "availableCpu": 4,
+            "availableMemory": 8192,
+            "latency": 100
+        },
+        "allocationScore": 0.65
+    }
+]

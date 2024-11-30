@@ -1,0 +1,10 @@
+{
+  "initializedAt": "2024-11-24T17:34:30.515Z",
+  "placeholderKeys": [
+    {
+      "receiverId": "placeholder-receiver",
+      "sharedKey": "lkvIIRiOUpeAqvFhlW13p8MffxdEmXzRIGofdcIOp6k="
+    }
+  ],
+  "note": "These keys are placeholders. Replace during actual QKD operations."
+}

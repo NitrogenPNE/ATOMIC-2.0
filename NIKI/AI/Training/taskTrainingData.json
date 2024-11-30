@@ -1,0 +1,8002 @@
+[
+  {
+    "cpuUsage": 37.49,
+    "memoryUsage": 11.83,
+    "gpuUsage": 25.64,
+    "taskPriority": 2,
+    "latency": 51,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 8.62,
+    "memoryUsage": 36.24,
+    "gpuUsage": 17.88,
+    "taskPriority": 3,
+    "latency": 89,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 16.78,
+    "memoryUsage": 94.69,
+    "gpuUsage": 47.72,
+    "taskPriority": 2,
+    "latency": 183,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 47.14,
+    "memoryUsage": 35.89,
+    "gpuUsage": 76.8,
+    "taskPriority": 1,
+    "latency": 199,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.13,
+    "memoryUsage": 89.02,
+    "gpuUsage": 31.35,
+    "taskPriority": 5,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 56.31,
+    "memoryUsage": 9.13,
+    "gpuUsage": 46.09,
+    "taskPriority": 3,
+    "latency": 101,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 32.07,
+    "memoryUsage": 75.17,
+    "gpuUsage": 70.25,
+    "taskPriority": 9,
+    "latency": 151,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 72.39,
+    "memoryUsage": 87.69,
+    "gpuUsage": 33.83,
+    "taskPriority": 3,
+    "latency": 193,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 82.46,
+    "memoryUsage": 16.29,
+    "gpuUsage": 82.95,
+    "taskPriority": 5,
+    "latency": 60,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 12.11,
+    "memoryUsage": 88.93,
+    "gpuUsage": 65.93,
+    "taskPriority": 8,
+    "latency": 101,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.74,
+    "memoryUsage": 20.68,
+    "gpuUsage": 64.52,
+    "taskPriority": 9,
+    "latency": 180,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 49.15,
+    "memoryUsage": 5.27,
+    "gpuUsage": 52.63,
+    "taskPriority": 8,
+    "latency": 50,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 61.32,
+    "memoryUsage": 81.59,
+    "gpuUsage": 46.63,
+    "taskPriority": 1,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 43.65,
+    "memoryUsage": 52.04,
+    "gpuUsage": 7.23,
+    "taskPriority": 6,
+    "latency": 30,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 7.31,
+    "memoryUsage": 32.46,
+    "gpuUsage": 98.97,
+    "taskPriority": 9,
+    "latency": 102,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 93.39,
+    "memoryUsage": 11.72,
+    "gpuUsage": 21.49,
+    "taskPriority": 6,
+    "latency": 115,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.86,
+    "memoryUsage": 71.66,
+    "gpuUsage": 74.85,
+    "taskPriority": 4,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.33,
+    "memoryUsage": 99.01,
+    "gpuUsage": 59.58,
+    "taskPriority": 9,
+    "latency": 34,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 55.13,
+    "memoryUsage": 89.85,
+    "gpuUsage": 5.52,
+    "taskPriority": 4,
+    "latency": 171,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 51.26,
+    "memoryUsage": 53.92,
+    "gpuUsage": 83.47,
+    "taskPriority": 7,
+    "latency": 143,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.75,
+    "memoryUsage": 68.81,
+    "gpuUsage": 12.01,
+    "taskPriority": 5,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 9.71,
+    "memoryUsage": 47.05,
+    "gpuUsage": 10.14,
+    "taskPriority": 3,
+    "latency": 56,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 95.52,
+    "memoryUsage": 21.79,
+    "gpuUsage": 76.71,
+    "taskPriority": 7,
+    "latency": 126,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 62.65,
+    "memoryUsage": 46.71,
+    "gpuUsage": 22.59,
+    "taskPriority": 9,
+    "latency": 124,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 53.97,
+    "memoryUsage": 76.45,
+    "gpuUsage": 91.08,
+    "taskPriority": 8,
+    "latency": 16,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 83.16,
+    "memoryUsage": 45.29,
+    "gpuUsage": 39.28,
+    "taskPriority": 9,
+    "latency": 187,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 63.42,
+    "memoryUsage": 53.53,
+    "gpuUsage": 70.88,
+    "taskPriority": 5,
+    "latency": 193,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.16,
+    "memoryUsage": 86.35,
+    "gpuUsage": 86.03,
+    "taskPriority": 2,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 61.21,
+    "memoryUsage": 93.03,
+    "gpuUsage": 11.99,
+    "taskPriority": 7,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 84.37,
+    "memoryUsage": 15.26,
+    "gpuUsage": 21.06,
+    "taskPriority": 1,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.8,
+    "memoryUsage": 93.06,
+    "gpuUsage": 72.57,
+    "taskPriority": 2,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.15,
+    "memoryUsage": 16.12,
+    "gpuUsage": 43.35,
+    "taskPriority": 3,
+    "latency": 142,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 52.9,
+    "memoryUsage": 30.74,
+    "gpuUsage": 55.65,
+    "taskPriority": 3,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 82.46,
+    "memoryUsage": 89.23,
+    "gpuUsage": 43.46,
+    "taskPriority": 8,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 38.52,
+    "memoryUsage": 43.25,
+    "gpuUsage": 29.61,
+    "taskPriority": 4,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 80.94,
+    "memoryUsage": 14.18,
+    "gpuUsage": 83.05,
+    "taskPriority": 4,
+    "latency": 177,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 48.87,
+    "memoryUsage": 71.37,
+    "gpuUsage": 18.2,
+    "taskPriority": 9,
+    "latency": 70,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 71.04,
+    "memoryUsage": 41.39,
+    "gpuUsage": 38.49,
+    "taskPriority": 9,
+    "latency": 65,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 87.79,
+    "memoryUsage": 76,
+    "gpuUsage": 56.36,
+    "taskPriority": 3,
+    "latency": 54,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 67.97,
+    "memoryUsage": 67.06,
+    "gpuUsage": 45.46,
+    "taskPriority": 4,
+    "latency": 129,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 98.63,
+    "memoryUsage": 99.67,
+    "gpuUsage": 28.71,
+    "taskPriority": 5,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.98,
+    "memoryUsage": 37.94,
+    "gpuUsage": 55.93,
+    "taskPriority": 9,
+    "latency": 51,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 66.02,
+    "memoryUsage": 17.37,
+    "gpuUsage": 48.27,
+    "taskPriority": 9,
+    "latency": 56,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 47.2,
+    "memoryUsage": 20.55,
+    "gpuUsage": 52.36,
+    "taskPriority": 4,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.69,
+    "memoryUsage": 58.49,
+    "gpuUsage": 19.08,
+    "taskPriority": 7,
+    "latency": 43,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.53,
+    "memoryUsage": 68.5,
+    "gpuUsage": 31.87,
+    "taskPriority": 1,
+    "latency": 80,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 95.85,
+    "memoryUsage": 6.88,
+    "gpuUsage": 83.11,
+    "taskPriority": 8,
+    "latency": 149,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 36.82,
+    "memoryUsage": 11.63,
+    "gpuUsage": 70.9,
+    "taskPriority": 2,
+    "latency": 14,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 94.96,
+    "memoryUsage": 87.16,
+    "gpuUsage": 31.44,
+    "taskPriority": 4,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.32,
+    "memoryUsage": 32.18,
+    "gpuUsage": 15.79,
+    "taskPriority": 4,
+    "latency": 145,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 25.32,
+    "memoryUsage": 26.73,
+    "gpuUsage": 95.88,
+    "taskPriority": 4,
+    "latency": 132,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 18.98,
+    "memoryUsage": 89.78,
+    "gpuUsage": 45.53,
+    "taskPriority": 7,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88.74,
+    "memoryUsage": 78.92,
+    "gpuUsage": 20.86,
+    "taskPriority": 7,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 16.23,
+    "memoryUsage": 54.03,
+    "gpuUsage": 70.14,
+    "taskPriority": 8,
+    "latency": 168,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 48.51,
+    "memoryUsage": 63.98,
+    "gpuUsage": 49.46,
+    "taskPriority": 9,
+    "latency": 197,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 69.07,
+    "memoryUsage": 14.75,
+    "gpuUsage": 89.37,
+    "taskPriority": 9,
+    "latency": 189,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 85.13,
+    "memoryUsage": 44.97,
+    "gpuUsage": 21.95,
+    "taskPriority": 4,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 87.84,
+    "memoryUsage": 38.11,
+    "gpuUsage": 80.15,
+    "taskPriority": 7,
+    "latency": 10,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 40.7,
+    "memoryUsage": 51.89,
+    "gpuUsage": 72.8,
+    "taskPriority": 1,
+    "latency": 141,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 89.51,
+    "memoryUsage": 68.98,
+    "gpuUsage": 72.36,
+    "taskPriority": 5,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.8,
+    "memoryUsage": 78.59,
+    "gpuUsage": 92.06,
+    "taskPriority": 3,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 37.92,
+    "memoryUsage": 28.48,
+    "gpuUsage": 78.7,
+    "taskPriority": 5,
+    "latency": 194,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 90.77,
+    "memoryUsage": 48.09,
+    "gpuUsage": 13.61,
+    "taskPriority": 7,
+    "latency": 116,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.52,
+    "memoryUsage": 25.47,
+    "gpuUsage": 10.17,
+    "taskPriority": 3,
+    "latency": 89,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 97.59,
+    "memoryUsage": 73.4,
+    "gpuUsage": 77.53,
+    "taskPriority": 2,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 89.59,
+    "memoryUsage": 27.01,
+    "gpuUsage": 96.21,
+    "taskPriority": 5,
+    "latency": 38,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 57.83,
+    "memoryUsage": 57.33,
+    "gpuUsage": 35.51,
+    "taskPriority": 2,
+    "latency": 166,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 21.84,
+    "memoryUsage": 87.22,
+    "gpuUsage": 44.37,
+    "taskPriority": 9,
+    "latency": 179,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 13.74,
+    "memoryUsage": 34.48,
+    "gpuUsage": 5.42,
+    "taskPriority": 4,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.67,
+    "memoryUsage": 62.53,
+    "gpuUsage": 46.89,
+    "taskPriority": 4,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.29,
+    "memoryUsage": 25.83,
+    "gpuUsage": 36.91,
+    "taskPriority": 2,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.63,
+    "memoryUsage": 99.46,
+    "gpuUsage": 14.67,
+    "taskPriority": 1,
+    "latency": 16,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 17.09,
+    "memoryUsage": 16.63,
+    "gpuUsage": 85.56,
+    "taskPriority": 9,
+    "latency": 106,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 29.64,
+    "memoryUsage": 75.16,
+    "gpuUsage": 59.86,
+    "taskPriority": 2,
+    "latency": 67,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 96.07,
+    "memoryUsage": 36.61,
+    "gpuUsage": 33.27,
+    "taskPriority": 9,
+    "latency": 104,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 59.06,
+    "memoryUsage": 89.41,
+    "gpuUsage": 99.33,
+    "taskPriority": 9,
+    "latency": 90,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 86.71,
+    "memoryUsage": 46.94,
+    "gpuUsage": 98.05,
+    "taskPriority": 1,
+    "latency": 10,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 22.92,
+    "memoryUsage": 49.1,
+    "gpuUsage": 33.74,
+    "taskPriority": 9,
+    "latency": 154,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 58.32,
+    "memoryUsage": 19.48,
+    "gpuUsage": 65.58,
+    "taskPriority": 9,
+    "latency": 151,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 11.69,
+    "memoryUsage": 92.64,
+    "gpuUsage": 76.99,
+    "taskPriority": 5,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 93.86,
+    "memoryUsage": 95.15,
+    "gpuUsage": 94.42,
+    "taskPriority": 6,
+    "latency": 168,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 94.74,
+    "memoryUsage": 5.1,
+    "gpuUsage": 71.93,
+    "taskPriority": 2,
+    "latency": 64,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 54.02,
+    "memoryUsage": 45.42,
+    "gpuUsage": 89.45,
+    "taskPriority": 5,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 81.08,
+    "memoryUsage": 48.29,
+    "gpuUsage": 33.93,
+    "taskPriority": 5,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.3,
+    "memoryUsage": 26.33,
+    "gpuUsage": 18.79,
+    "taskPriority": 7,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.23,
+    "memoryUsage": 57.26,
+    "gpuUsage": 57.15,
+    "taskPriority": 8,
+    "latency": 26,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.36,
+    "memoryUsage": 48.42,
+    "gpuUsage": 68.6,
+    "taskPriority": 3,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 32.95,
+    "memoryUsage": 63.42,
+    "gpuUsage": 73.91,
+    "taskPriority": 8,
+    "latency": 124,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 72.61,
+    "memoryUsage": 57.4,
+    "gpuUsage": 61.53,
+    "taskPriority": 9,
+    "latency": 129,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 85.57,
+    "memoryUsage": 84.69,
+    "gpuUsage": 26.92,
+    "taskPriority": 5,
+    "latency": 47,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.04,
+    "memoryUsage": 26.65,
+    "gpuUsage": 71.41,
+    "taskPriority": 7,
+    "latency": 152,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 57.41,
+    "memoryUsage": 10.42,
+    "gpuUsage": 9.25,
+    "taskPriority": 3,
+    "latency": 69,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.84,
+    "memoryUsage": 91.68,
+    "gpuUsage": 39.06,
+    "taskPriority": 5,
+    "latency": 148,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 89.2,
+    "memoryUsage": 72.7,
+    "gpuUsage": 86.79,
+    "taskPriority": 9,
+    "latency": 61,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 59.15,
+    "memoryUsage": 7.65,
+    "gpuUsage": 20.14,
+    "taskPriority": 9,
+    "latency": 110,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 77.23,
+    "memoryUsage": 95.95,
+    "gpuUsage": 93.54,
+    "taskPriority": 5,
+    "latency": 12,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 83.55,
+    "memoryUsage": 60.41,
+    "gpuUsage": 68.76,
+    "taskPriority": 6,
+    "latency": 96,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.57,
+    "memoryUsage": 20.01,
+    "gpuUsage": 68.2,
+    "taskPriority": 7,
+    "latency": 31,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.22,
+    "memoryUsage": 71.71,
+    "gpuUsage": 19.34,
+    "taskPriority": 2,
+    "latency": 33,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 73.7,
+    "memoryUsage": 92.42,
+    "gpuUsage": 16.52,
+    "taskPriority": 1,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.52,
+    "memoryUsage": 21.07,
+    "gpuUsage": 59.82,
+    "taskPriority": 7,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 42.19,
+    "memoryUsage": 64.01,
+    "gpuUsage": 17.42,
+    "taskPriority": 3,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 66.4,
+    "memoryUsage": 53.8,
+    "gpuUsage": 5.88,
+    "taskPriority": 9,
+    "latency": 124,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 90.33,
+    "memoryUsage": 81.48,
+    "gpuUsage": 14.27,
+    "taskPriority": 5,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 56.58,
+    "memoryUsage": 68.53,
+    "gpuUsage": 40.47,
+    "taskPriority": 7,
+    "latency": 66,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 87.42,
+    "memoryUsage": 43.15,
+    "gpuUsage": 96.05,
+    "taskPriority": 5,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.78,
+    "memoryUsage": 22.88,
+    "gpuUsage": 11.03,
+    "taskPriority": 6,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 44.34,
+    "memoryUsage": 57.45,
+    "gpuUsage": 64.28,
+    "taskPriority": 4,
+    "latency": 104,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 7.58,
+    "memoryUsage": 76.76,
+    "gpuUsage": 85.61,
+    "taskPriority": 1,
+    "latency": 39,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 90.33,
+    "memoryUsage": 22.94,
+    "gpuUsage": 58.97,
+    "taskPriority": 3,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.08,
+    "memoryUsage": 98.06,
+    "gpuUsage": 35.68,
+    "taskPriority": 8,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 9.73,
+    "memoryUsage": 50.11,
+    "gpuUsage": 65.98,
+    "taskPriority": 5,
+    "latency": 52,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 74.01,
+    "memoryUsage": 87.88,
+    "gpuUsage": 28.22,
+    "taskPriority": 8,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 79.8,
+    "memoryUsage": 49.91,
+    "gpuUsage": 64.19,
+    "taskPriority": 4,
+    "latency": 152,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.78,
+    "memoryUsage": 80.28,
+    "gpuUsage": 12.51,
+    "taskPriority": 8,
+    "latency": 80,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.63,
+    "memoryUsage": 37.44,
+    "gpuUsage": 63.01,
+    "taskPriority": 7,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 73.23,
+    "memoryUsage": 90.29,
+    "gpuUsage": 48.56,
+    "taskPriority": 4,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 22.81,
+    "memoryUsage": 62.07,
+    "gpuUsage": 89.16,
+    "taskPriority": 6,
+    "latency": 182,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.37,
+    "memoryUsage": 89.01,
+    "gpuUsage": 89.8,
+    "taskPriority": 5,
+    "latency": 135,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.51,
+    "memoryUsage": 79.97,
+    "gpuUsage": 15.35,
+    "taskPriority": 7,
+    "latency": 39,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 93.06,
+    "memoryUsage": 68.01,
+    "gpuUsage": 27.92,
+    "taskPriority": 3,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.35,
+    "memoryUsage": 20.98,
+    "gpuUsage": 63.45,
+    "taskPriority": 1,
+    "latency": 115,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 5.46,
+    "memoryUsage": 81.07,
+    "gpuUsage": 43.37,
+    "taskPriority": 7,
+    "latency": 39,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.13,
+    "memoryUsage": 56.19,
+    "gpuUsage": 57.99,
+    "taskPriority": 8,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.6,
+    "memoryUsage": 32.6,
+    "gpuUsage": 74.53,
+    "taskPriority": 3,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.71,
+    "memoryUsage": 60.84,
+    "gpuUsage": 27.99,
+    "taskPriority": 5,
+    "latency": 38,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 71.44,
+    "memoryUsage": 57.36,
+    "gpuUsage": 79.52,
+    "taskPriority": 2,
+    "latency": 54,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.33,
+    "memoryUsage": 81.2,
+    "gpuUsage": 99.42,
+    "taskPriority": 3,
+    "latency": 179,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 31.38,
+    "memoryUsage": 34.81,
+    "gpuUsage": 55.18,
+    "taskPriority": 4,
+    "latency": 53,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 87.61,
+    "memoryUsage": 32.59,
+    "gpuUsage": 83.63,
+    "taskPriority": 9,
+    "latency": 196,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 93.54,
+    "memoryUsage": 61.26,
+    "gpuUsage": 26,
+    "taskPriority": 8,
+    "latency": 88,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 24.58,
+    "memoryUsage": 12.94,
+    "gpuUsage": 89.18,
+    "taskPriority": 9,
+    "latency": 121,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 17.08,
+    "memoryUsage": 80.08,
+    "gpuUsage": 72.41,
+    "taskPriority": 9,
+    "latency": 179,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 85.32,
+    "memoryUsage": 59.28,
+    "gpuUsage": 22.42,
+    "taskPriority": 2,
+    "latency": 103,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 10.6,
+    "memoryUsage": 44.66,
+    "gpuUsage": 25.69,
+    "taskPriority": 3,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 21.72,
+    "memoryUsage": 80.33,
+    "gpuUsage": 66.91,
+    "taskPriority": 8,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 42.08,
+    "memoryUsage": 81.65,
+    "gpuUsage": 52.26,
+    "taskPriority": 9,
+    "latency": 189,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 93.09,
+    "memoryUsage": 81.61,
+    "gpuUsage": 84.42,
+    "taskPriority": 1,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 44.57,
+    "memoryUsage": 79.92,
+    "gpuUsage": 73.83,
+    "taskPriority": 8,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 41.97,
+    "memoryUsage": 29.33,
+    "gpuUsage": 29.11,
+    "taskPriority": 3,
+    "latency": 83,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 95.93,
+    "memoryUsage": 55.54,
+    "gpuUsage": 82.84,
+    "taskPriority": 5,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.3,
+    "memoryUsage": 67.79,
+    "gpuUsage": 89.3,
+    "taskPriority": 4,
+    "latency": 30,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 88.26,
+    "memoryUsage": 25.86,
+    "gpuUsage": 34.24,
+    "taskPriority": 5,
+    "latency": 170,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 95.45,
+    "memoryUsage": 15.64,
+    "gpuUsage": 70.42,
+    "taskPriority": 1,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.7,
+    "memoryUsage": 21.49,
+    "gpuUsage": 60.9,
+    "taskPriority": 4,
+    "latency": 39,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 64.67,
+    "memoryUsage": 68.53,
+    "gpuUsage": 42.2,
+    "taskPriority": 4,
+    "latency": 137,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 18.57,
+    "memoryUsage": 64.02,
+    "gpuUsage": 62.61,
+    "taskPriority": 8,
+    "latency": 83,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 87.31,
+    "memoryUsage": 12.95,
+    "gpuUsage": 36.87,
+    "taskPriority": 1,
+    "latency": 60,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 21.77,
+    "memoryUsage": 57.15,
+    "gpuUsage": 78.43,
+    "taskPriority": 1,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 84.35,
+    "memoryUsage": 20.69,
+    "gpuUsage": 65.06,
+    "taskPriority": 8,
+    "latency": 155,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 23.05,
+    "memoryUsage": 14.46,
+    "gpuUsage": 53.54,
+    "taskPriority": 6,
+    "latency": 165,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 19.37,
+    "memoryUsage": 25.74,
+    "gpuUsage": 76.61,
+    "taskPriority": 3,
+    "latency": 169,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 19.02,
+    "memoryUsage": 52.46,
+    "gpuUsage": 63.72,
+    "taskPriority": 6,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 24.25,
+    "memoryUsage": 43.44,
+    "gpuUsage": 93,
+    "taskPriority": 9,
+    "latency": 106,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 87.13,
+    "memoryUsage": 58.58,
+    "gpuUsage": 5.3,
+    "taskPriority": 3,
+    "latency": 164,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 86.84,
+    "memoryUsage": 72.36,
+    "gpuUsage": 61.54,
+    "taskPriority": 7,
+    "latency": 143,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 91.85,
+    "memoryUsage": 72.17,
+    "gpuUsage": 87.77,
+    "taskPriority": 5,
+    "latency": 42,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 79.58,
+    "memoryUsage": 36.42,
+    "gpuUsage": 84.04,
+    "taskPriority": 4,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 39.91,
+    "memoryUsage": 10.67,
+    "gpuUsage": 10.29,
+    "taskPriority": 6,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.39,
+    "memoryUsage": 66.39,
+    "gpuUsage": 81.74,
+    "taskPriority": 1,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 69.65,
+    "memoryUsage": 55.07,
+    "gpuUsage": 92.18,
+    "taskPriority": 5,
+    "latency": 54,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 89.96,
+    "memoryUsage": 31.52,
+    "gpuUsage": 86.24,
+    "taskPriority": 4,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 26.84,
+    "memoryUsage": 6.75,
+    "gpuUsage": 44.53,
+    "taskPriority": 5,
+    "latency": 182,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 97.75,
+    "memoryUsage": 99.15,
+    "gpuUsage": 59.16,
+    "taskPriority": 3,
+    "latency": 43,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.88,
+    "memoryUsage": 22.09,
+    "gpuUsage": 85.67,
+    "taskPriority": 3,
+    "latency": 71,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 78.52,
+    "memoryUsage": 34.45,
+    "gpuUsage": 47.19,
+    "taskPriority": 1,
+    "latency": 195,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 58.13,
+    "memoryUsage": 38.9,
+    "gpuUsage": 40.69,
+    "taskPriority": 1,
+    "latency": 19,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.06,
+    "memoryUsage": 27.06,
+    "gpuUsage": 65.55,
+    "taskPriority": 9,
+    "latency": 75,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 88.04,
+    "memoryUsage": 58.97,
+    "gpuUsage": 14.77,
+    "taskPriority": 4,
+    "latency": 88,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.73,
+    "memoryUsage": 84.93,
+    "gpuUsage": 86.83,
+    "taskPriority": 3,
+    "latency": 124,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.31,
+    "memoryUsage": 42.05,
+    "gpuUsage": 15.16,
+    "taskPriority": 9,
+    "latency": 123,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 52.06,
+    "memoryUsage": 23.04,
+    "gpuUsage": 89.77,
+    "taskPriority": 5,
+    "latency": 19,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 86.47,
+    "memoryUsage": 41.55,
+    "gpuUsage": 17.91,
+    "taskPriority": 3,
+    "latency": 131,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.09,
+    "memoryUsage": 65.58,
+    "gpuUsage": 92.51,
+    "taskPriority": 7,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 35.91,
+    "memoryUsage": 36.81,
+    "gpuUsage": 79.23,
+    "taskPriority": 2,
+    "latency": 12,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 55.4,
+    "memoryUsage": 83.2,
+    "gpuUsage": 50.15,
+    "taskPriority": 1,
+    "latency": 181,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.57,
+    "memoryUsage": 30.71,
+    "gpuUsage": 73.32,
+    "taskPriority": 6,
+    "latency": 182,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.53,
+    "memoryUsage": 10.44,
+    "gpuUsage": 15.54,
+    "taskPriority": 5,
+    "latency": 153,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 70.41,
+    "memoryUsage": 52.47,
+    "gpuUsage": 22.56,
+    "taskPriority": 4,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.18,
+    "memoryUsage": 58.03,
+    "gpuUsage": 63.42,
+    "taskPriority": 3,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.1,
+    "memoryUsage": 88.49,
+    "gpuUsage": 74.16,
+    "taskPriority": 2,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 41.85,
+    "memoryUsage": 7.54,
+    "gpuUsage": 96.94,
+    "taskPriority": 3,
+    "latency": 116,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 93.4,
+    "memoryUsage": 19.37,
+    "gpuUsage": 27.31,
+    "taskPriority": 7,
+    "latency": 20,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 63.74,
+    "memoryUsage": 62.07,
+    "gpuUsage": 85.87,
+    "taskPriority": 9,
+    "latency": 98,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 76.22,
+    "memoryUsage": 58.41,
+    "gpuUsage": 20.7,
+    "taskPriority": 6,
+    "latency": 58,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 20.53,
+    "memoryUsage": 6.79,
+    "gpuUsage": 80.64,
+    "taskPriority": 2,
+    "latency": 54,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 58.14,
+    "memoryUsage": 31.17,
+    "gpuUsage": 48.09,
+    "taskPriority": 3,
+    "latency": 22,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 66.55,
+    "memoryUsage": 22.5,
+    "gpuUsage": 84.53,
+    "taskPriority": 6,
+    "latency": 47,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 37.81,
+    "memoryUsage": 44.8,
+    "gpuUsage": 50.19,
+    "taskPriority": 2,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 54.52,
+    "memoryUsage": 64.45,
+    "gpuUsage": 79.58,
+    "taskPriority": 6,
+    "latency": 130,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.12,
+    "memoryUsage": 58.11,
+    "gpuUsage": 13.02,
+    "taskPriority": 6,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 52.8,
+    "memoryUsage": 28.96,
+    "gpuUsage": 61.01,
+    "taskPriority": 7,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 13.93,
+    "memoryUsage": 91.2,
+    "gpuUsage": 63.47,
+    "taskPriority": 3,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 25.74,
+    "memoryUsage": 81.19,
+    "gpuUsage": 48.21,
+    "taskPriority": 3,
+    "latency": 63,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.27,
+    "memoryUsage": 27.96,
+    "gpuUsage": 90.82,
+    "taskPriority": 6,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 60.45,
+    "memoryUsage": 99.07,
+    "gpuUsage": 50.89,
+    "taskPriority": 9,
+    "latency": 11,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 46.17,
+    "memoryUsage": 83.58,
+    "gpuUsage": 39.85,
+    "taskPriority": 9,
+    "latency": 53,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 80.46,
+    "memoryUsage": 66.48,
+    "gpuUsage": 87.37,
+    "taskPriority": 2,
+    "latency": 20,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 46.9,
+    "memoryUsage": 62.39,
+    "gpuUsage": 23.2,
+    "taskPriority": 6,
+    "latency": 147,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.01,
+    "memoryUsage": 16.92,
+    "gpuUsage": 96.5,
+    "taskPriority": 8,
+    "latency": 146,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 18.8,
+    "memoryUsage": 50.34,
+    "gpuUsage": 50.64,
+    "taskPriority": 4,
+    "latency": 119,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 26.01,
+    "memoryUsage": 33.32,
+    "gpuUsage": 52.3,
+    "taskPriority": 1,
+    "latency": 66,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.99,
+    "memoryUsage": 76.95,
+    "gpuUsage": 66.42,
+    "taskPriority": 4,
+    "latency": 55,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.25,
+    "memoryUsage": 71.91,
+    "gpuUsage": 71.44,
+    "taskPriority": 2,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 78.21,
+    "memoryUsage": 31.48,
+    "gpuUsage": 31.31,
+    "taskPriority": 8,
+    "latency": 182,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 15.95,
+    "memoryUsage": 32.42,
+    "gpuUsage": 43.57,
+    "taskPriority": 5,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 99.36,
+    "memoryUsage": 61.11,
+    "gpuUsage": 31.77,
+    "taskPriority": 2,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 12.49,
+    "memoryUsage": 78.2,
+    "gpuUsage": 57.42,
+    "taskPriority": 4,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.95,
+    "memoryUsage": 62.82,
+    "gpuUsage": 90.64,
+    "taskPriority": 2,
+    "latency": 163,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.38,
+    "memoryUsage": 13.24,
+    "gpuUsage": 97.66,
+    "taskPriority": 2,
+    "latency": 197,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.42,
+    "memoryUsage": 39.79,
+    "gpuUsage": 43.63,
+    "taskPriority": 1,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77,
+    "memoryUsage": 28.77,
+    "gpuUsage": 39.23,
+    "taskPriority": 8,
+    "latency": 198,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.16,
+    "memoryUsage": 81.09,
+    "gpuUsage": 81.3,
+    "taskPriority": 4,
+    "latency": 125,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 37.94,
+    "memoryUsage": 44.71,
+    "gpuUsage": 53.95,
+    "taskPriority": 5,
+    "latency": 149,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 9.04,
+    "memoryUsage": 88.53,
+    "gpuUsage": 40.56,
+    "taskPriority": 7,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 46.13,
+    "memoryUsage": 73.35,
+    "gpuUsage": 12.93,
+    "taskPriority": 7,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 98,
+    "memoryUsage": 79.69,
+    "gpuUsage": 98.76,
+    "taskPriority": 7,
+    "latency": 46,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 87.33,
+    "memoryUsage": 48.68,
+    "gpuUsage": 38.28,
+    "taskPriority": 5,
+    "latency": 55,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 70.15,
+    "memoryUsage": 29.35,
+    "gpuUsage": 29.46,
+    "taskPriority": 4,
+    "latency": 42,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 14.62,
+    "memoryUsage": 70.39,
+    "gpuUsage": 71.49,
+    "taskPriority": 4,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 86.06,
+    "memoryUsage": 92.06,
+    "gpuUsage": 10.11,
+    "taskPriority": 7,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 32.44,
+    "memoryUsage": 43.49,
+    "gpuUsage": 72.25,
+    "taskPriority": 3,
+    "latency": 145,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.21,
+    "memoryUsage": 40.33,
+    "gpuUsage": 34.06,
+    "taskPriority": 5,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.36,
+    "memoryUsage": 52.82,
+    "gpuUsage": 75.83,
+    "taskPriority": 6,
+    "latency": 159,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.54,
+    "memoryUsage": 49.59,
+    "gpuUsage": 32.89,
+    "taskPriority": 8,
+    "latency": 198,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.67,
+    "memoryUsage": 56.69,
+    "gpuUsage": 11.52,
+    "taskPriority": 5,
+    "latency": 125,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.8,
+    "memoryUsage": 71.54,
+    "gpuUsage": 20.05,
+    "taskPriority": 7,
+    "latency": 79,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.56,
+    "memoryUsage": 59.47,
+    "gpuUsage": 89.71,
+    "taskPriority": 8,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 92.61,
+    "memoryUsage": 24.07,
+    "gpuUsage": 25.52,
+    "taskPriority": 7,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 30.2,
+    "memoryUsage": 89.74,
+    "gpuUsage": 98.86,
+    "taskPriority": 9,
+    "latency": 31,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 79.02,
+    "memoryUsage": 81.34,
+    "gpuUsage": 80.43,
+    "taskPriority": 6,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.84,
+    "memoryUsage": 31.58,
+    "gpuUsage": 57.17,
+    "taskPriority": 5,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 98.38,
+    "memoryUsage": 67.59,
+    "gpuUsage": 86.86,
+    "taskPriority": 8,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 64.57,
+    "memoryUsage": 85.08,
+    "gpuUsage": 56.14,
+    "taskPriority": 7,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 76.75,
+    "memoryUsage": 77.88,
+    "gpuUsage": 66.99,
+    "taskPriority": 4,
+    "latency": 124,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 5.61,
+    "memoryUsage": 12.47,
+    "gpuUsage": 19.73,
+    "taskPriority": 2,
+    "latency": 24,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 49.94,
+    "memoryUsage": 85.68,
+    "gpuUsage": 75.75,
+    "taskPriority": 4,
+    "latency": 129,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 8.93,
+    "memoryUsage": 81.14,
+    "gpuUsage": 89.03,
+    "taskPriority": 2,
+    "latency": 131,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 84.5,
+    "memoryUsage": 72.46,
+    "gpuUsage": 21.67,
+    "taskPriority": 4,
+    "latency": 162,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 51.5,
+    "memoryUsage": 42.71,
+    "gpuUsage": 91.81,
+    "taskPriority": 9,
+    "latency": 67,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 62.49,
+    "memoryUsage": 91.5,
+    "gpuUsage": 82.33,
+    "taskPriority": 7,
+    "latency": 80,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.27,
+    "memoryUsage": 32.06,
+    "gpuUsage": 80.37,
+    "taskPriority": 6,
+    "latency": 197,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.19,
+    "memoryUsage": 10.11,
+    "gpuUsage": 18,
+    "taskPriority": 8,
+    "latency": 111,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 42.95,
+    "memoryUsage": 73.11,
+    "gpuUsage": 16.73,
+    "taskPriority": 8,
+    "latency": 117,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 56.59,
+    "memoryUsage": 28.57,
+    "gpuUsage": 86.42,
+    "taskPriority": 7,
+    "latency": 128,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 18.41,
+    "memoryUsage": 11.51,
+    "gpuUsage": 58.34,
+    "taskPriority": 7,
+    "latency": 14,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 59.4,
+    "memoryUsage": 71.68,
+    "gpuUsage": 22.03,
+    "taskPriority": 4,
+    "latency": 189,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 81.52,
+    "memoryUsage": 25.47,
+    "gpuUsage": 93.89,
+    "taskPriority": 6,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.46,
+    "memoryUsage": 68.55,
+    "gpuUsage": 79.92,
+    "taskPriority": 7,
+    "latency": 47,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 50.09,
+    "memoryUsage": 53.97,
+    "gpuUsage": 25.84,
+    "taskPriority": 3,
+    "latency": 151,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.56,
+    "memoryUsage": 11.78,
+    "gpuUsage": 97.31,
+    "taskPriority": 9,
+    "latency": 61,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 87.08,
+    "memoryUsage": 10,
+    "gpuUsage": 30.67,
+    "taskPriority": 4,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 70.25,
+    "memoryUsage": 55.57,
+    "gpuUsage": 31.34,
+    "taskPriority": 8,
+    "latency": 126,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 26.71,
+    "memoryUsage": 41.4,
+    "gpuUsage": 80.3,
+    "taskPriority": 3,
+    "latency": 69,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 8.47,
+    "memoryUsage": 65.51,
+    "gpuUsage": 94.18,
+    "taskPriority": 2,
+    "latency": 117,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 58.63,
+    "memoryUsage": 19.14,
+    "gpuUsage": 96.98,
+    "taskPriority": 7,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 50.62,
+    "memoryUsage": 87.57,
+    "gpuUsage": 23.02,
+    "taskPriority": 2,
+    "latency": 59,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.57,
+    "memoryUsage": 92.44,
+    "gpuUsage": 24.06,
+    "taskPriority": 6,
+    "latency": 152,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 66.63,
+    "memoryUsage": 62.26,
+    "gpuUsage": 73.04,
+    "taskPriority": 5,
+    "latency": 163,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.19,
+    "memoryUsage": 21.25,
+    "gpuUsage": 91.4,
+    "taskPriority": 6,
+    "latency": 12,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 87.92,
+    "memoryUsage": 23.29,
+    "gpuUsage": 72.74,
+    "taskPriority": 7,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.57,
+    "memoryUsage": 75.7,
+    "gpuUsage": 83.38,
+    "taskPriority": 6,
+    "latency": 76,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 79.48,
+    "memoryUsage": 7.81,
+    "gpuUsage": 78.89,
+    "taskPriority": 5,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.17,
+    "memoryUsage": 78.34,
+    "gpuUsage": 87.42,
+    "taskPriority": 5,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.66,
+    "memoryUsage": 66.25,
+    "gpuUsage": 87.94,
+    "taskPriority": 3,
+    "latency": 109,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.11,
+    "memoryUsage": 76.15,
+    "gpuUsage": 70.4,
+    "taskPriority": 2,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 50.41,
+    "memoryUsage": 36.01,
+    "gpuUsage": 76.24,
+    "taskPriority": 9,
+    "latency": 185,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 90.87,
+    "memoryUsage": 26.12,
+    "gpuUsage": 74.62,
+    "taskPriority": 1,
+    "latency": 170,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 56.19,
+    "memoryUsage": 7.77,
+    "gpuUsage": 99.2,
+    "taskPriority": 5,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 14.02,
+    "memoryUsage": 73.94,
+    "gpuUsage": 22.13,
+    "taskPriority": 7,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.57,
+    "memoryUsage": 31.74,
+    "gpuUsage": 78.01,
+    "taskPriority": 6,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.82,
+    "memoryUsage": 60.34,
+    "gpuUsage": 79.86,
+    "taskPriority": 8,
+    "latency": 142,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 51.33,
+    "memoryUsage": 48.47,
+    "gpuUsage": 47.33,
+    "taskPriority": 3,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.15,
+    "memoryUsage": 7.11,
+    "gpuUsage": 91.14,
+    "taskPriority": 5,
+    "latency": 32,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 62.36,
+    "memoryUsage": 9.45,
+    "gpuUsage": 54.68,
+    "taskPriority": 3,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 33.55,
+    "memoryUsage": 64.82,
+    "gpuUsage": 69.58,
+    "taskPriority": 8,
+    "latency": 83,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 18.75,
+    "memoryUsage": 65.07,
+    "gpuUsage": 17.56,
+    "taskPriority": 8,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.79,
+    "memoryUsage": 39,
+    "gpuUsage": 30.02,
+    "taskPriority": 9,
+    "latency": 140,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 61.23,
+    "memoryUsage": 8.76,
+    "gpuUsage": 70.75,
+    "taskPriority": 6,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 47.2,
+    "memoryUsage": 15.72,
+    "gpuUsage": 94.53,
+    "taskPriority": 9,
+    "latency": 68,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 97.7,
+    "memoryUsage": 20.11,
+    "gpuUsage": 49.16,
+    "taskPriority": 6,
+    "latency": 66,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.08,
+    "memoryUsage": 77.1,
+    "gpuUsage": 61.06,
+    "taskPriority": 1,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 25.99,
+    "memoryUsage": 8.38,
+    "gpuUsage": 49,
+    "taskPriority": 9,
+    "latency": 184,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 53.31,
+    "memoryUsage": 78.4,
+    "gpuUsage": 18.57,
+    "taskPriority": 1,
+    "latency": 188,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 70.18,
+    "memoryUsage": 37.31,
+    "gpuUsage": 55.59,
+    "taskPriority": 8,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.25,
+    "memoryUsage": 41.73,
+    "gpuUsage": 13.43,
+    "taskPriority": 4,
+    "latency": 65,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.64,
+    "memoryUsage": 26.05,
+    "gpuUsage": 26.85,
+    "taskPriority": 7,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.67,
+    "memoryUsage": 19.12,
+    "gpuUsage": 90.43,
+    "taskPriority": 8,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.99,
+    "memoryUsage": 80.69,
+    "gpuUsage": 28.03,
+    "taskPriority": 6,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 29.2,
+    "memoryUsage": 62.78,
+    "gpuUsage": 5.74,
+    "taskPriority": 4,
+    "latency": 26,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 17.97,
+    "memoryUsage": 80.46,
+    "gpuUsage": 31,
+    "taskPriority": 6,
+    "latency": 13,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 16.18,
+    "memoryUsage": 7.39,
+    "gpuUsage": 36.22,
+    "taskPriority": 1,
+    "latency": 124,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 71.5,
+    "memoryUsage": 86.59,
+    "gpuUsage": 53.19,
+    "taskPriority": 4,
+    "latency": 83,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.43,
+    "memoryUsage": 85.64,
+    "gpuUsage": 5.33,
+    "taskPriority": 8,
+    "latency": 194,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.87,
+    "memoryUsage": 30,
+    "gpuUsage": 10.59,
+    "taskPriority": 3,
+    "latency": 41,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.75,
+    "memoryUsage": 40.84,
+    "gpuUsage": 63.24,
+    "taskPriority": 1,
+    "latency": 79,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 54.39,
+    "memoryUsage": 36.32,
+    "gpuUsage": 66.82,
+    "taskPriority": 5,
+    "latency": 65,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 96.77,
+    "memoryUsage": 61.89,
+    "gpuUsage": 30.06,
+    "taskPriority": 2,
+    "latency": 11,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.74,
+    "memoryUsage": 88.29,
+    "gpuUsage": 37.83,
+    "taskPriority": 2,
+    "latency": 90,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.47,
+    "memoryUsage": 20.2,
+    "gpuUsage": 56,
+    "taskPriority": 6,
+    "latency": 153,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.16,
+    "memoryUsage": 42.91,
+    "gpuUsage": 16.75,
+    "taskPriority": 3,
+    "latency": 37,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.53,
+    "memoryUsage": 63.14,
+    "gpuUsage": 25.48,
+    "taskPriority": 1,
+    "latency": 177,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 31.6,
+    "memoryUsage": 78.85,
+    "gpuUsage": 68.35,
+    "taskPriority": 1,
+    "latency": 177,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.32,
+    "memoryUsage": 77.83,
+    "gpuUsage": 57.96,
+    "taskPriority": 1,
+    "latency": 42,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.69,
+    "memoryUsage": 43.11,
+    "gpuUsage": 26.02,
+    "taskPriority": 6,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 76.48,
+    "memoryUsage": 68.95,
+    "gpuUsage": 22.22,
+    "taskPriority": 1,
+    "latency": 75,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.75,
+    "memoryUsage": 87.65,
+    "gpuUsage": 37.62,
+    "taskPriority": 1,
+    "latency": 21,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 80.11,
+    "memoryUsage": 91.27,
+    "gpuUsage": 97,
+    "taskPriority": 8,
+    "latency": 131,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.17,
+    "memoryUsage": 50.06,
+    "gpuUsage": 91.71,
+    "taskPriority": 9,
+    "latency": 173,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 53.87,
+    "memoryUsage": 54.88,
+    "gpuUsage": 81.22,
+    "taskPriority": 2,
+    "latency": 135,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.57,
+    "memoryUsage": 58.57,
+    "gpuUsage": 16.78,
+    "taskPriority": 9,
+    "latency": 38,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 89.41,
+    "memoryUsage": 70.32,
+    "gpuUsage": 99.03,
+    "taskPriority": 3,
+    "latency": 41,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 80.95,
+    "memoryUsage": 34.11,
+    "gpuUsage": 53.82,
+    "taskPriority": 1,
+    "latency": 60,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 20.62,
+    "memoryUsage": 32.09,
+    "gpuUsage": 72.68,
+    "taskPriority": 7,
+    "latency": 70,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 65.24,
+    "memoryUsage": 32.03,
+    "gpuUsage": 73.1,
+    "taskPriority": 1,
+    "latency": 132,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 6.23,
+    "memoryUsage": 68.55,
+    "gpuUsage": 69.61,
+    "taskPriority": 1,
+    "latency": 170,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 26.64,
+    "memoryUsage": 31.78,
+    "gpuUsage": 97.98,
+    "taskPriority": 5,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 16.18,
+    "memoryUsage": 82,
+    "gpuUsage": 6.91,
+    "taskPriority": 9,
+    "latency": 115,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 98.56,
+    "memoryUsage": 86.81,
+    "gpuUsage": 32.32,
+    "taskPriority": 9,
+    "latency": 95,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 9.77,
+    "memoryUsage": 55.67,
+    "gpuUsage": 97.28,
+    "taskPriority": 2,
+    "latency": 160,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 7.53,
+    "memoryUsage": 25.24,
+    "gpuUsage": 49.78,
+    "taskPriority": 5,
+    "latency": 121,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 84.06,
+    "memoryUsage": 38.89,
+    "gpuUsage": 40.11,
+    "taskPriority": 4,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 81.36,
+    "memoryUsage": 35.05,
+    "gpuUsage": 95.22,
+    "taskPriority": 1,
+    "latency": 84,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 10.81,
+    "memoryUsage": 78.41,
+    "gpuUsage": 81.91,
+    "taskPriority": 7,
+    "latency": 40,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 44.44,
+    "memoryUsage": 59.2,
+    "gpuUsage": 19.77,
+    "taskPriority": 8,
+    "latency": 151,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 68.95,
+    "memoryUsage": 95.96,
+    "gpuUsage": 47.66,
+    "taskPriority": 6,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.23,
+    "memoryUsage": 86.25,
+    "gpuUsage": 52.55,
+    "taskPriority": 7,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.05,
+    "memoryUsage": 87.86,
+    "gpuUsage": 57.58,
+    "taskPriority": 3,
+    "latency": 64,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.47,
+    "memoryUsage": 91.63,
+    "gpuUsage": 9.55,
+    "taskPriority": 7,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 23.58,
+    "memoryUsage": 30.18,
+    "gpuUsage": 93.15,
+    "taskPriority": 4,
+    "latency": 49,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 69.06,
+    "memoryUsage": 65.11,
+    "gpuUsage": 15.77,
+    "taskPriority": 7,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.12,
+    "memoryUsage": 36.91,
+    "gpuUsage": 74.46,
+    "taskPriority": 3,
+    "latency": 155,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 89.27,
+    "memoryUsage": 39.16,
+    "gpuUsage": 52.32,
+    "taskPriority": 8,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 88.46,
+    "memoryUsage": 42.37,
+    "gpuUsage": 49.51,
+    "taskPriority": 6,
+    "latency": 141,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 35.69,
+    "memoryUsage": 69.9,
+    "gpuUsage": 72.58,
+    "taskPriority": 5,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 24.85,
+    "memoryUsage": 65.24,
+    "gpuUsage": 15.08,
+    "taskPriority": 4,
+    "latency": 179,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 28.77,
+    "memoryUsage": 21.75,
+    "gpuUsage": 63.15,
+    "taskPriority": 8,
+    "latency": 53,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 93.55,
+    "memoryUsage": 24.77,
+    "gpuUsage": 87.02,
+    "taskPriority": 6,
+    "latency": 45,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 56.16,
+    "memoryUsage": 90.87,
+    "gpuUsage": 68.41,
+    "taskPriority": 8,
+    "latency": 27,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 52.35,
+    "memoryUsage": 98.19,
+    "gpuUsage": 73.95,
+    "taskPriority": 5,
+    "latency": 58,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.51,
+    "memoryUsage": 24.02,
+    "gpuUsage": 11.83,
+    "taskPriority": 8,
+    "latency": 19,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 61.33,
+    "memoryUsage": 55.89,
+    "gpuUsage": 24.89,
+    "taskPriority": 9,
+    "latency": 85,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 29.61,
+    "memoryUsage": 79.82,
+    "gpuUsage": 26.28,
+    "taskPriority": 6,
+    "latency": 24,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 63.85,
+    "memoryUsage": 93.3,
+    "gpuUsage": 95.52,
+    "taskPriority": 3,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 42.38,
+    "memoryUsage": 82.04,
+    "gpuUsage": 82.72,
+    "taskPriority": 9,
+    "latency": 154,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 93.34,
+    "memoryUsage": 77.54,
+    "gpuUsage": 54.99,
+    "taskPriority": 6,
+    "latency": 125,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 8.03,
+    "memoryUsage": 57.77,
+    "gpuUsage": 6.05,
+    "taskPriority": 4,
+    "latency": 66,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 19.9,
+    "memoryUsage": 89.41,
+    "gpuUsage": 45.51,
+    "taskPriority": 9,
+    "latency": 49,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 85.85,
+    "memoryUsage": 68.52,
+    "gpuUsage": 76.17,
+    "taskPriority": 4,
+    "latency": 145,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 94.04,
+    "memoryUsage": 73.98,
+    "gpuUsage": 88.09,
+    "taskPriority": 2,
+    "latency": 62,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.36,
+    "memoryUsage": 33.42,
+    "gpuUsage": 13.73,
+    "taskPriority": 7,
+    "latency": 81,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.35,
+    "memoryUsage": 10.23,
+    "gpuUsage": 42.99,
+    "taskPriority": 6,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.04,
+    "memoryUsage": 33.39,
+    "gpuUsage": 30.7,
+    "taskPriority": 1,
+    "latency": 31,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 60.64,
+    "memoryUsage": 87.75,
+    "gpuUsage": 81.38,
+    "taskPriority": 5,
+    "latency": 36,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 83.06,
+    "memoryUsage": 82.57,
+    "gpuUsage": 57.91,
+    "taskPriority": 7,
+    "latency": 89,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.42,
+    "memoryUsage": 52.98,
+    "gpuUsage": 51.88,
+    "taskPriority": 3,
+    "latency": 166,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 64.34,
+    "memoryUsage": 71.86,
+    "gpuUsage": 68.91,
+    "taskPriority": 2,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 66.18,
+    "memoryUsage": 71.2,
+    "gpuUsage": 85.46,
+    "taskPriority": 9,
+    "latency": 121,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 34.75,
+    "memoryUsage": 93.29,
+    "gpuUsage": 51.54,
+    "taskPriority": 2,
+    "latency": 45,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 43.64,
+    "memoryUsage": 37.67,
+    "gpuUsage": 53.18,
+    "taskPriority": 8,
+    "latency": 106,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.52,
+    "memoryUsage": 7.23,
+    "gpuUsage": 61.17,
+    "taskPriority": 9,
+    "latency": 12,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 69.48,
+    "memoryUsage": 10.6,
+    "gpuUsage": 60.99,
+    "taskPriority": 8,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 90.49,
+    "memoryUsage": 55.75,
+    "gpuUsage": 75.69,
+    "taskPriority": 5,
+    "latency": 142,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 15.91,
+    "memoryUsage": 49.77,
+    "gpuUsage": 22.49,
+    "taskPriority": 7,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 98.86,
+    "memoryUsage": 36.79,
+    "gpuUsage": 85.89,
+    "taskPriority": 6,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 70.79,
+    "memoryUsage": 59.81,
+    "gpuUsage": 43.42,
+    "taskPriority": 7,
+    "latency": 70,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.34,
+    "memoryUsage": 56.22,
+    "gpuUsage": 72.91,
+    "taskPriority": 1,
+    "latency": 124,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.04,
+    "memoryUsage": 83.56,
+    "gpuUsage": 17.35,
+    "taskPriority": 7,
+    "latency": 177,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.86,
+    "memoryUsage": 41.31,
+    "gpuUsage": 77.34,
+    "taskPriority": 9,
+    "latency": 62,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 56,
+    "memoryUsage": 66.72,
+    "gpuUsage": 35.52,
+    "taskPriority": 9,
+    "latency": 117,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 83.13,
+    "memoryUsage": 76.21,
+    "gpuUsage": 39.46,
+    "taskPriority": 2,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.44,
+    "memoryUsage": 78.2,
+    "gpuUsage": 12.95,
+    "taskPriority": 8,
+    "latency": 170,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.2,
+    "memoryUsage": 70.87,
+    "gpuUsage": 38.7,
+    "taskPriority": 1,
+    "latency": 160,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.86,
+    "memoryUsage": 60.29,
+    "gpuUsage": 29.21,
+    "taskPriority": 4,
+    "latency": 86,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.73,
+    "memoryUsage": 56.45,
+    "gpuUsage": 37.04,
+    "taskPriority": 8,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 8.75,
+    "memoryUsage": 98.87,
+    "gpuUsage": 53.93,
+    "taskPriority": 2,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 23.84,
+    "memoryUsage": 48.54,
+    "gpuUsage": 29.78,
+    "taskPriority": 4,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.4,
+    "memoryUsage": 19.72,
+    "gpuUsage": 23.79,
+    "taskPriority": 9,
+    "latency": 66,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 88.14,
+    "memoryUsage": 88.26,
+    "gpuUsage": 53.18,
+    "taskPriority": 7,
+    "latency": 30,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.77,
+    "memoryUsage": 61.91,
+    "gpuUsage": 91.64,
+    "taskPriority": 8,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.71,
+    "memoryUsage": 45.56,
+    "gpuUsage": 64.48,
+    "taskPriority": 4,
+    "latency": 192,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 29.42,
+    "memoryUsage": 90.88,
+    "gpuUsage": 78.04,
+    "taskPriority": 8,
+    "latency": 69,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 32.37,
+    "memoryUsage": 47.51,
+    "gpuUsage": 44.8,
+    "taskPriority": 8,
+    "latency": 58,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 47.23,
+    "memoryUsage": 29.16,
+    "gpuUsage": 32.26,
+    "taskPriority": 5,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 28.49,
+    "memoryUsage": 95.51,
+    "gpuUsage": 30.57,
+    "taskPriority": 3,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.2,
+    "memoryUsage": 99.59,
+    "gpuUsage": 38.83,
+    "taskPriority": 4,
+    "latency": 135,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.91,
+    "memoryUsage": 14.95,
+    "gpuUsage": 12.71,
+    "taskPriority": 1,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 72.6,
+    "memoryUsage": 23.57,
+    "gpuUsage": 44.27,
+    "taskPriority": 5,
+    "latency": 122,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 8.3,
+    "memoryUsage": 43.32,
+    "gpuUsage": 35.39,
+    "taskPriority": 8,
+    "latency": 179,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 77.5,
+    "memoryUsage": 32.73,
+    "gpuUsage": 85.32,
+    "taskPriority": 6,
+    "latency": 28,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 51.98,
+    "memoryUsage": 99.66,
+    "gpuUsage": 5.18,
+    "taskPriority": 9,
+    "latency": 117,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 49.78,
+    "memoryUsage": 42.55,
+    "gpuUsage": 47.46,
+    "taskPriority": 1,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 85.38,
+    "memoryUsage": 53.06,
+    "gpuUsage": 99.13,
+    "taskPriority": 6,
+    "latency": 16,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 21.93,
+    "memoryUsage": 38.48,
+    "gpuUsage": 64.91,
+    "taskPriority": 1,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 21.48,
+    "memoryUsage": 40.42,
+    "gpuUsage": 94.42,
+    "taskPriority": 8,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 22.16,
+    "memoryUsage": 40.04,
+    "gpuUsage": 97.79,
+    "taskPriority": 5,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 61.54,
+    "memoryUsage": 13.39,
+    "gpuUsage": 19.06,
+    "taskPriority": 4,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.57,
+    "memoryUsage": 21.67,
+    "gpuUsage": 74.81,
+    "taskPriority": 2,
+    "latency": 43,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 47.22,
+    "memoryUsage": 46.35,
+    "gpuUsage": 71.54,
+    "taskPriority": 1,
+    "latency": 155,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 52.22,
+    "memoryUsage": 56.1,
+    "gpuUsage": 22.32,
+    "taskPriority": 8,
+    "latency": 105,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.81,
+    "memoryUsage": 57.53,
+    "gpuUsage": 35.36,
+    "taskPriority": 1,
+    "latency": 149,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 78.92,
+    "memoryUsage": 10.23,
+    "gpuUsage": 15.14,
+    "taskPriority": 4,
+    "latency": 76,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 67.43,
+    "memoryUsage": 64.56,
+    "gpuUsage": 73.35,
+    "taskPriority": 3,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.07,
+    "memoryUsage": 13.11,
+    "gpuUsage": 15.45,
+    "taskPriority": 5,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 19.34,
+    "memoryUsage": 29.99,
+    "gpuUsage": 45.1,
+    "taskPriority": 5,
+    "latency": 30,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 42.1,
+    "memoryUsage": 46.6,
+    "gpuUsage": 30.91,
+    "taskPriority": 2,
+    "latency": 41,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.69,
+    "memoryUsage": 31.55,
+    "gpuUsage": 84.09,
+    "taskPriority": 3,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 85.19,
+    "memoryUsage": 14.37,
+    "gpuUsage": 97.27,
+    "taskPriority": 1,
+    "latency": 86,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.57,
+    "memoryUsage": 76.49,
+    "gpuUsage": 47.05,
+    "taskPriority": 9,
+    "latency": 13,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 78.54,
+    "memoryUsage": 61.92,
+    "gpuUsage": 73.5,
+    "taskPriority": 1,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 23.33,
+    "memoryUsage": 30.16,
+    "gpuUsage": 44.07,
+    "taskPriority": 9,
+    "latency": 24,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 24.91,
+    "memoryUsage": 69.11,
+    "gpuUsage": 82.09,
+    "taskPriority": 4,
+    "latency": 17,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 13.34,
+    "memoryUsage": 90.87,
+    "gpuUsage": 20.91,
+    "taskPriority": 9,
+    "latency": 155,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 20.91,
+    "memoryUsage": 73.07,
+    "gpuUsage": 8.42,
+    "taskPriority": 2,
+    "latency": 38,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.96,
+    "memoryUsage": 47.02,
+    "gpuUsage": 86.51,
+    "taskPriority": 1,
+    "latency": 101,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 23.35,
+    "memoryUsage": 12.21,
+    "gpuUsage": 62.02,
+    "taskPriority": 9,
+    "latency": 52,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 9.9,
+    "memoryUsage": 95.01,
+    "gpuUsage": 87.34,
+    "taskPriority": 4,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 81.95,
+    "memoryUsage": 51.09,
+    "gpuUsage": 75.62,
+    "taskPriority": 8,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 22.85,
+    "memoryUsage": 72.93,
+    "gpuUsage": 25.37,
+    "taskPriority": 9,
+    "latency": 79,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 50.6,
+    "memoryUsage": 55.91,
+    "gpuUsage": 60.39,
+    "taskPriority": 8,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 62.66,
+    "memoryUsage": 14.39,
+    "gpuUsage": 76.38,
+    "taskPriority": 4,
+    "latency": 192,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 26.29,
+    "memoryUsage": 67.49,
+    "gpuUsage": 43.24,
+    "taskPriority": 1,
+    "latency": 86,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 92.94,
+    "memoryUsage": 56.51,
+    "gpuUsage": 52.45,
+    "taskPriority": 9,
+    "latency": 146,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 42.43,
+    "memoryUsage": 31.37,
+    "gpuUsage": 7.26,
+    "taskPriority": 9,
+    "latency": 184,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 98.04,
+    "memoryUsage": 41.78,
+    "gpuUsage": 90.34,
+    "taskPriority": 1,
+    "latency": 23,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 29.24,
+    "memoryUsage": 18.02,
+    "gpuUsage": 87.53,
+    "taskPriority": 9,
+    "latency": 55,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 37.77,
+    "memoryUsage": 62.48,
+    "gpuUsage": 90.19,
+    "taskPriority": 3,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.78,
+    "memoryUsage": 25.55,
+    "gpuUsage": 45.32,
+    "taskPriority": 6,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.06,
+    "memoryUsage": 61.6,
+    "gpuUsage": 25.46,
+    "taskPriority": 1,
+    "latency": 40,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 41.28,
+    "memoryUsage": 81.04,
+    "gpuUsage": 43.1,
+    "taskPriority": 7,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.23,
+    "memoryUsage": 30.45,
+    "gpuUsage": 43.82,
+    "taskPriority": 4,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.92,
+    "memoryUsage": 62.48,
+    "gpuUsage": 82.76,
+    "taskPriority": 2,
+    "latency": 63,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.36,
+    "memoryUsage": 73.07,
+    "gpuUsage": 33.99,
+    "taskPriority": 2,
+    "latency": 20,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 85.73,
+    "memoryUsage": 33.37,
+    "gpuUsage": 67.22,
+    "taskPriority": 1,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.33,
+    "memoryUsage": 39.49,
+    "gpuUsage": 33.32,
+    "taskPriority": 3,
+    "latency": 126,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 10.33,
+    "memoryUsage": 6.62,
+    "gpuUsage": 37.53,
+    "taskPriority": 3,
+    "latency": 188,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 58.83,
+    "memoryUsage": 91.84,
+    "gpuUsage": 53.26,
+    "taskPriority": 7,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 52.41,
+    "memoryUsage": 55.23,
+    "gpuUsage": 55.75,
+    "taskPriority": 1,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.46,
+    "memoryUsage": 87.28,
+    "gpuUsage": 75.12,
+    "taskPriority": 7,
+    "latency": 56,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 88.77,
+    "memoryUsage": 27.25,
+    "gpuUsage": 68.4,
+    "taskPriority": 2,
+    "latency": 142,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 29.43,
+    "memoryUsage": 17.76,
+    "gpuUsage": 10.45,
+    "taskPriority": 3,
+    "latency": 10,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 60.12,
+    "memoryUsage": 65.29,
+    "gpuUsage": 57.72,
+    "taskPriority": 5,
+    "latency": 82,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 65.23,
+    "memoryUsage": 51.44,
+    "gpuUsage": 74.41,
+    "taskPriority": 3,
+    "latency": 131,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.88,
+    "memoryUsage": 93.1,
+    "gpuUsage": 91.65,
+    "taskPriority": 4,
+    "latency": 193,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 29.87,
+    "memoryUsage": 6.54,
+    "gpuUsage": 6.17,
+    "taskPriority": 8,
+    "latency": 123,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 85.58,
+    "memoryUsage": 65.8,
+    "gpuUsage": 90.93,
+    "taskPriority": 3,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88.81,
+    "memoryUsage": 70.48,
+    "gpuUsage": 14.14,
+    "taskPriority": 5,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.97,
+    "memoryUsage": 11.3,
+    "gpuUsage": 84.02,
+    "taskPriority": 3,
+    "latency": 199,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 44.41,
+    "memoryUsage": 23.02,
+    "gpuUsage": 30.29,
+    "taskPriority": 6,
+    "latency": 72,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.09,
+    "memoryUsage": 82.44,
+    "gpuUsage": 75.04,
+    "taskPriority": 3,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.33,
+    "memoryUsage": 70.34,
+    "gpuUsage": 49.74,
+    "taskPriority": 8,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 67.09,
+    "memoryUsage": 75.15,
+    "gpuUsage": 30.48,
+    "taskPriority": 1,
+    "latency": 105,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.91,
+    "memoryUsage": 48.82,
+    "gpuUsage": 39.58,
+    "taskPriority": 9,
+    "latency": 183,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 50.85,
+    "memoryUsage": 26.29,
+    "gpuUsage": 42.69,
+    "taskPriority": 1,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.74,
+    "memoryUsage": 57.37,
+    "gpuUsage": 23.11,
+    "taskPriority": 5,
+    "latency": 159,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.62,
+    "memoryUsage": 13.98,
+    "gpuUsage": 24.03,
+    "taskPriority": 6,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 54.72,
+    "memoryUsage": 19.57,
+    "gpuUsage": 34.48,
+    "taskPriority": 3,
+    "latency": 109,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 47.27,
+    "memoryUsage": 15.76,
+    "gpuUsage": 12.19,
+    "taskPriority": 3,
+    "latency": 80,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 90.6,
+    "memoryUsage": 58.75,
+    "gpuUsage": 40.81,
+    "taskPriority": 8,
+    "latency": 194,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 59.19,
+    "memoryUsage": 49.26,
+    "gpuUsage": 22.15,
+    "taskPriority": 2,
+    "latency": 17,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 13,
+    "memoryUsage": 66.72,
+    "gpuUsage": 12.82,
+    "taskPriority": 1,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 65.08,
+    "memoryUsage": 75.77,
+    "gpuUsage": 15.42,
+    "taskPriority": 6,
+    "latency": 94,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.3,
+    "memoryUsage": 69.71,
+    "gpuUsage": 11.6,
+    "taskPriority": 2,
+    "latency": 176,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.87,
+    "memoryUsage": 54.14,
+    "gpuUsage": 60.24,
+    "taskPriority": 7,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 75.53,
+    "memoryUsage": 53.25,
+    "gpuUsage": 22.45,
+    "taskPriority": 5,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 24.69,
+    "memoryUsage": 11.57,
+    "gpuUsage": 27.59,
+    "taskPriority": 4,
+    "latency": 11,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 78.96,
+    "memoryUsage": 48.21,
+    "gpuUsage": 99.21,
+    "taskPriority": 8,
+    "latency": 49,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 71.56,
+    "memoryUsage": 5.96,
+    "gpuUsage": 33.53,
+    "taskPriority": 8,
+    "latency": 47,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 12.72,
+    "memoryUsage": 62.23,
+    "gpuUsage": 96.85,
+    "taskPriority": 3,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 18.47,
+    "memoryUsage": 38.18,
+    "gpuUsage": 68.22,
+    "taskPriority": 5,
+    "latency": 13,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 38.5,
+    "memoryUsage": 17.91,
+    "gpuUsage": 40.86,
+    "taskPriority": 4,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 38.07,
+    "memoryUsage": 25.29,
+    "gpuUsage": 96.59,
+    "taskPriority": 6,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.26,
+    "memoryUsage": 68.95,
+    "gpuUsage": 80.77,
+    "taskPriority": 8,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 48.21,
+    "memoryUsage": 44.46,
+    "gpuUsage": 46.65,
+    "taskPriority": 4,
+    "latency": 129,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 63.19,
+    "memoryUsage": 94.46,
+    "gpuUsage": 55.19,
+    "taskPriority": 8,
+    "latency": 105,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.92,
+    "memoryUsage": 62.21,
+    "gpuUsage": 70.81,
+    "taskPriority": 1,
+    "latency": 76,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 46.94,
+    "memoryUsage": 95.42,
+    "gpuUsage": 93.55,
+    "taskPriority": 8,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.93,
+    "memoryUsage": 75.76,
+    "gpuUsage": 58.13,
+    "taskPriority": 5,
+    "latency": 145,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.97,
+    "memoryUsage": 31.18,
+    "gpuUsage": 79.86,
+    "taskPriority": 4,
+    "latency": 40,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 62.23,
+    "memoryUsage": 72.37,
+    "gpuUsage": 36.01,
+    "taskPriority": 2,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 68.19,
+    "memoryUsage": 16.92,
+    "gpuUsage": 92.67,
+    "taskPriority": 2,
+    "latency": 46,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 45.7,
+    "memoryUsage": 44.38,
+    "gpuUsage": 42.04,
+    "taskPriority": 8,
+    "latency": 112,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.26,
+    "memoryUsage": 39.51,
+    "gpuUsage": 46.53,
+    "taskPriority": 1,
+    "latency": 25,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.44,
+    "memoryUsage": 91.02,
+    "gpuUsage": 27.49,
+    "taskPriority": 9,
+    "latency": 34,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 23.65,
+    "memoryUsage": 24.63,
+    "gpuUsage": 90.11,
+    "taskPriority": 3,
+    "latency": 81,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 88.28,
+    "memoryUsage": 51.8,
+    "gpuUsage": 39.49,
+    "taskPriority": 9,
+    "latency": 193,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 10.42,
+    "memoryUsage": 85.27,
+    "gpuUsage": 12.11,
+    "taskPriority": 6,
+    "latency": 64,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.6,
+    "memoryUsage": 30.14,
+    "gpuUsage": 93.32,
+    "taskPriority": 1,
+    "latency": 89,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 57.85,
+    "memoryUsage": 70.91,
+    "gpuUsage": 82.88,
+    "taskPriority": 5,
+    "latency": 194,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.41,
+    "memoryUsage": 55.97,
+    "gpuUsage": 83.91,
+    "taskPriority": 2,
+    "latency": 12,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 86.35,
+    "memoryUsage": 24.5,
+    "gpuUsage": 33.85,
+    "taskPriority": 7,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 18.94,
+    "memoryUsage": 29.33,
+    "gpuUsage": 22.83,
+    "taskPriority": 9,
+    "latency": 145,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 17.81,
+    "memoryUsage": 57.51,
+    "gpuUsage": 56.68,
+    "taskPriority": 9,
+    "latency": 93,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 79.77,
+    "memoryUsage": 80.4,
+    "gpuUsage": 11.82,
+    "taskPriority": 5,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.31,
+    "memoryUsage": 20.15,
+    "gpuUsage": 76.72,
+    "taskPriority": 2,
+    "latency": 49,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.68,
+    "memoryUsage": 58.85,
+    "gpuUsage": 90.03,
+    "taskPriority": 6,
+    "latency": 72,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 22.06,
+    "memoryUsage": 26.26,
+    "gpuUsage": 15.64,
+    "taskPriority": 6,
+    "latency": 37,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 14.13,
+    "memoryUsage": 70.21,
+    "gpuUsage": 47.13,
+    "taskPriority": 1,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 80.55,
+    "memoryUsage": 92.85,
+    "gpuUsage": 35.53,
+    "taskPriority": 4,
+    "latency": 48,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 43.69,
+    "memoryUsage": 25.51,
+    "gpuUsage": 61.94,
+    "taskPriority": 8,
+    "latency": 168,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 69.98,
+    "memoryUsage": 65.77,
+    "gpuUsage": 72.6,
+    "taskPriority": 3,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 96.44,
+    "memoryUsage": 73.34,
+    "gpuUsage": 74.8,
+    "taskPriority": 9,
+    "latency": 158,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 98.69,
+    "memoryUsage": 67.29,
+    "gpuUsage": 54.48,
+    "taskPriority": 8,
+    "latency": 47,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 78.28,
+    "memoryUsage": 88.75,
+    "gpuUsage": 14.08,
+    "taskPriority": 3,
+    "latency": 53,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.4,
+    "memoryUsage": 69.84,
+    "gpuUsage": 80.91,
+    "taskPriority": 8,
+    "latency": 83,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 12.62,
+    "memoryUsage": 27.87,
+    "gpuUsage": 16.16,
+    "taskPriority": 1,
+    "latency": 59,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 19.85,
+    "memoryUsage": 60.83,
+    "gpuUsage": 31.37,
+    "taskPriority": 9,
+    "latency": 131,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 66.15,
+    "memoryUsage": 98.68,
+    "gpuUsage": 88.16,
+    "taskPriority": 1,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 10.94,
+    "memoryUsage": 36.26,
+    "gpuUsage": 51.19,
+    "taskPriority": 1,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 47.16,
+    "memoryUsage": 45.4,
+    "gpuUsage": 79.23,
+    "taskPriority": 9,
+    "latency": 51,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 11.14,
+    "memoryUsage": 13.13,
+    "gpuUsage": 12.27,
+    "taskPriority": 5,
+    "latency": 102,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 32.42,
+    "memoryUsage": 53.3,
+    "gpuUsage": 35.67,
+    "taskPriority": 2,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 52.13,
+    "memoryUsage": 70.11,
+    "gpuUsage": 99.15,
+    "taskPriority": 8,
+    "latency": 65,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.06,
+    "memoryUsage": 45.57,
+    "gpuUsage": 95.71,
+    "taskPriority": 2,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.95,
+    "memoryUsage": 18.15,
+    "gpuUsage": 50.09,
+    "taskPriority": 1,
+    "latency": 104,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 69.49,
+    "memoryUsage": 91.43,
+    "gpuUsage": 68.91,
+    "taskPriority": 2,
+    "latency": 77,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.27,
+    "memoryUsage": 25.71,
+    "gpuUsage": 88.91,
+    "taskPriority": 3,
+    "latency": 143,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.59,
+    "memoryUsage": 28.95,
+    "gpuUsage": 19.68,
+    "taskPriority": 7,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.93,
+    "memoryUsage": 53.99,
+    "gpuUsage": 23.02,
+    "taskPriority": 7,
+    "latency": 115,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.82,
+    "memoryUsage": 51.79,
+    "gpuUsage": 20.76,
+    "taskPriority": 9,
+    "latency": 143,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 25.87,
+    "memoryUsage": 84.75,
+    "gpuUsage": 8.41,
+    "taskPriority": 8,
+    "latency": 182,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.93,
+    "memoryUsage": 29.32,
+    "gpuUsage": 49.92,
+    "taskPriority": 7,
+    "latency": 189,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 70.01,
+    "memoryUsage": 62.33,
+    "gpuUsage": 31.52,
+    "taskPriority": 4,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 51.24,
+    "memoryUsage": 19.6,
+    "gpuUsage": 96.56,
+    "taskPriority": 3,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 41.55,
+    "memoryUsage": 90.49,
+    "gpuUsage": 5.36,
+    "taskPriority": 7,
+    "latency": 62,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 51.53,
+    "memoryUsage": 30.27,
+    "gpuUsage": 53.51,
+    "taskPriority": 8,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.14,
+    "memoryUsage": 8.09,
+    "gpuUsage": 50.77,
+    "taskPriority": 6,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 30.36,
+    "memoryUsage": 82.45,
+    "gpuUsage": 68.95,
+    "taskPriority": 3,
+    "latency": 132,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.9,
+    "memoryUsage": 74.55,
+    "gpuUsage": 51.51,
+    "taskPriority": 1,
+    "latency": 56,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 24.24,
+    "memoryUsage": 16.43,
+    "gpuUsage": 5.47,
+    "taskPriority": 8,
+    "latency": 199,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 62.88,
+    "memoryUsage": 56.37,
+    "gpuUsage": 63.38,
+    "taskPriority": 1,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88.59,
+    "memoryUsage": 24.5,
+    "gpuUsage": 29.91,
+    "taskPriority": 9,
+    "latency": 187,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 47.93,
+    "memoryUsage": 6.56,
+    "gpuUsage": 59.51,
+    "taskPriority": 6,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.8,
+    "memoryUsage": 92.2,
+    "gpuUsage": 63.69,
+    "taskPriority": 6,
+    "latency": 128,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 24.82,
+    "memoryUsage": 52.7,
+    "gpuUsage": 6.63,
+    "taskPriority": 6,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 44.81,
+    "memoryUsage": 61.63,
+    "gpuUsage": 50.07,
+    "taskPriority": 7,
+    "latency": 124,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.15,
+    "memoryUsage": 40.36,
+    "gpuUsage": 29.25,
+    "taskPriority": 7,
+    "latency": 162,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 47.89,
+    "memoryUsage": 45.64,
+    "gpuUsage": 98.96,
+    "taskPriority": 8,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 86.85,
+    "memoryUsage": 42.52,
+    "gpuUsage": 86.29,
+    "taskPriority": 4,
+    "latency": 190,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.24,
+    "memoryUsage": 35.58,
+    "gpuUsage": 67.55,
+    "taskPriority": 8,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 71.32,
+    "memoryUsage": 13.15,
+    "gpuUsage": 67.62,
+    "taskPriority": 1,
+    "latency": 181,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 56.24,
+    "memoryUsage": 16.3,
+    "gpuUsage": 72.99,
+    "taskPriority": 1,
+    "latency": 58,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 41.11,
+    "memoryUsage": 25,
+    "gpuUsage": 73.64,
+    "taskPriority": 4,
+    "latency": 113,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.93,
+    "memoryUsage": 53.77,
+    "gpuUsage": 40.92,
+    "taskPriority": 3,
+    "latency": 19,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 67.2,
+    "memoryUsage": 50.33,
+    "gpuUsage": 100,
+    "taskPriority": 8,
+    "latency": 94,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 10.53,
+    "memoryUsage": 37.62,
+    "gpuUsage": 5.86,
+    "taskPriority": 8,
+    "latency": 42,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 53.23,
+    "memoryUsage": 85.86,
+    "gpuUsage": 14.49,
+    "taskPriority": 1,
+    "latency": 26,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.61,
+    "memoryUsage": 33.84,
+    "gpuUsage": 74.4,
+    "taskPriority": 2,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 54.13,
+    "memoryUsage": 42.74,
+    "gpuUsage": 87.71,
+    "taskPriority": 3,
+    "latency": 154,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.54,
+    "memoryUsage": 7.85,
+    "gpuUsage": 86.59,
+    "taskPriority": 1,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 16.81,
+    "memoryUsage": 83.19,
+    "gpuUsage": 75.6,
+    "taskPriority": 1,
+    "latency": 61,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.99,
+    "memoryUsage": 40.11,
+    "gpuUsage": 72.29,
+    "taskPriority": 6,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.54,
+    "memoryUsage": 19.75,
+    "gpuUsage": 86.93,
+    "taskPriority": 5,
+    "latency": 19,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 29.56,
+    "memoryUsage": 56.6,
+    "gpuUsage": 60.7,
+    "taskPriority": 6,
+    "latency": 142,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 66.43,
+    "memoryUsage": 91.73,
+    "gpuUsage": 52.76,
+    "taskPriority": 2,
+    "latency": 183,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 90.28,
+    "memoryUsage": 8.19,
+    "gpuUsage": 24.39,
+    "taskPriority": 2,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 85.99,
+    "memoryUsage": 14.31,
+    "gpuUsage": 40.39,
+    "taskPriority": 7,
+    "latency": 24,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.04,
+    "memoryUsage": 43.52,
+    "gpuUsage": 33.5,
+    "taskPriority": 9,
+    "latency": 187,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 55.33,
+    "memoryUsage": 63.3,
+    "gpuUsage": 71.13,
+    "taskPriority": 7,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 63.21,
+    "memoryUsage": 11.57,
+    "gpuUsage": 8.66,
+    "taskPriority": 2,
+    "latency": 143,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 5.22,
+    "memoryUsage": 56.98,
+    "gpuUsage": 75.45,
+    "taskPriority": 9,
+    "latency": 129,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 18.93,
+    "memoryUsage": 57.8,
+    "gpuUsage": 34.12,
+    "taskPriority": 7,
+    "latency": 116,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.55,
+    "memoryUsage": 7.69,
+    "gpuUsage": 64.79,
+    "taskPriority": 3,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 24.65,
+    "memoryUsage": 71.71,
+    "gpuUsage": 30.84,
+    "taskPriority": 9,
+    "latency": 123,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 30.31,
+    "memoryUsage": 50.32,
+    "gpuUsage": 73.02,
+    "taskPriority": 6,
+    "latency": 61,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 29.1,
+    "memoryUsage": 15.5,
+    "gpuUsage": 47.94,
+    "taskPriority": 1,
+    "latency": 157,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 82.69,
+    "memoryUsage": 91.22,
+    "gpuUsage": 75.4,
+    "taskPriority": 6,
+    "latency": 57,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.76,
+    "memoryUsage": 96.11,
+    "gpuUsage": 79.32,
+    "taskPriority": 2,
+    "latency": 164,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.45,
+    "memoryUsage": 83.42,
+    "gpuUsage": 11.1,
+    "taskPriority": 2,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.5,
+    "memoryUsage": 77.3,
+    "gpuUsage": 90.51,
+    "taskPriority": 9,
+    "latency": 20,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 81.31,
+    "memoryUsage": 43.46,
+    "gpuUsage": 56.12,
+    "taskPriority": 8,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 85.92,
+    "memoryUsage": 66.08,
+    "gpuUsage": 45.94,
+    "taskPriority": 2,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 49.33,
+    "memoryUsage": 25.9,
+    "gpuUsage": 87.58,
+    "taskPriority": 9,
+    "latency": 129,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 15.63,
+    "memoryUsage": 44.53,
+    "gpuUsage": 24.72,
+    "taskPriority": 4,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 85.92,
+    "memoryUsage": 72.31,
+    "gpuUsage": 69.46,
+    "taskPriority": 1,
+    "latency": 188,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.4,
+    "memoryUsage": 61.22,
+    "gpuUsage": 47.37,
+    "taskPriority": 6,
+    "latency": 89,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.03,
+    "memoryUsage": 60.46,
+    "gpuUsage": 9.51,
+    "taskPriority": 5,
+    "latency": 81,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 14.38,
+    "memoryUsage": 7.73,
+    "gpuUsage": 72.51,
+    "taskPriority": 4,
+    "latency": 77,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 23.3,
+    "memoryUsage": 54.34,
+    "gpuUsage": 95.18,
+    "taskPriority": 5,
+    "latency": 39,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 63.53,
+    "memoryUsage": 64.61,
+    "gpuUsage": 8.15,
+    "taskPriority": 2,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 42.03,
+    "memoryUsage": 62.05,
+    "gpuUsage": 40.25,
+    "taskPriority": 2,
+    "latency": 123,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.07,
+    "memoryUsage": 13.44,
+    "gpuUsage": 67.67,
+    "taskPriority": 7,
+    "latency": 79,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.07,
+    "memoryUsage": 30.34,
+    "gpuUsage": 44.29,
+    "taskPriority": 1,
+    "latency": 12,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 60.59,
+    "memoryUsage": 19.1,
+    "gpuUsage": 15.96,
+    "taskPriority": 9,
+    "latency": 66,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 14.85,
+    "memoryUsage": 12.45,
+    "gpuUsage": 72.91,
+    "taskPriority": 3,
+    "latency": 88,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 63.31,
+    "memoryUsage": 70.73,
+    "gpuUsage": 37.6,
+    "taskPriority": 7,
+    "latency": 24,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 96.31,
+    "memoryUsage": 69.12,
+    "gpuUsage": 26.01,
+    "taskPriority": 8,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 94.12,
+    "memoryUsage": 65.32,
+    "gpuUsage": 33.22,
+    "taskPriority": 8,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.39,
+    "memoryUsage": 5.14,
+    "gpuUsage": 59.56,
+    "taskPriority": 1,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 85.71,
+    "memoryUsage": 65.07,
+    "gpuUsage": 78.6,
+    "taskPriority": 6,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.41,
+    "memoryUsage": 81.76,
+    "gpuUsage": 28.16,
+    "taskPriority": 5,
+    "latency": 45,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 14.2,
+    "memoryUsage": 92.2,
+    "gpuUsage": 32.85,
+    "taskPriority": 2,
+    "latency": 23,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 68.08,
+    "memoryUsage": 23.27,
+    "gpuUsage": 56.45,
+    "taskPriority": 5,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 15.63,
+    "memoryUsage": 42,
+    "gpuUsage": 18.71,
+    "taskPriority": 7,
+    "latency": 50,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 95.46,
+    "memoryUsage": 42.74,
+    "gpuUsage": 80.31,
+    "taskPriority": 9,
+    "latency": 134,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 36.47,
+    "memoryUsage": 38.56,
+    "gpuUsage": 51.14,
+    "taskPriority": 2,
+    "latency": 82,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 31.07,
+    "memoryUsage": 87.17,
+    "gpuUsage": 99.7,
+    "taskPriority": 7,
+    "latency": 60,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 17.46,
+    "memoryUsage": 50.96,
+    "gpuUsage": 54.5,
+    "taskPriority": 5,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.85,
+    "memoryUsage": 62.22,
+    "gpuUsage": 35.87,
+    "taskPriority": 6,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 84.35,
+    "memoryUsage": 78.83,
+    "gpuUsage": 89.31,
+    "taskPriority": 7,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.28,
+    "memoryUsage": 84.8,
+    "gpuUsage": 67.47,
+    "taskPriority": 1,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 55.37,
+    "memoryUsage": 77.86,
+    "gpuUsage": 66.39,
+    "taskPriority": 6,
+    "latency": 90,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 20.8,
+    "memoryUsage": 45.91,
+    "gpuUsage": 11.99,
+    "taskPriority": 9,
+    "latency": 160,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 54.88,
+    "memoryUsage": 94.57,
+    "gpuUsage": 9.91,
+    "taskPriority": 5,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88,
+    "memoryUsage": 38.02,
+    "gpuUsage": 43.94,
+    "taskPriority": 2,
+    "latency": 175,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 46.52,
+    "memoryUsage": 53.61,
+    "gpuUsage": 38.51,
+    "taskPriority": 9,
+    "latency": 171,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 31.94,
+    "memoryUsage": 70.93,
+    "gpuUsage": 86.26,
+    "taskPriority": 6,
+    "latency": 46,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 6.33,
+    "memoryUsage": 53.19,
+    "gpuUsage": 48.09,
+    "taskPriority": 4,
+    "latency": 147,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 7.47,
+    "memoryUsage": 44.67,
+    "gpuUsage": 36.39,
+    "taskPriority": 8,
+    "latency": 82,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 68.12,
+    "memoryUsage": 36.6,
+    "gpuUsage": 25.87,
+    "taskPriority": 8,
+    "latency": 25,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.02,
+    "memoryUsage": 62.04,
+    "gpuUsage": 23.21,
+    "taskPriority": 4,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.72,
+    "memoryUsage": 87.05,
+    "gpuUsage": 13.34,
+    "taskPriority": 7,
+    "latency": 159,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 18.87,
+    "memoryUsage": 9.69,
+    "gpuUsage": 53.04,
+    "taskPriority": 5,
+    "latency": 103,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 77.53,
+    "memoryUsage": 72.76,
+    "gpuUsage": 69.68,
+    "taskPriority": 2,
+    "latency": 51,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 79.51,
+    "memoryUsage": 50.37,
+    "gpuUsage": 8.54,
+    "taskPriority": 8,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 56.09,
+    "memoryUsage": 84.38,
+    "gpuUsage": 61.74,
+    "taskPriority": 3,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 54.13,
+    "memoryUsage": 11.72,
+    "gpuUsage": 60.53,
+    "taskPriority": 6,
+    "latency": 26,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 43.6,
+    "memoryUsage": 91.59,
+    "gpuUsage": 14.79,
+    "taskPriority": 4,
+    "latency": 49,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 95.96,
+    "memoryUsage": 7.01,
+    "gpuUsage": 34.35,
+    "taskPriority": 9,
+    "latency": 48,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 10.86,
+    "memoryUsage": 75.52,
+    "gpuUsage": 81.14,
+    "taskPriority": 2,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.84,
+    "memoryUsage": 61.01,
+    "gpuUsage": 88.86,
+    "taskPriority": 8,
+    "latency": 63,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 50.65,
+    "memoryUsage": 30.93,
+    "gpuUsage": 18.32,
+    "taskPriority": 8,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 56.86,
+    "memoryUsage": 68.15,
+    "gpuUsage": 88.77,
+    "taskPriority": 8,
+    "latency": 179,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.99,
+    "memoryUsage": 7.31,
+    "gpuUsage": 9.59,
+    "taskPriority": 6,
+    "latency": 51,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.78,
+    "memoryUsage": 71.62,
+    "gpuUsage": 91.48,
+    "taskPriority": 4,
+    "latency": 128,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 61.17,
+    "memoryUsage": 38.19,
+    "gpuUsage": 45.72,
+    "taskPriority": 4,
+    "latency": 119,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 31.66,
+    "memoryUsage": 17.42,
+    "gpuUsage": 55.34,
+    "taskPriority": 9,
+    "latency": 45,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 41.54,
+    "memoryUsage": 32.97,
+    "gpuUsage": 58.97,
+    "taskPriority": 2,
+    "latency": 145,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.97,
+    "memoryUsage": 25.27,
+    "gpuUsage": 17.74,
+    "taskPriority": 9,
+    "latency": 30,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 75.68,
+    "memoryUsage": 99,
+    "gpuUsage": 35.1,
+    "taskPriority": 7,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88.84,
+    "memoryUsage": 49.25,
+    "gpuUsage": 56.15,
+    "taskPriority": 3,
+    "latency": 77,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 34.84,
+    "memoryUsage": 97.56,
+    "gpuUsage": 70,
+    "taskPriority": 7,
+    "latency": 61,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 18.36,
+    "memoryUsage": 96.42,
+    "gpuUsage": 50.19,
+    "taskPriority": 4,
+    "latency": 114,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 93.18,
+    "memoryUsage": 35.3,
+    "gpuUsage": 69.21,
+    "taskPriority": 3,
+    "latency": 18,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 38.69,
+    "memoryUsage": 48.39,
+    "gpuUsage": 8.09,
+    "taskPriority": 5,
+    "latency": 73,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.26,
+    "memoryUsage": 69.53,
+    "gpuUsage": 16.25,
+    "taskPriority": 2,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 56.34,
+    "memoryUsage": 65.72,
+    "gpuUsage": 75.54,
+    "taskPriority": 5,
+    "latency": 155,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.36,
+    "memoryUsage": 5.03,
+    "gpuUsage": 65.72,
+    "taskPriority": 9,
+    "latency": 54,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 88.92,
+    "memoryUsage": 18.72,
+    "gpuUsage": 44.55,
+    "taskPriority": 7,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.87,
+    "memoryUsage": 45.22,
+    "gpuUsage": 60.03,
+    "taskPriority": 6,
+    "latency": 40,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 74.44,
+    "memoryUsage": 57.24,
+    "gpuUsage": 9.24,
+    "taskPriority": 9,
+    "latency": 67,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 13.77,
+    "memoryUsage": 29.85,
+    "gpuUsage": 86.57,
+    "taskPriority": 2,
+    "latency": 29,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 28.13,
+    "memoryUsage": 57.85,
+    "gpuUsage": 89.66,
+    "taskPriority": 6,
+    "latency": 176,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 88.69,
+    "memoryUsage": 79.21,
+    "gpuUsage": 35.85,
+    "taskPriority": 4,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 18.22,
+    "memoryUsage": 23.09,
+    "gpuUsage": 90.84,
+    "taskPriority": 9,
+    "latency": 76,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 89.89,
+    "memoryUsage": 99.98,
+    "gpuUsage": 9.81,
+    "taskPriority": 6,
+    "latency": 53,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 61.59,
+    "memoryUsage": 32.04,
+    "gpuUsage": 60.54,
+    "taskPriority": 9,
+    "latency": 188,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 8.12,
+    "memoryUsage": 38.74,
+    "gpuUsage": 82.57,
+    "taskPriority": 8,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 63.79,
+    "memoryUsage": 5.6,
+    "gpuUsage": 52,
+    "taskPriority": 5,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.05,
+    "memoryUsage": 99.83,
+    "gpuUsage": 73.28,
+    "taskPriority": 9,
+    "latency": 182,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 77.77,
+    "memoryUsage": 47.22,
+    "gpuUsage": 99.11,
+    "taskPriority": 3,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 63.5,
+    "memoryUsage": 25.42,
+    "gpuUsage": 85.51,
+    "taskPriority": 5,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.98,
+    "memoryUsage": 53.9,
+    "gpuUsage": 88.1,
+    "taskPriority": 2,
+    "latency": 14,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 31.66,
+    "memoryUsage": 44.21,
+    "gpuUsage": 51.43,
+    "taskPriority": 7,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 99.72,
+    "memoryUsage": 9.49,
+    "gpuUsage": 54.58,
+    "taskPriority": 3,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.65,
+    "memoryUsage": 11.24,
+    "gpuUsage": 31.81,
+    "taskPriority": 4,
+    "latency": 80,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 33.41,
+    "memoryUsage": 58.1,
+    "gpuUsage": 80.44,
+    "taskPriority": 6,
+    "latency": 50,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 55.92,
+    "memoryUsage": 17.94,
+    "gpuUsage": 26.49,
+    "taskPriority": 1,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 60.15,
+    "memoryUsage": 28.85,
+    "gpuUsage": 57.11,
+    "taskPriority": 2,
+    "latency": 42,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 29.36,
+    "memoryUsage": 82.92,
+    "gpuUsage": 46.8,
+    "taskPriority": 8,
+    "latency": 49,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.99,
+    "memoryUsage": 49.03,
+    "gpuUsage": 14.48,
+    "taskPriority": 4,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 5.94,
+    "memoryUsage": 86.49,
+    "gpuUsage": 65.79,
+    "taskPriority": 9,
+    "latency": 14,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 29.51,
+    "memoryUsage": 55.73,
+    "gpuUsage": 69.88,
+    "taskPriority": 3,
+    "latency": 70,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.3,
+    "memoryUsage": 38.32,
+    "gpuUsage": 87.59,
+    "taskPriority": 2,
+    "latency": 157,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 42.91,
+    "memoryUsage": 80.65,
+    "gpuUsage": 38.31,
+    "taskPriority": 8,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 92.73,
+    "memoryUsage": 63.57,
+    "gpuUsage": 77.86,
+    "taskPriority": 2,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.98,
+    "memoryUsage": 84.74,
+    "gpuUsage": 41.61,
+    "taskPriority": 9,
+    "latency": 185,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 80.24,
+    "memoryUsage": 29.86,
+    "gpuUsage": 72.77,
+    "taskPriority": 8,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.73,
+    "memoryUsage": 59.46,
+    "gpuUsage": 78.66,
+    "taskPriority": 7,
+    "latency": 49,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.25,
+    "memoryUsage": 32.54,
+    "gpuUsage": 8.42,
+    "taskPriority": 4,
+    "latency": 13,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 40.34,
+    "memoryUsage": 38.56,
+    "gpuUsage": 14.76,
+    "taskPriority": 9,
+    "latency": 12,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 96.36,
+    "memoryUsage": 75.73,
+    "gpuUsage": 43.19,
+    "taskPriority": 6,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.94,
+    "memoryUsage": 20.4,
+    "gpuUsage": 92.85,
+    "taskPriority": 3,
+    "latency": 133,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 58.98,
+    "memoryUsage": 69.87,
+    "gpuUsage": 24.04,
+    "taskPriority": 1,
+    "latency": 117,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 10.33,
+    "memoryUsage": 24.61,
+    "gpuUsage": 52.7,
+    "taskPriority": 4,
+    "latency": 190,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 17.48,
+    "memoryUsage": 79.75,
+    "gpuUsage": 98.95,
+    "taskPriority": 3,
+    "latency": 51,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.21,
+    "memoryUsage": 75.47,
+    "gpuUsage": 13.26,
+    "taskPriority": 2,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 87.59,
+    "memoryUsage": 10.66,
+    "gpuUsage": 27.77,
+    "taskPriority": 3,
+    "latency": 49,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.4,
+    "memoryUsage": 19.01,
+    "gpuUsage": 54.98,
+    "taskPriority": 9,
+    "latency": 42,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 31.15,
+    "memoryUsage": 52.28,
+    "gpuUsage": 64.58,
+    "taskPriority": 8,
+    "latency": 113,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.72,
+    "memoryUsage": 96.64,
+    "gpuUsage": 40.08,
+    "taskPriority": 8,
+    "latency": 77,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.25,
+    "memoryUsage": 9.74,
+    "gpuUsage": 17.34,
+    "taskPriority": 4,
+    "latency": 196,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 78.82,
+    "memoryUsage": 14.09,
+    "gpuUsage": 98,
+    "taskPriority": 2,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 16.33,
+    "memoryUsage": 8.98,
+    "gpuUsage": 62.06,
+    "taskPriority": 3,
+    "latency": 70,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 21.63,
+    "memoryUsage": 64.42,
+    "gpuUsage": 53.43,
+    "taskPriority": 3,
+    "latency": 42,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 68.64,
+    "memoryUsage": 31.38,
+    "gpuUsage": 79.71,
+    "taskPriority": 5,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.75,
+    "memoryUsage": 62.81,
+    "gpuUsage": 22.73,
+    "taskPriority": 3,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 51.94,
+    "memoryUsage": 18.69,
+    "gpuUsage": 68.56,
+    "taskPriority": 3,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 60.96,
+    "memoryUsage": 40.5,
+    "gpuUsage": 48,
+    "taskPriority": 1,
+    "latency": 192,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 66.95,
+    "memoryUsage": 41.4,
+    "gpuUsage": 22.74,
+    "taskPriority": 2,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 27.28,
+    "memoryUsage": 41.17,
+    "gpuUsage": 94.01,
+    "taskPriority": 2,
+    "latency": 95,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 51.75,
+    "memoryUsage": 62.58,
+    "gpuUsage": 69.58,
+    "taskPriority": 7,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 68.41,
+    "memoryUsage": 20.35,
+    "gpuUsage": 97.99,
+    "taskPriority": 1,
+    "latency": 101,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.16,
+    "memoryUsage": 48.74,
+    "gpuUsage": 25.48,
+    "taskPriority": 2,
+    "latency": 176,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.39,
+    "memoryUsage": 13.95,
+    "gpuUsage": 20.45,
+    "taskPriority": 1,
+    "latency": 16,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 93.75,
+    "memoryUsage": 37.38,
+    "gpuUsage": 8.33,
+    "taskPriority": 1,
+    "latency": 22,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 21.18,
+    "memoryUsage": 70.04,
+    "gpuUsage": 55.97,
+    "taskPriority": 5,
+    "latency": 91,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 21.34,
+    "memoryUsage": 79.64,
+    "gpuUsage": 16.94,
+    "taskPriority": 2,
+    "latency": 129,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.65,
+    "memoryUsage": 20.59,
+    "gpuUsage": 97.93,
+    "taskPriority": 9,
+    "latency": 121,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 63.36,
+    "memoryUsage": 54.04,
+    "gpuUsage": 52.13,
+    "taskPriority": 4,
+    "latency": 36,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 56.24,
+    "memoryUsage": 5.12,
+    "gpuUsage": 37.62,
+    "taskPriority": 7,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 26.37,
+    "memoryUsage": 56.57,
+    "gpuUsage": 28.47,
+    "taskPriority": 2,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 53.6,
+    "memoryUsage": 43.19,
+    "gpuUsage": 66.99,
+    "taskPriority": 6,
+    "latency": 15,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 19.12,
+    "memoryUsage": 8.95,
+    "gpuUsage": 88.2,
+    "taskPriority": 4,
+    "latency": 50,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 94.78,
+    "memoryUsage": 60.03,
+    "gpuUsage": 12.28,
+    "taskPriority": 8,
+    "latency": 82,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 31.49,
+    "memoryUsage": 71.2,
+    "gpuUsage": 57.09,
+    "taskPriority": 3,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.53,
+    "memoryUsage": 67.17,
+    "gpuUsage": 87.17,
+    "taskPriority": 6,
+    "latency": 174,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 25.87,
+    "memoryUsage": 90.56,
+    "gpuUsage": 70.66,
+    "taskPriority": 5,
+    "latency": 122,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 58.48,
+    "memoryUsage": 77.45,
+    "gpuUsage": 27.15,
+    "taskPriority": 4,
+    "latency": 64,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 84.67,
+    "memoryUsage": 36.62,
+    "gpuUsage": 14.07,
+    "taskPriority": 4,
+    "latency": 63,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.44,
+    "memoryUsage": 15.56,
+    "gpuUsage": 44.37,
+    "taskPriority": 2,
+    "latency": 45,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 71.67,
+    "memoryUsage": 88.13,
+    "gpuUsage": 76.77,
+    "taskPriority": 7,
+    "latency": 75,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 17.87,
+    "memoryUsage": 49.32,
+    "gpuUsage": 69.56,
+    "taskPriority": 7,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 58.99,
+    "memoryUsage": 83.59,
+    "gpuUsage": 60.12,
+    "taskPriority": 4,
+    "latency": 43,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.23,
+    "memoryUsage": 40.95,
+    "gpuUsage": 20.57,
+    "taskPriority": 8,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 81.42,
+    "memoryUsage": 94.67,
+    "gpuUsage": 10.76,
+    "taskPriority": 1,
+    "latency": 96,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 67.96,
+    "memoryUsage": 67.65,
+    "gpuUsage": 18.79,
+    "taskPriority": 8,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.62,
+    "memoryUsage": 59.49,
+    "gpuUsage": 23.07,
+    "taskPriority": 6,
+    "latency": 133,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 69.06,
+    "memoryUsage": 41.47,
+    "gpuUsage": 80.52,
+    "taskPriority": 7,
+    "latency": 79,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.96,
+    "memoryUsage": 21.49,
+    "gpuUsage": 50.33,
+    "taskPriority": 6,
+    "latency": 30,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.99,
+    "memoryUsage": 35.19,
+    "gpuUsage": 46.43,
+    "taskPriority": 9,
+    "latency": 51,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 23.06,
+    "memoryUsage": 29.5,
+    "gpuUsage": 37.25,
+    "taskPriority": 9,
+    "latency": 27,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 71.54,
+    "memoryUsage": 87.44,
+    "gpuUsage": 93.48,
+    "taskPriority": 7,
+    "latency": 37,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 92.52,
+    "memoryUsage": 43.1,
+    "gpuUsage": 79.39,
+    "taskPriority": 8,
+    "latency": 175,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.87,
+    "memoryUsage": 58.12,
+    "gpuUsage": 44.32,
+    "taskPriority": 1,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 6.22,
+    "memoryUsage": 90.18,
+    "gpuUsage": 5.75,
+    "taskPriority": 5,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 32.08,
+    "memoryUsage": 54.87,
+    "gpuUsage": 14.59,
+    "taskPriority": 4,
+    "latency": 185,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 96.04,
+    "memoryUsage": 90.04,
+    "gpuUsage": 52.79,
+    "taskPriority": 2,
+    "latency": 188,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.48,
+    "memoryUsage": 90.45,
+    "gpuUsage": 73.41,
+    "taskPriority": 5,
+    "latency": 59,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 24.85,
+    "memoryUsage": 28.68,
+    "gpuUsage": 37.41,
+    "taskPriority": 7,
+    "latency": 175,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 20,
+    "memoryUsage": 51.16,
+    "gpuUsage": 41.98,
+    "taskPriority": 8,
+    "latency": 84,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 34.39,
+    "memoryUsage": 30.64,
+    "gpuUsage": 91.3,
+    "taskPriority": 6,
+    "latency": 32,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 16.44,
+    "memoryUsage": 94.02,
+    "gpuUsage": 6.57,
+    "taskPriority": 4,
+    "latency": 98,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 78.15,
+    "memoryUsage": 32.55,
+    "gpuUsage": 69.74,
+    "taskPriority": 1,
+    "latency": 142,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 55.76,
+    "memoryUsage": 37.78,
+    "gpuUsage": 11.91,
+    "taskPriority": 5,
+    "latency": 94,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 96.73,
+    "memoryUsage": 55.93,
+    "gpuUsage": 13.08,
+    "taskPriority": 4,
+    "latency": 190,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 53.28,
+    "memoryUsage": 93.59,
+    "gpuUsage": 6.85,
+    "taskPriority": 2,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 53,
+    "memoryUsage": 8.99,
+    "gpuUsage": 57.64,
+    "taskPriority": 2,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 55.69,
+    "memoryUsage": 30.52,
+    "gpuUsage": 25.31,
+    "taskPriority": 2,
+    "latency": 143,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.81,
+    "memoryUsage": 74.45,
+    "gpuUsage": 98.02,
+    "taskPriority": 6,
+    "latency": 69,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 40.23,
+    "memoryUsage": 50.13,
+    "gpuUsage": 33.91,
+    "taskPriority": 5,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.27,
+    "memoryUsage": 19.28,
+    "gpuUsage": 70.5,
+    "taskPriority": 6,
+    "latency": 113,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 23.01,
+    "memoryUsage": 22.26,
+    "gpuUsage": 59.79,
+    "taskPriority": 8,
+    "latency": 163,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 36.72,
+    "memoryUsage": 42.74,
+    "gpuUsage": 70.04,
+    "taskPriority": 7,
+    "latency": 120,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 15.79,
+    "memoryUsage": 82.18,
+    "gpuUsage": 67.33,
+    "taskPriority": 7,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.16,
+    "memoryUsage": 50.05,
+    "gpuUsage": 30.64,
+    "taskPriority": 3,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 54.72,
+    "memoryUsage": 91.34,
+    "gpuUsage": 44.2,
+    "taskPriority": 3,
+    "latency": 164,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.94,
+    "memoryUsage": 54.95,
+    "gpuUsage": 92.58,
+    "taskPriority": 4,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 95.03,
+    "memoryUsage": 33.9,
+    "gpuUsage": 36.3,
+    "taskPriority": 8,
+    "latency": 118,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.25,
+    "memoryUsage": 33.67,
+    "gpuUsage": 93.92,
+    "taskPriority": 6,
+    "latency": 137,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 36.4,
+    "memoryUsage": 54.37,
+    "gpuUsage": 49.09,
+    "taskPriority": 9,
+    "latency": 63,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 57.66,
+    "memoryUsage": 17.9,
+    "gpuUsage": 52.23,
+    "taskPriority": 2,
+    "latency": 171,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 28.29,
+    "memoryUsage": 9.64,
+    "gpuUsage": 5.6,
+    "taskPriority": 4,
+    "latency": 130,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 43.85,
+    "memoryUsage": 23.75,
+    "gpuUsage": 97.16,
+    "taskPriority": 8,
+    "latency": 132,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 93.1,
+    "memoryUsage": 22.48,
+    "gpuUsage": 18.98,
+    "taskPriority": 4,
+    "latency": 18,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 43.12,
+    "memoryUsage": 71.94,
+    "gpuUsage": 92.6,
+    "taskPriority": 3,
+    "latency": 188,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.79,
+    "memoryUsage": 21.24,
+    "gpuUsage": 93.23,
+    "taskPriority": 5,
+    "latency": 144,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 84.13,
+    "memoryUsage": 61.44,
+    "gpuUsage": 93.52,
+    "taskPriority": 3,
+    "latency": 31,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 52.27,
+    "memoryUsage": 52.33,
+    "gpuUsage": 17.53,
+    "taskPriority": 4,
+    "latency": 97,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.63,
+    "memoryUsage": 20.48,
+    "gpuUsage": 70.06,
+    "taskPriority": 7,
+    "latency": 73,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 40.43,
+    "memoryUsage": 77.88,
+    "gpuUsage": 81.84,
+    "taskPriority": 1,
+    "latency": 105,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.4,
+    "memoryUsage": 13.43,
+    "gpuUsage": 13.45,
+    "taskPriority": 7,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 30.11,
+    "memoryUsage": 37.6,
+    "gpuUsage": 67.12,
+    "taskPriority": 8,
+    "latency": 72,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 25.62,
+    "memoryUsage": 54.38,
+    "gpuUsage": 34.35,
+    "taskPriority": 8,
+    "latency": 199,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 63.15,
+    "memoryUsage": 75.15,
+    "gpuUsage": 45.18,
+    "taskPriority": 7,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 11.11,
+    "memoryUsage": 74.38,
+    "gpuUsage": 32.76,
+    "taskPriority": 6,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.03,
+    "memoryUsage": 34.72,
+    "gpuUsage": 11.3,
+    "taskPriority": 5,
+    "latency": 129,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 50.38,
+    "memoryUsage": 33.76,
+    "gpuUsage": 83.85,
+    "taskPriority": 7,
+    "latency": 31,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 69.05,
+    "memoryUsage": 30.81,
+    "gpuUsage": 74.79,
+    "taskPriority": 7,
+    "latency": 136,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 81.4,
+    "memoryUsage": 53.11,
+    "gpuUsage": 53.42,
+    "taskPriority": 2,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.23,
+    "memoryUsage": 40.71,
+    "gpuUsage": 32.22,
+    "taskPriority": 1,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 85.46,
+    "memoryUsage": 71.03,
+    "gpuUsage": 94.22,
+    "taskPriority": 6,
+    "latency": 19,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 60.87,
+    "memoryUsage": 62.79,
+    "gpuUsage": 38.19,
+    "taskPriority": 4,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 59.09,
+    "memoryUsage": 80.71,
+    "gpuUsage": 99.59,
+    "taskPriority": 3,
+    "latency": 29,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 5.9,
+    "memoryUsage": 96.46,
+    "gpuUsage": 89.12,
+    "taskPriority": 9,
+    "latency": 114,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 14.9,
+    "memoryUsage": 84.4,
+    "gpuUsage": 74.11,
+    "taskPriority": 9,
+    "latency": 189,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 75.24,
+    "memoryUsage": 18.39,
+    "gpuUsage": 65.34,
+    "taskPriority": 3,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.61,
+    "memoryUsage": 33.1,
+    "gpuUsage": 10.17,
+    "taskPriority": 6,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.22,
+    "memoryUsage": 57.33,
+    "gpuUsage": 77.92,
+    "taskPriority": 9,
+    "latency": 121,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 43.12,
+    "memoryUsage": 88.26,
+    "gpuUsage": 95.06,
+    "taskPriority": 7,
+    "latency": 44,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 27,
+    "memoryUsage": 89.96,
+    "gpuUsage": 61.11,
+    "taskPriority": 9,
+    "latency": 57,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 25.56,
+    "memoryUsage": 67.7,
+    "gpuUsage": 87.36,
+    "taskPriority": 4,
+    "latency": 47,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 58.94,
+    "memoryUsage": 85.04,
+    "gpuUsage": 19.15,
+    "taskPriority": 8,
+    "latency": 135,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 50.94,
+    "memoryUsage": 91.53,
+    "gpuUsage": 32.21,
+    "taskPriority": 6,
+    "latency": 176,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 59.94,
+    "memoryUsage": 14.63,
+    "gpuUsage": 66.23,
+    "taskPriority": 3,
+    "latency": 166,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.26,
+    "memoryUsage": 17.6,
+    "gpuUsage": 49.81,
+    "taskPriority": 1,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.38,
+    "memoryUsage": 84.29,
+    "gpuUsage": 67.63,
+    "taskPriority": 2,
+    "latency": 88,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 11.44,
+    "memoryUsage": 17.59,
+    "gpuUsage": 56.16,
+    "taskPriority": 9,
+    "latency": 31,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 86.17,
+    "memoryUsage": 56.08,
+    "gpuUsage": 87.19,
+    "taskPriority": 5,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 85.48,
+    "memoryUsage": 90.29,
+    "gpuUsage": 5.63,
+    "taskPriority": 5,
+    "latency": 63,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 57.07,
+    "memoryUsage": 59.44,
+    "gpuUsage": 70.58,
+    "taskPriority": 3,
+    "latency": 103,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.24,
+    "memoryUsage": 68.95,
+    "gpuUsage": 41.71,
+    "taskPriority": 3,
+    "latency": 173,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 30.28,
+    "memoryUsage": 68.06,
+    "gpuUsage": 68.54,
+    "taskPriority": 8,
+    "latency": 79,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 82.49,
+    "memoryUsage": 63.45,
+    "gpuUsage": 25.13,
+    "taskPriority": 6,
+    "latency": 93,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 92.84,
+    "memoryUsage": 34.74,
+    "gpuUsage": 75.85,
+    "taskPriority": 4,
+    "latency": 96,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 94.01,
+    "memoryUsage": 78.26,
+    "gpuUsage": 90.13,
+    "taskPriority": 2,
+    "latency": 90,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 39.08,
+    "memoryUsage": 94.8,
+    "gpuUsage": 14.08,
+    "taskPriority": 5,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.67,
+    "memoryUsage": 72.97,
+    "gpuUsage": 21.98,
+    "taskPriority": 4,
+    "latency": 111,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 31.57,
+    "memoryUsage": 57.74,
+    "gpuUsage": 46.53,
+    "taskPriority": 1,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 88.75,
+    "memoryUsage": 57.14,
+    "gpuUsage": 38.56,
+    "taskPriority": 5,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 43.32,
+    "memoryUsage": 35.7,
+    "gpuUsage": 12.24,
+    "taskPriority": 6,
+    "latency": 167,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.25,
+    "memoryUsage": 70.85,
+    "gpuUsage": 49.9,
+    "taskPriority": 2,
+    "latency": 33,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 86.65,
+    "memoryUsage": 57.13,
+    "gpuUsage": 26.05,
+    "taskPriority": 3,
+    "latency": 61,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 16.2,
+    "memoryUsage": 82.88,
+    "gpuUsage": 24.16,
+    "taskPriority": 7,
+    "latency": 68,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 76.25,
+    "memoryUsage": 34.15,
+    "gpuUsage": 83.54,
+    "taskPriority": 6,
+    "latency": 172,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.28,
+    "memoryUsage": 27.87,
+    "gpuUsage": 42.89,
+    "taskPriority": 9,
+    "latency": 47,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 89.64,
+    "memoryUsage": 11.74,
+    "gpuUsage": 69.33,
+    "taskPriority": 6,
+    "latency": 164,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.16,
+    "memoryUsage": 57.3,
+    "gpuUsage": 36.03,
+    "taskPriority": 2,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 33.85,
+    "memoryUsage": 29.13,
+    "gpuUsage": 60.54,
+    "taskPriority": 1,
+    "latency": 168,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 21.67,
+    "memoryUsage": 12.57,
+    "gpuUsage": 44.46,
+    "taskPriority": 7,
+    "latency": 60,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 13.23,
+    "memoryUsage": 17.56,
+    "gpuUsage": 74.42,
+    "taskPriority": 3,
+    "latency": 180,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 43.56,
+    "memoryUsage": 10.04,
+    "gpuUsage": 87.26,
+    "taskPriority": 1,
+    "latency": 153,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 12.9,
+    "memoryUsage": 51.48,
+    "gpuUsage": 43.5,
+    "taskPriority": 6,
+    "latency": 66,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 15.45,
+    "memoryUsage": 16.83,
+    "gpuUsage": 62.33,
+    "taskPriority": 8,
+    "latency": 145,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 77.6,
+    "memoryUsage": 25.51,
+    "gpuUsage": 97.49,
+    "taskPriority": 6,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 42.69,
+    "memoryUsage": 62.58,
+    "gpuUsage": 16.71,
+    "taskPriority": 2,
+    "latency": 73,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.46,
+    "memoryUsage": 95.22,
+    "gpuUsage": 78.02,
+    "taskPriority": 3,
+    "latency": 153,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 95.2,
+    "memoryUsage": 53.96,
+    "gpuUsage": 87.36,
+    "taskPriority": 1,
+    "latency": 78,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 17.87,
+    "memoryUsage": 37.47,
+    "gpuUsage": 97.38,
+    "taskPriority": 6,
+    "latency": 117,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.25,
+    "memoryUsage": 9.85,
+    "gpuUsage": 56.76,
+    "taskPriority": 2,
+    "latency": 129,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 50.79,
+    "memoryUsage": 74.87,
+    "gpuUsage": 35.76,
+    "taskPriority": 9,
+    "latency": 85,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 90.28,
+    "memoryUsage": 95.79,
+    "gpuUsage": 19.72,
+    "taskPriority": 2,
+    "latency": 195,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 70.62,
+    "memoryUsage": 88.13,
+    "gpuUsage": 49.37,
+    "taskPriority": 7,
+    "latency": 75,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 29.73,
+    "memoryUsage": 98.63,
+    "gpuUsage": 26.54,
+    "taskPriority": 4,
+    "latency": 194,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 96.49,
+    "memoryUsage": 17.42,
+    "gpuUsage": 98.22,
+    "taskPriority": 7,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.93,
+    "memoryUsage": 87.47,
+    "gpuUsage": 24.5,
+    "taskPriority": 3,
+    "latency": 139,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.01,
+    "memoryUsage": 76.46,
+    "gpuUsage": 33.81,
+    "taskPriority": 4,
+    "latency": 147,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 90.43,
+    "memoryUsage": 76.83,
+    "gpuUsage": 54.83,
+    "taskPriority": 8,
+    "latency": 121,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.21,
+    "memoryUsage": 41.86,
+    "gpuUsage": 15.38,
+    "taskPriority": 1,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 20.22,
+    "memoryUsage": 17.97,
+    "gpuUsage": 56.16,
+    "taskPriority": 9,
+    "latency": 183,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 82.58,
+    "memoryUsage": 66.28,
+    "gpuUsage": 56.81,
+    "taskPriority": 8,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 77.05,
+    "memoryUsage": 53.12,
+    "gpuUsage": 88.19,
+    "taskPriority": 3,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 83.02,
+    "memoryUsage": 7.34,
+    "gpuUsage": 13.6,
+    "taskPriority": 8,
+    "latency": 39,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 72.98,
+    "memoryUsage": 33.38,
+    "gpuUsage": 50.4,
+    "taskPriority": 7,
+    "latency": 171,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 98.55,
+    "memoryUsage": 23.11,
+    "gpuUsage": 69.42,
+    "taskPriority": 4,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.72,
+    "memoryUsage": 61.91,
+    "gpuUsage": 6.64,
+    "taskPriority": 10,
+    "latency": 92,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 18.16,
+    "memoryUsage": 16.1,
+    "gpuUsage": 81.86,
+    "taskPriority": 5,
+    "latency": 59,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 90.08,
+    "memoryUsage": 41.51,
+    "gpuUsage": 57.03,
+    "taskPriority": 6,
+    "latency": 164,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 41.08,
+    "memoryUsage": 75.55,
+    "gpuUsage": 59.76,
+    "taskPriority": 7,
+    "latency": 37,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 80.18,
+    "memoryUsage": 60.78,
+    "gpuUsage": 87.39,
+    "taskPriority": 1,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 57.84,
+    "memoryUsage": 77.21,
+    "gpuUsage": 81.63,
+    "taskPriority": 3,
+    "latency": 99,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 26.19,
+    "memoryUsage": 6.27,
+    "gpuUsage": 46.08,
+    "taskPriority": 8,
+    "latency": 61,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 35.68,
+    "memoryUsage": 80.53,
+    "gpuUsage": 36.23,
+    "taskPriority": 3,
+    "latency": 36,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 14.65,
+    "memoryUsage": 73.66,
+    "gpuUsage": 63.83,
+    "taskPriority": 7,
+    "latency": 96,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 78.45,
+    "memoryUsage": 86.79,
+    "gpuUsage": 38.2,
+    "taskPriority": 4,
+    "latency": 67,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 59.19,
+    "memoryUsage": 79.64,
+    "gpuUsage": 66.06,
+    "taskPriority": 1,
+    "latency": 57,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 27.65,
+    "memoryUsage": 18.8,
+    "gpuUsage": 74.7,
+    "taskPriority": 4,
+    "latency": 111,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 44.74,
+    "memoryUsage": 61.42,
+    "gpuUsage": 16.4,
+    "taskPriority": 9,
+    "latency": 93,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 39.99,
+    "memoryUsage": 63.75,
+    "gpuUsage": 8.11,
+    "taskPriority": 5,
+    "latency": 138,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 52.13,
+    "memoryUsage": 99.55,
+    "gpuUsage": 25.16,
+    "taskPriority": 3,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 12.58,
+    "memoryUsage": 48.79,
+    "gpuUsage": 19.91,
+    "taskPriority": 6,
+    "latency": 10,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 35.7,
+    "memoryUsage": 47.12,
+    "gpuUsage": 74.03,
+    "taskPriority": 4,
+    "latency": 150,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.18,
+    "memoryUsage": 14.4,
+    "gpuUsage": 42.19,
+    "taskPriority": 5,
+    "latency": 25,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 70.65,
+    "memoryUsage": 82.55,
+    "gpuUsage": 13.35,
+    "taskPriority": 9,
+    "latency": 193,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 56.94,
+    "memoryUsage": 72.66,
+    "gpuUsage": 58.04,
+    "taskPriority": 9,
+    "latency": 16,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 17.16,
+    "memoryUsage": 41.01,
+    "gpuUsage": 85.67,
+    "taskPriority": 5,
+    "latency": 179,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 84,
+    "memoryUsage": 16.32,
+    "gpuUsage": 37.63,
+    "taskPriority": 3,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 79.05,
+    "memoryUsage": 39.7,
+    "gpuUsage": 80.75,
+    "taskPriority": 5,
+    "latency": 189,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.11,
+    "memoryUsage": 71.06,
+    "gpuUsage": 89.08,
+    "taskPriority": 9,
+    "latency": 37,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 87.54,
+    "memoryUsage": 80.89,
+    "gpuUsage": 40.58,
+    "taskPriority": 3,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 45.16,
+    "memoryUsage": 46.38,
+    "gpuUsage": 82.13,
+    "taskPriority": 4,
+    "latency": 197,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 21.6,
+    "memoryUsage": 39.86,
+    "gpuUsage": 60.26,
+    "taskPriority": 7,
+    "latency": 87,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 26.24,
+    "memoryUsage": 32.95,
+    "gpuUsage": 56.5,
+    "taskPriority": 6,
+    "latency": 165,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 73.35,
+    "memoryUsage": 44.05,
+    "gpuUsage": 78.12,
+    "taskPriority": 5,
+    "latency": 35,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 36.97,
+    "memoryUsage": 76.56,
+    "gpuUsage": 45.08,
+    "taskPriority": 4,
+    "latency": 28,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 66.06,
+    "memoryUsage": 81.33,
+    "gpuUsage": 16.96,
+    "taskPriority": 4,
+    "latency": 33,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 52.86,
+    "memoryUsage": 40.66,
+    "gpuUsage": 76.75,
+    "taskPriority": 3,
+    "latency": 48,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 28.91,
+    "memoryUsage": 83.33,
+    "gpuUsage": 20.44,
+    "taskPriority": 4,
+    "latency": 39,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 41.14,
+    "memoryUsage": 96.08,
+    "gpuUsage": 27.88,
+    "taskPriority": 7,
+    "latency": 88,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 32.44,
+    "memoryUsage": 18.62,
+    "gpuUsage": 59.52,
+    "taskPriority": 9,
+    "latency": 63,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 93.2,
+    "memoryUsage": 57.38,
+    "gpuUsage": 22.7,
+    "taskPriority": 9,
+    "latency": 74,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 69.1,
+    "memoryUsage": 33.76,
+    "gpuUsage": 26.77,
+    "taskPriority": 2,
+    "latency": 29,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 99.93,
+    "memoryUsage": 44.47,
+    "gpuUsage": 77.52,
+    "taskPriority": 9,
+    "latency": 25,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 28.57,
+    "memoryUsage": 99.57,
+    "gpuUsage": 34.76,
+    "taskPriority": 5,
+    "latency": 193,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 53.98,
+    "memoryUsage": 70.24,
+    "gpuUsage": 66.14,
+    "taskPriority": 9,
+    "latency": 129,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 53.37,
+    "memoryUsage": 85.87,
+    "gpuUsage": 79.7,
+    "taskPriority": 6,
+    "latency": 152,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 9.12,
+    "memoryUsage": 38.32,
+    "gpuUsage": 76.8,
+    "taskPriority": 4,
+    "latency": 10,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 44.71,
+    "memoryUsage": 71.9,
+    "gpuUsage": 61.27,
+    "taskPriority": 4,
+    "latency": 192,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 76.08,
+    "memoryUsage": 87.82,
+    "gpuUsage": 16.44,
+    "taskPriority": 5,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 57.32,
+    "memoryUsage": 31.87,
+    "gpuUsage": 60.54,
+    "taskPriority": 9,
+    "latency": 12,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 23.26,
+    "memoryUsage": 51.66,
+    "gpuUsage": 32.53,
+    "taskPriority": 5,
+    "latency": 94,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 98.37,
+    "memoryUsage": 85.39,
+    "gpuUsage": 96.21,
+    "taskPriority": 1,
+    "latency": 52,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 61.07,
+    "memoryUsage": 78.57,
+    "gpuUsage": 82.2,
+    "taskPriority": 1,
+    "latency": 98,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 97.69,
+    "memoryUsage": 59.11,
+    "gpuUsage": 42.19,
+    "taskPriority": 7,
+    "latency": 45,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 30.37,
+    "memoryUsage": 20.15,
+    "gpuUsage": 96.5,
+    "taskPriority": 9,
+    "latency": 160,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 26.17,
+    "memoryUsage": 57.97,
+    "gpuUsage": 38.02,
+    "taskPriority": 5,
+    "latency": 84,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 68.09,
+    "memoryUsage": 86.9,
+    "gpuUsage": 72.59,
+    "taskPriority": 3,
+    "latency": 67,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 41.45,
+    "memoryUsage": 56.74,
+    "gpuUsage": 77.71,
+    "taskPriority": 7,
+    "latency": 40,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 69.3,
+    "memoryUsage": 81.36,
+    "gpuUsage": 50.37,
+    "taskPriority": 4,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 91.53,
+    "memoryUsage": 34.21,
+    "gpuUsage": 77.61,
+    "taskPriority": 4,
+    "latency": 169,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 94.91,
+    "memoryUsage": 94.27,
+    "gpuUsage": 10.98,
+    "taskPriority": 2,
+    "latency": 73,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 60.3,
+    "memoryUsage": 49.82,
+    "gpuUsage": 54.76,
+    "taskPriority": 1,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 36.07,
+    "memoryUsage": 53.97,
+    "gpuUsage": 60.29,
+    "taskPriority": 8,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 13.48,
+    "memoryUsage": 48.41,
+    "gpuUsage": 40.65,
+    "taskPriority": 2,
+    "latency": 21,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 91.79,
+    "memoryUsage": 59.17,
+    "gpuUsage": 98.62,
+    "taskPriority": 6,
+    "latency": 193,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 33.02,
+    "memoryUsage": 84.8,
+    "gpuUsage": 61.61,
+    "taskPriority": 7,
+    "latency": 146,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.21,
+    "memoryUsage": 5.46,
+    "gpuUsage": 86.29,
+    "taskPriority": 1,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 76.5,
+    "memoryUsage": 88.2,
+    "gpuUsage": 49.62,
+    "taskPriority": 1,
+    "latency": 160,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 37.47,
+    "memoryUsage": 36.21,
+    "gpuUsage": 48.77,
+    "taskPriority": 5,
+    "latency": 123,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 97.53,
+    "memoryUsage": 52.28,
+    "gpuUsage": 91.95,
+    "taskPriority": 8,
+    "latency": 45,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 58.17,
+    "memoryUsage": 63.96,
+    "gpuUsage": 41.59,
+    "taskPriority": 9,
+    "latency": 80,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 55.61,
+    "memoryUsage": 24.61,
+    "gpuUsage": 99.7,
+    "taskPriority": 7,
+    "latency": 175,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 14.53,
+    "memoryUsage": 81.45,
+    "gpuUsage": 88.67,
+    "taskPriority": 4,
+    "latency": 180,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 24.77,
+    "memoryUsage": 65.5,
+    "gpuUsage": 80.5,
+    "taskPriority": 3,
+    "latency": 149,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 62.65,
+    "memoryUsage": 55.18,
+    "gpuUsage": 45.89,
+    "taskPriority": 6,
+    "latency": 137,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 87.84,
+    "memoryUsage": 79.83,
+    "gpuUsage": 16.94,
+    "taskPriority": 5,
+    "latency": 60,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 52.63,
+    "memoryUsage": 95.75,
+    "gpuUsage": 77.06,
+    "taskPriority": 5,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 85.19,
+    "memoryUsage": 35.89,
+    "gpuUsage": 62.48,
+    "taskPriority": 4,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 74.56,
+    "memoryUsage": 66.98,
+    "gpuUsage": 40.39,
+    "taskPriority": 5,
+    "latency": 21,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 75.12,
+    "memoryUsage": 86.21,
+    "gpuUsage": 36.52,
+    "taskPriority": 8,
+    "latency": 98,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 46.71,
+    "memoryUsage": 77,
+    "gpuUsage": 75.48,
+    "taskPriority": 8,
+    "latency": 144,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 66.62,
+    "memoryUsage": 31.34,
+    "gpuUsage": 80.23,
+    "taskPriority": 2,
+    "latency": 186,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 54.89,
+    "memoryUsage": 38.76,
+    "gpuUsage": 23.03,
+    "taskPriority": 8,
+    "latency": 171,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 82.63,
+    "memoryUsage": 40.09,
+    "gpuUsage": 26.33,
+    "taskPriority": 5,
+    "latency": 167,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 45.67,
+    "memoryUsage": 43.99,
+    "gpuUsage": 82.09,
+    "taskPriority": 5,
+    "latency": 74,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 60.87,
+    "memoryUsage": 80.45,
+    "gpuUsage": 30.46,
+    "taskPriority": 7,
+    "latency": 118,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 17.36,
+    "memoryUsage": 20,
+    "gpuUsage": 41.12,
+    "taskPriority": 3,
+    "latency": 162,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 5.66,
+    "memoryUsage": 23.32,
+    "gpuUsage": 98.13,
+    "taskPriority": 8,
+    "latency": 43,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 82.95,
+    "memoryUsage": 78.15,
+    "gpuUsage": 34.76,
+    "taskPriority": 9,
+    "latency": 111,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 42.74,
+    "memoryUsage": 39.97,
+    "gpuUsage": 65.23,
+    "taskPriority": 3,
+    "latency": 57,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.56,
+    "memoryUsage": 39.73,
+    "gpuUsage": 93.68,
+    "taskPriority": 2,
+    "latency": 19,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 71.34,
+    "memoryUsage": 56.37,
+    "gpuUsage": 26.12,
+    "taskPriority": 7,
+    "latency": 107,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 71.49,
+    "memoryUsage": 94.78,
+    "gpuUsage": 53.64,
+    "taskPriority": 6,
+    "latency": 70,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 51.93,
+    "memoryUsage": 22.19,
+    "gpuUsage": 65.26,
+    "taskPriority": 7,
+    "latency": 53,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 20.75,
+    "memoryUsage": 56.1,
+    "gpuUsage": 41.27,
+    "taskPriority": 1,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 29.21,
+    "memoryUsage": 28.95,
+    "gpuUsage": 38.32,
+    "taskPriority": 7,
+    "latency": 44,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 13.54,
+    "memoryUsage": 60.57,
+    "gpuUsage": 35.81,
+    "taskPriority": 6,
+    "latency": 34,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 37.13,
+    "memoryUsage": 79.5,
+    "gpuUsage": 74.19,
+    "taskPriority": 3,
+    "latency": 125,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 11.4,
+    "memoryUsage": 79.2,
+    "gpuUsage": 80.01,
+    "taskPriority": 6,
+    "latency": 102,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 42.3,
+    "memoryUsage": 99.47,
+    "gpuUsage": 52.67,
+    "taskPriority": 7,
+    "latency": 110,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 19.6,
+    "memoryUsage": 99.15,
+    "gpuUsage": 63.38,
+    "taskPriority": 6,
+    "latency": 137,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 22.94,
+    "memoryUsage": 42.22,
+    "gpuUsage": 27.99,
+    "taskPriority": 8,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 56.96,
+    "memoryUsage": 19.59,
+    "gpuUsage": 12.5,
+    "taskPriority": 5,
+    "latency": 191,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 27.51,
+    "memoryUsage": 83.12,
+    "gpuUsage": 79.27,
+    "taskPriority": 8,
+    "latency": 71,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 68.24,
+    "memoryUsage": 41.13,
+    "gpuUsage": 37.14,
+    "taskPriority": 5,
+    "latency": 70,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 7.01,
+    "memoryUsage": 83.07,
+    "gpuUsage": 15.04,
+    "taskPriority": 1,
+    "latency": 18,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 66.32,
+    "memoryUsage": 91.63,
+    "gpuUsage": 52.83,
+    "taskPriority": 7,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 47.74,
+    "memoryUsage": 53.96,
+    "gpuUsage": 97.75,
+    "taskPriority": 7,
+    "latency": 14,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 15.94,
+    "memoryUsage": 43.64,
+    "gpuUsage": 92.02,
+    "taskPriority": 5,
+    "latency": 115,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 68.92,
+    "memoryUsage": 32.37,
+    "gpuUsage": 45.74,
+    "taskPriority": 8,
+    "latency": 54,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 13.33,
+    "memoryUsage": 22.77,
+    "gpuUsage": 73.44,
+    "taskPriority": 3,
+    "latency": 13,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 88.15,
+    "memoryUsage": 53.39,
+    "gpuUsage": 32.52,
+    "taskPriority": 5,
+    "latency": 176,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 93.85,
+    "memoryUsage": 31.24,
+    "gpuUsage": 64.23,
+    "taskPriority": 6,
+    "latency": 21,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 98.29,
+    "memoryUsage": 84.7,
+    "gpuUsage": 45.4,
+    "taskPriority": 5,
+    "latency": 105,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 41.51,
+    "memoryUsage": 58.45,
+    "gpuUsage": 24.61,
+    "taskPriority": 2,
+    "latency": 134,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 72.94,
+    "memoryUsage": 31,
+    "gpuUsage": 12.42,
+    "taskPriority": 8,
+    "latency": 55,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 66.44,
+    "memoryUsage": 13.63,
+    "gpuUsage": 40.47,
+    "taskPriority": 7,
+    "latency": 155,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 5.26,
+    "memoryUsage": 11.16,
+    "gpuUsage": 59.54,
+    "taskPriority": 7,
+    "latency": 83,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 7.61,
+    "memoryUsage": 90.22,
+    "gpuUsage": 55.69,
+    "taskPriority": 5,
+    "latency": 148,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 7.77,
+    "memoryUsage": 52.28,
+    "gpuUsage": 27.41,
+    "taskPriority": 3,
+    "latency": 41,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 64.27,
+    "memoryUsage": 93.22,
+    "gpuUsage": 20.86,
+    "taskPriority": 5,
+    "latency": 85,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 83.79,
+    "memoryUsage": 60.46,
+    "gpuUsage": 69.37,
+    "taskPriority": 4,
+    "latency": 175,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 74.36,
+    "memoryUsage": 25.04,
+    "gpuUsage": 15.21,
+    "taskPriority": 9,
+    "latency": 176,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 53.64,
+    "memoryUsage": 26.43,
+    "gpuUsage": 14.85,
+    "taskPriority": 5,
+    "latency": 116,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 40.29,
+    "memoryUsage": 8.32,
+    "gpuUsage": 35.83,
+    "taskPriority": 1,
+    "latency": 140,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 78.55,
+    "memoryUsage": 99.88,
+    "gpuUsage": 5.99,
+    "taskPriority": 6,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 38.59,
+    "memoryUsage": 23.56,
+    "gpuUsage": 37.14,
+    "taskPriority": 1,
+    "latency": 92,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 20.31,
+    "memoryUsage": 86.93,
+    "gpuUsage": 18.01,
+    "taskPriority": 6,
+    "latency": 106,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.57,
+    "memoryUsage": 91.75,
+    "gpuUsage": 93.71,
+    "taskPriority": 5,
+    "latency": 159,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 28.8,
+    "memoryUsage": 52.63,
+    "gpuUsage": 16.51,
+    "taskPriority": 9,
+    "latency": 144,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 30.57,
+    "memoryUsage": 84.31,
+    "gpuUsage": 84.82,
+    "taskPriority": 2,
+    "latency": 177,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 96.39,
+    "memoryUsage": 95.84,
+    "gpuUsage": 22.89,
+    "taskPriority": 7,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 31.39,
+    "memoryUsage": 20.77,
+    "gpuUsage": 81.77,
+    "taskPriority": 4,
+    "latency": 127,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 91.07,
+    "memoryUsage": 10.1,
+    "gpuUsage": 73.53,
+    "taskPriority": 1,
+    "latency": 37,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 48.41,
+    "memoryUsage": 18.21,
+    "gpuUsage": 23.32,
+    "taskPriority": 6,
+    "latency": 75,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 26.21,
+    "memoryUsage": 68.58,
+    "gpuUsage": 81.7,
+    "taskPriority": 8,
+    "latency": 69,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 27.75,
+    "memoryUsage": 57.41,
+    "gpuUsage": 80.93,
+    "taskPriority": 9,
+    "latency": 106,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 95.6,
+    "memoryUsage": 99.64,
+    "gpuUsage": 10.57,
+    "taskPriority": 5,
+    "latency": 35,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 93.94,
+    "memoryUsage": 18.24,
+    "gpuUsage": 73.75,
+    "taskPriority": 7,
+    "latency": 17,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 51.36,
+    "memoryUsage": 44.5,
+    "gpuUsage": 77.29,
+    "taskPriority": 8,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 84.46,
+    "memoryUsage": 29.03,
+    "gpuUsage": 66.67,
+    "taskPriority": 9,
+    "latency": 147,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 37.86,
+    "memoryUsage": 73.14,
+    "gpuUsage": 19.41,
+    "taskPriority": 5,
+    "latency": 44,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 38.08,
+    "memoryUsage": 69.03,
+    "gpuUsage": 33.18,
+    "taskPriority": 8,
+    "latency": 133,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 31.73,
+    "memoryUsage": 57.79,
+    "gpuUsage": 86.95,
+    "taskPriority": 8,
+    "latency": 159,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 65.66,
+    "memoryUsage": 46.81,
+    "gpuUsage": 17.06,
+    "taskPriority": 8,
+    "latency": 123,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 69.68,
+    "memoryUsage": 78.84,
+    "gpuUsage": 44.88,
+    "taskPriority": 4,
+    "latency": 47,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 19.22,
+    "memoryUsage": 44.8,
+    "gpuUsage": 17.98,
+    "taskPriority": 8,
+    "latency": 67,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 97.13,
+    "memoryUsage": 19.83,
+    "gpuUsage": 63.58,
+    "taskPriority": 1,
+    "latency": 184,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 64.8,
+    "memoryUsage": 67.28,
+    "gpuUsage": 87.94,
+    "taskPriority": 5,
+    "latency": 47,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 26.17,
+    "memoryUsage": 69.26,
+    "gpuUsage": 69.78,
+    "taskPriority": 8,
+    "latency": 98,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 46.76,
+    "memoryUsage": 38.4,
+    "gpuUsage": 40.73,
+    "taskPriority": 7,
+    "latency": 158,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 49.57,
+    "memoryUsage": 46.01,
+    "gpuUsage": 89.33,
+    "taskPriority": 5,
+    "latency": 47,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 38.22,
+    "memoryUsage": 40.28,
+    "gpuUsage": 99.99,
+    "taskPriority": 2,
+    "latency": 23,
+    "optimalNode": "node2"
+  },
+  {
+    "cpuUsage": 76.88,
+    "memoryUsage": 13.88,
+    "gpuUsage": 31.58,
+    "taskPriority": 1,
+    "latency": 108,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 5.19,
+    "memoryUsage": 32.25,
+    "gpuUsage": 72.95,
+    "taskPriority": 3,
+    "latency": 192,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 36,
+    "memoryUsage": 37.39,
+    "gpuUsage": 70.63,
+    "taskPriority": 8,
+    "latency": 37,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 22.53,
+    "memoryUsage": 18.39,
+    "gpuUsage": 81.61,
+    "taskPriority": 9,
+    "latency": 185,
+    "optimalNode": "node1"
+  },
+  {
+    "cpuUsage": 32.19,
+    "memoryUsage": 68.79,
+    "gpuUsage": 35.26,
+    "taskPriority": 5,
+    "latency": 100,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 34.64,
+    "memoryUsage": 36.55,
+    "gpuUsage": 92.84,
+    "taskPriority": 4,
+    "latency": 84,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 50.91,
+    "memoryUsage": 46.49,
+    "gpuUsage": 7.65,
+    "taskPriority": 9,
+    "latency": 13,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 23.7,
+    "memoryUsage": 60.46,
+    "gpuUsage": 71.9,
+    "taskPriority": 7,
+    "latency": 187,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 64.62,
+    "memoryUsage": 64.66,
+    "gpuUsage": 11.09,
+    "taskPriority": 6,
+    "latency": 141,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 36.04,
+    "memoryUsage": 48.65,
+    "gpuUsage": 62.72,
+    "taskPriority": 8,
+    "latency": 152,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 60.36,
+    "memoryUsage": 70.44,
+    "gpuUsage": 6.49,
+    "taskPriority": 7,
+    "latency": 156,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 24.71,
+    "memoryUsage": 41.99,
+    "gpuUsage": 16.16,
+    "taskPriority": 5,
+    "latency": 27,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 5.68,
+    "memoryUsage": 38.13,
+    "gpuUsage": 27.43,
+    "taskPriority": 1,
+    "latency": 19,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 15.73,
+    "memoryUsage": 81.72,
+    "gpuUsage": 19.25,
+    "taskPriority": 9,
+    "latency": 11,
+    "optimalNode": "node5"
+  },
+  {
+    "cpuUsage": 10.05,
+    "memoryUsage": 65.61,
+    "gpuUsage": 41.47,
+    "taskPriority": 7,
+    "latency": 178,
+    "optimalNode": "node4"
+  },
+  {
+    "cpuUsage": 59.77,
+    "memoryUsage": 75.41,
+    "gpuUsage": 73,
+    "taskPriority": 2,
+    "latency": 46,
+    "optimalNode": "node3"
+  },
+  {
+    "cpuUsage": 57.31,
+    "memoryUsage": 10.09,
+    "gpuUsage": 74.4,
+    "taskPriority": 5,
+    "latency": 197,
+    "optimalNode": "node4"
+  }
+]

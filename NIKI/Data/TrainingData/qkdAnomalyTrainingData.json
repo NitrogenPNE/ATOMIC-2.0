@@ -1,0 +1,26 @@
+[
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 3,
+        "hasTimestamp": true,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 0,
+        "hasTimestamp": false,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    }
+]

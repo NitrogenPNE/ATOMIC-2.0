@@ -1,0 +1,110 @@
+[
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 0,
+        "hasTimestamp": false,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 3,
+        "hasTimestamp": true,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": false,
+        "validKeyFormat": true,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": false,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 3,
+        "hasTimestamp": false,
+        "validKeyFormat": true,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 0,
+        "hasTimestamp": false,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 4,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": false,
+        "validKeyFormat": true,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 5,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": false,
+        "validKeyFormat": true,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 2,
+        "hasTimestamp": true,
+        "validKeyFormat": false,
+        "isAnomalous": true
+    },
+    {
+        "numKeys": 1,
+        "hasTimestamp": true,
+        "validKeyFormat": true,
+        "isAnomalous": false
+    }
+]

@@ -1,0 +1,84 @@
+[
+    {
+        "cpuUsage": 75,
+        "memoryUsage": 60,
+        "gpuUsage": 30,
+        "taskPriority": 2,
+        "latency": 150,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeA"
+    },
+    {
+        "cpuUsage": 40,
+        "memoryUsage": 20,
+        "gpuUsage": 10,
+        "taskPriority": 1,
+        "latency": 30,
+        "suspiciousPatterns": false,
+        "optimalNode": "NodeB"
+    },
+    {
+        "cpuUsage": 90,
+        "memoryUsage": 85,
+        "gpuUsage": 70,
+        "taskPriority": 3,
+        "latency": 200,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeC"
+    },
+    {
+        "cpuUsage": 20,
+        "memoryUsage": 25,
+        "gpuUsage": 0,
+        "taskPriority": 1,
+        "latency": 10,
+        "suspiciousPatterns": false,
+        "optimalNode": "NodeA"
+    },
+    {
+        "cpuUsage": 60,
+        "memoryUsage": 50,
+        "gpuUsage": 40,
+        "taskPriority": 2,
+        "latency": 120,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeB"
+    },
+    {
+        "cpuUsage": 80,
+        "memoryUsage": 70,
+        "gpuUsage": 60,
+        "taskPriority": 3,
+        "latency": 180,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeC"
+    },
+    {
+        "cpuUsage": 10,
+        "memoryUsage": 5,
+        "gpuUsage": 2,
+        "taskPriority": 1,
+        "latency": 20,
+        "suspiciousPatterns": false,
+        "optimalNode": "NodeA"
+    },
+    {
+        "cpuUsage": 55,
+        "memoryUsage": 75,
+        "gpuUsage": 50,
+        "taskPriority": 2,
+        "latency": 90,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeB"
+    },
+    {
+        "cpuUsage": 95,
+        "memoryUsage": 99,
+        "gpuUsage": 80,
+        "taskPriority": 3,
+        "latency": 250,
+        "suspiciousPatterns": true,
+        "optimalNode": "NodeC"
+    }
+
+]

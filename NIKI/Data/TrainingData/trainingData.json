@@ -1,0 +1,192 @@
+[
+  {
+    "task": {
+      "priority": 1,
+      "size": 512,
+      "particlePriority": 3
+    },
+    "node": {
+      "cpuLoad": 20,
+      "memoryUsage": 40,
+      "capacity": 80,
+      "uptime": 1000
+    },
+    "system": {
+      "cpuLoad": 30,
+      "memoryUsage": 50,
+      "networkLatency": 10
+    },
+    "score": 0.9
+  },
+  {
+    "task": {
+      "priority": 2,
+      "size": 1024,
+      "particlePriority": 2
+    },
+    "node": {
+      "cpuLoad": 50,
+      "memoryUsage": 60,
+      "capacity": 70,
+      "uptime": 500
+    },
+    "system": {
+      "cpuLoad": 45,
+      "memoryUsage": 60,
+      "networkLatency": 20
+    },
+    "score": 0.8
+  },
+  {
+    "task": {
+      "priority": 3,
+      "size": 256,
+      "particlePriority": 1
+    },
+    "node": {
+      "cpuLoad": 10,
+      "memoryUsage": 20,
+      "capacity": 90,
+      "uptime": 2000
+    },
+    "system": {
+      "cpuLoad": 20,
+      "memoryUsage": 30,
+      "networkLatency": 5
+    },
+    "score": 0.95
+  },
+  {
+    "task": {
+      "priority": 1,
+      "size": 2048,
+      "particlePriority": 3
+    },
+    "node": {
+      "cpuLoad": 80,
+      "memoryUsage": 90,
+      "capacity": 50,
+      "uptime": 300
+    },
+    "system": {
+      "cpuLoad": 75,
+      "memoryUsage": 80,
+      "networkLatency": 50
+    },
+    "score": 0.6
+  },
+  {
+    "task": {
+      "priority": 2,
+      "size": 512,
+      "particlePriority": 2
+    },
+    "node": {
+      "cpuLoad": 30,
+      "memoryUsage": 40,
+      "capacity": 85,
+      "uptime": 1200
+    },
+    "system": {
+      "cpuLoad": 35,
+      "memoryUsage": 45,
+      "networkLatency": 15
+    },
+    "score": 0.85
+  },
+  {
+    "task": {
+      "priority": 3,
+      "size": 1024,
+      "particlePriority": 1
+    },
+    "node": {
+      "cpuLoad": 15,
+      "memoryUsage": 25,
+      "capacity": 95,
+      "uptime": 1500
+    },
+    "system": {
+      "cpuLoad": 25,
+      "memoryUsage": 35,
+      "networkLatency": 10
+    },
+    "score": 0.92
+  },
+  {
+    "task": {
+      "priority": 1,
+      "size": 128,
+      "particlePriority": 3
+    },
+    "node": {
+      "cpuLoad": 90,
+      "memoryUsage": 95,
+      "capacity": 40,
+      "uptime": 100
+    },
+    "system": {
+      "cpuLoad": 85,
+      "memoryUsage": 90,
+      "networkLatency": 60
+    },
+    "score": 0.4
+  },
+  {
+    "task": {
+      "priority": 2,
+      "size": 768,
+      "particlePriority": 2
+    },
+    "node": {
+      "cpuLoad": 45,
+      "memoryUsage": 55,
+      "capacity": 75,
+      "uptime": 800
+    },
+    "system": {
+      "cpuLoad": 50,
+      "memoryUsage": 60,
+      "networkLatency": 25
+    },
+    "score": 0.78
+  },
+  {
+    "task": {
+      "priority": 3,
+      "size": 1536,
+      "particlePriority": 1
+    },
+    "node": {
+      "cpuLoad": 25,
+      "memoryUsage": 35,
+      "capacity": 90,
+      "uptime": 2000
+    },
+    "system": {
+      "cpuLoad": 30,
+      "memoryUsage": 40,
+      "networkLatency": 12
+    },
+    "score": 0.94
+  },
+  {
+    "task": {
+      "priority": 1,
+      "size": 4096,
+      "particlePriority": 3
+    },
+    "node": {
+      "cpuLoad": 95,
+      "memoryUsage": 100,
+      "capacity": 30,
+      "uptime": 50
+    },
+    "system": {
+      "cpuLoad": 90,
+      "memoryUsage": 95,
+      "networkLatency": 70
+    },
+    "score": 0.3
+  }
+]
