@@ -1,24 +1,27 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Token Validation
-//
-// Description:
-// Validates the authenticity, integrity, and usage of tokens within the ATOMIC
-// ecosystem. Includes proof-of-access and compliance checks.
-//
-// Dependencies:
-// - encryptionUtils.js: For decrypting and validating token encryption.
-// - fs-extra: For managing token metadata.
-// - path: For directory management.
-// - crypto: For cryptographic operations.
-//
-// Author: Shawn Blackmore
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ * All Rights Reserved.
+ *
+ * Module: Token Validation
+ *
+ * Description:
+ * Validates the authenticity, integrity, and Proof-of-Access (PoA) of tokens within
+ * the ATOMIC ecosystem. Includes compliance checks and secure logging.
+ *
+ * Dependencies:
+ * - encryptionUtils.js: For decrypting and validating token encryption.
+ * - fs-extra: For managing token metadata.
+ * - path: For directory management.
+ * - crypto: For cryptographic operations.
+ *
+ * Author: Shawn Blackmore
+ * -------------------------------------------------------------------------------
+ */
 
 const fs = require("fs-extra");
 const path = require("path");
@@ -29,11 +32,8 @@ const crypto = require("crypto");
 const tokenMetadataPath = path.resolve(__dirname, "../Config/tokenMetadata.json");
 const tokenUsageHistoryPath = path.resolve(__dirname, "../Data/tokenUsageHistory.json");
 
-// Constants
-const TOKEN_USAGE_LIMIT = 1; // Limit tokens to a single usage
-
 /**
- * Validate a token's authenticity and integrity.
+ * Validate a token's authenticity, integrity, and Proof-of-Access.
  * @param {string} tokenId - The unique identifier for the token.
  * @param {string} encryptedToken - The encrypted token string.
  * @returns {Object} - Validation result with token details or an error.
@@ -77,34 +77,9 @@ async function validateToken(tokenId, encryptedToken) {
 }
 
 /**
- * Check token usage history for anomalies or repeated use.
- * @param {string} tokenId - The token ID to check.
- * @returns {boolean} - Returns true if token usage is valid, otherwise false.
- */
-async function checkUsageHistory(tokenId) {
-    try {
-        console.log("Checking token usage history...");
-        const usageHistory = await fs.readJson(tokenUsageHistoryPath);
-
-        const usageRecords = usageHistory.filter((entry) => entry.tokenId === tokenId);
-
-        if (usageRecords.length >= TOKEN_USAGE_LIMIT) {
-            console.warn("Potential anomaly: Token has been used more than the allowed limit.");
-            return false;
-        }
-
-        console.log("Token usage history is valid.");
-        return true;
-    } catch (error) {
-        console.error("Failed to check token usage history:", error.message);
-        return false;
-    }
-}
-
-/**
- * Generate proof-of-access for a token.
+ * Generate Proof-of-Access for a token.
  * @param {string} tokenId - The token ID to validate.
- * @returns {Object} - Proof-of-access details.
+ * @returns {Object} - Proof-of-Access details.
  */
 async function generateProofOfAccess(tokenId) {
     try {
@@ -118,19 +93,19 @@ async function generateProofOfAccess(tokenId) {
             throw new Error("Invalid token: Token ID not found.");
         }
 
-        console.log("Generating proof-of-access...");
+        console.log("Generating Proof-of-Access...");
         const proof = crypto.createHash("sha256").update(tokenId + tokenDetails.metadata.owner).digest("hex");
 
-        console.log("Proof-of-access generated.");
+        console.log("Proof-of-Access generated.");
         return { tokenId, proof, timestamp: new Date().toISOString() };
     } catch (error) {
-        console.error("Error generating proof-of-access:", error.message);
+        console.error("Error generating Proof-of-Access:", error.message);
         throw error;
     }
 }
 
 /**
- * Validate and log token usage.
+ * Validate and log token usage for Proof-of-Access operations.
  * @param {string} tokenId - The token ID to validate.
  * @param {string} encryptedToken - The encrypted token data.
  * @returns {boolean} - Returns true if validation is successful, otherwise false.
@@ -141,14 +116,6 @@ async function validateAndLogUsage(tokenId, encryptedToken) {
 
     if (!tokenValidationResult.valid) {
         console.error("Token validation failed:", tokenValidationResult.error);
-        return false;
-    }
-
-    console.log("Validating token usage history...");
-    const usageValid = await checkUsageHistory(tokenId);
-
-    if (!usageValid) {
-        console.error("Token validation failed: Usage history check failed.");
         return false;
     }
 
@@ -183,4 +150,4 @@ if (require.main === module) {
         });
 }
 
-module.exports = { validateToken, checkUsageHistory, generateProofOfAccess, validateAndLogUsage };
+module.exports = { validateToken, generateProofOfAccess, validateAndLogUsage };
