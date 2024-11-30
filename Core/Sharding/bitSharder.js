@@ -19,6 +19,7 @@
  * - fs-extra: For shard management and ledger operations.
  * - ledgerManager.js: Logs shard operations to the ATOMIC blockchain.
  * - predictionEngine: NIKI-powered shard placement optimization.
+ * - tokenValidation.js: Validates tokens for Proof-of-Access.
  *
  * Author: Shawn Blackmore
  * -------------------------------------------------------------------------------
@@ -30,6 +31,7 @@ const uuid = require("uuid");
 const quantumEncryption = require("../../atomic-blockchain/core/quantumEncryption"); // Quantum encryption utilities
 const { logShardCreation } = require("../../atomic-blockchain/ledgerManager");
 const predictionEngine = require("../../NIKI/predictionEngine");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
 // **Paths and Constants**
 const ADDRESS_LEDGER_DIR = path.resolve(__dirname, "../../Ledgers/UserAddresses");
@@ -67,6 +69,23 @@ async function generateNodeAddress(nodeType, corporateId) {
 }
 
 /**
+ * Validates the token before proceeding with data sharding.
+ * @param {string} tokenId - The token ID to validate.
+ * @param {string} encryptedToken - The encrypted token string.
+ * @returns {Promise<boolean>} - True if the token is valid, otherwise false.
+ */
+async function validateAccessToken(tokenId, encryptedToken) {
+    console.log("Validating access token...");
+    const validation = await validateToken(tokenId, encryptedToken);
+    if (!validation.valid) {
+        console.error("Token validation failed:", validation.error);
+        throw new Error("Invalid access token.");
+    }
+    console.log("Access token validated successfully.");
+    return true;
+}
+
+/**
  * Encrypts data using quantum-resistant encryption for secure sharding.
  * @param {string} data - Data to encrypt.
  * @returns {Object} - Encrypted data and quantum encryption metadata.
@@ -80,9 +99,14 @@ function encryptDataWithQuantum(data) {
  * @param {string} nodeType - Node type (e.g., "CorporateHQNode", "NationalDefenseHQNode").
  * @param {string} corporateId - Corporate or Defense identifier.
  * @param {string} data - Data to shard.
+ * @param {string} tokenId - The token ID used for validation.
+ * @param {string} encryptedToken - The encrypted token used for validation.
  * @returns {Promise<Object>} - Sharded data and node address.
  */
-async function shardDataIntoBits(nodeType, corporateId, data) {
+async function shardDataIntoBits(nodeType, corporateId, data, tokenId, encryptedToken) {
+    // Validate the token before processing
+    await validateAccessToken(tokenId, encryptedToken);
+
     const address = await generateNodeAddress(nodeType, corporateId);
 
     // Encrypt data using quantum encryption
@@ -95,6 +119,7 @@ async function shardDataIntoBits(nodeType, corporateId, data) {
             bit: (byte >> (7 - bitIndex)) & 1,
             particle: ["proton", "neutron", "electron"][bitIndex % 3],
             frequency: Math.floor(Math.random() * 1000) + 1,
+            associatedToken: tokenId, // Link shard with the token
         }))
     );
 
