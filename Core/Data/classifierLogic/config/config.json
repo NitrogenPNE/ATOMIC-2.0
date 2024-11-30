@@ -1,0 +1,5 @@
+{
+    "port": 4000,
+    "classificationThreshold": 1024,
+    "logging": true
+}

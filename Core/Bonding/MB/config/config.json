@@ -1,0 +1,20 @@
+{
+    "port": 4020,
+        "logging": {
+        "enabled": true,
+            "level": "info",
+                "destination": "../../logs/GB/gbBonding.log"
+    },
+    "ledgers": {
+        "frequencies": {
+            "proton": "../../../Ledgers/Frequencies/MB/protonBounceRate.json",
+                "electron": "../../../Ledgers/Frequencies/MB/electronBounceRate.json",
+                    "neutron": "../../../Ledgers/Frequencies/MB/neutronBounceRate.json"
+        },
+        "gb": "../../../Ledgers/Frequencies/GB/"
+    },
+    "bonding": {
+        "threshold": 1024,
+            "interval": 30000
+    }
+}

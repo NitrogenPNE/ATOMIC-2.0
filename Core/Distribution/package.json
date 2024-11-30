@@ -1,0 +1,55 @@
+{
+    "name": "bit-atom-distributor",
+    "version": "1.0.0",
+    "description": "Module for distributing data into bit atoms within the Atomic Node Network.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "test": "jest --detectOpenHandles",
+        "test:watch": "jest --watch",
+        "lint": "eslint .",
+        "dev": "nodemon server/server.js"
+    },
+    "author": "Shawn Blackmore",
+    "license": "ATOMIC",
+    "dependencies": {
+        "axios": "^1.7.7",
+        "dotenv": "^10.0.0",
+        "express": "^4.17.1",
+        "fs-extra": "^11.1.1",
+        "path": "^0.12.7",
+        "winston": "^3.8.2"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "eslint": "^8.0.0",
+        "nodemon": "^2.0.20"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "verbose": true
+    },
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atomic-ltd/bit-atom-distributor.git"
+    },
+    "bugs": {
+        "url": "https://github.com/atomic-ltd/bit-atom-distributor/issues"
+    },
+    "homepage": "https://atomic.ca/projects/bit-atom-distributor",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "keywords": [
+        "data",
+        "bit",
+        "atom",
+        "distributor",
+        "node",
+        "network"
+    ],
+    "files": [
+        "index.js",
+        "server/"
+    ]
+}

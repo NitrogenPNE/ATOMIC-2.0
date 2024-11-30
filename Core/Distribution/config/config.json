@@ -1,0 +1,21 @@
+{
+    "port": 4000,
+    "bitAggregationThreshold": 8,
+    "byteAggregationThreshold": 1024,
+    "kbAggregationThreshold": 1024,
+    "mbAggregationThreshold": 1024,
+    "gbAggregationThreshold": 1024,
+    "shardLimit": 1048576,
+    "logging": {
+        "enabled": true,
+        "level": "info",
+        "destination": "../../logs/Distribution/distribution.log"
+    },
+    "nodePoolSize": 100,
+    "dataReplicationFactor": 3,
+    "maxNodeCapacityBytes": 1073741824,
+    "storagePaths": {
+        "bitStoragePath": "../../../Ledgers/BitStorage/data",
+        "poolBasePath": "../../../Ledgers/Pools/data"
+    }
+}

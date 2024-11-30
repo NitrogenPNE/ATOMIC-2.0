@@ -1,0 +1,23 @@
+{
+    "port": 4005,
+    "logging": {
+        "enabled": true,
+        "level": "info",
+        "destination": "../../logs/BounceRateNode/bounceRateNode.log"
+    },
+    "ledgers": {
+        "frequencies": {
+            "BITS": "../../../Ledgers/Frequencies/BITS/",
+            "BYTES": "../../../Ledgers/Frequencies/BYTES/",
+            "KB": "../../../Ledgers/Frequencies/KB/",
+            "MB": "../../../Ledgers/Frequencies/MB/",
+            "GB": "../../../Ledgers/Frequencies/GB/",
+            "TB": "../../../Ledgers/Frequencies/TB/"
+        },
+        "mining": "../../../Ledgers/Mining/"
+    },
+    "monitoring": {
+        "enabled": true,
+        "pollingIntervalMs": 5000
+    }
+}

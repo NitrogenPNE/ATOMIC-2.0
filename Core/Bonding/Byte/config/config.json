@@ -1,0 +1,15 @@
+{
+    "port": 4020,
+        "logging": {
+        "enabled": true,
+            "level": "info",
+                "destination": "../../logs/ByteKB/byteKbBonding.log"
+    },
+    "ledgers": {
+        "frequencies": {
+            "bytes": "../../../Ledgers/Frequencies/BYTES/",
+                "kb": "../../../Ledgers/Frequencies/KB/"
+        },
+        "user": "../../../Ledgers/Users/userLedger.json"
+    }
+}
