@@ -1,0 +1,20 @@
+{
+    "subscriptions": [
+        {
+            "nodeId": "CORP-NODE-001",
+            "type": "Corporate",
+            "address": "c7a8f9819fcb4e4d9c4ecf52ad9231df",
+            "subscribedAt": "2024-11-24T12:00:00Z",
+            "lastRenewed": "2024-11-24T12:00:00Z",
+            "status": "active"
+        },
+        {
+            "nodeId": "DEFENSE-NODE-002",
+            "type": "NationalDefense",
+            "address": "9b2d1ecb8f7144ed993b65f2b5e8368e",
+            "subscribedAt": "2024-11-24T12:15:00Z",
+            "lastRenewed": "2024-11-24T12:15:00Z",
+            "status": "active"
+        }
+    ]
+}

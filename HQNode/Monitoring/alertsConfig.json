@@ -1,0 +1,64 @@
+{
+    "alerts": {
+        "enabled": true,
+        "thresholds": {
+            "cpuUsagePercent": 85,
+            "memoryUsagePercent": 90,
+            "diskUsagePercent": 80,
+            "networkLatencyMs": 1000,
+            "transactionValidationFailureRate": 5
+        },
+        "notificationChannels": {
+            "email": {
+                "enabled": true,
+                "recipients": [
+                    "hq-monitoring@atomic.com",
+                    "security@atomic.com"
+                ],
+                "smtpServer": "smtp.atomic.com",
+                "port": 587,
+                "auth": {
+                    "username": "monitoring-bot",
+                    "password": "securepassword123"
+                }
+            },
+            "sms": {
+                "enabled": false,
+                "recipients": [
+                    "+1234567890",
+                    "+0987654321"
+                ]
+            },
+            "webhook": {
+                "enabled": true,
+                "url": "https://hq.atomic.com/webhooks/alerts",
+                "authToken": "secureWebhookToken987"
+            }
+        },
+        "logging": {
+            "enabled": true,
+            "level": "warn",
+            "logFile": "../Monitoring/alerts.log",
+            "rotation": {
+                "enabled": true,
+                "frequency": "daily",
+                "maxSizeMb": 20,
+                "retainDays": 14
+            }
+        },
+        "autoRecovery": {
+            "enabled": true,
+            "actions": [
+                {
+                    "type": "restartService",
+                    "service": "Validation"
+                },
+                {
+                    "type": "freeDiskSpace",
+                    "path": "../Logs",
+                    "retainLastFiles": 50
+                }
+            ]
+        }
+    }
+}

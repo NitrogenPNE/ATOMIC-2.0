@@ -1,0 +1,44 @@
+{
+    "logs": [
+        {
+            "timestamp": "2024-11-24T10:15:00Z",
+            "type": "INFO",
+            "message": "Monitoring system initialized successfully.",
+            "details": {
+                "cpuUsagePercent": 15,
+                "memoryUsagePercent": 30,
+                "diskUsagePercent": 40
+            }
+        },
+        {
+            "timestamp": "2024-11-24T10:30:00Z",
+            "type": "WARNING",
+            "message": "High CPU usage detected.",
+            "details": {
+                "cpuUsagePercent": 92,
+                "memoryUsagePercent": 70,
+                "diskUsagePercent": 45
+            }
+        },
+        {
+            "timestamp": "2024-11-24T11:00:00Z",
+            "type": "ERROR",
+            "message": "Disk usage exceeded threshold.",
+            "details": {
+                "cpuUsagePercent": 50,
+                "memoryUsagePercent": 60,
+                "diskUsagePercent": 82
+            }
+        },
+        {
+            "timestamp": "2024-11-24T11:15:00Z",
+            "type": "RECOVERY",
+            "message": "Auto-recovery action executed: freeDiskSpace",
+            "details": {
+                "path": "../Logs",
+                "filesDeleted": 100,
+                "remainingFiles": 50
+            }
+        }
+    ]
+}

@@ -1,0 +1,51 @@
+{
+    "name": "atomic-hqnode",
+        "version": "1.0.0",
+            "description": "ATOMIC HQ Node - Centralized hub for orchestration, validation, monitoring, and arbitration in the ATOMIC Blockchain.",
+                "main": "index.js",
+                    "scripts": {
+        "start": "node index.js",
+            "dev": "nodemon index.js",
+                "test": "jest --coverage",
+                    "lint": "eslint .",
+                        "monitor": "node Monitoring/systemMonitor.js",
+                            "arbitrate": "node Arbitration/consensusArbitrator.js",
+                                "orchestrate": "node Orchestration/taskCoordinator.js",
+                                    "validate": "node Validation/blockValidator.js",
+                                        "metrics": "node Monitoring/performanceLogger.js"
+    },
+    "repository": {
+        "type": "git",
+            "url": "https://github.com/atomic-ltd/atomic-hqnode.git"
+    },
+    "keywords": [
+        "blockchain",
+        "ATOMIC",
+        "HQNode",
+        "orchestration",
+        "validation",
+        "monitoring",
+        "arbitration",
+        "distributed-ledger",
+        "decentralized"
+    ],
+        "author": "ATOMIC, Ltd.",
+            "license": "ATOMIC-Limited-1.0",
+                "dependencies": {
+        "express": "^4.18.2",
+            "winston": "^3.9.0",
+                "fs-extra": "^11.1.1",
+                    "lodash": "^4.17.21",
+                        "dotenv": "^16.0.3",
+                            "uuid": "^9.0.0"
+    },
+    "devDependencies": {
+        "eslint": "^8.47.0",
+            "jest": "^29.7.0",
+                "nodemon": "^2.0.22"
+    },
+    "engines": {
+        "node": ">=18.0.0",
+            "npm": ">=8.0.0"
+    }
+}

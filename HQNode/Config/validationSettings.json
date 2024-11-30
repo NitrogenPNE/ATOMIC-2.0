@@ -1,0 +1,42 @@
+{
+    "validation": {
+        "enabled": true,
+        "blockValidation": {
+            "hashAlgorithm": "SHA-256",
+            "consensusMechanism": "Proof-of-Bounce",
+            "timeoutMs": 3000,
+            "maxBlockSizeMb": 2
+        },
+        "transactionValidation": {
+            "schemaValidation": true,
+            "signatureValidation": true,
+            "duplicateCheck": true,
+            "timeoutMs": 2000
+        },
+        "shardIntegrity": {
+            "enabled": true,
+            "frequency": "daily",
+            "hashAlgorithm": "SHA-256",
+            "auditRetentionDays": 30
+        },
+        "nodeAuthorization": {
+            "enabled": true,
+            "certificateValidation": true,
+            "allowedRegions": [
+                "North America",
+                "Europe",
+                "Asia-Pacific"
+            ]
+        },
+        "logging": {
+            "level": "info",
+            "logsPath": "../Validation/logs",
+            "rotation": {
+                "enabled": true,
+                "frequency": "daily",
+                "maxSizeMb": 50,
+                "retainDays": 14
+            }
+        }
+    }
+}

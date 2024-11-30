@@ -1,0 +1,149 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HQ Node Monitoring Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+
+        header {
+            background-color: #0047ab;
+            color: #fff;
+            padding: 20px;
+            text-align: center;
+        }
+
+        .container {
+            padding: 20px;
+        }
+
+        .card {
+            background: #fff;
+            border-radius: 8px;
+            box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
+            margin-bottom: 20px;
+            padding: 20px;
+        }
+
+            .card h2 {
+                margin-top: 0;
+            }
+
+            .card p {
+                margin: 5px 0;
+            }
+
+        .status {
+            font-weight: bold;
+        }
+
+            .status.ok {
+                color: green;
+            }
+
+            .status.warn {
+                color: orange;
+            }
+
+            .status.error {
+                color: red;
+            }
+
+        footer {
+            text-align: center;
+            padding: 10px 0;
+            background-color: #0047ab;
+            color: #fff;
+            position: fixed;
+            bottom: 0;
+            width: 100%;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>ATOMIC HQ Node Monitoring Dashboard</h1>
+        <p>Real-time insights into system performance and health</p>
+    </header>
+    <div class="container">
+        <div class="card">
+            <h2>Performance Metrics</h2>
+            <p>CPU Usage: <span id="cpuUsage" class="status">Loading...</span></p>
+            <p>Memory Usage: <span id="memoryUsage" class="status">Loading...</span></p>
+            <p>Disk Usage: <span id="diskUsage" class="status">Loading...</span></p>
+        </div>
+        <div class="card">
+            <h2>Network Health</h2>
+            <p>Status: <span id="networkStatus" class="status">Loading...</span></p>
+            <p>Connected Nodes: <span id="connectedNodes" class="status">Loading...</span></p>
+        </div>
+        <div class="card">
+            <h2>Alerts</h2>
+            <ul id="alertsList">
+                <li>Loading alerts...</li>
+            </ul>
+        </div>
+    </div>
+    <footer>
+        &copy; 2024 ATOMIC, Ltd. All Rights Reserved.
+    </footer>
+    <script>
+    async function fetchMetrics() {
+      try {
+        const response = await fetch('/api/metrics'); // Replace with actual API endpoint
+        const data = await response.json();
+
+        // Update Performance Metrics
+        document.getElementById('cpuUsage').textContent = `${data.performance.cpuUsage}%`;
+        document.getElementById('memoryUsage').textContent = `${data.performance.memoryUsage}%`;
+        document.getElementById('diskUsage').textContent = `${data.performance.diskUsage}%`;
+
+        // Update Status Colors
+        updateStatus(document.getElementById('cpuUsage'), data.performance.cpuUsage, 80);
+        updateStatus(document.getElementById('memoryUsage'), data.performance.memoryUsage, 85);
+        updateStatus(document.getElementById('diskUsage'), data.performance.diskUsage, 90);
+
+        // Update Network Health
+        document.getElementById('networkStatus').textContent = data.network.status;
+        document.getElementById('connectedNodes').textContent = data.network.connectedNodes;
+
+        // Update Alerts
+        const alertsList = document.getElementById('alertsList');
+        alertsList.innerHTML = '';
+        if (data.alerts.length === 0) {
+          alertsList.innerHTML = '<li>No alerts at the moment.</li>';
+        } else {
+          data.alerts.forEach(alert => {
+            const listItem = document.createElement('li');
+            listItem.textContent = alert.message;
+            alertsList.appendChild(listItem);
+          });
+        }
+      } catch (error) {
+        console.error('Error fetching metrics:', error);
+      }
+    }
+
+    function updateStatus(element, value, threshold) {
+      if (value > threshold) {
+        element.className = 'status error';
+      } else if (value > threshold * 0.8) {
+        element.className = 'status warn';
+      } else {
+        element.className = 'status ok';
+      }
+    }
+
+    // Refresh metrics every 60 seconds
+    setInterval(fetchMetrics, 60000);
+    fetchMetrics();
+    </script>
+</body>
+</html>

@@ -1,0 +1,53 @@
+{
+    "nodeId": "HQ-001",
+        "environment": "production",
+            "network": {
+        "maxConnections": 500,
+            "heartbeatIntervalMs": 10000
+    },
+    "monitoring": {
+        "alertThresholds": {
+            "cpuLoad": 0.8,
+                "memoryUsage": 0.85
+        },
+        "logRetentionDays": 30,
+            "logDirectory": "./Monitoring/logs",
+                "scripts": {
+            "healthChecker": "./Monitoring/networkHealthChecker.js",
+                "performanceLogger": "./Monitoring/performanceLogger.js",
+                    "alertsConfig": "./Monitoring/alertsConfig.json"
+        }
+    },
+    "arbitration": {
+        "consensusTimeoutMs": 15000,
+            "manualFallback": true,
+                "scripts": {
+            "policyFile": "./Arbitration/arbitrationPolicy.json",
+                "logs": "./Arbitration/arbitrationLogs.json",
+                    "consensusArbitrator": "./Arbitration/consensusArbitrator.js",
+                        "disputeManager": "./Arbitration/disputeManager.js",
+                            "rollbackHandler": "./Arbitration/rollbackHandler.js"
+        }
+    },
+    "orchestration": {
+        "maxTasks": 1000,
+            "shardRebalanceThreshold": 0.75,
+                "scripts": {
+            "taskCoordinator": "./Orchestration/taskCoordinator.js",
+                "loadBalancer": "./Orchestration/loadBalancer.js",
+                    "shardManager": "./Orchestration/shardManager.js",
+                        "orchestrationLogs": "./Orchestration/orchestrationLogs.json",
+                            "orchestrationPolicy": "./Orchestration/orchestrationPolicy.json"
+        }
+    },
+    "validation": {
+        "logDirectory": "./Validation/logs",
+            "rulesFile": "./Validation/validationRules.json",
+                "scripts": {
+            "blockValidator": "./Validation/blockValidator.js",
+                "transactionValidator": "./Validation/transactionValidator.js",
+                    "shardValidator": "./Validation/shardValidator.js",
+                        "utils": "./Validation/validationUtils.js"
+        }
+    }
+}

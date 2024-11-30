@@ -1,0 +1,89 @@
+{
+    "hqNode": {
+        "id": "HQ-NODE-001",
+        "region": "Global",
+        "role": "Central Coordinator",
+        "description": "ATOMIC HQ Node - Central hub for consensus, arbitration, and monitoring.",
+        "api": {
+            "port": 8080,
+            "host": "127.0.0.1",
+            "rateLimiting": {
+                "enabled": true,
+                "windowMs": 60000,
+                "maxRequests": 500
+            },
+            "endpoints": {
+                "validation": "/hq/validation",
+                "arbitration": "/hq/arbitration",
+                "monitoring": "/hq/monitoring",
+                "config": "/hq/config"
+            }
+        }
+    },
+    "blockchain": {
+        "networkId": 42,
+        "consensusAlgorithm": "Proof-of-Bounce",
+        "blockTimeSeconds": 10,
+        "genesisBlockHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "supernodeConnection": {
+            "enabled": true,
+            "supernodes": [
+                "ws://supernode1.atomic.global:6001",
+                "ws://supernode2.atomic.global:6002",
+                "ws://supernode3.atomic.global:6003"
+            ]
+        },
+        "ledgerPath": "../atomic-blockchain/ledger.json"
+    },
+    "arbitration": {
+        "enabled": true,
+        "policyPath": "../Arbitration/arbitrationPolicy.json",
+        "logsPath": "../Arbitration/arbitrationLogs.json",
+        "timeoutMs": 30000
+    },
+    "monitoring": {
+        "enabled": true,
+        "logsPath": "../Monitoring/logs",
+        "alerts": {
+            "enabled": true,
+            "email": "alerts@atomic.global",
+            "thresholds": {
+                "cpuUsage": 85,
+                "memoryUsage": 90,
+                "diskSpace": 80
+            }
+        }
+    },
+    "orchestration": {
+        "enabled": true,
+        "shardingPolicy": "Dynamic-Bounce",
+        "taskDistribution": {
+            "enabled": true,
+            "maxTasksPerNode": 10
+        }
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyManagement": {
+                "publicKeyPath": "../Security/publicKey.pem",
+                "privateKeyPath": "../Security/privateKey.pem"
+            }
+        },
+        "authentication": {
+            "enabled": true,
+            "apiKeys": [
+                "hq-key-123",
+                "hq-key-456",
+                "hq-key-789"
+            ],
+            "aclPath": "../Config/acl.json"
+        }
+    },
+    "environment": {
+        "mode": "production",
+        "loggingLevel": "info",
+        "region": "Global"
+    }
+}

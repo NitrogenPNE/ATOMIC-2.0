@@ -1,0 +1,30 @@
+{
+    "transactionValidation": {
+        "maxAmount": 1000000,
+        "minAmount": 0.01,
+        "maxSignatureLength": 256,
+        "requiredFields": [ "id", "from", "to", "amount", "timestamp", "signature" ]
+    },
+    "blockValidation": {
+        "maxTransactionsPerBlock": 5000,
+        "maxBlockSizeMB": 10,
+        "requiredFields": [ "index", "previousHash", "timestamp", "transactions", "hash", "nonce" ],
+        "difficultyTarget": 4,
+        "timestampDriftAllowanceSeconds": 300
+    },
+    "shardValidation": {
+        "maxShardSizeMB": 1024,
+        "requiredFields": [ "id", "hash", "timestamp", "data" ],
+        "integrityCheckFrequencyMinutes": 60
+    },
+    "consensusRules": {
+        "requiredQuorumPercentage": 66,
+        "minSupernodeParticipants": 5,
+        "fallbackToManualArbitration": true
+    },
+    "generalValidation": {
+        "enableTamperDetection": true,
+        "auditLogRetentionDays": 30,
+        "strictSchemaEnforcement": true
+    }
+}

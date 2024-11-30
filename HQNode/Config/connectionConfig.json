@@ -1,0 +1,14 @@
+{
+    "tokens": {
+        "CORP-HQ-001": "9a6d42ed2d8f33b5dcae04a5b5d7e05b0cc65b9ddf8453451c9e4a60f9d61d53",
+            "NAT-DEF-HQ-001": "4b7c8f2e92a9dbe4eb89bace78ed64b5828e9cf735fa1277d4df9f5216b34c5a",
+                "CORP-NODE-002": "7a9f123e9382cfae8de85d3cfd34935a764f0e1422e9b5436b7e6d24fc8b61c9",
+                    "NAT-DEF-NODE-003": "ef423c78a1b29f8ebd2ea0497d6c7e02f2da3c79e1bd7ea256df347fdb4aafc2"
+    },
+    "connectionSettings": {
+        "maxConnections": 500,
+            "heartbeatIntervalMs": 30000,
+                "retryIntervalMs": 10000,
+                    "secureProtocol": true
+    }
+}

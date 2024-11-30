@@ -1,0 +1,65 @@
+{
+    "rules": [
+        {
+            "name": "Node Type Validation",
+            "description": "Ensure the node type is either 'Corporate' or 'NationalDefense'.",
+            "conditions": [
+                {
+                    "field": "type",
+                    "allowedValues": [ "Corporate", "NationalDefense" ]
+                }
+            ],
+            "errorMessage": "Invalid node type. Allowed values are 'Corporate' or 'NationalDefense'."
+        },
+        {
+            "name": "Node Size Validation",
+            "description": "Ensure the node size is one of 'small', 'medium', 'large', or 'defense'.",
+            "conditions": [
+                {
+                    "field": "size",
+                    "allowedValues": [ "small", "medium", "large", "defense" ]
+                }
+            ],
+            "errorMessage": "Invalid node size. Allowed values are 'small', 'medium', 'large', or 'defense'."
+        },
+        {
+            "name": "Unique Node Identifier",
+            "description": "Ensure each subscription is tied to a unique node ID.",
+            "conditions": [
+                {
+                    "field": "nodeId",
+                    "unique": true
+                }
+            ],
+            "errorMessage": "Duplicate nodeId detected. Each node must have a unique identifier."
+        },
+        {
+            "name": "Subscription Active Check",
+            "description": "Ensure only active subscriptions can be renewed.",
+            "conditions": [
+                {
+                    "field": "status",
+                    "allowedValues": [ "active" ]
+                }
+            ],
+            "errorMessage": "Cannot renew subscription. Status must be 'active'."
+        },
+        {
+            "name": "National Defense Exemption",
+            "description": "National Defense nodes are exempt from subscription fees.",
+            "conditions": [
+                {
+                    "field": "type",
+                    "value": "NationalDefense",
+                    "exempt": true
+                }
+            ],
+            "errorMessage": "National Defense nodes should not incur subscription fees."
+        }
+    ],
+    "defaults": {
+        "renewalPeriodDays": 30,
+        "maxConnections": 500,
+        "minNodeUptimeHours": 24
+    }
+}

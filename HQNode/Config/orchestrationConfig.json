@@ -1,0 +1,43 @@
+{
+    "orchestration": {
+        "enabled": true,
+        "sharding": {
+            "strategy": "dynamic-bounce",
+            "maxShardSizeMb": 1024,
+            "minShardsPerNode": 5,
+            "distributionPolicy": {
+                "primaryReplica": "local",
+                "secondaryReplica": "remote",
+                "redundancyLevel": 2
+            }
+        },
+        "taskScheduling": {
+            "enabled": true,
+            "defaultPriority": "normal",
+            "maxConcurrentTasks": 50,
+            "retryPolicy": {
+                "maxRetries": 3,
+                "backoffMs": 500
+            }
+        },
+        "nodeManagement": {
+            "supernodeCluster": [
+                "ws://supernode1.atomic.global:6001",
+                "ws://supernode2.atomic.global:6002",
+                "ws://supernode3.atomic.global:6003"
+            ],
+            "maxNodes": 500,
+            "heartbeatIntervalMs": 10000
+        },
+        "logging": {
+            "level": "debug",
+            "logsPath": "../Orchestration/logs",
+            "rotation": {
+                "enabled": true,
+                "frequency": "weekly",
+                "maxSizeMb": 100,
+                "retainWeeks": 4
+            }
+        }
+    }
+}

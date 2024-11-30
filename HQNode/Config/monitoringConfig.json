@@ -1,0 +1,46 @@
+{
+    "monitoring": {
+        "enabled": true,
+        "logging": {
+            "level": "info",
+            "logsPath": "../Monitoring/logs",
+            "rotation": {
+                "enabled": true,
+                "frequency": "daily",
+                "maxSizeMb": 50,
+                "retainDays": 30
+            }
+        },
+        "alerts": {
+            "enabled": true,
+            "emailNotifications": {
+                "enabled": true,
+                "recipient": "alerts@atomic.global",
+                "smtpConfig": {
+                    "host": "smtp.atomic.global",
+                    "port": 587,
+                    "secure": false,
+                    "auth": {
+                        "user": "monitoring@atomic.global",
+                        "pass": "securepassword"
+                    }
+                }
+            },
+            "thresholds": {
+                "cpuUsage": 85,
+                "memoryUsage": 90,
+                "diskSpace": 80,
+                "networkLatencyMs": 100
+            }
+        },
+        "heartbeat": {
+            "intervalMs": 15000,
+            "retryLimit": 5,
+            "nodes": [
+                "ws://supernode1.atomic.global:6001",
+                "ws://supernode2.atomic.global:6002",
+                "ws://supernode3.atomic.global:6003"
+            ]
+        }
+    }
+}
