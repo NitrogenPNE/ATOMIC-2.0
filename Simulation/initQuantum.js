@@ -39,8 +39,8 @@ const os = require("os");
 const { spawnSync } = require("child_process");
 
 // Paths
-const CONFIG_PATH = path.join("C:\\ATOMIC 2.0\\Config", "quantumConfig.json");
-const LOG_FILE = path.join("C:\\ATOMIC 2.0\\Logs", "quantumInit.log");
+const CONFIG_PATH = path.resolve(__dirname, "..", "Config", "quantumConfig.json");
+const LOG_FILE = path.resolve(__dirname, "..", "Logs", "quantumInit.log");
 
 // Logging utility
 function logMessage(message, level = "INFO") {
@@ -112,7 +112,7 @@ function prepareEnvironment(config) {
     logMessage("Preparing simulation environment...");
     try {
         // Allocate directories for quantum states, logs, etc.
-        const quantumStateDir = config.simulation.exportDirectory;
+        const quantumStateDir = path.resolve(__dirname, config.simulation.exportDirectory);
         fs.mkdirSync(quantumStateDir, { recursive: true });
         logMessage(`Quantum state export directory prepared: ${quantumStateDir}`);
     } catch (error) {

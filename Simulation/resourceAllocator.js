@@ -26,7 +26,7 @@
 //
 // Dependencies:
 // - os: For system resource monitoring.
-// - node-system-stats: For detailed GPU/TPU metrics.
+// - gpu-info: For detailed GPU metrics.
 // - fs: For logging and configuration handling.
 //
 // Contact:
@@ -36,17 +36,28 @@
 const os = require("os");
 const fs = require("fs");
 const path = require("path");
+const gpuInfo = require("gpu-info"); // Ensure this is installed via npm install gpu-info
+
+let hasCheckedForGPU = false;
+let gpuAvailable = false;
 
 // Configuration
-const CONFIG_PATH = path.join("C:\\ATOMIC 2.0\\Config", "quantumConfig.json");
-const LOG_FILE = path.join("C:\\ATOMIC 2.0\\Logs", "resourceAllocator.log");
+const CONFIG_PATH = path.resolve(__dirname, "../Config/quantumConfig.json");
+const LOG_FILE = path.resolve(__dirname, "../Logs/resourceAllocator.log");
+const PERFORMANCE_METRICS_FILE = path.resolve(__dirname, "../Logs/performanceMetrics.json");
 
 // Logging utility
 function logMessage(message, level = "INFO") {
     const timestamp = new Date().toISOString();
     const logEntry = `[${timestamp}] [${level}] ${message}\n`;
-    fs.appendFileSync(LOG_FILE, logEntry, "utf8");
-    console.log(logEntry);
+    try {
+        fs.appendFileSync(LOG_FILE, logEntry, "utf8");
+    } catch (error) {
+        console.error(`[${timestamp}] [ERROR] Failed to write log: ${error.message}`);
+    }
+    if (["DEBUG", "ERROR", "WARN"].includes(level)) {
+        console.log(logEntry);
+    }
 }
 
 // Load configuration
@@ -57,7 +68,7 @@ function loadConfig() {
         return config;
     } catch (error) {
         logMessage(`Error loading configuration: ${error.message}`, "ERROR");
-        throw error;
+        throw new Error("Configuration loading failed. Ensure the quantumConfig.json is valid.");
     }
 }
 
@@ -93,32 +104,46 @@ function getAverageCPULoad(cpuUsage) {
     return ((1 - totalIdle / totalTick) * 100).toFixed(2);
 }
 
-// GPU/TPU resource monitoring (placeholder)
-function monitorGPU() {
-    // Replace with real GPU metrics (e.g., using nvidia-smi or other libraries)
-    const gpuAvailable = true; // Simulated GPU availability
-    logMessage(`GPU Availability: ${gpuAvailable}`);
+// GPU/TPU resource monitoring
+async function monitorGPU() {
+    if (hasCheckedForGPU) return gpuAvailable;
+
+    try {
+        const gpus = await gpuInfo();
+        if (gpus.length > 0) {
+            logMessage(`GPU detected: ${gpus.map(gpu => gpu.model).join(", ")}`);
+            gpuAvailable = true;
+        } else {
+            logMessage("No GPU detected. Falling back to CPU-only mode.", "WARN");
+            gpuAvailable = false;
+        }
+    } catch (error) {
+        logMessage(`Error detecting GPU: ${error.message}. Falling back to CPU-only mode.`, "WARN");
+        gpuAvailable = false;
+    }
+
+    hasCheckedForGPU = true;
     return gpuAvailable;
 }
 
 // Allocate resources dynamically
-function allocateResources(config) {
+async function allocateResources(config) {
     logMessage("Allocating resources for quantum simulations...");
 
     const resources = monitorResources();
-    const gpuAvailable = monitorGPU();
+    const gpuStatus = await monitorGPU();
 
-    if (resources.cpu.load > config.system.resourceLimits.maxCPUUsage) {
+    if (resources.cpu.load > (config.system.resourceLimits.maxCPUUsage || 85)) {
         logMessage("CPU usage exceeds limit. Reducing simulation threads.", "WARN");
         // Adjust simulation threads dynamically
     }
 
-    if (resources.memory.usage > config.system.resourceLimits.maxMemoryUsage) {
+    if (resources.memory.usage > (config.system.resourceLimits.maxMemoryUsage || 90)) {
         logMessage("Memory usage exceeds limit. Optimizing memory allocation.", "WARN");
         // Implement memory optimization logic
     }
 
-    if (!gpuAvailable && config.system.gpuAcceleration) {
+    if (!gpuStatus && config.system.gpuAcceleration) {
         logMessage("GPU unavailable. Falling back to CPU-only simulation.", "WARN");
         // Adjust simulation mode to CPU-only
     }
@@ -130,21 +155,21 @@ function allocateResources(config) {
 function logPerformanceMetrics() {
     logMessage("Logging performance metrics...");
     const stats = monitorResources();
-    fs.writeFileSync(
-        path.join("C:\\ATOMIC 2.0\\Logs", "performanceMetrics.json"),
-        JSON.stringify(stats, null, 4),
-        "utf8"
-    );
-    logMessage("Performance metrics logged.");
+    try {
+        fs.writeFileSync(PERFORMANCE_METRICS_FILE, JSON.stringify(stats, null, 4), "utf8");
+        logMessage("Performance metrics logged.");
+    } catch (error) {
+        logMessage(`Error writing performance metrics: ${error.message}`, "ERROR");
+    }
 }
 
 // Main function to allocate and monitor resources
-function manageResources() {
+async function manageResources() {
     try {
         logMessage("Starting resource allocation...");
         const config = loadConfig();
 
-        allocateResources(config);
+        await allocateResources(config);
         logPerformanceMetrics();
 
         logMessage("Resource management completed.");
@@ -162,5 +187,6 @@ module.exports = { monitorResources, allocateResources, manageResources };
 
 // ------------------------------------------------------------------------------
 // End of Resource Allocator Module
-// Version: 1.0.0 | Updated: 2024-11-26
+// Version: 1.0.5 | Updated: 2024-11-30
 // ------------------------------------------------------------------------------
+
