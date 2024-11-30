@@ -1,0 +1,30 @@
+[
+    {
+        "timestamp": "2024-11-25T14:02:10Z",
+        "satelliteId": "SAT-001",
+        "operation": "Handshake",
+        "status": "Success",
+        "details": "Handshake established successfully with satellite DefenseComm-Alpha."
+    },
+    {
+        "timestamp": "2024-11-25T14:04:15Z",
+        "satelliteId": "SAT-002",
+        "operation": "Data Transmission",
+        "status": "Failed",
+        "details": "Timeout occurred while sending data to DefenseComm-Beta."
+    },
+    {
+        "timestamp": "2024-11-25T14:06:30Z",
+        "satelliteId": "SAT-003",
+        "operation": "Ping",
+        "status": "Success",
+        "details": "Received ping response from satellite DefenseComm-Gamma in 120ms."
+    },
+    {
+        "timestamp": "2024-11-25T14:10:45Z",
+        "satelliteId": "SAT-001",
+        "operation": "Data Reception",
+        "status": "Success",
+        "details": "Received encrypted payload from DefenseComm-Alpha. Size: 10MB."
+    }
+]

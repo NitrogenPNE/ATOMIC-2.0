@@ -1,0 +1,34 @@
+{
+    "clusters": [
+        {
+            "clusterId": "CL-001",
+            "name": "Critical Infrastructure Cluster",
+            "nodes": ["ND-Node1", "ND-Node2", "ND-Node3"],
+            "isolationLevel": "Tier-5",
+            "isolationMode": "Air-Gapped",
+            "createdAt": "2024-11-30T08:00:00Z",
+            "lastValidated": "2024-12-01T12:30:00Z",
+            "description": "Handles all critical defense-related operations and is fully isolated from external networks."
+        },
+        {
+            "clusterId": "CL-002",
+            "name": "Research and Development Cluster",
+            "nodes": ["RD-Node1", "RD-Node2"],
+            "isolationLevel": "Tier-3",
+            "isolationMode": "Controlled Network",
+            "createdAt": "2024-12-01T09:30:00Z",
+            "lastValidated": "2024-12-02T10:00:00Z",
+            "description": "Facilitates research projects while maintaining moderate isolation standards."
+        },
+        {
+            "clusterId": "CL-003",
+            "name": "Training and Simulation Cluster",
+            "nodes": ["TS-Node1", "TS-Node2", "TS-Node3", "TS-Node4"],
+            "isolationLevel": "Tier-2",
+            "isolationMode": "Virtualized Environment",
+            "createdAt": "2024-12-03T14:45:00Z",
+            "lastValidated": "2024-12-03T18:00:00Z",
+            "description": "Dedicated to training simulations and scenario-based drills with minimal isolation requirements."
+        }
+    ]
+}

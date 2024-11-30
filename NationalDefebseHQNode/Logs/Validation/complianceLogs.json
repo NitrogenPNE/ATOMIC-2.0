@@ -1,0 +1,25 @@
+{
+    "logs": [
+        {
+            "timestamp": "2024-11-26T10:30:00Z",
+            "type": "transaction",
+            "dataId": "txn-001",
+            "result": true,
+            "message": "Compliance checks passed."
+        },
+        {
+            "timestamp": "2024-11-26T11:00:00Z",
+            "type": "shard",
+            "dataId": "shard-001",
+            "result": false,
+            "message": "Rule violation: Shard size exceeds allowed limit."
+        },
+        {
+            "timestamp": "2024-11-26T11:30:00Z",
+            "type": "contract",
+            "dataId": "contract-xyz",
+            "result": true,
+            "message": "Compliance checks passed for smart contract."
+        }
+    ]
+}

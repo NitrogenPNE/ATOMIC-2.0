@@ -1,0 +1,23 @@
+[
+    {
+        "timestamp": "2024-11-27T10:00:00Z",
+        "metrics": {
+            "cpuLoad": 1.2,
+            "memoryUsage": 72.4,
+            "uptime": 1209600
+        },
+        "anomalies": []
+    },
+    {
+        "timestamp": "2024-11-27T12:00:00Z",
+        "metrics": {
+            "cpuLoad": 3.0,
+            "memoryUsage": 89.6,
+            "uptime": 1209601
+        },
+        "anomalies": [
+            { "type": "CPU Load", "value": 3.0 },
+            { "type": "Memory Usage", "value": 89.6 }
+        ]
+    }
+]

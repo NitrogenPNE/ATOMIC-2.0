@@ -1,0 +1,49 @@
+{
+    "logs": [
+        {
+            "timestamp": "2024-11-27T10:00:00Z",
+            "operation": "AirGap Activation",
+            "status": "success",
+            "details": {
+                "initiator": "System",
+                "mode": "Manual",
+                "reason": "Scheduled maintenance window",
+                "affectedSystems": ["NationalDefenseHQNode", "ShardManager"]
+            }
+        },
+        {
+            "timestamp": "2024-11-27T12:30:00Z",
+            "operation": "Data Transfer",
+            "status": "failure",
+            "details": {
+                "initiator": "Admin-123",
+                "mode": "Secure USB",
+                "reason": "Unauthorized device detected",
+                "affectedFiles": ["hqConfig.json", "validationLogs.json"]
+            }
+        },
+        {
+            "timestamp": "2024-11-27T14:45:00Z",
+            "operation": "AirGap Deactivation",
+            "status": "success",
+            "details": {
+                "initiator": "System",
+                "mode": "Automatic",
+                "reason": "End of scheduled isolation period",
+                "affectedSystems": ["NationalDefenseHQNode", "ShardManager"]
+            }
+        }
+    ],
+        "configuration": {
+        "logRetentionDays": 90,
+            "logPath": "./Logs/AirGap/",
+                "alerting": {
+            "enabled": true,
+                "thresholds": {
+                "failures": 5,
+                    "suspiciousActivity": 3
+            },
+            "notificationChannels": ["email", "dashboard"]
+        }
+    }
+}

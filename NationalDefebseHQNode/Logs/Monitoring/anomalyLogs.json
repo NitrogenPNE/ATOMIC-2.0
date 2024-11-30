@@ -1,0 +1,52 @@
+{
+    "anomalies": [
+        {
+            "timestamp": "2024-11-26T14:15:00Z",
+            "detectedBy": "behavioralAnomalyDetector",
+            "type": "suspiciousLogin",
+            "details": {
+                "userId": "unknown_user",
+                "sourceIP": "192.168.1.100",
+                "attempts": 12,
+                "result": "failed"
+            },
+            "severity": "high",
+            "actionTaken": "IP blocked, admin notified"
+        },
+        {
+            "timestamp": "2024-11-26T15:30:00Z",
+            "detectedBy": "honeypotManager",
+            "type": "honeypotEngagement",
+            "details": {
+                "sourceIP": "203.0.113.45",
+                "interactionLevel": "high",
+                "payloads": [
+                    {
+                        "type": "SQLInjection",
+                        "payload": "' OR '1'='1'; --"
+                    },
+                    {
+                        "type": "CommandInjection",
+                        "payload": "&& rm -rf /"
+                    }
+                ]
+            },
+            "severity": "critical",
+            "actionTaken": "Source quarantined, incident logged"
+        },
+        {
+            "timestamp": "2024-11-26T16:10:00Z",
+            "detectedBy": "intrusionPreventionSystem",
+            "type": "unusualNetworkTraffic",
+            "details": {
+                "sourceIP": "10.0.0.5",
+                "destinationIP": "10.0.0.20",
+                "dataVolume": "2GB in 30 seconds",
+                "protocol": "TCP",
+                "port": 22
+            },
+            "severity": "medium",
+            "actionTaken": "Traffic throttled, admin notified"
+        }
+    ]
+}
