@@ -29,7 +29,9 @@ Every token and shard is associated with hierarchical metadata:
 Atomic Metadata: Includes shard-specific details (neutrons, protons, electrons) for fine-grained control.
 Node Role Data: Differentiates between HQ, corporate, and branch nodes, ensuring role-based access control.
 Usage Counters: Track token usage to detect anomalies or abuse.
+
 3. ATOMIC Shards and Data Bouncing in PoA
+
 3.1 Sharding with PoA
 ATOMIC employs a military-grade sharding mechanism, breaking data into encrypted "atomic shards." Each shard:
 
