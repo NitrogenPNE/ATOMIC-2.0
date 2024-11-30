@@ -23,7 +23,7 @@ const cors = require("cors");
 const rateLimit = require("express-rate-limit");
 const promBundle = require("express-prom-bundle"); // For Prometheus metrics
 const winston = require("winston");
-const { getBlockByHash, getLatestBlock, getTransactionById, submitTransaction } = require("../core/blockchainNode");
+const { getBlockByHash, getLatestBlock, getTransactions, submitTransaction } = require("../core/blockchainNode");
 const { validateTransaction } = require("../utils/validationUtils");
 const { validateApiKeyWithRole } = require("../utils/authUtils");
 const { encryptLog } = require("../utils/loggingUtils");
@@ -51,8 +51,9 @@ const logger = winston.createLogger({
     format: winston.format.combine(
         winston.format.timestamp(),
         winston.format.printf(({ timestamp, level, message, ...meta }) => {
-            return `[${timestamp}] [${level.toUpperCase()}]: ${encryptLog(message)} ${Object.keys(meta).length ? JSON.stringify(meta) : ""
-                }`;
+            return `[${timestamp}] [${level.toUpperCase()}]: ${encryptLog(message)} ${
+                Object.keys(meta).length ? JSON.stringify(meta) : ""
+            }`;
         })
     ),
     transports: [
