@@ -11,8 +11,8 @@
  *
  * Description:
  * This module manages the distribution of bit atoms across HQNode, CorporateHQNode,
- * and NationalDefenseHQNode ledgers. Ensures distribution metadata is logged on
- * the blockchain for traceability and security.
+ * and NationalDefenseHQNode ledgers. It ensures token verification and metadata 
+ * logging on the blockchain for traceability and security.
  *
  * Dependencies:
  * - fs-extra: File system operations and JSON handling.
@@ -20,6 +20,7 @@
  * - loggingUtils: Centralized logging and monitoring.
  * - ledgerManager: Logs shard-related operations on the blockchain.
  * - predictionEngine: Optimizes distribution using AI-powered placement.
+ * - tokenValidation: Validates token-based Proof-of-Access.
  *
  * Author: Shawn Blackmore
  * -------------------------------------------------------------------------------
@@ -29,7 +30,7 @@ const fs = require("fs-extra");
 const path = require("path");
 const { createDistributionProposal } = require("../../Contracts/Distribution/script/atomDistributionContract");
 const { logShardMetadata } = require("../../atomic-blockchain/ledgerManager");
-const { validateUserAddress } = require("../../AtomFission/AddressNode/Tracker/user/script/userAddressTracker");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 const { logInfo, logError } = require("../../Utilities/loggingUtils");
 const predictionEngine = require("../../NIKI/predictionEngine");
 
@@ -51,21 +52,29 @@ async function initializeStoragePaths() {
 }
 
 /**
- * Retrieves and validates user address.
+ * Validates token for Proof-of-Access.
+ * @param {string} tokenId - Token ID for verification.
+ * @param {string} encryptedToken - Encrypted token data for validation.
+ * @returns {Promise<Object>} - Token validation result.
  */
-async function getUserAddressInfo(userId) {
-    const userAddress = await validateUserAddress(userId);
-    if (!userAddress) throw new Error(`User address not found for ID: ${userId}`);
-    return { userId, address: userAddress };
+async function validateTokenAccess(tokenId, encryptedToken) {
+    const validationResult = await validateToken(tokenId, encryptedToken);
+    if (!validationResult.valid) {
+        throw new Error("Token validation failed: Access denied.");
+    }
+    return validationResult;
 }
 
 /**
  * Creates and logs a distribution proposal.
+ * @param {string} tokenId - Token ID associated with the request.
+ * @param {number} duration - Duration of distribution.
+ * @returns {Promise<Object>} - Proposal details.
  */
-async function distributeWithProposal(userId, duration) {
+async function distributeWithProposal(tokenId, duration) {
     try {
-        logInfo(`Creating a distribution proposal for user: ${userId} for duration: ${duration}`);
-        const proposal = await createDistributionProposal(`distribute-${userId}`, "system", duration);
+        logInfo(`Creating a distribution proposal for token: ${tokenId} for duration: ${duration}`);
+        const proposal = await createDistributionProposal(`distribute-${tokenId}`, "system", duration);
         logInfo(`Proposal created on blockchain with ID: ${proposal.id}`);
         return proposal;
     } catch (error) {
@@ -76,22 +85,31 @@ async function distributeWithProposal(userId, duration) {
 
 /**
  * Manages atom distribution across all nodes and logs metadata.
+ * @param {string} tokenId - Token ID for validation.
+ * @param {string} encryptedToken - Encrypted token data for validation.
+ * @param {number} duration - Distribution duration.
  */
-async function distributeToPools(userId, duration) {
+async function distributeToPools(tokenId, encryptedToken, duration) {
     try {
-        logInfo(`Starting atom distribution for user: ${userId} with duration: ${duration}`);
-        const { address: userAddress } = await getUserAddressInfo(userId);
-        const proposal = await distributeWithProposal(userId, duration);
+        logInfo(`Starting atom distribution for token: ${tokenId} with duration: ${duration}`);
+        
+        // Step 1: Validate Token Access
+        const tokenDetails = await validateTokenAccess(tokenId, encryptedToken);
 
+        // Step 2: Create Distribution Proposal
+        const proposal = await distributeWithProposal(tokenId, duration);
+
+        // Step 3: Distribute Atoms
         const atomTypes = ["BITS", "BYTES", "KB", "MB", "GB", "TB"];
         for (const type of atomTypes) {
-            await distributeAtomsByType(type, userAddress, duration, proposal.id);
+            await distributeAtomsByType(type, tokenDetails.address, duration, proposal.id);
         }
 
+        // Step 4: Log Metadata
         logInfo("Logging shard metadata on blockchain...");
-        await logShardMetadata(userId, proposal.id, atomTypes, duration);
+        await logShardMetadata(tokenId, proposal.id, atomTypes, duration);
 
-        logInfo(`Distribution completed for user: ${userId}`);
+        logInfo(`Distribution completed for token: ${tokenId}`);
     } catch (error) {
         logError(`Error during atom distribution: ${error.message}`);
         throw error;
@@ -101,7 +119,7 @@ async function distributeToPools(userId, duration) {
 /**
  * Distributes atoms of a specific type and logs operations.
  */
-async function distributeAtomsByType(type, userAddress, duration, proposalId) {
+async function distributeAtomsByType(type, nodeAddress, duration, proposalId) {
     const typePath = path.join(MINING_PATH, type);
     try {
         const addresses = await fs.readdir(typePath);
@@ -117,7 +135,7 @@ async function distributeAtomsByType(type, userAddress, duration, proposalId) {
                 logInfo(`No bounce rates for address: ${address} (${type}). Skipping.`);
                 continue;
             }
-            await distributeBasedOnNode(userAddress, duration, proposalId, type, address, bounceRates);
+            await distributeBasedOnNode(nodeAddress, duration, proposalId, type, address, bounceRates);
         }
     } catch (error) {
         logError(`Failed to distribute ${type} atoms: ${error.message}`);
@@ -128,7 +146,7 @@ async function distributeAtomsByType(type, userAddress, duration, proposalId) {
 /**
  * Distributes atoms for a specific node and logs bounce rate data.
  */
-async function distributeBasedOnNode(userAddress, duration, proposalId, type, address, bounceRates) {
+async function distributeBasedOnNode(nodeAddress, duration, proposalId, type, address, bounceRates) {
     const distributionPath = path.join(DISTRIBUTION_PATH, type, address);
     try {
         await fs.ensureDir(distributionPath);
@@ -141,7 +159,7 @@ async function distributeBasedOnNode(userAddress, duration, proposalId, type, ad
             const filePath = path.join(distributionPath, `${particle}Frequency.json`);
             const existingData = (await fs.pathExists(filePath)) ? await fs.readJson(filePath) : [];
             const updatedData = mergeUniqueData(existingData, particleRates, {
-                userAddress,
+                nodeAddress,
                 atomType: type,
                 duration,
                 particle,
