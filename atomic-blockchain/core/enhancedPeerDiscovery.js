@@ -29,7 +29,7 @@ const dns = require("dns");
 const winston = require("winston");
 const { validatePeer, validateShardCapability } = require("../utils/validationUtils");
 const { establishQuantumSecureConnection } = require("../utils/quantumCryptoUtils");
-const { validateToken } = require("../TokenManagement/tokenValidation");
+const { validateToken } = require("../../../Pricing/TokenManagement/tokenValidation");
 
 // Logger setup
 const logger = winston.createLogger({
