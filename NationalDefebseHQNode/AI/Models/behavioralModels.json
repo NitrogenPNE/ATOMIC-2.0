@@ -1,0 +1,69 @@
+{
+    "behavioralModels": [
+        {
+            "modelId": "BM001",
+            "name": "Suspicious Login Detection",
+            "description": "Detects patterns indicative of suspicious login attempts, such as brute force attacks.",
+            "features": [
+                "failedLoginAttempts",
+                "loginDuration",
+                "geoLocation",
+                "timeOfDay"
+            ],
+            "thresholds": {
+                "failedLoginAttempts": 10,
+                "loginDuration": "5 seconds",
+                "geoLocation": "unusual",
+                "timeOfDay": "unusual"
+            },
+            "actions": [
+                "blockIP",
+                "notifyAdmin"
+            ],
+            "lastUpdated": "2024-11-26T12:00:00Z"
+        },
+        {
+            "modelId": "BM002",
+            "name": "Unusual Network Traffic",
+            "description": "Detects unusual spikes in network traffic volume or irregular access patterns.",
+            "features": [
+                "dataVolume",
+                "protocolType",
+                "destinationPort",
+                "trafficDuration"
+            ],
+            "thresholds": {
+                "dataVolume": "1GB in 10 seconds",
+                "protocolType": ["TCP", "UDP"],
+                "destinationPort": [22, 3389, 443],
+                "trafficDuration": "short bursts"
+            },
+            "actions": [
+                "throttleTraffic",
+                "notifyAdmin",
+                "logAnomaly"
+            ],
+            "lastUpdated": "2024-11-26T12:30:00Z"
+        },
+        {
+            "modelId": "BM003",
+            "name": "Honeypot Interaction Analysis",
+            "description": "Analyzes interaction patterns with honeypots to detect high-risk threats.",
+            "features": [
+                "interactionFrequency",
+                "payloadType",
+                "sourceIPReputation"
+            ],
+            "thresholds": {
+                "interactionFrequency": "5 interactions in 1 minute",
+                "payloadType": ["SQLInjection", "CommandInjection", "RCE"],
+                "sourceIPReputation": "low"
+            },
+            "actions": [
+                "quarantineSource",
+                "notifySecurityTeam"
+            ],
+            "lastUpdated": "2024-11-26T13:00:00Z"
+        }
+    ]
+}
