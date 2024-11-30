@@ -1,0 +1,41 @@
+{
+    "endpoints": {
+        "userAuthentication": "/api/authenticateUser",
+        "chatResponse": "/api/chatResponse",
+        "nodeInfo": "/api/getNodeInfo",
+        "subscriptionDetails": "/api/getSubscriptionDetails",
+        "systemHealth": "/api/getSystemHealth",
+        "shardManagement": "/api/manageShards",
+        "transactionValidation": "/api/validateTransaction",
+        "analyticsDashboard": "/api/getAnalytics",
+        "taskManagement": "/api/manageTasks",
+        "incidentReports": "/api/getIncidentReports",
+        "updateSettings": "/api/updateSettings",
+        "logRetrieval": "/api/getLogs",
+        "smartContractDeployment": "/api/deploySmartContract"
+    },
+    "security": {
+        "requireAuthentication": true,
+        "rateLimiting": {
+            "enabled": true,
+            "maxRequestsPerMinute": 60
+        },
+        "cors": {
+            "allowedOrigins": [ "https://www.atomic.ca", "http://localhost" ],
+            "allowedMethods": [ "GET", "POST", "PUT", "DELETE" ],
+            "allowedHeaders": [ "Content-Type", "Authorization" ]
+        }
+    },
+    "timeoutSettings": {
+        "responseTimeoutSeconds": 15,
+        "sessionTimeoutMinutes": 30
+    },
+    "errorHandling": {
+        "defaultErrorMessage": "An error occurred while processing your request. Please try again later.",
+        "apiErrorMapping": {
+            "404": "The requested endpoint could not be found.",
+            "500": "Internal server error. Please contact support.",
+            "401": "Unauthorized access. Please log in."
+        }
+    }
+}

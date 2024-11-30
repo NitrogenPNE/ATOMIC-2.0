@@ -1,0 +1,115 @@
+{
+    "general": {
+        "welcomeMessage": "Hello! I’m NIKI, your ATOMIC Assistant. How can I help you today?",
+        "helpTopics": [
+            "Understanding subscriptions",
+            "Managing nodes",
+            "System health and metrics",
+            "Shard management",
+            "Transaction validation",
+            "Security settings",
+            "Node orchestration",
+            "Redundancy and failover",
+            "Data distribution",
+            "Smart contracts",
+            "AI integration (NIKI functionalities)",
+            "HQ node registration",
+            "Branch and department management"
+        ],
+        "fallbackMessage": "I'm sorry, I couldn't understand that. Can you please rephrase?"
+    },
+    "hqNodeManagement": {
+        "overview": "HQ Nodes are central units that orchestrate node networks, manage branches, and oversee subscriptions.",
+        "registration": [
+            "Corporate and National Defense HQ Nodes can be registered using their unique identifiers.",
+            "Ensure proper configuration files (e.g., `hqConfig.json`) are available before registration.",
+            "NIKI provides guided steps to register HQ Nodes."
+        ],
+        "associatedNodes": "HQ Nodes are linked to branches and departments, allowing streamlined node management.",
+        "branchManagement": [
+            "Branches are created when a new directory is added under the HQ Node structure.",
+            "NIKI automatically assigns unique identifiers to each branch.",
+            "Departments within branches are created similarly via directory structure."
+        ],
+        "monitoring": [
+            "Real-time updates on branch and department status.",
+            "Provides metrics on node utilization, shard distribution, and transaction health."
+        ],
+        "security": "Each HQ Node enforces branch-level access control and ensures isolated data management."
+    },
+    "subscriptions": {
+        "info": "Subscriptions determine how many nodes your organization can manage. Each tier increases the maximum number of nodes allowed.",
+        "pricingTiers": {
+            "1-25": "100 USD per month",
+            "26-50": "200 USD per month",
+            "51-100": "400 USD per month",
+            "101-150": "600 USD per month",
+            "151-200": "800 USD per month",
+            "201-500": "2000 USD per month",
+            "501-1000": "5000 USD per month",
+            "1001-5000": "20,000 USD per month",
+            "5001-10,000": "50,000 USD per month",
+            "10,001-100,000": "Contact support for enterprise pricing"
+        },
+        "nodeLimitReachedMessage": "You have reached the maximum node limit for your subscription tier. Please upgrade your subscription to add more nodes.",
+        "upgradeInstructions": "Visit the ATOMIC Dashboard, go to 'Subscriptions,' and select the appropriate tier."
+    },
+    "branchManagement": {
+        "overview": "Branches allow you to organize and manage nodes by geographical or departmental structure.",
+        "addingBranches": [
+            "Create a new directory under the HQ Node's structure to add a branch.",
+            "NIKI will automatically detect and register the branch."
+        ],
+        "departmentManagement": [
+            "Departments can be added by creating subdirectories within a branch.",
+            "Departments inherit branch-level security and access policies."
+        ],
+        "monitoring": [
+            "Track branch-level resource allocation, system health, and shard distribution.",
+            "Monitor the status of all nodes within a branch."
+        ]
+    },
+    "nodeManagement": {
+        "overview": "Nodes are individual units in the ATOMIC network responsible for storage, computation, or validation.",
+        "addingNodes": "Go to the ATOMIC Dashboard and register the new node using its unique identifier.",
+        "removingNodes": "Deactivate the node in the dashboard or CLI, ensuring all tasks and shards are reassigned.",
+        "monitoringNodes": [
+            "Check node metrics (CPU, memory, storage, latency).",
+            "Run health checks periodically."
+        ],
+        "failureRecovery": "Enable automatic failover to ensure tasks and data are redistributed if a node goes offline."
+    },
+    "AIIntegration": {
+        "description": "NIKI leverages advanced AI models to optimize shard placement, predict system bottlenecks, and provide intelligent recommendations.",
+        "capabilities": [
+            "Real-time system health analysis.",
+            "Predictive load balancing.",
+            "Natural language interface for system interaction.",
+            "HQ Node orchestration and branch-level insights."
+        ],
+        "futurePlans": "Integration with third-party analytics tools and enhanced predictive capabilities using federated learning."
+    },
+    "security": {
+        "bestPractices": [
+            "Enable multi-factor authentication for all accounts.",
+            "Rotate encryption keys periodically.",
+            "Conduct penetration testing every quarter."
+        ],
+        "incidentResponse": [
+            "Isolate affected nodes.",
+            "Perform a thorough security audit.",
+            "Rotate credentials and encryption keys.",
+            "Notify affected stakeholders immediately."
+        ],
+        "branchLevelPolicies": [
+            "Enforce access control rules specific to each branch.",
+            "Ensure encrypted communication between branches and HQ Nodes."
+        ]
+    },
+    "contact": {
+        "supportEmail": "support@atomic.ca",
+        "supportPhone": "+1-800-555-ATOMIC",
+        "docsUrl": "https://www.atomic.ca/documentation",
+        "emergencyContact": "+1-800-555-EMERGENCY"
+    }
+}

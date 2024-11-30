@@ -1,0 +1,42 @@
+{
+    "generalUtilities": {
+        "uuidGenerator": {
+            "description": "Generates a universally unique identifier (UUID).",
+            "code": "function generateUUID() { return ([1e7]+-1e3+-4e3+-8e3+-1e11).replace(/[018]/g, c => (c ^ crypto.getRandomValues(new Uint8Array(1))[0] & 15 >> c / 4).toString(16)); }"
+        },
+        "hashingFunction": {
+            "description": "Generates a SHA-256 hash for a given string.",
+            "code": "async function hashString(input) { const encoder = new TextEncoder(); const data = encoder.encode(input); const hash = await crypto.subtle.digest('SHA-256', data); return Array.from(new Uint8Array(hash)).map(b => b.toString(16).padStart(2, '0')).join(''); }"
+        }
+    },
+    "nodeManagement": {
+        "addNode": {
+            "description": "Adds a node to the network registry.",
+            "code": "function addNode(nodeId, nodeData, registry) { if (!registry[nodeId]) { registry[nodeId] = nodeData; } return registry; }"
+        },
+        "removeNode": {
+            "description": "Removes a node from the network registry.",
+            "code": "function removeNode(nodeId, registry) { delete registry[nodeId]; return registry; }"
+        }
+    },
+    "subscriptionManagement": {
+        "validateSubscription": {
+            "description": "Validates if a subscription tier allows additional nodes.",
+            "code": "function validateSubscription(tier, currentNodes, maxNodes) { return currentNodes < maxNodes[tier]; }"
+        },
+        "calculatePricing": {
+            "description": "Calculates the subscription cost based on the tier.",
+            "code": "function calculatePricing(tier, pricingTiers) { return pricingTiers[tier] || 0; }"
+        }
+    },
+    "security": {
+        "encryption": {
+            "description": "Encrypts a string using AES-GCM.",
+            "code": "async function encrypt(data, key) { const encoder = new TextEncoder(); const iv = crypto.getRandomValues(new Uint8Array(12)); const encodedKey = await crypto.subtle.importKey('raw', key, {name: 'AES-GCM'}, false, ['encrypt']); const encrypted = await crypto.subtle.encrypt({name: 'AES-GCM', iv}, encodedKey, encoder.encode(data)); return { encryptedData: encrypted, iv }; }"
+        },
+        "decryption": {
+            "description": "Decrypts an AES-GCM encrypted string.",
+            "code": "async function decrypt(encrypted, key, iv) { const encodedKey = await crypto.subtle.importKey('raw', key, {name: 'AES-GCM'}, false, ['decrypt']); const decrypted = await crypto.subtle.decrypt({name: 'AES-GCM', iv}, encodedKey, encrypted); return new TextDecoder().decode(decrypted); }"
+        }
+    }
+}

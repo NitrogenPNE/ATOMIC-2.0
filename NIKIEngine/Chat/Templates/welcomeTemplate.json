@@ -1,0 +1,38 @@
+{
+    "welcomeMessages": {
+        "default": {
+            "message": "Hello! I’m NIKI, your ATOMIC Assistant. How can I help you today?",
+            "subtext": "Type your query below or choose a topic from the menu to get started."
+        },
+        "firstTimeUser": {
+            "message": "Welcome to the ATOMIC ecosystem! I’m NIKI, here to assist you in managing nodes, subscriptions, and more.",
+            "subtext": "Explore the system's features or ask me anything to get started."
+        },
+        "returningUser": {
+            "message": "Welcome back! What would you like to do today?",
+            "subtext": "Check system health, manage nodes, or get a report? Let me know how I can assist."
+        },
+        "systemUpdate": {
+            "message": "Hello! The ATOMIC system has been recently updated. Would you like to explore the new features?",
+            "subtext": "Type 'new features' to see what's new or continue with your tasks."
+        }
+    },
+    "actionPrompts": [
+        {
+            "label": "Manage Nodes",
+            "command": "manage nodes"
+        },
+        {
+            "label": "View Subscription",
+            "command": "view subscription"
+        },
+        {
+            "label": "Check System Health",
+            "command": "check system health"
+        },
+        {
+            "label": "Generate Report",
+            "command": "generate report"
+        }
+    ]
+}

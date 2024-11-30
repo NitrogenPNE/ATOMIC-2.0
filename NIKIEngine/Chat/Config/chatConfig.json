@@ -1,0 +1,47 @@
+{
+    "chatSettings": {
+        "defaultLanguage": "en",
+        "maxMessageLength": 1000,
+        "autoCompleteEnabled": true,
+        "sessionTimeoutMinutes": 30,
+        "welcomeMessage": "Hello! I’m NIKI, your ATOMIC Assistant. How can I assist you today?"
+    },
+    "userPermissions": {
+        "admin": {
+            "canManageNodes": true,
+            "canViewAnalytics": true,
+            "canModifySubscriptions": true,
+            "canAccessAdvancedSettings": true
+        },
+        "standard": {
+            "canManageNodes": false,
+            "canViewAnalytics": true,
+            "canModifySubscriptions": false,
+            "canAccessAdvancedSettings": false
+        },
+        "guest": {
+            "canManageNodes": false,
+            "canViewAnalytics": false,
+            "canModifySubscriptions": false,
+            "canAccessAdvancedSettings": false
+        }
+    },
+    "apiEndpoints": {
+        "analytics": "/api/analytics",
+        "nodeManagement": "/api/nodes",
+        "subscriptions": "/api/subscriptions",
+        "security": "/api/security",
+        "validation": "/api/validation",
+        "chatResponses": "/api/chat"
+    },
+    "logSettings": {
+        "logLevel": "info",
+        "maxLogSizeMB": 10,
+        "logRetentionDays": 30
+    },
+    "advancedFeatures": {
+        "enableAIRecommendations": true,
+        "enableLiveUpdates": true,
+        "debugMode": false
+    }
+}

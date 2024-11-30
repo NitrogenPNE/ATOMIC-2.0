@@ -1,0 +1,138 @@
+{
+    "nikiEngine": {
+        "generalSettings": {
+            "assistantName": "NIKI",
+            "welcomeMessage": "Hello! I’m NIKI, your ATOMIC Assistant. How can I assist you today?",
+            "fallbackMessage": "I'm sorry, I couldn't understand that. Could you rephrase?",
+            "maxResponseLength": 2000
+        },
+        "permissions": {
+            "allowCommandExecution": true,
+            "allowedCommands": [ "node", "npm", "python", "atomic-cli", "powershell", "bash" ],
+            "restrictedCommands": [ "rm -rf", "format", "shutdown", "restart" ]
+        },
+        "chatSettings": {
+            "chatHistoryLimit": 100,
+            "saveChatHistory": true,
+            "historyStoragePath": "./Logs/chatHistory.json",
+            "enableMultiUserSupport": true,
+            "enableVoiceInteraction": true,
+            "supportedLanguages": [ "en", "fr", "es", "de", "zh" ]
+        },
+        "scriptGeneration": {
+            "enableScriptWriting": true,
+            "supportedLanguages": [ "JavaScript", "Python", "Bash", "PowerShell" ],
+            "defaultLanguage": "JavaScript",
+            "outputDirectory": "./GeneratedScripts",
+            "validationSettings": {
+                "enablePreExecutionValidation": true,
+                "validateAgainstBestPractices": true
+            },
+            "testAutomation": {
+                "enableUnitTestGeneration": true,
+                "testFrameworks": [ "Jest", "Mocha", "PyTest" ],
+                "testOutputDirectory": "./GeneratedScripts/Tests"
+            }
+        },
+        "subscriptions": {
+            "enableSubscriptionManagement": true,
+            "defaultTier": "1-25",
+            "tierDetails": {
+                "1-25": {
+                    "maxNodes": 25,
+                    "price": 100
+                },
+                "26-50": {
+                    "maxNodes": 50,
+                    "price": 200
+                },
+                "51-100": {
+                    "maxNodes": 100,
+                    "price": 400
+                },
+                "101-150": {
+                    "maxNodes": 150,
+                    "price": 600
+                },
+                "151-200": {
+                    "maxNodes": 200,
+                    "price": 800
+                },
+                "201-500": {
+                    "maxNodes": 500,
+                    "price": 2000
+                },
+                "501-1000": {
+                    "maxNodes": 1000,
+                    "price": 5000
+                }
+            },
+            "upgradeInstructions": "Visit the ATOMIC Dashboard to manage your subscription."
+        },
+        "integrationSettings": {
+            "enableAIIntegration": true,
+            "modelType": "GPT-J",
+            "modelTrainingPath": "./AI/trainingScripts",
+            "predictionModelPath": "./AI/models",
+            "analyticsEnginePath": "./Analytics/analyticsEngine.js",
+            "codeRepositoryPath": "./CodeRepository"
+        },
+        "security": {
+            "enableMFA": true,
+            "encryption": {
+                "algorithm": "AES-256-GCM",
+                "keyRotationFrequencyDays": 90
+            },
+            "auditLogPath": "./Logs/securityAudit.json",
+            "secureExecution": {
+                "sandboxEnabled": true,
+                "sandboxPath": "./SandboxEnvironment"
+            }
+        },
+        "monitoring": {
+            "enableSystemMonitoring": true,
+            "monitoringIntervalMs": 30000,
+            "metrics": [
+                "CPU load",
+                "Memory usage",
+                "Disk I/O",
+                "Network throughput",
+                "Node uptime",
+                "Shard allocation health"
+            ],
+            "alertThresholds": {
+                "cpuLoad": 85,
+                "memoryUsage": 80,
+                "diskUsage": 90,
+                "networkLatency": 120
+            }
+        },
+        "reporting": {
+            "generateDailyReports": true,
+            "reportStoragePath": "./Reports",
+            "emailReports": {
+                "enabled": true,
+                "recipients": [ "admin@atomic.ca", "support@atomic.ca" ]
+            },
+            "richOutputSupport": {
+                "enabled": true,
+                "formats": [ "PDF", "HTML", "CSV" ]
+            }
+        },
+        "errorHandling": {
+            "retryAttempts": 5,
+            "retryIntervalMs": 3000,
+            "defaultErrorMessage": "An unexpected error occurred. Please contact support.",
+            "errorLoggingPath": "./Logs/errorLogs.json",
+            "alertOnCriticalError": {
+                "enabled": true,
+                "recipients": [ "admin@atomic.ca" ]
+            }
+        },
+        "scriptAnalysis": {
+            "enableBestPracticesCheck": true,
+            "staticAnalysisTools": [ "ESLint", "PyLint" ],
+            "reportStoragePath": "./Logs/codeAnalysisReports.json"
+        }
+    }
+}

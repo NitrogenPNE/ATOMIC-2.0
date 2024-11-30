@@ -1,0 +1,31 @@
+{
+    "plugins": [
+        {
+            "name": "ExamplePlugin",
+            "file": "examplePlugin.js",
+            "active": true,
+            "description": "An example plugin to demonstrate plugin capabilities.",
+            "version": "1.0.0",
+            "author": "ATOMIC Team",
+            "lastUpdated": "2024-11-24"
+        },
+        {
+            "name": "SecurityEnhancer",
+            "file": "securityEnhancer.js",
+            "active": false,
+            "description": "Enhances security measures for the system.",
+            "version": "1.1.0",
+            "author": "ATOMIC Security Team",
+            "lastUpdated": "2024-10-15"
+        },
+        {
+            "name": "PerformanceOptimizer",
+            "file": "performanceOptimizer.js",
+            "active": true,
+            "description": "Optimizes system performance and resource utilization.",
+            "version": "2.0.0",
+            "author": "ATOMIC Optimization Team",
+            "lastUpdated": "2024-11-01"
+        }
+    ]
+}

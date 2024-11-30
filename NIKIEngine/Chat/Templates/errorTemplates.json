@@ -1,0 +1,77 @@
+{
+    "generalErrors": {
+        "unknownError": {
+            "title": "Unexpected Error",
+            "message": "Something went wrong. Please try again later or contact support if the issue persists.",
+            "code": "ERR_UNKNOWN"
+        },
+        "invalidInput": {
+            "title": "Invalid Input",
+            "message": "The input provided is not valid. Please check and try again.",
+            "code": "ERR_INVALID_INPUT"
+        },
+        "missingData": {
+            "title": "Missing Data",
+            "message": "Required data is missing. Please provide all necessary information and retry.",
+            "code": "ERR_MISSING_DATA"
+        }
+    },
+    "authenticationErrors": {
+        "unauthorizedAccess": {
+            "title": "Unauthorized Access",
+            "message": "You do not have permission to access this resource. Please check your credentials.",
+            "code": "ERR_UNAUTHORIZED"
+        },
+        "sessionExpired": {
+            "title": "Session Expired",
+            "message": "Your session has expired. Please log in again to continue.",
+            "code": "ERR_SESSION_EXPIRED"
+        }
+    },
+    "subscriptionErrors": {
+        "nodeLimitExceeded": {
+            "title": "Node Limit Reached",
+            "message": "You have exceeded the maximum number of nodes allowed by your subscription. Upgrade to add more nodes.",
+            "code": "ERR_NODE_LIMIT"
+        },
+        "paymentFailure": {
+            "title": "Payment Failed",
+            "message": "We couldn't process your payment. Please check your payment method and try again.",
+            "code": "ERR_PAYMENT_FAILURE"
+        }
+    },
+    "systemErrors": {
+        "resourceUnavailable": {
+            "title": "Resource Unavailable",
+            "message": "The requested resource is currently unavailable. Please try again later.",
+            "code": "ERR_RESOURCE_UNAVAILABLE"
+        },
+        "timeout": {
+            "title": "Request Timeout",
+            "message": "The request timed out. Please check your network connection and try again.",
+            "code": "ERR_TIMEOUT"
+        },
+        "dependencyFailure": {
+            "title": "System Dependency Error",
+            "message": "A required system component is unavailable. Please contact support.",
+            "code": "ERR_DEPENDENCY_FAILURE"
+        }
+    },
+    "validationErrors": {
+        "shardValidationFailed": {
+            "title": "Shard Validation Failed",
+            "message": "The shard integrity validation did not pass. Please verify the data and try again.",
+            "code": "ERR_SHARD_VALIDATION"
+        },
+        "contractValidationFailed": {
+            "title": "Smart Contract Validation Error",
+            "message": "The smart contract contains errors. Please review and fix the issues before deploying.",
+            "code": "ERR_CONTRACT_VALIDATION"
+        }
+    },
+    "contactSupport": {
+        "title": "Need Assistance?",
+        "message": "If you need further help, contact our support team at support@atomic.ca or call +1-800-555-ATOMIC.",
+        "code": "INFO_SUPPORT"
+    }
+}

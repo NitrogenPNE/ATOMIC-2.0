@@ -1,0 +1,11 @@
+{
+    "logs": [],
+    "metadata": {
+        "logFormat": {
+            "timestamp": "ISO 8601 formatted date and time",
+            "eventType": "Type of the analytics event (e.g., 'query', 'error', 'reportGeneration')",
+            "details": "Additional information about the event"
+        },
+        "description": "This file logs analytics-related events and queries handled by the NIKI engine for tracking and troubleshooting purposes."
+    }
+}

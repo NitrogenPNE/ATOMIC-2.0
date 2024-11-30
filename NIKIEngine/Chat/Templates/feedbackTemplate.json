@@ -1,0 +1,52 @@
+{
+    "feedbackPrompts": {
+        "generalUsage": {
+            "title": "General Feedback",
+            "message": "How was your experience using NIKI today? Your feedback helps us improve.",
+            "options": [
+                "Excellent",
+                "Good",
+                "Average",
+                "Poor"
+            ]
+        },
+        "responseAccuracy": {
+            "title": "Response Accuracy",
+            "message": "Was NIKI's response accurate and helpful?",
+            "options": [
+                "Yes, completely accurate",
+                "Somewhat accurate",
+                "Not accurate at all"
+            ]
+        },
+        "interfaceExperience": {
+            "title": "Interface Feedback",
+            "message": "How do you feel about the NIKI chat interface?",
+            "options": [
+                "Very intuitive",
+                "Easy to use",
+                "Needs improvement",
+                "Confusing"
+            ]
+        },
+        "systemPerformance": {
+            "title": "System Performance",
+            "message": "How was the performance of the system during your session?",
+            "options": [
+                "Fast and responsive",
+                "Average speed",
+                "Sluggish",
+                "Unusable"
+            ]
+        }
+    },
+    "openFeedback": {
+        "title": "Share More",
+        "message": "Would you like to provide additional comments or suggestions?",
+        "placeholder": "Enter your feedback here..."
+    },
+    "thankYouMessage": {
+        "title": "Thank You!",
+        "message": "We appreciate your feedback and will use it to improve your experience."
+    }
+}

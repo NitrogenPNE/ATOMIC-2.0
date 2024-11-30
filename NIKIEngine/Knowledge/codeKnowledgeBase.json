@@ -1,0 +1,140 @@
+{
+    "general": {
+        "description": "This knowledge base defines the ATOMIC system's architecture, modules, and functionality.",
+        "lastUpdated": "2024-11-24",
+        "version": "1.0.0"
+    },
+    "modules": {
+        "NIKIEngine": {
+            "description": "AI assistant for managing, monitoring, and optimizing the ATOMIC system.",
+            "subModules": {
+                "AI": "Handles AI-related operations like prediction, chat integration, and GPT capabilities.",
+                "Analytics": "Provides usage metrics, predictions, and reporting features.",
+                "Chat": "User interface for interacting with NIKI via chat.",
+                "Extensions": "Allows plugins and additional functionalities for customization.",
+                "Monitoring": "Tracks system performance, alerts, and activity logs.",
+                "NodeManagement": "Manages nodes, subscriptions, and folder-based structure mappings.",
+                "Subscriptions": "Handles subscription tiers, pricing, and address allocations.",
+                "Tasks": "Manages task allocation, redundancy, and scheduling.",
+                "Validation": "Ensures data, shard, and smart contract integrity."
+            }
+        },
+        "atomicBlockchain": {
+            "description": "Immutable ledger for transactions, shard allocations, and smart contracts.",
+            "features": [
+                "Consensus-based validation",
+                "Tamper-proof transaction records",
+                "Smart contract execution"
+            ]
+        },
+        "HQNode": {
+            "description": "Orchestrates node operations within HQ networks.",
+            "components": [
+                "Validation",
+                "Orchestration",
+                "Monitoring",
+                "Subscriptions",
+                "Arbitration"
+            ]
+        },
+        "CorporateNodes": {
+            "description": "Branch-level nodes under HQ nodes for data and shard handling.",
+            "capabilities": [
+                "Data redundancy",
+                "Local shard management",
+                "Real-time communication with HQ nodes"
+            ]
+        },
+        "NationalDefenseHQNode": {
+            "description": "Military-grade HQ node for secure shard handling and blockchain validation.",
+            "features": [
+                "AI-enhanced security monitoring",
+                "Advanced redundancy protocols",
+                "Defense-specific arbitration policies"
+            ]
+        }
+    },
+    "scripts": {
+        "commonScripts": [
+            {
+                "name": "shardValidator.js",
+                "purpose": "Validates shard integrity across nodes.",
+                "location": "Validation/"
+            },
+            {
+                "name": "taskScheduler.js",
+                "purpose": "Schedules tasks for optimal performance.",
+                "location": "Tasks/"
+            },
+            {
+                "name": "systemMonitor.js",
+                "purpose": "Monitors overall system health.",
+                "location": "Monitoring/"
+            },
+            {
+                "name": "registerHQNode.js",
+                "purpose": "Registers HQ nodes with the ATOMIC network.",
+                "location": "NodeManagement/"
+            }
+        ],
+        "NIKI-specific": [
+            {
+                "name": "chatEngine.js",
+                "purpose": "Processes user messages and generates responses.",
+                "location": "Chat/Scripts/"
+            },
+            {
+                "name": "gptIntegrationHandler.js",
+                "purpose": "Handles GPT-J integration for intelligent responses.",
+                "location": "AI/"
+            },
+            {
+                "name": "codeGenerator.js",
+                "purpose": "Generates new scripts based on user needs.",
+                "location": "CodeGen/"
+            }
+        ]
+    },
+    "relationships": {
+        "NIKIEngine": {
+            "connectedModules": [
+                "atomicBlockchain",
+                "HQNode",
+                "CorporateNodes",
+                "NationalDefenseHQNode"
+            ],
+            "dependencies": [
+                "Monitoring",
+                "AI",
+                "Validation"
+            ]
+        },
+        "atomicBlockchain": {
+            "dependencies": [
+                "Validation",
+                "HQNode",
+                "CorporateNodes"
+            ]
+        },
+        "HQNode": {
+            "dependencies": [
+                "NodeManagement",
+                "Validation",
+                "Monitoring",
+                "Subscriptions"
+            ]
+        }
+    },
+    "guidelines": {
+        "codingStandards": [
+            "Use strict mode in all scripts.",
+            "Follow modular design principles.",
+            "Ensure test coverage for all critical modules."
+        ],
+        "securityPractices": [
+            "Encrypt all sensitive data.",
+            "Validate inputs to prevent injection attacks.",
+            "Conduct regular security audits."
+        ]
+    }
+}

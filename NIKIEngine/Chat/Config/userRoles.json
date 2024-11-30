@@ -1,0 +1,65 @@
+{
+    "roles": {
+        "admin": {
+            "permissions": [
+                "manageHQNodes",
+                "viewAllLogs",
+                "updateSettings",
+                "manageSubscriptions",
+                "deploySmartContracts",
+                "accessAnalytics",
+                "assignNodeAddresses",
+                "validateTransactions"
+            ],
+            "description": "Full access to manage all aspects of the ATOMIC system."
+        },
+        "corporateAdmin": {
+            "permissions": [
+                "manageCorporateNodes",
+                "viewCorporateLogs",
+                "updateCorporateSettings",
+                "manageCorporateSubscriptions",
+                "accessCorporateAnalytics",
+                "assignCorporateNodeAddresses",
+                "validateCorporateTransactions"
+            ],
+            "description": "Manage corporate HQ nodes and their associated operations."
+        },
+        "nationalDefenseAdmin": {
+            "permissions": [
+                "manageDefenseNodes",
+                "viewDefenseLogs",
+                "updateDefenseSettings",
+                "manageDefenseSubscriptions",
+                "accessDefenseAnalytics",
+                "assignDefenseNodeAddresses",
+                "validateDefenseTransactions",
+                "accessThreatDetection"
+            ],
+            "description": "Handle national defense nodes and perform security-critical operations."
+        },
+        "user": {
+            "permissions": [
+                "viewNodeMetrics",
+                "submitTransactions",
+                "accessPersonalAnalytics",
+                "viewShardStatus"
+            ],
+            "description": "Limited access for individual node operators to view and manage their assigned resources."
+        },
+        "guest": {
+            "permissions": [
+                "viewPublicDocumentation",
+                "requestSupport"
+            ],
+            "description": "Restricted access for guests to explore general information about the ATOMIC system."
+        }
+    },
+    "defaultRole": "user",
+    "roleHierarchy": {
+        "admin": [ "corporateAdmin", "nationalDefenseAdmin", "user", "guest" ],
+        "corporateAdmin": [ "user", "guest" ],
+        "nationalDefenseAdmin": [ "user", "guest" ],
+        "user": [ "guest" ]
+    }
+}

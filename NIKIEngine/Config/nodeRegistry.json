@@ -1,0 +1,61 @@
+{
+    "registry": {
+        "hqNodes": [
+            {
+                "id": "HQNode-Corporate-001",
+                "name": "Corporate HQ Node 1",
+                "branch": "Corporate",
+                "location": "New York, USA",
+                "departments": [ "Validation", "Shard Management", "Monitoring" ],
+                "status": "active",
+                "lastUpdated": "2024-11-24T12:00:00Z"
+            },
+            {
+                "id": "HQNode-Defense-001",
+                "name": "National Defense HQ Node 1",
+                "branch": "National Defense",
+                "location": "Washington, USA",
+                "departments": [ "Orchestration", "Security", "Monitoring" ],
+                "status": "active",
+                "lastUpdated": "2024-11-24T12:00:00Z"
+            }
+        ],
+        "corporateNodes": [
+            {
+                "id": "CorporateNode-001",
+                "hqNode": "HQNode-Corporate-001",
+                "department": "Validation",
+                "status": "active",
+                "lastUpdated": "2024-11-24T12:00:00Z"
+            },
+            {
+                "id": "CorporateNode-002",
+                "hqNode": "HQNode-Corporate-001",
+                "department": "Shard Management",
+                "status": "inactive",
+                "lastUpdated": "2024-11-23T10:00:00Z"
+            }
+        ],
+        "defenseNodes": [
+            {
+                "id": "DefenseNode-001",
+                "hqNode": "HQNode-Defense-001",
+                "department": "Monitoring",
+                "status": "active",
+                "lastUpdated": "2024-11-24T11:00:00Z"
+            },
+            {
+                "id": "DefenseNode-002",
+                "hqNode": "HQNode-Defense-001",
+                "department": "Security",
+                "status": "active",
+                "lastUpdated": "2024-11-24T11:30:00Z"
+            }
+        ]
+    },
+    "metadata": {
+        "totalNodes": 6,
+        "lastSync": "2024-11-24T12:00:00Z",
+        "registryVersion": "1.0.0"
+    }
+}

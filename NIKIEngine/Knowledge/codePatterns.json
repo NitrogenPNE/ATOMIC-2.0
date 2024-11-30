@@ -1,0 +1,122 @@
+{
+    "general": {
+        "description": "Reusable code patterns for the ATOMIC system to ensure consistency, efficiency, and security.",
+        "lastUpdated": "2024-11-24",
+        "version": "1.0.0"
+    },
+    "patterns": {
+        "validation": {
+            "description": "Patterns for validating data, inputs, and configurations.",
+            "examples": [
+                {
+                    "name": "Input Validation",
+                    "code": [
+                        "'use strict';",
+                        "function validateInput(data) {",
+                        "    if (!data || typeof data !== 'object') throw new Error('Invalid input data.');",
+                        "    return true;",
+                        "}",
+                        "module.exports = { validateInput };"
+                    ]
+                },
+                {
+                    "name": "Schema Validation",
+                    "code": [
+                        "'use strict';",
+                        "const Joi = require('joi');",
+                        "const schema = Joi.object({",
+                        "    id: Joi.string().required(),",
+                        "    name: Joi.string().required()",
+                        "});",
+                        "function validateSchema(data) {",
+                        "    const result = schema.validate(data);",
+                        "    if (result.error) throw new Error(result.error.message);",
+                        "    return true;",
+                        "}",
+                        "module.exports = { validateSchema };"
+                    ]
+                }
+            ]
+        },
+        "monitoring": {
+            "description": "Patterns for system monitoring and logging.",
+            "examples": [
+                {
+                    "name": "Activity Logger",
+                    "code": [
+                        "'use strict';",
+                        "const fs = require('fs-extra');",
+                        "const path = require('path');",
+                        "const logFilePath = path.resolve(__dirname, '../Logs/activityLogs.json');",
+                        "async function logActivity(message) {",
+                        "    const logEntry = { timestamp: new Date().toISOString(), message };",
+                        "    await fs.appendFile(logFilePath, JSON.stringify(logEntry) + '\\n');",
+                        "}",
+                        "module.exports = { logActivity };"
+                    ]
+                }
+            ]
+        },
+        "dataProcessing": {
+            "description": "Patterns for processing and transforming data.",
+            "examples": [
+                {
+                    "name": "Data Transformation",
+                    "code": [
+                        "'use strict';",
+                        "function transformData(input) {",
+                        "    return input.map(item => ({ ...item, transformed: true }));",
+                        "}",
+                        "module.exports = { transformData };"
+                    ]
+                }
+            ]
+        },
+        "nodeManagement": {
+            "description": "Patterns for managing nodes and subscriptions.",
+            "examples": [
+                {
+                    "name": "Add Node to Registry",
+                    "code": [
+                        "'use strict';",
+                        "const fs = require('fs-extra');",
+                        "const path = require('path');",
+                        "const registryPath = path.resolve(__dirname, '../Config/nodeRegistry.json');",
+                        "async function addNode(hqId, nodeData) {",
+                        "    const registry = await fs.readJson(registryPath);",
+                        "    if (!registry[hqId]) registry[hqId] = { nodes: [] };",
+                        "    registry[hqId].nodes.push(nodeData);",
+                        "    await fs.writeJson(registryPath, registry, { spaces: 2 });",
+                        "}",
+                        "module.exports = { addNode };"
+                    ]
+                }
+            ]
+        },
+        "security": {
+            "description": "Patterns for ensuring system security.",
+            "examples": [
+                {
+                    "name": "Encrypt Data",
+                    "code": [
+                        "'use strict';",
+                        "const crypto = require('crypto');",
+                        "function encryptData(data, key) {",
+                        "    const iv = crypto.randomBytes(16);",
+                        "    const cipher = crypto.createCipheriv('aes-256-gcm', key, iv);",
+                        "    let encrypted = cipher.update(data, 'utf8', 'hex');",
+                        "    encrypted += cipher.final('hex');",
+                        "    const authTag = cipher.getAuthTag();",
+                        "    return { encrypted, iv: iv.toString('hex'), authTag: authTag.toString('hex') };",
+                        "}",
+                        "module.exports = { encryptData };"
+                    ]
+                }
+            ]
+        }
+    },
+    "guidelines": {
+        "reusePatterns": "Use these patterns as building blocks for all new features to maintain consistency.",
+        "customization": "Extend existing patterns to accommodate specific requirements without breaking existing functionality."
+    }
+}

@@ -1,0 +1,65 @@
+{
+    "monitoring": {
+        "systemHealth": {
+            "enabled": true,
+            "metrics": [
+                "CPU load",
+                "Memory usage",
+                "Storage availability",
+                "Network latency"
+            ],
+            "thresholds": {
+                "cpuLoad": 90,
+                "memoryUsage": 85,
+                "storageAvailability": 95,
+                "networkLatency": 150
+            },
+            "alerts": {
+                "enabled": true,
+                "channels": [ "email", "dashboard" ],
+                "emailRecipients": [ "admin@atomic.ca", "it-support@atomic.ca" ]
+            }
+        },
+        "activityLogs": {
+            "enabled": true,
+            "logFilePath": "./Logs/activityLogs.json",
+            "logLevel": "info",
+            "maxLogSizeMb": 50,
+            "retentionDays": 30
+        },
+        "resourceUsage": {
+            "enabled": true,
+            "trackingIntervalMs": 60000,
+            "loggingEnabled": true,
+            "logFilePath": "./Logs/resourceUsage.json"
+        }
+    },
+    "alertsConfig": {
+        "highPriority": {
+            "cpuLoad": "95%",
+            "memoryUsage": "90%",
+            "storageAvailability": "98%",
+            "networkLatency": "200ms"
+        },
+        "lowPriority": {
+            "cpuLoad": "85%",
+            "memoryUsage": "80%",
+            "storageAvailability": "90%",
+            "networkLatency": "120ms"
+        }
+    },
+    "reporting": {
+        "generateDailyReports": true,
+        "reportStoragePath": "./Reports",
+        "emailReports": {
+            "enabled": true,
+            "recipients": [ "reports@atomic.ca" ]
+        }
+    },
+    "errorHandling": {
+        "retryAttempts": 3,
+        "retryIntervalMs": 5000,
+        "onFailure": "alertAdmin",
+        "adminContact": "support@atomic.ca"
+    }
+}

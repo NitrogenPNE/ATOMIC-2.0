@@ -1,0 +1,91 @@
+{
+    "roles": {
+        "administrator": {
+            "description": "Full access to all NIKI functionalities, including system-wide configuration and node management.",
+            "permissions": [
+                "manage_subscriptions",
+                "view_system_health",
+                "configure_access_control",
+                "deploy_smart_contracts",
+                "view_and_manage_shards",
+                "manage_nodes",
+                "access_analytics",
+                "generate_reports",
+                "configure_niki_ai"
+            ]
+        },
+        "hq_node_admin": {
+            "description": "Access to manage HQ nodes, connected nodes, and shard orchestration.",
+            "permissions": [
+                "view_system_health",
+                "manage_nodes",
+                "view_and_manage_shards",
+                "generate_reports",
+                "configure_niki_ai"
+            ]
+        },
+        "corporate_user": {
+            "description": "Limited access to view subscription details and node metrics.",
+            "permissions": [
+                "view_system_health",
+                "view_subscription_details",
+                "generate_reports"
+            ]
+        },
+        "national_defense_user": {
+            "description": "Access restricted to national defense operations and sensitive data management.",
+            "permissions": [
+                "manage_defense_nodes",
+                "view_defense_analytics",
+                "access_threat_monitoring",
+                "view_and_manage_shards"
+            ]
+        }
+    },
+    "defaultRole": "corporate_user",
+    "authentication": {
+        "multiFactorRequired": true,
+        "allowedLoginAttempts": 5,
+        "lockoutDurationMinutes": 15
+    },
+    "auditLogs": {
+        "enabled": true,
+        "logAccessAttempts": true,
+        "logDataChanges": true
+    },
+    "restrictedActions": [
+        {
+            "action": "deploy_smart_contracts",
+            "allowedRoles": [ "administrator" ]
+        },
+        {
+            "action": "configure_access_control",
+            "allowedRoles": [ "administrator" ]
+        },
+        {
+            "action": "manage_defense_nodes",
+            "allowedRoles": [ "national_defense_user" ]
+        }
+    ],
+    "nodeAccessLevels": {
+        "hq_nodes": {
+            "permissions": [
+                "manage_nodes",
+                "configure_niki_ai",
+                "orchestrate_shards"
+            ]
+        },
+        "corporate_nodes": {
+            "permissions": [
+                "view_system_health",
+                "view_subscription_details"
+            ]
+        },
+        "defense_nodes": {
+            "permissions": [
+                "manage_defense_nodes",
+                "access_threat_monitoring"
+            ]
+        }
+    }
+}

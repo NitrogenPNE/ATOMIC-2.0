@@ -1,0 +1,57 @@
+{
+    "responses": {
+        "general": {
+            "welcome": "Hello! I’m NIKI, your ATOMIC Assistant. How can I assist you today?",
+            "fallback": "I'm sorry, I didn't understand that. Could you rephrase your question?",
+            "goodbye": "Thank you for using NIKI. Have a great day!"
+        },
+        "subscriptions": {
+            "currentStatus": "Your current subscription tier is {{tier}}, allowing up to {{maxNodes}} nodes. You currently have {{nodeCount}} nodes registered.",
+            "upgradePrompt": "Would you like to upgrade your subscription to allow more nodes? Here are the available options:",
+            "successUpgrade": "Your subscription has been successfully upgraded to the {{newTier}} tier. You can now register up to {{newMaxNodes}} nodes.",
+            "errorUpgrade": "There was an issue processing your subscription upgrade. Please try again or contact support."
+        },
+        "systemHealth": {
+            "overview": "The system is running at {{cpuLoad}}% CPU load, {{memoryUsage}}% memory usage, and {{storageUsage}}% storage usage. Network latency is {{networkLatency}}ms.",
+            "alert": "Warning: {{metric}} has exceeded the threshold with a value of {{value}}.",
+            "troubleshootingTips": "Here are some tips to address {{metric}} issues: {{tips}}"
+        },
+        "shards": {
+            "status": "Shard {{shardId}} is currently distributed across {{nodeCount}} nodes with {{redundancyLevel}} redundancy.",
+            "integrity": "Shard {{shardId}} passed the integrity check. All data is consistent and redundant.",
+            "corruptionDetected": "Warning: Shard {{shardId}} is corrupted. Attempting recovery from redundant copies."
+        },
+        "transactions": {
+            "validationSuccess": "Transaction {{transactionId}} has been successfully validated and added to the blockchain.",
+            "validationError": "Transaction {{transactionId}} failed validation due to {{errorReason}}.",
+            "resolutionTips": "To resolve the issue, please {{resolutionSteps}} and try again."
+        },
+        "smartContracts": {
+            "deploymentSuccess": "Smart contract {{contractName}} has been successfully deployed.",
+            "deploymentError": "Error deploying smart contract {{contractName}}: {{errorReason}}.",
+            "validationSuccess": "Smart contract {{contractName}} passed all validation checks.",
+            "validationError": "Smart contract {{contractName}} failed validation: {{errorReason}}."
+        },
+        "nodeManagement": {
+            "addSuccess": "Node {{nodeId}} has been successfully added to HQ {{hqId}}.",
+            "addError": "Error adding node {{nodeId}} to HQ {{hqId}}: {{errorReason}}.",
+            "removeSuccess": "Node {{nodeId}} has been successfully removed from HQ {{hqId}}.",
+            "removeError": "Error removing node {{nodeId}} from HQ {{hqId}}: {{errorReason}}.",
+            "monitoring": "Node {{nodeId}} is running at {{cpuLoad}}% CPU load, {{memoryUsage}}% memory usage, and {{storageUsage}}% storage usage. Network latency is {{networkLatency}}ms."
+        },
+        "security": {
+            "incidentDetected": "Security incident detected: {{incidentDetails}}. Initiating response protocols.",
+            "incidentResolved": "The security incident has been successfully resolved.",
+            "bestPractices": "Here are some security best practices: {{bestPractices}}"
+        },
+        "analytics": {
+            "usageMetrics": "Current system usage: {{metricDetails}}",
+            "reportGenerated": "Your analytics report has been generated: {{reportLink}}",
+            "predictiveAnalysis": "Predictive analysis: {{analysisDetails}}"
+        },
+        "feedback": {
+            "thankYou": "Thank you for your feedback! Your input helps us improve NIKI and the ATOMIC ecosystem.",
+            "prompt": "Would you like to provide feedback on your experience?"
+        }
+    }
+}

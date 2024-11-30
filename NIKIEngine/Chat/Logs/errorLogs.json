@@ -1,0 +1,14 @@
+{
+    "logs": [],
+    "metadata": {
+        "logFormat": {
+            "timestamp": "ISO 8601 formatted date and time",
+            "errorType": "Type of error (e.g., 'ValidationError', 'SystemError', 'APIError')",
+            "message": "Detailed error message",
+            "stackTrace": "Stack trace or technical details of the error (if applicable)",
+            "user": "Identifier for the user involved in the error (if any)",
+            "context": "Additional context related to the error (e.g., 'task', 'transaction', 'node interaction')"
+        },
+        "description": "This file logs errors encountered during NIKI chat operations for debugging and system monitoring."
+    }
+}

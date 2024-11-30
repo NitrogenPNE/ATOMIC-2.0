@@ -1,0 +1,55 @@
+{
+    "subscriptions": {
+        "tiers": [
+            {
+                "name": "Starter",
+                "nodeLimit": 25,
+                "monthlyCost": 100,
+                "annualCost": 1000
+            },
+            {
+                "name": "Small Business",
+                "nodeLimit": 50,
+                "monthlyCost": 200,
+                "annualCost": 2000
+            },
+            {
+                "name": "Medium Enterprise",
+                "nodeLimit": 100,
+                "monthlyCost": 400,
+                "annualCost": 4000
+            },
+            {
+                "name": "Large Enterprise",
+                "nodeLimit": 150,
+                "monthlyCost": 600,
+                "annualCost": 6000
+            },
+            {
+                "name": "Enterprise Plus",
+                "nodeLimit": 200,
+                "monthlyCost": 800,
+                "annualCost": 8000
+            },
+            {
+                "name": "Global",
+                "nodeLimit": 1000,
+                "monthlyCost": 5000,
+                "annualCost": 50000
+            }
+        ],
+        "overagePolicy": {
+            "extraNodeCostPerMonth": 50,
+            "overageLimit": 50,
+            "notificationThreshold": 90
+        },
+        "upgradePolicy": {
+            "manualUpgrade": "Contact support to request a manual upgrade.",
+            "autoUpgrade": "When usage exceeds 95% of the current tier, an automatic upgrade is triggered."
+        }
+    },
+    "metadata": {
+        "lastUpdated": "2024-11-24T12:00:00Z",
+        "configVersion": "1.0.0"
+    }
+}

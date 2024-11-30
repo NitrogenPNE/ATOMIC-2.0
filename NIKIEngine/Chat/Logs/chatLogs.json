@@ -1,0 +1,14 @@
+{
+    "logs": [],
+    "metadata": {
+        "logFormat": {
+            "timestamp": "ISO 8601 formatted date and time",
+            "user": "Identifier for the user initiating the interaction",
+            "role": "Role of the user (e.g., 'admin', 'corporate', 'defense')",
+            "message": "Text of the message sent by the user",
+            "response": "Text of the response provided by NIKI",
+            "eventType": "Type of event (e.g., 'chat', 'command', 'error')"
+        },
+        "description": "This file logs chat interactions between users and the NIKI engine for monitoring, auditing, and troubleshooting."
+    }
+}

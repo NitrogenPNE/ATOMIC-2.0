@@ -1,0 +1,51 @@
+{
+    "scriptWriting": {
+        "enabled": true,
+        "supportedLanguages": [
+            "JavaScript",
+            "Python",
+            "PowerShell",
+            "Bash"
+        ],
+        "defaultLanguage": "JavaScript",
+        "codeStandards": {
+            "indentation": "4 spaces",
+            "namingConvention": "camelCase",
+            "maxLineLength": 120,
+            "strictMode": true
+        },
+        "directories": {
+            "codeGeneration": "C:\\ATOMIC 2.0\\NIKIEngine\\CodeGen",
+            "extensions": "C:\\ATOMIC 2.0\\NIKIEngine\\Extensions",
+            "plugins": "C:\\ATOMIC 2.0\\NIKIEngine\\Extensions\\Plugins"
+        },
+        "securityChecks": {
+            "enabled": true,
+            "prohibitedActions": [
+                "executing unverified external commands",
+                "overwriting critical system files"
+            ],
+            "validationLevels": {
+                "syntaxCheck": true,
+                "dependencyScan": true,
+                "runtimeSimulation": true
+            }
+        },
+        "feedbackCollection": {
+            "enabled": true,
+            "logFeedback": "C:\\ATOMIC 2.0\\NIKIEngine\\Chat\\Logs\\scriptFeedbackLogs.json"
+        },
+        "defaultTemplates": [
+            "basicTemplate.json",
+            "advancedTemplate.json"
+        ],
+        "timeoutSettings": {
+            "scriptExecution": 5000,
+            "validationProcess": 3000
+        },
+        "auditTrail": {
+            "enabled": true,
+            "logFile": "C:\\ATOMIC 2.0\\NIKIEngine\\Chat\\Logs\\auditTrailLogs.json"
+        }
+    }
+}
