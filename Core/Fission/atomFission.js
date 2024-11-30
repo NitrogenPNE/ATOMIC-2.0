@@ -10,8 +10,8 @@
 //
 // Description:
 // Optimized for military-grade security, this module handles classification,
-// sharding, encryption, and distribution of data while logging metadata to 
-// centralized blockchain ledgers.
+// sharding, encryption, distribution of data, and token validation while 
+// logging metadata to centralized blockchain ledgers.
 //
 // Author: Shawn Blackmore
 // ------------------------------------------------------------------------------
@@ -22,17 +22,20 @@ const { shardDataIntoBits } = require("../Sharding/bitSharder");
 const { distributeToPools } = require("../Distribution/bitAtomDistributor");
 const { logShardCreation } = require("../../atomic-blockchain/scripts/ledgerManager");
 const { writeShardMetadata } = require("../../atomic-blockchain/shardMetadataManager");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 const NIKI = require("../../NIKI/predictionEngine");
 const fs = require("fs-extra");
 
 /**
- * Executes the Atom Fission Process, coordinating classification, sharding, and distribution.
+ * Executes the Atom Fission Process, coordinating token validation, classification, sharding, and distribution.
  * @param {string} userId - User's unique identifier.
+ * @param {string} tokenId - Unique token ID for validation.
+ * @param {string} encryptedToken - Encrypted token data for Proof-of-Access.
  * @param {string} inputData - Raw input data (optional).
  * @param {string} filePath - Path to the input file (optional).
  * @returns {Promise<Object>} - Fission result containing the user address and bit atoms.
  */
-async function atomFissionProcess(userId, inputData = null, filePath = null) {
+async function atomFissionProcess(userId, tokenId, encryptedToken, inputData = null, filePath = null) {
     console.log(`Starting Atom Fission for User ID: ${userId}`);
     const atomFissionContract = new AtomFissionContract();
 
@@ -41,9 +44,17 @@ async function atomFissionProcess(userId, inputData = null, filePath = null) {
         await validateInputs(userId, inputData, filePath);
         atomFissionContract.recordEvent("info", `Atom Fission initiated for User ID: ${userId}`);
 
+        // Step 2: Validate Token
+        console.log("Validating token for Proof-of-Access...");
+        const tokenValidationResult = await validateToken(tokenId, encryptedToken);
+        if (!tokenValidationResult.valid) {
+            throw new Error("Invalid token: Access denied.");
+        }
+        atomFissionContract.recordEvent("info", `Token validated for User ID: ${userId}, Token ID: ${tokenId}`);
+
         let classificationResult;
 
-        // Step 2: Classify Data
+        // Step 3: Classify Data
         if (filePath) {
             console.log(`Classifying input file: ${filePath}`);
             classificationResult = await classifyData(filePath);
@@ -56,7 +67,7 @@ async function atomFissionProcess(userId, inputData = null, filePath = null) {
 
         logClassificationResult(classificationResult);
 
-        // Step 3: Shard Data into Bit Atoms
+        // Step 4: Shard Data into Bit Atoms
         console.log("Sharding data into bit atoms...");
         const { address, bitAtoms } = await shardDataIntoBits(userId, classificationResult);
 
@@ -66,17 +77,17 @@ async function atomFissionProcess(userId, inputData = null, filePath = null) {
 
         atomFissionContract.recordEvent("info", `Data sharded into bit atoms for User ID: ${userId}`);
 
-        // Step 4: Predict Optimal Distribution with NIKI
+        // Step 5: Predict Optimal Distribution with NIKI
         console.log("Predicting optimal shard distribution...");
         const optimalNodes = await NIKI.predictOptimalShardDistribution(address, bitAtoms);
 
-        // Step 5: Log Shard Metadata to Blockchain
+        // Step 6: Log Shard Metadata to Blockchain
         console.log("Recording shard metadata to blockchain...");
-        await writeShardMetadata(address, bitAtoms, optimalNodes);
+        await writeShardMetadata(address, bitAtoms, optimalNodes, { tokenId });
 
         atomFissionContract.recordEvent("info", `Shard metadata recorded to blockchain for User ID: ${userId}`);
 
-        // Step 6: Distribute Bit Atoms to Pools
+        // Step 7: Distribute Bit Atoms to Pools
         console.log("Distributing bit atoms to pools...");
         await distributeToPools(userId, bitAtoms, optimalNodes);
 
@@ -86,7 +97,7 @@ async function atomFissionProcess(userId, inputData = null, filePath = null) {
         const fissionResult = { address, bitAtoms, optimalNodes };
 
         // Record success in the blockchain
-        await logShardCreation(address, bitAtoms);
+        await logShardCreation(address, bitAtoms, { tokenId });
         atomFissionContract.recordEvent("success", `Atom Fission process completed successfully for User ID: ${userId}`);
 
         return fissionResult;
@@ -134,6 +145,6 @@ module.exports = { atomFissionProcess };
 
 // ------------------------------------------------------------------------------
 // End of Module: Integrated Atom Fission Process
-// Version: 2.1.0 | Updated: 2024-11-28
-// Change Log: Optimized for centralized metadata tracking and military-grade redundancy.
+// Version: 3.0.0 | Updated: 2024-11-29
+// Change Log: Added token validation for Proof-of-Access.
 // ------------------------------------------------------------------------------
