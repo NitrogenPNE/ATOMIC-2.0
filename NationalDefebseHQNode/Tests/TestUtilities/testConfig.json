@@ -1,0 +1,31 @@
+{
+    "testEnvironment": "NationalDefenseHQNode",
+    "defaultNodeCount": 10,
+    "mockData": {
+        "shardCount": 5,
+        "transactionCount": 50,
+        "contractCount": 10
+    },
+    "logging": {
+        "level": "debug",
+        "logToFile": true,
+        "logFilePath": "C:\\ATOMIC 2.0\\NationalDefenseHQNode\\Tests\\TestReports\\testLogs.json"
+    },
+    "timeLimits": {
+        "unitTestTimeout": 5000,
+        "integrationTestTimeout": 20000,
+        "penetrationTestTimeout": 30000
+    },
+    "security": {
+        "enableEncryptionValidation": true,
+        "validateAccessControl": true
+    },
+    "validation": {
+        "schemaValidation": true,
+        "logicValidation": true
+    },
+    "reports": {
+        "generateSummary": true,
+        "outputDirectory": "C:\\ATOMIC 2.0\\NationalDefenseHQNode\\Tests\\TestReports\\"
+    }
+}
