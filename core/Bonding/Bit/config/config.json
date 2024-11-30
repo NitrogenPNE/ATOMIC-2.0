@@ -1,0 +1,16 @@
+{
+    "port": 4001,
+    "logging": {
+        "enabled": true,
+        "level": "info",
+        "destination": "../../logs/BitBonding/bitBonding.log"
+    },
+    "ledgers": {
+        "frequencies": {
+            "proton": "../../../Ledgers/Frequencies/BITS/protonFrequency.json",
+            "electron": "../../../Ledgers/Frequencies/BITS/electronFrequency.json",
+            "neutron": "../../../Ledgers/Frequencies/BITS/neutronFrequency.json"
+        },
+        "user": "../../../Ledgers/Users/userLedger.json"
+    }
+}
