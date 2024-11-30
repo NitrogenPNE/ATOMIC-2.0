@@ -1,0 +1,44 @@
+{
+    "arbitrationPolicy": {
+        "type": "National Defense",
+        "description": "Defines rules and protocols for resolving disputes in the National Defense network.",
+        "priorityLevels": {
+            "high": {
+                "timeLimit": "5 minutes",
+                "authorizedRoles": [ "Defense Coordinator", "HQ Admin" ]
+            },
+            "medium": {
+                "timeLimit": "30 minutes",
+                "authorizedRoles": [ "Shard Manager", "Validator" ]
+            },
+            "low": {
+                "timeLimit": "24 hours",
+                "authorizedRoles": [ "Node Operator" ]
+            }
+        },
+        "disputeTypes": {
+            "validationError": {
+                "description": "Disputes related to failed block or shard validations.",
+                "resolutionProtocol": "Revalidate with quorum consensus."
+            },
+            "resourceConflict": {
+                "description": "Conflicts over resource allocation or shard ownership.",
+                "resolutionProtocol": "Resource arbitration meeting."
+            },
+            "maliciousActivity": {
+                "description": "Reports of malicious or unauthorized activity within the network.",
+                "resolutionProtocol": "Immediate escalation to Defense Coordinator."
+            }
+        },
+        "escalationProtocol": {
+            "firstLevel": "Local Node Arbitration",
+            "secondLevel": "Regional Supernode Arbitration",
+            "finalLevel": "National Defense HQ Arbitration"
+        },
+        "logging": {
+            "enabled": true,
+            "logRetentionDays": 90,
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/arbitrationLogs.json"
+        }
+    }
+}
