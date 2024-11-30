@@ -1,0 +1,36 @@
+{
+    "logs": [
+        {
+            "logId": "LOG-001",
+            "trainingId": "TR-001",
+            "userId": "userId-001",
+            "timestamp": "2024-12-01T09:05:00Z",
+            "status": "Started",
+            "message": "User began training on Cybersecurity Basics."
+        },
+        {
+            "logId": "LOG-002",
+            "trainingId": "TR-001",
+            "userId": "userId-002",
+            "timestamp": "2024-12-02T10:30:00Z",
+            "status": "In Progress",
+            "message": "User completed module 2 of Cybersecurity Basics."
+        },
+        {
+            "logId": "LOG-003",
+            "trainingId": "TR-002",
+            "userId": "userId-003",
+            "timestamp": "2024-12-10T15:45:00Z",
+            "status": "Completed",
+            "message": "User successfully completed the Zero Trust Architecture training."
+        },
+        {
+            "logId": "LOG-004",
+            "trainingId": "TR-003",
+            "userId": "userId-001",
+            "timestamp": "2025-01-15T12:00:00Z",
+            "status": "In Progress",
+            "message": "User is halfway through the Advanced Threat Detection training."
+        }
+    ]
+}

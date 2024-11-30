@@ -1,0 +1,31 @@
+{
+    "schedule": [
+        {
+            "trainingId": "TR-001",
+            "title": "Cybersecurity Basics",
+            "description": "Introduction to fundamental cybersecurity principles.",
+            "assignedTo": ["userId-001", "userId-002"],
+            "startDate": "2024-12-01T09:00:00Z",
+            "endDate": "2024-12-05T17:00:00Z",
+            "status": "Scheduled"
+        },
+        {
+            "trainingId": "TR-002",
+            "title": "Zero Trust Architecture",
+            "description": "Deep dive into Zero Trust access control policies and implementation.",
+            "assignedTo": ["userId-003"],
+            "startDate": "2024-12-10T09:00:00Z",
+            "endDate": "2024-12-12T17:00:00Z",
+            "status": "Scheduled"
+        },
+        {
+            "trainingId": "TR-003",
+            "title": "Advanced Threat Detection",
+            "description": "Training on behavioral anomaly detection and honeypot configurations.",
+            "assignedTo": ["userId-001"],
+            "startDate": "2025-01-15T09:00:00Z",
+            "endDate": "2025-01-20T17:00:00Z",
+            "status": "Pending"
+        }
+    ]
+}
