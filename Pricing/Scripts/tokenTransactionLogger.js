@@ -1,22 +1,26 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Token Transaction Logger
-//
-// Description:
-// Handles the logging of all token transactions, including minting, redemption,
-// transfer, and proof-of-access validations.
-//
-// Dependencies:
-// - fs-extra: For managing transaction logs.
-// - path: For directory management.
-//
-// Author: Shawn Blackmore
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ * All Rights Reserved.
+ *
+ * Module: Token Transaction Logger
+ *
+ * Description:
+ * Handles the logging of all token-related activities, including minting,
+ * redemption, Proof-of-Access validations, shard usage, node validations,
+ * and block-related operations.
+ *
+ * Dependencies:
+ * - fs-extra: For managing transaction logs.
+ * - path: For directory management.
+ *
+ * Author: Shawn Blackmore
+ * -------------------------------------------------------------------------------
+ */
 
 const fs = require("fs-extra");
 const path = require("path");
@@ -36,11 +40,11 @@ async function ensureLogFile() {
 }
 
 /**
- * Log a token transaction.
+ * Log a token transaction with Proof-of-Access metadata.
  * @param {Object} transactionDetails - Details of the token transaction.
- * @param {string} transactionDetails.type - Type of transaction (e.g., "MINT", "REDEEM", "TRANSFER").
+ * @param {string} transactionDetails.type - Type of transaction (e.g., "MINT", "REDEEM", "VALIDATION").
  * @param {string} transactionDetails.tokenId - The ID of the token involved.
- * @param {Object} transactionDetails.metadata - Additional details of the transaction.
+ * @param {Object} transactionDetails.metadata - Additional metadata (e.g., node, shard, or operation details).
  */
 async function logTokenTransaction(transactionDetails) {
     try {
@@ -65,13 +69,23 @@ async function logTokenTransaction(transactionDetails) {
 }
 
 /**
- * Retrieve token transaction logs.
- * @returns {Array} - Array of token transaction logs.
+ * Retrieve token transaction logs with optional filters.
+ * @param {Object} [filter] - Optional filter criteria (e.g., type or tokenId).
+ * @returns {Array} - Filtered array of token transaction logs.
  */
-async function getTransactionLogs() {
+async function getTransactionLogs(filter = {}) {
     try {
         await ensureLogFile();
-        return await fs.readJson(TOKEN_TRANSACTION_LOG);
+        const logs = await fs.readJson(TOKEN_TRANSACTION_LOG);
+
+        if (Object.keys(filter).length === 0) {
+            return logs; // Return all logs if no filter is applied
+        }
+
+        // Apply filters
+        return logs.filter((log) =>
+            Object.entries(filter).every(([key, value]) => log[key] === value)
+        );
     } catch (error) {
         console.error("Error retrieving token transaction logs:", error.message);
         throw error;
@@ -81,19 +95,21 @@ async function getTransactionLogs() {
 // Example Usage if called directly
 if (require.main === module) {
     const sampleTransaction = {
-        type: "MINT",
-        tokenId: "example-token-id",
+        type: "REDEEM",
+        tokenId: "sample-token-id",
         metadata: {
-            mintedBy: "node-1",
-            nodeCount: 3,
-            totalCost: "19.77",
+            redeemedBy: "node-123",
+            operation: "shard-access",
         },
     };
 
     logTokenTransaction(sampleTransaction)
         .then(() => console.log("Sample transaction logged successfully."))
         .catch((error) => console.error("Failed to log sample transaction:", error.message));
+
+    getTransactionLogs({ type: "REDEEM" })
+        .then((logs) => console.log("Filtered Logs:", logs))
+        .catch((error) => console.error("Failed to retrieve logs:", error.message));
 }
 
 module.exports = { logTokenTransaction, getTransactionLogs };
-
