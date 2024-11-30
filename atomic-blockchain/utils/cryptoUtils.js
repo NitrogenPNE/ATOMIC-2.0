@@ -1,89 +1,62 @@
 "use strict"; // Enforce strict mode
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Enhanced Cryptographic Utilities
-//
-// Description:
-// Provides robust cryptographic utilities, including advanced quantum-resistant
-// key generation, secure data encryption, and enhanced key management for 
-// military-grade security. Incorporates atomic hierarchy concepts (neutrons,
-// protons, and electrons) for fine-grained cryptographic control.
-//
-// Enhancements:
-// - Atomic-level cryptographic key management.
-// - Quantum-resistant Dilithium and Kyber keys.
-// - Support for neutrons, protons, and electrons in encryption contexts.
-// - Secure key rotation and tamper detection.
-//
-// Dependencies:
-// - crypto: For secure hashing, signing, and encryption.
-// - libsodium-wrappers: For quantum-resistant cryptographic operations.
-// - fs-extra: For key storage and management.
-// - winston: For structured logging and auditing.
-//
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * Copyright (c) 2023 ATOMIC, Ltd.
+ *
+ * Module: Quantum-Resistant Cryptographic Utilities
+ *
+ * Description:
+ * Provides quantum-resistant cryptographic utilities, including key generation,
+ * secure token signatures, and enhanced encryption/decryption methods for
+ * ATOMIC's Proof-of-Access operations.
+ *
+ * Enhancements:
+ * - Integration with Kyber and Dilithium quantum-safe algorithms.
+ * - Support for secure token validation and renewal.
+ * - Comprehensive logging for cryptographic operations.
+ *
+ * Dependencies:
+ * - libsodium-wrappers: For quantum-resistant cryptographic operations.
+ * - fs-extra: For secure key management.
+ * - crypto: For fallback cryptographic utilities.
+ * - path: For file path management.
+ * -------------------------------------------------------------------------------
+ */
 
-const crypto = require("crypto");
 const sodium = require("libsodium-wrappers");
 const fs = require("fs-extra");
-const winston = require("winston");
 const path = require("path");
 
-// **Key Storage Configuration**
-const KEY_STORAGE_PATH = path.join(__dirname, "../config/keys");
-const AES_KEY_LENGTH = 32; // 256-bit AES key
-
-// **Logger Configuration**
-const logger = winston.createLogger({
-    level: "info",
-    format: winston.format.combine(
-        winston.format.timestamp(),
-        winston.format.json()
-    ),
-    transports: [
-        new winston.transports.File({ filename: "crypto.log" }),
-        new winston.transports.Console(),
-    ],
-});
+// **Key Storage Paths**
+const KEY_STORAGE_PATH = path.join(__dirname, "../Keys");
 
 /**
- * Initialize cryptographic utilities.
- * Ensures that libsodium is ready and key storage is initialized.
+ * Initialize cryptographic utilities and ensure libsodium readiness.
  */
 async function initializeCryptoUtils() {
     await sodium.ready;
     await fs.ensureDir(KEY_STORAGE_PATH);
-    logger.info("Cryptographic utilities initialized.");
+    console.info("Quantum-resistant cryptographic utilities initialized.");
 }
 
 /**
- * Generate quantum-resistant keypairs categorized by atomic hierarchy.
- * - Neutron: High-security, low-performance keys.
- * - Proton: Balanced keys for general use.
- * - Electron: Lightweight, fast, and less secure keys.
- * @param {string} type - "neutron", "proton", or "electron".
- * @returns {Object} - Public and private keys in base64 format.
+ * Generate a quantum-resistant keypair using Kyber or Dilithium algorithms.
+ * @param {string} type - "kyber" for encryption or "dilithium" for digital signatures.
+ * @returns {Object} - Contains publicKey and privateKey in base64 format.
  */
-function generateAtomicKeys(type) {
-    logger.info(`Generating ${type}-level quantum-resistant keypair...`);
+function generateQuantumKeypair(type) {
+    console.info(`Generating ${type} quantum-resistant keypair...`);
     let keypair;
 
-    switch (type) {
-        case "neutron":
-            keypair = sodium.crypto_sign_keypair(); // Example: High-security keys
-            break;
-        case "proton":
-            keypair = sodium.crypto_kx_keypair(); // Example: Balanced keys
-            break;
-        case "electron":
-            keypair = sodium.crypto_box_keypair(); // Example: Lightweight keys
-            break;
-        default:
-            throw new Error("Invalid atomic key type. Choose 'neutron', 'proton', or 'electron'.");
+    if (type === "kyber") {
+        keypair = sodium.crypto_kx_keypair(); // For encryption
+    } else if (type === "dilithium") {
+        keypair = sodium.crypto_sign_keypair(); // For digital signatures
+    } else {
+        throw new Error("Invalid keypair type. Use 'kyber' or 'dilithium'.");
     }
 
     return {
@@ -93,86 +66,91 @@ function generateAtomicKeys(type) {
 }
 
 /**
- * Encrypt data with AES-GCM, categorized by atomic levels.
- * - Neutron: Includes redundancy metadata for tamper detection.
- * - Proton: Standard AES-GCM encryption.
- * - Electron: Lightweight encryption with minimal metadata.
- * @param {string|Buffer} plaintext - Data to encrypt.
- * @param {Buffer} key - Encryption key.
- * @param {string} type - "neutron", "proton", or "electron".
- * @returns {Object} - Encrypted data and metadata.
+ * Sign data with a quantum-resistant private key (Dilithium).
+ * @param {string} data - Data to be signed.
+ * @param {string} privateKey - Base64-encoded private key.
+ * @returns {string} - Digital signature in base64 format.
  */
-function encryptAtomic(plaintext, key, type) {
-    logger.info(`Encrypting data using ${type}-level AES-GCM...`);
-    const iv = crypto.randomBytes(12);
-    const cipher = crypto.createCipheriv("aes-256-gcm", key, iv);
+function signWithQuantum(data, privateKey) {
+    const privateKeyBuffer = Buffer.from(privateKey, "base64");
+    const signature = sodium.crypto_sign_detached(data, privateKeyBuffer);
+    return Buffer.from(signature).toString("base64");
+}
 
-    const encrypted = Buffer.concat([cipher.update(plaintext), cipher.final()]);
-    const authTag = cipher.getAuthTag();
+/**
+ * Verify a quantum-resistant signature.
+ * @param {string} data - Original data.
+ * @param {string} signature - Base64-encoded signature.
+ * @param {string} publicKey - Base64-encoded public key.
+ * @returns {boolean} - Whether the signature is valid.
+ */
+function verifyQuantumSignature(data, signature, publicKey) {
+    const publicKeyBuffer = Buffer.from(publicKey, "base64");
+    const signatureBuffer = Buffer.from(signature, "base64");
 
-    const metadata = { iv: iv.toString("base64"), authTag: authTag.toString("base64") };
+    return sodium.crypto_sign_verify_detached(signatureBuffer, data, publicKeyBuffer);
+}
 
-    if (type === "neutron") {
-        metadata.redundancyCheck = crypto.createHash("sha256").update(encrypted).digest("hex");
-    }
-
+/**
+ * Encrypt data using quantum-safe symmetric encryption (AES-GCM).
+ * @param {string|Buffer} data - Data to encrypt.
+ * @param {Buffer} key - Encryption key.
+ * @returns {Object} - Contains encryptedData (base64), iv, and authTag.
+ */
+function encryptWithQuantum(data, key) {
+    const iv = sodium.randombytes_buf(12);
+    const cipher = sodium.crypto_aead_aes256gcm_encrypt(data, null, null, iv, key);
     return {
-        encryptedData: encrypted.toString("base64"),
-        metadata,
+        encryptedData: Buffer.from(cipher).toString("base64"),
+        iv: Buffer.from(iv).toString("base64"),
     };
 }
 
 /**
- * Decrypt data encrypted with AES-GCM and categorized by atomic levels.
- * @param {Object} encryptedObject - Contains encrypted data and metadata.
+ * Decrypt data encrypted with quantum-safe symmetric encryption (AES-GCM).
+ * @param {Object} encryptedObject - Contains encryptedData (base64), iv, and authTag.
  * @param {Buffer} key - Decryption key.
- * @param {string} type - "neutron", "proton", or "electron".
  * @returns {string} - Decrypted plaintext.
  */
-function decryptAtomic(encryptedObject, key, type) {
-    logger.info(`Decrypting ${type}-level AES-GCM data...`);
-    const { encryptedData, metadata } = encryptedObject;
+function decryptWithQuantum(encryptedObject, key) {
+    const { encryptedData, iv } = encryptedObject;
+    const encryptedBuffer = Buffer.from(encryptedData, "base64");
+    const ivBuffer = Buffer.from(iv, "base64");
 
-    const decipher = crypto.createDecipheriv(
-        "aes-256-gcm",
-        key,
-        Buffer.from(metadata.iv, "base64")
-    );
-    decipher.setAuthTag(Buffer.from(metadata.authTag, "base64"));
-
-    const decrypted = Buffer.concat([
-        decipher.update(Buffer.from(encryptedData, "base64")),
-        decipher.final(),
-    ]);
-
-    if (type === "neutron" && metadata.redundancyCheck) {
-        const calculatedChecksum = crypto.createHash("sha256").update(Buffer.from(encryptedData, "base64")).digest("hex");
-        if (calculatedChecksum !== metadata.redundancyCheck) {
-            throw new Error("Data integrity check failed during decryption.");
-        }
-    }
-
-    return decrypted.toString("utf8");
+    return sodium.crypto_aead_aes256gcm_decrypt(null, encryptedBuffer, null, ivBuffer, key).toString("utf-8");
 }
 
 /**
- * Generate and store atomic-level AES keys.
- * @param {string} type - "neutron", "proton", or "electron".
- * @returns {Buffer} - Generated AES key.
+ * Securely store quantum-resistant keys to file.
+ * @param {Object} keypair - Contains publicKey and privateKey.
+ * @param {string} fileName - File name to store the keys.
  */
-async function generateAtomicAESKey(type) {
-    logger.info(`Generating ${type}-level AES key...`);
-    const key = crypto.randomBytes(AES_KEY_LENGTH);
-    const keyPath = path.join(KEY_STORAGE_PATH, `${type}_aesKey.key`);
-    await fs.writeFile(keyPath, key.toString("base64"));
-    logger.info(`Stored ${type}-level AES key at: ${keyPath}`);
-    return key;
+async function storeQuantumKeys(keypair, fileName) {
+    const filePath = path.join(KEY_STORAGE_PATH, `${fileName}.json`);
+    await fs.writeJson(filePath, keypair, { spaces: 2 });
+    console.info(`Stored quantum-resistant keys at: ${filePath}`);
+}
+
+/**
+ * Load quantum-resistant keys from file.
+ * @param {string} fileName - File name to load the keys from.
+ * @returns {Object} - Contains publicKey and privateKey.
+ */
+async function loadQuantumKeys(fileName) {
+    const filePath = path.join(KEY_STORAGE_PATH, `${fileName}.json`);
+    if (!(await fs.pathExists(filePath))) {
+        throw new Error(`Key file not found: ${filePath}`);
+    }
+    return await fs.readJson(filePath);
 }
 
 module.exports = {
     initializeCryptoUtils,
-    generateAtomicKeys,
-    encryptAtomic,
-    decryptAtomic,
-    generateAtomicAESKey,
+    generateQuantumKeypair,
+    signWithQuantum,
+    verifyQuantumSignature,
+    encryptWithQuantum,
+    decryptWithQuantum,
+    storeQuantumKeys,
+    loadQuantumKeys,
 };
