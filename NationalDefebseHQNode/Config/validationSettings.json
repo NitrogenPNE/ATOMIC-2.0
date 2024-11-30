@@ -1,0 +1,100 @@
+{
+    "description": "Validation settings for the National Defense HQ Node.",
+    "lastUpdated": "2024-11-24",
+    "validation": {
+        "blockValidation": {
+            "enabled": true,
+            "rules": {
+                "hashVerification": true,
+                "timestampConsistency": true,
+                "transactionIntegrity": true,
+                "signatureVerification": true
+            },
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/blockValidationLogs.json"
+        },
+        "transactionValidation": {
+            "enabled": true,
+            "rules": {
+                "schemaCompliance": true,
+                "amountSanityCheck": true,
+                "recipientExistence": true,
+                "multiSigVerification": false
+            },
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/transactionValidationLogs.json"
+        },
+        "shardValidation": {
+            "enabled": true,
+            "rules": {
+                "shardHashConsistency": true,
+                "dataIntegrity": true,
+                "ownershipVerification": true,
+                "distributionRedundancyCheck": true
+            },
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/shardValidationLogs.json"
+        }
+    },
+    "auditSettings": {
+        "frequency": "daily",
+        "auditPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/AuditLogs/",
+        "reporting": {
+            "enabled": true,
+            "outputFormat": "json",
+            "notifyOnFailure": true,
+            "notificationRecipients": [
+                "security@defense.gov",
+                "node-admin@atomic-defense.com"
+            ]
+        }
+    },
+    "securitySettings": {
+        "thresholds": {
+            "validationFailures": {
+                "warningLevel": 5,
+                "criticalLevel": 10
+            },
+            "nodeResponseTime": {
+                "maxAllowedMs": 500,
+                "warningLevelMs": 300
+            }
+        },
+        "alerts": {
+            "enabled": true,
+            "alertLogPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/alerts.json",
+            "notificationRecipients": [
+                "security@defense.gov",
+                "admin@atomic-defense.com"
+            ]
+        }
+    },
+    "logging": {
+        "validationLogs": {
+            "enabled": true,
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/validationLogs.json",
+            "rotation": {
+                "maxSizeMb": 50,
+                "retainDays": 30
+            }
+        },
+        "auditLogs": {
+            "enabled": true,
+            "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/auditLogs.json",
+            "rotation": {
+                "maxSizeMb": 50,
+                "retainDays": 30
+            }
+        }
+    },
+    "rulesEngine": {
+        "enabled": true,
+        "scriptPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Validation/rulesEngine.js",
+        "parameters": {
+            "dynamicRuleLoading": true,
+            "priorityLevels": [
+                "critical",
+                "high",
+                "medium",
+                "low"
+            ]
+        }
+    }
+}

@@ -1,0 +1,43 @@
+{
+  "backupKeys": [
+    {
+      "keyId": "key-001",
+      "createdAt": "2024-11-24T10:00:00Z",
+      "backupLocation": "secure-vault-01",
+      "status": "active",
+      "lastUsed": "2024-11-25T08:30:00Z",
+      "metadata": {
+        "keyType": "RSA",
+        "keySize": 4096,
+        "backupMethod": "HSM snapshot",
+        "encryption": "AES-256"
+      }
+    },
+    {
+      "keyId": "key-002",
+      "createdAt": "2024-11-20T12:45:00Z",
+      "backupLocation": "secure-vault-02",
+      "status": "archived",
+      "lastUsed": "2024-11-23T15:00:00Z",
+      "metadata": {
+        "keyType": "ECC",
+        "keySize": 256,
+        "backupMethod": "manual export",
+        "encryption": "AES-256"
+      }
+    },
+    {
+      "keyId": "key-003",
+      "createdAt": "2024-11-21T14:20:00Z",
+      "backupLocation": "secure-vault-01",
+      "status": "active",
+      "lastUsed": "2024-11-24T19:00:00Z",
+      "metadata": {
+        "keyType": "AES",
+        "keySize": 256,
+        "backupMethod": "scheduled rotation",
+        "encryption": "AES-256"
+      }
+    }
+  ]
+}

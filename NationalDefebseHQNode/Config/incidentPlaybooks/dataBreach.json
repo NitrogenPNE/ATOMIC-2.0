@@ -1,0 +1,27 @@
+{
+    "name": "Data Breach Response",
+        "description": "Standard response to suspected data breach incidents.",
+            "steps": [
+                {
+                    "description": "Notify the Security Team.",
+                    "action": "notify",
+                    "recipient": "SecurityTeam",
+                    "message": "A potential data breach has been detected. Immediate attention required."
+                },
+                {
+                    "description": "Initiate lockdown on affected systems.",
+                    "action": "lockdown",
+                    "target": "affectedSystems"
+                },
+                {
+                    "description": "Collect system logs for forensic analysis.",
+                    "action": "collectLogs",
+                    "target": "allNodes"
+                },
+                {
+                    "description": "Run custom diagnostic commands.",
+                    "action": "customCommand",
+                    "command": "diagnostics.sh"
+                }
+            ]
+}

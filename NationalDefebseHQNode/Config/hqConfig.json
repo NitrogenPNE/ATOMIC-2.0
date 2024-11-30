@@ -1,0 +1,71 @@
+{
+    "description": "Configuration settings for the National Defense HQ Node",
+    "lastUpdated": "2024-11-24",
+    "nodeSettings": {
+        "nodeId": "DEFENSE-HQ-001",
+        "role": "Orchestrator and Validator",
+        "networkId": "NationalDefenseNet",
+        "operationalMode": "high-security",
+        "dataPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Data",
+        "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs",
+        "maxConnections": 2000,
+        "heartbeatIntervalMs": 5000,
+        "syncIntervalMs": 15000
+    },
+    "encryptionStandards": {
+        "protocol": "Quantum-Resistant Hybrid",
+        "keyRotationFrequency": "90 days",
+        "dataEncryption": "AES-GCM-256"
+    },
+    "monitoringSettings": {
+        "enabled": true,
+        "logFile": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/monitoring.json",
+        "healthCheckInterval": "10 minutes",
+        "performanceMetrics": {
+            "enabled": true,
+            "trackCpuUsage": true,
+            "trackMemoryUsage": true,
+            "trackNetworkLatency": true
+        }
+    },
+    "arbitrationSettings": {
+        "enabled": true,
+        "policyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Arbitration/arbitrationPolicy.json",
+        "disputeResolutionMode": "fast-track",
+        "auditLogPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Arbitration/arbitrationLogs.json"
+    },
+    "subscriptionSettings": {
+        "addressIssuerPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Subscriptions/addressIssuer.js",
+        "subscriptionLedger": "C:/ATOMIC 2.0/NationalDefenseHQNode/Subscriptions/subscriptionLedger.json",
+        "subscriptionRules": "C:/ATOMIC 2.0/NationalDefenseHQNode/Subscriptions/subscriptionRules.json"
+    },
+    "orchestrationSettings": {
+        "enabled": true,
+        "loadBalancerPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Orchestration/loadBalancer.js",
+        "taskCoordinatorPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Orchestration/taskCoordinator.js",
+        "shardManagerPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Orchestration/shardManager.js"
+    },
+    "validationSettings": {
+        "blockValidatorPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Validation/blockValidator.js",
+        "shardValidatorPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Validation/shardValidator.js",
+        "transactionValidatorPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Validation/transactionValidator.js",
+        "validationRulesPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Validation/validationRules.json"
+    },
+    "logging": {
+        "level": "info",
+        "rotate": {
+            "enabled": true,
+            "maxSizeMb": 50,
+            "retainDays": 30
+        }
+    },
+    "auditSettings": {
+        "enabled": true,
+        "auditFrequency": "monthly",
+        "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/audit.json",
+        "standards": [
+            "NIST SP 800-53",
+            "ISO/IEC 27001"
+        ]
+    }
+}

@@ -1,0 +1,21 @@
+{
+    "transaction": {
+        "schema": {
+            "type": "object",
+                "properties": {
+                "id": { "type": "string" },
+                "from": { "type": "string" },
+                "to": { "type": "string" },
+                "amount": { "type": "number", "minimum": 0 },
+                "timestamp": { "type": "string", "format": "date-time" }
+            },
+            "required": ["id", "from", "to", "amount", "timestamp"]
+        },
+        "rules": [
+            {
+                "condition": "data.amount <= 100000",
+                "message": "Transaction amount exceeds allowed limit."
+            }
+        ]
+    }
+}

@@ -1,0 +1,75 @@
+{
+    "description": "Encryption Standards for National Defense HQ Node",
+    "lastUpdated": "2024-11-24",
+    "encryptionProtocols": [
+        {
+            "name": "Quantum-Resistant Hybrid RSA",
+            "type": "asymmetric",
+            "keyLength": 4096,
+            "description": "Combines RSA with lattice-based algorithms for quantum resistance."
+        },
+        {
+            "name": "Lattice-Based Kyber",
+            "type": "asymmetric",
+            "keyLength": 256,
+            "description": "Post-quantum secure lattice-based key exchange protocol."
+        },
+        {
+            "name": "AES-GCM-256",
+            "type": "symmetric",
+            "keyLength": 256,
+            "description": "High-speed encryption with authentication tag for data integrity."
+        }
+    ],
+    "keyManagement": {
+        "publicKeyPath": "C:/ATOMIC 2.0/Keys/Defense/publicKey.pem",
+        "privateKeyPath": "C:/ATOMIC 2.0/Keys/Defense/privateKey.pem",
+        "keyRotationPolicy": {
+            "enabled": true,
+            "rotationFrequency": "90 days",
+            "backupOldKeys": true,
+            "rotationAlertRecipients": [
+                "admin@defense.atomic",
+                "security@defense.atomic"
+            ]
+        }
+    },
+    "hashingStandards": [
+        {
+            "name": "SHA-256",
+            "description": "Secure hashing for data integrity checks."
+        },
+        {
+            "name": "SHA-512",
+            "description": "Enhanced hashing standard for high-security scenarios."
+        }
+    ],
+    "communicationEncryption": {
+        "protocol": "TLS 1.3",
+        "cipherSuites": [
+            "TLS_AES_256_GCM_SHA384",
+            "TLS_CHACHA20_POLY1305_SHA256"
+        ],
+        "description": "Secures communication between nodes and HQ with the latest TLS standards."
+    },
+    "dataProtectionPolicies": {
+        "encryptionAtRest": {
+            "enabled": true,
+            "description": "Encrypts all stored data using AES-GCM-256."
+        },
+        "encryptionInTransit": {
+            "enabled": true,
+            "description": "Applies TLS 1.3 for all data transmission."
+        }
+    },
+    "auditAndCompliance": {
+        "enabled": true,
+        "auditFrequency": "monthly",
+        "auditLogPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/encryptionAudits.json",
+        "complianceStandards": [
+            "NIST SP 800-53",
+            "ISO/IEC 27001",
+            "Quantum-Safe Cryptography Guidelines v1.0"
+        ]
+    }
+}

@@ -1,0 +1,63 @@
+{
+  "honeypots": [
+    {
+      "id": "honeypot-001",
+      "type": "network",
+      "description": "Simulated vulnerable network endpoint for detecting malicious activity.",
+      "active": true,
+      "settings": {
+        "ipRange": "192.168.10.0/24",
+        "portRange": [22, 80, 443],
+        "protocols": ["TCP", "UDP"],
+        "maxConnections": 100
+      }
+    },
+    {
+      "id": "honeypot-002",
+      "type": "application",
+      "description": "Web application honeypot for capturing attempts to exploit vulnerabilities.",
+      "active": true,
+      "settings": {
+        "applicationType": "fakeCMS",
+        "loginEndpoints": ["/admin", "/login"],
+        "logging": true,
+        "maxRequestsPerMinute": 50
+      }
+    },
+    {
+      "id": "honeypot-003",
+      "type": "database",
+      "description": "Simulated database server for tracking unauthorized access attempts.",
+      "active": false,
+      "settings": {
+        "databaseType": "MySQL",
+        "fakeTables": ["users", "transactions", "sensitive_data"],
+        "maxQueries": 200,
+        "queryLogging": true
+      }
+    }
+  ],
+  "logging": {
+    "logPath": "./Logs/Honeypot/",
+    "logRetentionDays": 30
+  },
+  "alerting": {
+    "enabled": true,
+    "thresholds": {
+      "network": 10,
+      "application": 15,
+      "database": 5
+    },
+    "notificationChannels": ["email", "sms", "dashboard"]
+  },
+  "securityPolicies": {
+    "isolation": {
+      "enabled": true,
+      "blockIPAfterAttempts": 5
+    },
+    "integrationWithIPS": {
+      "enabled": true,
+      "responseTimeMs": 500
+    }
+  }
+}

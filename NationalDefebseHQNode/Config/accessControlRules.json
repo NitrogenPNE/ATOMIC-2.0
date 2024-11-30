@@ -1,0 +1,41 @@
+{
+    "description": "Access Control Rules for the National Defense HQ Node.",
+    "lastUpdated": "2024-11-24",
+    "rules": {
+        "default": {
+            "allowConnections": false,
+            "logging": true
+        },
+        "trustedEntities": [
+            {
+                "entityType": "Supernode",
+                "allowedActions": [ "read", "write", "sync" ],
+                "ipWhitelist": [ "192.168.1.10", "192.168.1.11", "192.168.1.12" ],
+                "requiresAuthToken": true
+            },
+            {
+                "entityType": "DefenseNode",
+                "allowedActions": [ "read", "write" ],
+                "ipWhitelist": [ "192.168.2.20", "192.168.2.21" ],
+                "requiresAuthToken": true
+            },
+            {
+                "entityType": "CorporateNode",
+                "allowedActions": [ "read" ],
+                "ipWhitelist": [ "192.168.3.30" ],
+                "requiresAuthToken": true
+            }
+        ],
+        "blacklistedEntities": [
+            {
+                "ip": "192.168.4.40",
+                "reason": "Unauthorized access attempt detected."
+            }
+        ]
+    },
+    "audit": {
+        "enabled": true,
+        "frequency": "daily",
+        "logPath": "C:/ATOMIC 2.0/Logs/accessControlAudit.json"
+    }
+}

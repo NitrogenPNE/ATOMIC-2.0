@@ -1,0 +1,72 @@
+{
+    "description": "National Defense HQ Node Configuration Settings",
+    "lastUpdated": "2024-11-24",
+    "network": {
+        "protocol": "ATOMIC-Defense",
+        "hqNodeId": "DEFENSE-HQ-001",
+        "region": "Global",
+        "defaultNodePort": 7070,
+        "defaultApiPort": 8081,
+        "maxConnections": 1000,
+        "heartbeatIntervalMs": 15000,
+        "supernodeSyncIntervalMs": 10000,
+        "bootstrapNodes": [
+            "ws://node1.defense.internal:7070",
+            "ws://node2.defense.internal:7071",
+            "ws://supernode.defense.internal:7072"
+        ]
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyManagement": {
+                "publicKeyPath": "C:/ATOMIC 2.0/Keys/Defense/publicKey.pem",
+                "privateKeyPath": "C:/ATOMIC 2.0/Keys/Defense/privateKey.pem"
+            }
+        },
+        "accessControl": {
+            "rulesFilePath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Config/accessControlRules.json",
+            "requireTokens": true,
+            "allowedRegions": [ "Global", "National" ],
+            "auditFrequency": "daily"
+        }
+    },
+    "orchestration": {
+        "shardPolicy": "high-redundancy",
+        "taskScheduling": {
+            "maxConcurrentTasks": 50,
+            "priorityLevels": [ "critical", "high", "medium", "low" ]
+        }
+    },
+    "monitoring": {
+        "enabled": true,
+        "logPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/monitoringLogs.json",
+        "alerts": {
+            "enabled": true,
+            "alertThresholds": {
+                "cpuUsage": 85,
+                "memoryUsage": 90,
+                "networkLatencyMs": 500
+            },
+            "recipients": [
+                "admin@defense.atomic",
+                "security@defense.atomic"
+            ]
+        }
+    },
+    "logging": {
+        "logLevel": "info",
+        "filePath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/defenseHQ.log",
+        "rotation": {
+            "frequency": "daily",
+            "maxSizeMb": 100,
+            "retainDays": 30
+        }
+    },
+    "subscriptions": {
+        "enabled": true,
+        "ledgerPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Subscriptions/subscriptionLedger.json",
+        "rulesPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Subscriptions/subscriptionRules.json"
+    }
+}

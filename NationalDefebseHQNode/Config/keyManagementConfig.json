@@ -1,0 +1,89 @@
+{
+    "description": "Configuration for key management within the National Defense HQ Node.",
+    "lastUpdated": "2024-11-24",
+    "keyManagement": {
+        "protocol": "Quantum-Resistant Hybrid",
+        "algorithms": [
+            "lattice-based",
+            "AES-GCM-256",
+            "ECDSA"
+        ],
+        "keyStorage": {
+            "privateKeyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Keys/privateKey.pem",
+            "publicKeyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Keys/publicKey.pem",
+            "backupKeyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Keys/backupKey.pem"
+        },
+        "keyRotation": {
+            "enabled": true,
+            "frequencyDays": 90,
+            "backupFrequencyDays": 30,
+            "notificationThresholdDays": 7
+        },
+        "accessControl": {
+            "allowedRoles": [
+                "Administrator",
+                "Security Officer",
+                "System Manager"
+            ],
+            "auditLogPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/keyManagementAudit.json"
+        }
+    },
+    "encryptionStandards": {
+        "dataEncryption": {
+            "algorithm": "AES-GCM-256",
+            "keyLength": 256,
+            "ivLength": 12
+        },
+        "signatureVerification": {
+            "algorithm": "ECDSA",
+            "hashFunction": "SHA-256"
+        },
+        "secureTransport": {
+            "protocol": "TLS 1.3",
+            "cipherSuites": [
+                "TLS_AES_256_GCM_SHA384",
+                "TLS_CHACHA20_POLY1305_SHA256"
+            ]
+        }
+    },
+    "backupSettings": {
+        "enabled": true,
+        "backupPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Backup",
+        "encryption": {
+            "algorithm": "AES-GCM-256",
+            "keyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Keys/backupKey.pem"
+        },
+        "schedule": {
+            "frequency": "daily",
+            "time": "02:00"
+        }
+    },
+    "logging": {
+        "auditLogs": {
+            "enabled": true,
+            "path": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/keyManagementAudit.json",
+            "rotation": {
+                "maxSizeMb": 50,
+                "retainDays": 30
+            }
+        },
+        "keyEvents": {
+            "path": "C:/ATOMIC 2.0/NationalDefenseHQNode/Logs/keyEvents.json",
+            "logLevel": "info"
+        }
+    },
+    "recoverySettings": {
+        "emergencyAccess": {
+            "enabled": true,
+            "policyPath": "C:/ATOMIC 2.0/NationalDefenseHQNode/Config/emergencyAccessPolicy.json",
+            "authorizedRoles": [
+                "Security Officer",
+                "Administrator"
+            ]
+        },
+        "fallbackKeys": {
+            "enabled": true,
+            "path": "C:/ATOMIC 2.0/NationalDefenseHQNode/Keys/fallbackKeys/"
+        }
+    }
+}

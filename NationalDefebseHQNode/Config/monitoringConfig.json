@@ -1,0 +1,72 @@
+{
+    "monitoringConfig": {
+        "healthChecks": {
+            "intervalMs": 10000,
+                "thresholds": {
+                "cpuLoad": {
+                    "critical": 90,
+                        "warning": 75
+                },
+                "memoryUsage": {
+                    "critical": 85,
+                        "warning": 70
+                },
+                "diskSpace": {
+                    "critical": 80,
+                        "warning": 60
+                },
+                "networkLatency": {
+                    "critical": 200,
+                        "warning": 100
+                }
+            }
+        },
+        "threatDetection": {
+            "enabled": true,
+                "detectionAlgorithms": [
+                    "anomalyBehaviorModel",
+                    "intrusionSignatures",
+                    "honeypotEngagement"
+                ],
+                    "alertThresholds": {
+                "suspiciousActivity": 5,
+                    "failedLogins": 10
+            }
+        },
+        "logging": {
+            "logRetentionDays": 30,
+                "logLevel": "info",
+                    "logOutput": "./Logs/Monitoring/"
+        },
+        "alerting": {
+            "enabled": true,
+                "notificationChannels": {
+                "email": {
+                    "enabled": true,
+                        "recipients": ["admin@example.com", "security@example.com"]
+                },
+                "sms": {
+                    "enabled": true,
+                        "recipients": ["+1234567890"]
+                },
+                "dashboard": {
+                    "enabled": true
+                }
+            }
+        },
+        "integrations": {
+            "prometheus": {
+                "enabled": true,
+                    "endpoint": "/metrics",
+                        "port": 9090
+            },
+            "grafana": {
+                "enabled": true,
+                    "dashboards": {
+                    "systemHealth": "dashboard-id-123",
+                        "securityOverview": "dashboard-id-456"
+                }
+            }
+        }
+    }
+}
