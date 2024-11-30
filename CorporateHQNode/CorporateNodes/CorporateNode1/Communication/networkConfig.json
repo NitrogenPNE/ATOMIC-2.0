@@ -1,0 +1,56 @@
+{
+    "nodeId": "CorporateNode1",
+    "nodeType": "Corporate",
+    "networkSettings": {
+        "port": 6001,
+        "protocol": "WebSocket",
+        "maxConnections": 100,
+        "heartbeatIntervalMs": 30000,
+        "secureConnection": true
+    },
+    "trustedPeers": [
+        {
+            "address": "ws://hq.supernode.local:7000",
+            "role": "HQ Supernode"
+        },
+        {
+            "address": "ws://corp.node2.local:6002",
+            "role": "Corporate Node"
+        },
+        {
+            "address": "ws://branch.node1.local:6003",
+            "role": "Branch Node"
+        }
+    ],
+    "encryption": {
+        "enabled": true,
+        "algorithms": [
+            "AES-256-GCM",
+            "RSA-OAEP",
+            "lattice-based"
+        ],
+        "keyManagement": {
+            "publicKeyPath": "./keys/publicKey.pem",
+            "privateKeyPath": "./keys/privateKey.pem"
+        }
+    },
+    "logging": {
+        "enabled": true,
+        "level": "info",
+        "output": "./logs/network.log"
+    },
+    "discovery": {
+        "dnsSeed": "nodes.atomic.network",
+        "enableFallback": true,
+        "fallbackPeers": [
+            {
+                "address": "ws://fallback1.atomic.network:6000",
+                "priority": 1
+            },
+            {
+                "address": "ws://fallback2.atomic.network:6000",
+                "priority": 2
+            }
+        ]
+    }
+}

@@ -1,0 +1,20 @@
+{
+    "logRetentionDays": 30,
+    "logFilePath": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode1/Logs/validation.log",
+    "logLevels": {
+        "info": true,
+        "warning": true,
+        "error": true
+    },
+    "rotationPolicy": {
+        "enabled": true,
+        "frequency": "daily",
+        "maxFileSizeMB": 50,
+        "backupCount": 7
+    },
+    "auditSettings": {
+        "enabled": true,
+        "auditFilePath": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode1/Logs/validationAudit.log",
+        "auditRetentionDays": 90
+    }
+}

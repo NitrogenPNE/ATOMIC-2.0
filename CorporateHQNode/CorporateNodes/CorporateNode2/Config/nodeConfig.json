@@ -1,0 +1,47 @@
+{
+    "nodeId": "CorporateNode2",
+    "role": "corporate",
+    "dataStorage": {
+        "path": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Data",
+        "maxStorageBytes": 500000000000,
+        "autoCleanup": true
+    },
+    "consensus": {
+        "algorithm": "Proof-of-Access",
+        "blockTimeSeconds": 10,
+        "dynamicBlockTime": true
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyPaths": {
+                "publicKey": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Keys/publicKey.pem",
+                "privateKey": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Keys/privateKey.pem"
+            }
+        },
+        "authentication": {
+            "enabled": true,
+            "aclPath": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Config/accessControlList.json",
+            "twoFactor": false
+        }
+    },
+    "logging": {
+        "level": "debug",
+        "file": "logs/corporateNode2.log",
+        "rotate": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxSizeMb": 50,
+            "retainDays": 14
+        }
+    },
+    "sharding": {
+        "enabled": true,
+        "shardPaths": {
+            "bitShards": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Shards/bitShards",
+            "byteShards": "C:/ATOMIC 2.0/CorporateHQNode/CorporateNodes/CorporateNode2/Shards/byteShards"
+        },
+        "auditIntervalMs": 60000
+    }
+}

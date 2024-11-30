@@ -1,0 +1,32 @@
+{
+    "replicationFactor": 3,
+    "policies": [
+        {
+            "shardType": "bitShards",
+            "minNodes": 2,
+            "maxNodes": 5,
+            "priority": "high"
+        },
+        {
+            "shardType": "byteShards",
+            "minNodes": 2,
+            "maxNodes": 4,
+            "priority": "medium"
+        },
+        {
+            "shardType": "kbShards",
+            "minNodes": 1,
+            "maxNodes": 3,
+            "priority": "low"
+        }
+    ],
+    "auditFrequencyMs": 120000,
+    "fallbackStrategy": {
+        "action": "reroute",
+        "timeoutMs": 30000
+    },
+    "failureThreshold": {
+        "allowedFailures": 2,
+        "actionOnThreshold": "alert"
+    }
+}

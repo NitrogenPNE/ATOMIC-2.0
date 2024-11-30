@@ -1,0 +1,24 @@
+{
+    "logs": [],
+    "config": {
+        "retentionPeriodDays": 30,
+        "logFilePath": "C:/ATOMIC 2.0/CorporateHQNode/Logs/monitoring.log",
+        "maxLogFileSizeMb": 50,
+        "logLevel": "info"
+    },
+    "alerts": {
+        "enabled": true,
+        "thresholds": {
+            "cpuLoad": {
+                "load1": 0.8,
+                "load5": 0.7,
+                "load15": 0.6
+            },
+            "memoryUsage": {
+                "critical": 0.9,
+                "warning": 0.8
+            }
+        },
+        "notificationRecipients": [ "sysadmin@corporatehq.atomic" ]
+    }
+}

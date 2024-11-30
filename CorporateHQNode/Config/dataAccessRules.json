@@ -1,0 +1,136 @@
+{
+    "accessControl": {
+        "roles": {
+            "admin": {
+                "permissions": [
+                    "read_all_data",
+                    "write_all_data",
+                    "modify_permissions",
+                    "audit_trails",
+                    "delete_data"
+                ],
+                "restrictions": []
+            },
+            "operator": {
+                "permissions": [
+                    "read_all_data",
+                    "write_data",
+                    "audit_trails"
+                ],
+                "restrictions": [
+                    "modify_permissions",
+                    "delete_data"
+                ]
+            },
+            "auditor": {
+                "permissions": [
+                    "read_audit_trails",
+                    "read_all_data"
+                ],
+                "restrictions": [
+                    "write_data",
+                    "delete_data",
+                    "modify_permissions"
+                ]
+            },
+            "readOnly": {
+                "permissions": [
+                    "read_all_data"
+                ],
+                "restrictions": [
+                    "write_data",
+                    "modify_permissions",
+                    "delete_data",
+                    "audit_trails"
+                ]
+            }
+        },
+        "defaultRole": "readOnly"
+    },
+    "dataCategories": {
+        "shardData": {
+            "description": "Access to shard-specific data and metadata.",
+            "accessRoles": [
+                "admin",
+                "operator",
+                "auditor"
+            ]
+        },
+        "auditLogs": {
+            "description": "Access to logs related to data auditing and integrity checks.",
+            "accessRoles": [
+                "admin",
+                "auditor"
+            ]
+        },
+        "configurationData": {
+            "description": "Access to configuration files and node settings.",
+            "accessRoles": [
+                "admin"
+            ]
+        },
+        "userTransactions": {
+            "description": "Access to user transaction data stored on the blockchain.",
+            "accessRoles": [
+                "admin",
+                "operator"
+            ]
+        },
+        "systemLogs": {
+            "description": "Access to system-level logs for debugging and operational monitoring.",
+            "accessRoles": [
+                "admin",
+                "auditor"
+            ]
+        }
+    },
+    "compliance": {
+        "dataRetentionPolicy": {
+            "shardData": {
+                "retentionPeriodDays": 365,
+                "autoCleanup": true
+            },
+            "auditLogs": {
+                "retentionPeriodDays": 730,
+                "autoCleanup": true
+            },
+            "userTransactions": {
+                "retentionPeriodDays": 1825,
+                "autoCleanup": false
+            }
+        },
+        "encryptionPolicy": {
+            "enabled": true,
+            "algorithms": [
+                "lattice-based",
+                "hybrid-RSA"
+            ],
+            "rotationIntervalDays": 90
+        },
+        "loggingPolicy": {
+            "logAccessAttempts": true,
+            "logFailedAttempts": true,
+            "aggregationSystem": {
+                "enabled": true,
+                "system": "ELK",
+                "url": "http://elk.corp.internal/logs"
+            }
+        }
+    },
+    "exceptions": {
+        "emergencyAccess": {
+            "enabled": true,
+            "triggerConditions": [
+                "disaster_recovery",
+                "critical_node_failure"
+            ],
+            "authorizedRoles": [
+                "admin"
+            ],
+            "logging": {
+                "enabled": true,
+                "logPath": "./logs/emergencyAccess.log"
+            }
+        }
+    }
+}

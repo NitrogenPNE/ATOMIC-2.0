@@ -1,0 +1,51 @@
+{
+    "replicationPolicy": {
+        "sharding": {
+            "enabled": true,
+            "replicationFactor": 3,
+            "policy": "Weighted",
+            "nodePrioritization": {
+                "HQ": 1,
+                "Corporate": 2,
+                "Branch": 3
+            },
+            "dataPlacementStrategy": "RegionOptimized",
+            "failureTolerance": {
+                "maxFailedNodes": 2,
+                "autoRedistribution": true
+            }
+        },
+        "retentionPolicy": {
+            "enabled": true,
+            "retentionPeriodDays": 90,
+            "archivalPath": "./archives",
+            "archivalCompression": "gzip"
+        },
+        "auditSettings": {
+            "auditIntervalMs": 60000,
+            "auditTrailStorage": "./audit/trails",
+            "alertOnFailure": true
+        },
+        "loadBalancing": {
+            "enabled": true,
+            "thresholds": {
+                "maxShardsPerNode": 100,
+                "loadRedistribution": true
+            }
+        },
+        "security": {
+            "encryption": {
+                "type": "shard-level",
+                "algorithm": "AES-256",
+                "keyManagement": {
+                    "keyRotationIntervalDays": 30,
+                    "keyStoragePath": "./keys/shardKeys"
+                }
+            },
+            "tamperDetection": {
+                "enabled": true,
+                "hashingAlgorithm": "SHA3-256"
+            }
+        }
+    }
+}

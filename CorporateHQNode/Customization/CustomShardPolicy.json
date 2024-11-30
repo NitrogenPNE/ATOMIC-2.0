@@ -1,0 +1,36 @@
+{
+    "policyName": "Custom Shard Allocation Policy",
+    "description": "Defines custom shard allocation and replication rules for Corporate Nodes.",
+    "version": "1.0",
+    "effectiveDate": "2024-11-26",
+    "shardRules": [
+        {
+            "shardType": "BIT",
+            "allocationStrategy": "HighFrequency",
+            "replicationFactor": 3,
+            "priorityNodes": [ "CorporateNode1", "CorporateNode2" ]
+        },
+        {
+            "shardType": "BYTE",
+            "allocationStrategy": "Balanced",
+            "replicationFactor": 2,
+            "priorityNodes": [ "CorporateNode1", "CorporateNode3" ]
+        },
+        {
+            "shardType": "KB",
+            "allocationStrategy": "LatencyOptimized",
+            "replicationFactor": 4,
+            "priorityNodes": [ "CorporateNode2", "CorporateNode3" ]
+        }
+    ],
+    "fallbackStrategy": {
+        "replicationFactor": 2,
+        "allowDynamicNodeSelection": true
+    },
+    "auditInterval": "7d",
+    "complianceRequirements": {
+        "encryption": "AES-256",
+        "signingAlgorithm": "RSA-2048"
+    },
+    "notes": "This policy supports flexible shard distribution based on workload and node performance."
+}

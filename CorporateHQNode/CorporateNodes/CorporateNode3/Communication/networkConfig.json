@@ -1,0 +1,46 @@
+{
+    "nodeId": "CorporateNode3",
+    "network": {
+        "port": 6013,
+        "maxConnections": 50,
+        "heartbeatIntervalMs": 30000,
+        "authorizedPeers": [
+            "ws://corporate-node1.local:6011",
+            "ws://corporate-node2.local:6012",
+            "ws://hq-node.local:7000"
+        ],
+        "fallbackPeers": [
+            "ws://corporate-node4.local:6014",
+            "ws://corporate-node5.local:6015"
+        ]
+    },
+    "security": {
+        "encryption": "quantum-resistant",
+        "encryptionAlgorithms": [ "Kyber", "Dilithium" ],
+        "authentication": {
+            "method": "token-based",
+            "tokenExpiration": 86400
+        }
+    },
+    "logging": {
+        "level": "info",
+        "file": "./logs/connection.log",
+        "rotation": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxSizeMb": 50,
+            "retainDays": 30
+        }
+    },
+    "messageTypes": {
+        "heartbeat": {
+            "description": "Periodic signal to ensure connection health."
+        },
+        "shardSync": {
+            "description": "Message to synchronize shard data."
+        },
+        "blockUpdate": {
+            "description": "Message containing blockchain block updates."
+        }
+    }
+}

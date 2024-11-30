@@ -1,0 +1,27 @@
+{
+    "validationLogEntries": [
+        {
+            "timestamp": "2023-11-25T14:30:15.123Z",
+            "transactionId": "tx1234567890",
+            "validationStatus": "success",
+            "validationDetails": "Transaction validated successfully with all checks passed."
+        },
+        {
+            "timestamp": "2023-11-25T15:10:05.456Z",
+            "transactionId": "tx0987654321",
+            "validationStatus": "failure",
+            "validationDetails": "Transaction signature validation failed for input: txInput456."
+        },
+        {
+            "timestamp": "2023-11-25T15:45:30.789Z",
+            "transactionId": "tx1122334455",
+            "validationStatus": "failure",
+            "validationDetails": "Input and output values do not match. Total input: 100, Total output: 110."
+        }
+    ],
+    "logSummary": {
+        "totalValidations": 3,
+        "successfulValidations": 1,
+        "failedValidations": 2
+    }
+}

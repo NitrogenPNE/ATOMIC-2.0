@@ -1,0 +1,91 @@
+{
+    "configName": "Alerts Configuration",
+    "description": "Configuration for monitoring alerts within the Corporate HQ Node.",
+    "version": "1.0",
+    "effectiveDate": "2024-11-26",
+    "alertLevels": [
+        {
+            "level": "Critical",
+            "threshold": {
+                "cpuUsage": 90,
+                "memoryUsage": 95,
+                "shardIntegrityFailures": 3
+            },
+            "actions": [
+                "send_email",
+                "trigger_sms",
+                "escalate_to_admin"
+            ],
+            "escalationPolicy": "Immediate"
+        },
+        {
+            "level": "High",
+            "threshold": {
+                "cpuUsage": 75,
+                "memoryUsage": 85,
+                "shardIntegrityFailures": 2
+            },
+            "actions": [
+                "send_email",
+                "log_event"
+            ],
+            "escalationPolicy": "Within 1 hour"
+        },
+        {
+            "level": "Medium",
+            "threshold": {
+                "cpuUsage": 60,
+                "memoryUsage": 70,
+                "shardIntegrityFailures": 1
+            },
+            "actions": [
+                "log_event"
+            ],
+            "escalationPolicy": "Within 6 hours"
+        },
+        {
+            "level": "Low",
+            "threshold": {
+                "cpuUsage": 50,
+                "memoryUsage": 60,
+                "shardIntegrityFailures": 0
+            },
+            "actions": [
+                "log_event"
+            ],
+            "escalationPolicy": "Daily review"
+        }
+    ],
+    "defaultActions": [
+        "log_event",
+        "notify_support"
+    ],
+    "notificationMethods": {
+        "email": {
+            "enabled": true,
+            "recipients": [
+                "admin@corporatehqnode.com",
+                "support@corporatehqnode.com"
+            ]
+        },
+        "sms": {
+            "enabled": true,
+            "recipients": [
+                "+1234567890",
+                "+0987654321"
+            ]
+        },
+        "dashboard": {
+            "enabled": true
+        }
+    },
+    "logging": {
+        "enabled": true,
+        "logFilePath": "C:/ATOMIC 2.0/CorporateHQNode/Logs/alerts.log",
+        "logRotationPolicy": {
+            "frequency": "daily",
+            "retainDays": 30
+        }
+    },
+    "notes": "Customize thresholds and escalation policies based on operational requirements."
+}

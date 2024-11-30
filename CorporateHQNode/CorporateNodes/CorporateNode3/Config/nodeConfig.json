@@ -1,0 +1,64 @@
+{
+    "nodeId": "CorporateNode3",
+    "role": "CorporateNode",
+    "description": "CorporateNode3 is responsible for shard replication, validation, and secure communication within the network.",
+    "location": {
+        "region": "APAC",
+        "dataCenter": "SingaporeDC"
+    },
+    "resources": {
+        "cpuCores": 8,
+        "memoryGb": 32,
+        "storageGb": 1000,
+        "networkBandwidthGbps": 1
+    },
+    "shardManagement": {
+        "enabled": true,
+        "maxShards": 200,
+        "replicationFactor": 3,
+        "auditIntervalMs": 60000
+    },
+    "blockchain": {
+        "consensusAlgorithm": "Proof-of-Access",
+        "maxTransactionPoolSize": 5000,
+        "blockTimeSeconds": 10,
+        "dynamicBlockTime": true
+    },
+    "api": {
+        "enabled": true,
+        "port": 9023,
+        "rateLimiting": {
+            "enabled": true,
+            "requestsPerMinute": 100
+        },
+        "cors": {
+            "enabled": true,
+            "allowedOrigins": [
+                "http://corporate-app.internal",
+                "http://hq-dashboard.local"
+            ]
+        }
+    },
+    "logging": {
+        "level": "debug",
+        "file": "./logs/nodeConfig.log",
+        "rotation": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxSizeMb": 50,
+            "retainDays": 30
+        }
+    },
+    "security": {
+        "encryption": "quantum-resistant",
+        "keyManagement": {
+            "publicKeyPath": "./keys/publicKey.pem",
+            "privateKeyPath": "./keys/privateKey.pem"
+        },
+        "authentication": {
+            "aclFilePath": "./config/acl.json",
+            "enabled": true,
+            "multiFactor": true
+        }
+    }
+}

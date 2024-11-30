@@ -1,0 +1,7 @@
+[
+    {
+        "timestamp": "2024-11-26T10:00:00Z",
+        "level": "INFO",
+        "message": "Validation logs initialized. Ready to track transaction validation events."
+    }
+]

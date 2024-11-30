@@ -1,0 +1,56 @@
+{
+    "configName": "Department Role Configuration",
+    "description": "Defines roles and permissions for departments within the Corporate HQ Node.",
+    "version": "1.0",
+    "effectiveDate": "2024-11-26",
+    "roles": [
+        {
+            "roleName": "Data Scientist",
+            "permissions": [
+                "analyze_shards",
+                "generate_reports",
+                "access_kb_shards"
+            ],
+            "restrictions": [
+                "no_data_deletion",
+                "read_only_access"
+            ]
+        },
+        {
+            "roleName": "System Administrator",
+            "permissions": [
+                "manage_nodes",
+                "modify_configurations",
+                "perform_ledger_audits"
+            ],
+            "restrictions": [
+                "requires_2fa"
+            ]
+        },
+        {
+            "roleName": "Compliance Officer",
+            "permissions": [
+                "audit_transactions",
+                "monitor_shard_integrity",
+                "enforce_policies"
+            ],
+            "restrictions": [
+                "read_only_access"
+            ]
+        },
+        {
+            "roleName": "Developer",
+            "permissions": [
+                "deploy_contracts",
+                "access_test_nodes",
+                "execute_shard_tests"
+            ],
+            "restrictions": [
+                "restricted_to_sandbox"
+            ]
+        }
+    ],
+    "defaultRole": "Read-Only User",
+    "auditFrequency": "30d",
+    "notes": "Roles are dynamically assignable based on department needs and project requirements."
+}

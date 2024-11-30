@@ -1,0 +1,51 @@
+{
+    "policyId": "replicationPolicy-003",
+    "description": "Defines replication strategies and rules for CorporateNode3 shard management.",
+    "replicationSettings": {
+        "enabled": true,
+        "replicationFactor": 3,
+        "priorityRegions": [
+            {
+                "region": "APAC",
+                "weight": 1.0
+            },
+            {
+                "region": "EMEA",
+                "weight": 0.8
+            },
+            {
+                "region": "Americas",
+                "weight": 0.7
+            }
+        ]
+    },
+    "auditSettings": {
+        "auditIntervalMs": 60000,
+        "maxAuditFailures": 3,
+        "responseThresholdMs": 5000
+    },
+    "failureRecovery": {
+        "enabled": true,
+        "fallbackNodes": [
+            "CorporateNode2",
+            "CorporateNode1"
+        ],
+        "retryCount": 5,
+        "retryIntervalMs": 2000
+    },
+    "dataIntegrity": {
+        "checksumValidation": true,
+        "encryptionValidation": true,
+        "quantumResistanceValidation": true
+    },
+    "conflictResolution": {
+        "enabled": true,
+        "resolutionStrategy": "latest-timestamp",
+        "disputeArbitrator": "hq"
+    },
+    "logging": {
+        "enabled": true,
+        "logFile": "./logs/replicationPolicy.log",
+        "logLevel": "info"
+    }
+}

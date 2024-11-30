@@ -1,0 +1,40 @@
+{
+    "logs": [
+        {
+            "timestamp": "2024-11-26T08:15:30Z",
+            "transactionId": "tx1234567890abcdef",
+            "validationStatus": "success",
+            "details": {
+                "structureValidation": true,
+                "integrityValidation": true,
+                "signatureValidation": true,
+                "shardConstraintsValidation": true
+            },
+            "message": "Transaction successfully validated."
+        },
+        {
+            "timestamp": "2024-11-26T09:00:45Z",
+            "transactionId": "tx0987654321fedcba",
+            "validationStatus": "failure",
+            "details": {
+                "structureValidation": true,
+                "integrityValidation": false,
+                "signatureValidation": true,
+                "shardConstraintsValidation": true
+            },
+            "message": "Integrity validation failed due to mismatched transaction hash."
+        },
+        {
+            "timestamp": "2024-11-26T10:12:22Z",
+            "transactionId": "tx1122334455667788",
+            "validationStatus": "failure",
+            "details": {
+                "structureValidation": true,
+                "integrityValidation": true,
+                "signatureValidation": false,
+                "shardConstraintsValidation": true
+            },
+            "message": "Signature validation failed for one or more inputs."
+        }
+    ]
+}

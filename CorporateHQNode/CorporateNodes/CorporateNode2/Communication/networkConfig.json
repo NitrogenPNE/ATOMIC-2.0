@@ -1,0 +1,38 @@
+{
+    "nodeId": "CorporateNode2",
+    "host": "192.168.1.102",
+    "port": 6052,
+    "hqSupernode": {
+        "host": "192.168.1.100",
+        "port": 7000
+    },
+    "peerNodes": [
+        {
+            "nodeId": "CorporateNode1",
+            "host": "192.168.1.101",
+            "port": 6051
+        },
+        {
+            "nodeId": "CorporateNode3",
+            "host": "192.168.1.103",
+            "port": 6053
+        }
+    ],
+    "heartbeatIntervalMs": 30000,
+    "maxRetries": 5,
+    "retryIntervalMs": 10000,
+    "encryption": {
+        "type": "quantum-resistant",
+        "algorithms": [ "lattice-based", "hybrid-RSA" ]
+    },
+    "logging": {
+        "level": "info",
+        "file": "logs/network-connection.log",
+        "rotate": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxSizeMb": 50,
+            "retainDays": 30
+        }
+    }
+}

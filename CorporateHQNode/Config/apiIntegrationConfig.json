@@ -1,0 +1,72 @@
+{
+    "apiIntegration": {
+        "authentication": {
+            "enabled": true,
+            "token": "secure-api-token-hq-node",
+            "tokenExpiryDays": 30,
+            "whitelistedIps": [
+                "192.168.1.100",
+                "192.168.1.101",
+                "10.0.0.50"
+            ],
+            "rateLimiting": {
+                "enabled": true,
+                "windowMs": 60000,
+                "maxRequestsPerWindow": 100
+            }
+        },
+        "externalEndpoints": {
+            "analyticsApi": {
+                "url": "https://analytics.atomic.network/api",
+                "timeoutMs": 5000
+            },
+            "reportingApi": {
+                "url": "https://reporting.atomic.network/api",
+                "timeoutMs": 5000
+            },
+            "shardSyncApi": {
+                "url": "https://shardsync.atomic.network/api",
+                "timeoutMs": 5000
+            }
+        },
+        "hqInternalEndpoints": {
+            "shardManagement": {
+                "url": "http://hq.supernode.internal:7000/shards/manage",
+                "timeoutMs": 3000
+            },
+            "ledgerSync": {
+                "url": "http://hq.supernode.internal:7000/ledger/sync",
+                "timeoutMs": 3000
+            }
+        },
+        "security": {
+            "encryption": {
+                "enabled": true,
+                "algorithms": [
+                    "AES-256-GCM",
+                    "RSA-OAEP"
+                ],
+                "keyPaths": {
+                    "publicKey": "./keys/publicKey.pem",
+                    "privateKey": "./keys/privateKey.pem"
+                }
+            },
+            "twoFactorAuthentication": {
+                "enabled": true,
+                "provider": "https://2fa.atomic.network/api",
+                "backupCodesAllowed": true
+            }
+        },
+        "logging": {
+            "enabled": true,
+            "logLevel": "info",
+            "logFile": "./logs/apiIntegration.log",
+            "rotate": {
+                "enabled": true,
+                "frequency": "daily",
+                "maxSizeMb": 50,
+                "retainDays": 30
+            }
+        }
+    }
+}

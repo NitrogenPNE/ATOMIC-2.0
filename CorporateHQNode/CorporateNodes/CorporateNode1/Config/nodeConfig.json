@@ -1,0 +1,84 @@
+{
+    "nodeId": "CorporateNode1",
+    "nodeType": "Corporate",
+    "environment": "Production",
+    "blockchainSettings": {
+        "network": "internalnet",
+        "consensusAlgorithm": "Proof-of-Access",
+        "sharding": {
+            "enabled": true,
+            "auditIntervalMs": 60000,
+            "bitShardsPath": "./data/shards/bitShards",
+            "byteShardsPath": "./data/shards/byteShards",
+            "auditPath": "./data/audit"
+        },
+        "dynamicBlockTime": true,
+        "maxTransactionsPerBlock": 1000
+    },
+    "apiSettings": {
+        "port": 9091,
+        "rateLimiting": {
+            "enabled": true,
+            "windowMs": 60000,
+            "maxRequests": 100
+        },
+        "security": {
+            "requireAuth": true,
+            "allowedOrigins": [
+                "http://corporate-app.internal",
+                "https://corporate-dashboard.internal"
+            ]
+        }
+    },
+    "storage": {
+        "dataDirectory": "./data",
+        "maxStorageBytes": 500000000000,
+        "cleanup": {
+            "enabled": true,
+            "intervalMs": 86400000
+        }
+    },
+    "logging": {
+        "level": "debug",
+        "outputDirectory": "./logs",
+        "rotation": {
+            "enabled": true,
+            "maxFileSizeMb": 50,
+            "retainDays": 30
+        }
+    },
+    "network": {
+        "maxPeers": 50,
+        "heartbeatIntervalMs": 10000,
+        "peerDiscovery": {
+            "enabled": true,
+            "dnsSeed": "nodes.atomic.network",
+            "fallbackPeers": [
+                "ws://fallback1.atomic.network:6000",
+                "ws://fallback2.atomic.network:6000"
+            ]
+        }
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyPaths": {
+                "publicKey": "./keys/publicKey.pem",
+                "privateKey": "./keys/privateKey.pem"
+            }
+        },
+        "authentication": {
+            "enabled": true,
+            "aclPath": "./config/acl.json",
+            "twoFactor": true
+        },
+        "intrusionDetection": {
+            "enabled": true,
+            "thresholds": {
+                "unusualTrafficRate": 100,
+                "failedLoginAttempts": 5
+            }
+        }
+    }
+}

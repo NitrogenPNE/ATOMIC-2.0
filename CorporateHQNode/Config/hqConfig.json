@@ -1,0 +1,115 @@
+{
+    "hqNodeSettings": {
+        "nodeId": "HQ-CORPORATE-001",
+        "region": "Global",
+        "nodeType": "Corporate HQ",
+        "maxConnections": 1000,
+        "heartbeatIntervalMs": 5000,
+        "dataSyncIntervalMs": 15000
+    },
+    "interNodeCommunication": {
+        "supernodeAddress": "ws://hq.supernode.internal:7000",
+        "bootstrapNodes": [
+            "ws://node1.corp.internal:6001",
+            "ws://node2.corp.internal:6002"
+        ],
+        "peerDiscovery": {
+            "enabled": true,
+            "fallbackNodes": [
+                "ws://backup1.corp.internal:7001",
+                "ws://backup2.corp.internal:7002"
+            ],
+            "peerValidation": {
+                "enabled": true,
+                "validationAlgorithm": "lattice-based",
+                "timeoutMs": 3000
+            }
+        }
+    },
+    "securityPolicies": {
+        "encryption": {
+            "enabled": true,
+            "algorithms": [
+                "lattice-based",
+                "post-quantum"
+            ],
+            "keyRotationDays": 90
+        },
+        "apiKeys": {
+            "enabled": true,
+            "keyExpiryDays": 60,
+            "authorizedKeys": [
+                "hq-key-12345",
+                "hq-key-67890"
+            ]
+        },
+        "intrusionDetection": {
+            "enabled": true,
+            "anomalyThreshold": 0.95,
+            "responseActions": [
+                "log",
+                "notify",
+                "quarantine"
+            ]
+        }
+    },
+    "dataManagement": {
+        "storagePaths": {
+            "shards": "./data/shards",
+            "logs": "./logs",
+            "backups": "./data/backups"
+        },
+        "maxStorageBytes": 2000000000000,
+        "autoCleanup": {
+            "enabled": true,
+            "cleanupThreshold": 0.85
+        }
+    },
+    "consensusSettings": {
+        "algorithm": "Proof-of-Access",
+        "timeoutMs": 10000,
+        "retryAttempts": 3
+    },
+    "logging": {
+        "level": "info",
+        "file": "./logs/hq-node.log",
+        "rotation": {
+            "enabled": true,
+            "maxSizeMb": 100,
+            "retainDays": 30
+        },
+        "aggregation": {
+            "enabled": true,
+            "system": "ELK",
+            "url": "http://elk.corp.internal/logs"
+        }
+    },
+    "apiSettings": {
+        "enabled": true,
+        "host": "127.0.0.1",
+        "port": 9090,
+        "rateLimiting": {
+            "enabled": true,
+            "windowMs": 60000,
+            "maxRequests": 500
+        },
+        "cors": {
+            "enabled": true,
+            "allowedOrigins": [
+                "http://corp-app.internal",
+                "https://trusted-app.internal"
+            ]
+        }
+    },
+    "emergencyFailover": {
+        "enabled": true,
+        "triggerConditions": [
+            "supernode_failure",
+            "critical_data_loss"
+        ],
+        "backupNodes": [
+            "ws://backup1.corp.internal:7001",
+            "ws://backup2.corp.internal:7002"
+        ]
+    }
+}
