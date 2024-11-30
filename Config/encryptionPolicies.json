@@ -1,0 +1,56 @@
+{
+    "encryption": {
+        "algorithm": "AES-256-GCM",            // Encryption algorithm used for data security
+            "keyLength": 256,                      // Length of encryption keys in bits
+                "ivLength": 12,                        // Length of the initialization vector in bytes
+                    "authTagLength": 16,                   // Length of the authentication tag in bytes
+                        "defaultHashAlgorithm": "SHA-256",     // Hashing algorithm for data integrity
+                            "padding": "PKCS7",                    // Padding scheme for block encryption
+                                "keyRotation": {
+            "enabled": true,                   // Enable or disable key rotation
+                "rotationInterval": 86400,         // Time in seconds for periodic key rotation (24 hours)
+                    "rotationThreshold": 100000        // Maximum number of encryptions before forcing key rotation
+        }
+    },
+    "keyManagement": {
+        "storage": "HSM",                      // Hardware Security Module for key storage
+            "backupPolicy": {
+            "enabled": true,
+                "location": "C:\\ATOMIC 2.0\\Keys\\Backups",  // Local backup directory for key backups
+                    "frequency": "daily",             // Frequency of key backups (daily, weekly, etc.)
+                        "retentionPeriod": 30             // Number of days to retain key backups
+        },
+        "distribution": {
+            "method": "PKI",                  // Public Key Infrastructure for secure key distribution
+                "certificateAuthority": {
+                "url": "https://ca.atomic.local",  // URL of the Certificate Authority
+                    "contact": "security@atomic.ca"   // Contact for the CA
+            }
+        }
+    },
+    "accessControl": {
+        "multiFactorAuthentication": true,     // Enable MFA for encryption operations
+            "allowedRoles": ["Admin", "HQNode"],   // Roles permitted to perform encryption/decryption
+                "logging": {
+            "enabled": true,
+                "logFile": "C:\\ATOMIC 2.0\\Logs\\encryption.log",  // Log file for encryption activities
+                    "logLevel": "INFO"                 // Logging level: DEBUG, INFO, WARN, ERROR
+        }
+    },
+    "quantumReadiness": {
+        "enablePostQuantumAlgorithms": true,   // Enable post-quantum cryptographic algorithms
+            "pqAlgorithms": ["Kyber", "Dilithium"], // List of post-quantum algorithms to support
+                "fallbackToClassic": true              // Allow fallback to classical encryption if necessary
+    },
+    "testingAndValidation": {
+        "integrityChecks": {
+            "enabled": true,
+                "frequency": "hourly",             // Frequency of integrity checks
+                    "maxFailuresBeforeAlert": 3        // Number of failures before triggering an alert
+        },
+        "encryptionPerformance": {
+            "benchmarkFrequency": "daily",     // Frequency of performance benchmarks
+                "acceptableLatency": 50            // Acceptable encryption/decryption latency in milliseconds
+        }
+    }
+}

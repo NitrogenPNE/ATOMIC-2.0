@@ -1,0 +1,50 @@
+{
+    "system": {
+        "nodeType": "HQNode",
+            "simulationMode": "quantum",  // Options: quantum, classical
+                "maxConcurrency": 16,        // Maximum concurrent operations (threads, qubits)
+                    "gpuAcceleration": true,     // Enable GPU acceleration for simulations
+                        "resourceLimits": {
+            "maxCPUUsage": 85,       // Max CPU usage percentage
+                "maxMemoryUsage": 90     // Max memory usage percentage
+        }
+    },
+    "quantumParameters": {
+        "qubitCount": 128,           // Number of qubits simulated
+            "entanglementThreshold": 0.9, // Threshold for qubit entanglement
+                "errorCorrection": true,     // Enable quantum error correction
+                    "gateOperations": {
+            "supportedGates": ["H", "X", "Y", "Z", "CNOT", "SWAP"], // Supported quantum gates
+                "gateNoiseLevel": 0.01   // Noise level for gate operations
+        }
+    },
+    "encryption": {
+        "algorithm": "AES-256-GCM",   // Default quantum-safe encryption algorithm
+            "keyLength": 256,            // Encryption key length in bits
+                "hashAlgorithm": "SHA-256",  // Hashing algorithm for integrity checks
+                    "enableKeyRotation": true,   // Periodic key rotation for enhanced security
+                        "keyRotationInterval": 86400 // Time in seconds (24 hours) for key rotation
+    },
+    "performance": {
+        "monitoringInterval": 10,    // Performance monitoring interval in seconds
+            "loggingLevel": "INFO",      // Options: DEBUG, INFO, WARN, ERROR
+                "alertThresholds": {
+            "cpuUsage": 90,          // Alert if CPU usage exceeds this percentage
+                "memoryUsage": 95,       // Alert if memory usage exceeds this percentage
+                    "diskUsage": 90          // Alert if disk usage exceeds this percentage
+        }
+    },
+    "validation": {
+        "strictMode": true,          // Enforce strict validation policies
+            "retryLimit": 3,             // Number of retry attempts for failed validations
+                "logging": {
+            "logValidationResults": true, // Log validation results to file
+                "logDirectory": "C:\\ATOMIC 2.0\\Logs"
+        }
+    },
+    "simulation": {
+        "enableQuantumStateExport": true,   // Export quantum states for debugging
+            "exportDirectory": "C:\\ATOMIC 2.0\\Data\\QuantumStates",
+                "stateFormat": "json"               // Format for exported states (json, binary)
+    }
+}

@@ -1,0 +1,63 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+        "title": "Shard Schema",
+            "type": "object",
+                "properties": {
+        "id": {
+            "type": "string",
+                "description": "Unique identifier for the shard, typically a UUID."
+        },
+        "parentAtomId": {
+            "type": "string",
+                "description": "ID of the parent atom from which this shard originates."
+        },
+        "data": {
+            "type": "string",
+                "description": "Base64-encoded data payload of the shard."
+        },
+        "hash": {
+            "type": "string",
+                "pattern": "^[a-f0-9]{64}$",
+                    "description": "SHA-256 hash of the shard's data for integrity verification."
+        },
+        "dependencies": {
+            "type": "array",
+                "items": {
+                "type": "string",
+                    "description": "ID of dependent shards required for this shard."
+            },
+            "description": "List of dependent shard IDs."
+        },
+        "index": {
+            "type": "integer",
+                "minimum": 0,
+                    "description": "The index of the shard within its parent atom."
+        },
+        "metadata": {
+            "type": "object",
+                "properties": {
+                "createdBy": {
+                    "type": "string",
+                        "description": "Identifier of the entity that created the shard."
+                },
+                "timestamp": {
+                    "type": "string",
+                        "format": "date-time",
+                            "description": "ISO 8601 timestamp of when the shard was created."
+                },
+                "iv": {
+                    "type": "string",
+                        "description": "Initialization vector for encryption, if applicable."
+                },
+                "authTag": {
+                    "type": "string",
+                        "description": "Authentication tag for encrypted data."
+                }
+            },
+            "required": ["createdBy", "timestamp"],
+                "description": "Metadata for tracking shard creation and encryption."
+        }
+    },
+    "required": ["id", "parentAtomId", "data", "hash", "index", "metadata"],
+        "additionalProperties": false
+}
