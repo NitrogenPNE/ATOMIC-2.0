@@ -1,4 +1,4 @@
-﻿"use strict";
+"use strict";
 
 // SPDX-License-Identifier: ATOMIC-Limited-1.0
 // ------------------------------------------------------------------------------
@@ -27,10 +27,12 @@ const axios = require("axios");
 // Config paths
 const marketMetricsPath = path.resolve(__dirname, "../Config/marketMetricsConfig.json");
 const carbonPricingPath = path.resolve(__dirname, "../Data/carbonPricing.json");
+const tokenMetricsPath = path.resolve(__dirname, "../Data/tokenMetrics.json");
 
 // Constants
 const DEFAULT_CARBON_API = "https://api.carbonpricingexample.com/current";
 const DEFAULT_DEMAND_API = "https://api.marketdemandexample.com/demand";
+const DEFAULT_TOKEN_API = "https://api.tokenmetrics.example.com/current";
 
 /**
  * Fetches the current carbon pricing from an external API.
@@ -70,6 +72,27 @@ async function fetchMarketDemand() {
 }
 
 /**
+ * Fetches the current token metrics from an external API.
+ * @returns {Object} - Current token metrics including demand and circulation.
+ */
+async function fetchTokenMetrics() {
+    try {
+        console.log("Fetching token metrics data...");
+        const response = await axios.get(DEFAULT_TOKEN_API);
+        const tokenMetrics = {
+            tokenDemand: response.data.tokenDemand || 1.0, // Default to neutral demand
+            circulatingSupply: response.data.circulatingSupply || 0,
+            totalSupply: response.data.totalSupply || 0,
+        };
+        console.log("Token metrics retrieved:", tokenMetrics);
+        return tokenMetrics;
+    } catch (error) {
+        console.error("Error fetching token metrics data:", error.message);
+        throw new Error("Failed to fetch token metrics.");
+    }
+}
+
+/**
  * Updates market metrics based on the fetched data.
  */
 async function updateMarketMetrics() {
@@ -79,6 +102,7 @@ async function updateMarketMetrics() {
         // Fetch external data
         const carbonPrice = await fetchCarbonPricing();
         const demandMetrics = await fetchMarketDemand();
+        const tokenMetrics = await fetchTokenMetrics();
 
         // Update carbon pricing
         const carbonPricingData = { currentPrice: carbonPrice };
@@ -91,6 +115,14 @@ async function updateMarketMetrics() {
             carbonFootprintMultiplier: 1.0, // Default value, can be adjusted dynamically
         };
         await fs.writeJson(marketMetricsPath, marketMetrics, { spaces: 2 });
+
+        // Update token metrics
+        const tokenMetricsData = {
+            tokenDemand: tokenMetrics.tokenDemand,
+            circulatingSupply: tokenMetrics.circulatingSupply,
+            totalSupply: tokenMetrics.totalSupply,
+        };
+        await fs.writeJson(tokenMetricsPath, tokenMetricsData, { spaces: 2 });
 
         console.log("Market metrics updated successfully.");
     } catch (error) {
@@ -110,4 +142,4 @@ if (require.main === module) {
         });
 }
 
-module.exports = { updateMarketMetrics, fetchCarbonPricing, fetchMarketDemand };
+module.exports = { updateMarketMetrics, fetchCarbonPricing, fetchMarketDemand, fetchTokenMetrics };
