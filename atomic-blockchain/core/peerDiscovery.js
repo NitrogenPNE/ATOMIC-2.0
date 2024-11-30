@@ -9,7 +9,7 @@
 //
 // Description:
 // Implements dynamic peer discovery, token-based validation, and secure authentication
-// with atomic-level metadata for ATOMIC’s military-grade network.
+// with atomic-level metadata for ATOMICâ€™s military-grade network.
 //
 // Enhancements:
 // - Token-based peer validation for Proof-of-Access.
@@ -22,7 +22,7 @@
 const dns = require("dns");
 const winston = require("winston");
 const { validatePeer, validateShardCapability } = require("../utils/validationUtils");
-const { establishQuantumSecureConnection } = require("../utils/quantumCrypto");
+const { establishQuantumSecureConnection } = require("../utils/quantumCryptoUtils");
 const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
 // **Logger Setup**
@@ -75,7 +75,7 @@ async function discoverPeers() {
     } catch (error) {
         logger.error("Error during peer discovery:", error);
 
-        // Return weighted fallback peers if discovery fails
+        // Use fallback peers if discovery fails
         logger.warn("Using fallback peers...");
         PEER_DISCOVERY_CONFIG.fallbackPeers.forEach(({ address }) =>
             discoveredPeers.set(address, { role: "Fallback", atomicCapabilities: null, lastChecked: Date.now() })
