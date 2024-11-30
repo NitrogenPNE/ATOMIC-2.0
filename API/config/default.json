@@ -1,0 +1,52 @@
+{
+    "port": 8080,
+    "apiToken": null,
+    "rateLimit": {
+        "windowMs": 60000,
+        "maxRequests": 100
+    },
+    "logging": {
+        "level": "info",
+        "file": "logs/api.log",
+        "console": true
+    },
+    "cors": {
+        "allowedOrigins": [
+            "http://localhost:3000",
+            "https://atomic.ca"
+        ],
+        "allowedMethods": [ "GET", "POST", "PUT", "DELETE" ],
+        "allowedHeaders": [ "Authorization", "Content-Type" ]
+    },
+    "security": {
+        "https": false,
+        "allowedIPs": [],
+        "enableCSRF": true
+    },
+    "nodeConfig": {
+        "nodes": [
+            "http://localhost:4001",
+            "http://localhost:4002",
+            "http://localhost:4003"
+        ],
+        "shardTimeoutMs": 5000,
+        "retryAttempts": 3
+    },
+    "ledgerConfig": {
+        "ledgerPath": "/mnt/atomic-ledger",
+        "validationStrategy": "proof-of-work",
+        "syncIntervalMs": 10000
+    },
+    "analytics": {
+        "enableMetrics": true,
+        "metricsEndpoint": "http://localhost:8081/metrics"
+    },
+    "documentation": {
+        "swagger": {
+            "enabled": true,
+            "path": "/api/docs",
+            "title": "ATOMIC API Documentation",
+            "version": "1.0.0"
+        }
+    }
+}

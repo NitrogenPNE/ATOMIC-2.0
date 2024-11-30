@@ -1,0 +1,207 @@
+openapi: 3.0.3
+info:
+  title: ATOMIC API
+  description: |
+    API for the ATOMIC (Advanced Technologies Optimizing Integrated Chains) system. 
+    Provides endpoints for managing nodes, supernodes, analytics, and system health.
+  version: 1.0.0
+  contact:
+    name: Shawn Blackmore
+    email: shawnrblackmore@outlook.com
+
+servers:
+  - url: http://localhost:8080/api
+    description: Development Server
+
+paths:
+  /nodes/{nodeId}/status:
+    get:
+      summary: Get the status of a specific node
+      parameters:
+        - name: nodeId
+          in: path
+          required: true
+          description: ID of the node
+          schema:
+            type: string
+            example: "4001"
+      responses:
+        '200':
+          description: Node status retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+                    properties:
+                      uptime:
+                        type: integer
+                        description: Node uptime in seconds
+                      currentShard:
+                        type: string
+                        description: The current shard managed by the node
+                      status:
+                        type: string
+                        description: The node's operational status
+        '404':
+          description: Node not found
+        '500':
+          description: Internal server error
+
+  /nodes/{nodeId}/restart:
+    post:
+      summary: Restart a specific node
+      parameters:
+        - name: nodeId
+          in: path
+          required: true
+          description: ID of the node
+          schema:
+            type: string
+            example: "4001"
+      responses:
+        '200':
+          description: Node restarted successfully
+        '404':
+          description: Node not found
+        '500':
+          description: Internal server error
+
+  /supernodes/{supernodeId}/status:
+    get:
+      summary: Get the status of a specific supernode
+      parameters:
+        - name: supernodeId
+          in: path
+          required: true
+          description: ID of the supernode
+          schema:
+            type: string
+            example: "5001"
+      responses:
+        '200':
+          description: Supernode status retrieved successfully
+        '404':
+          description: Supernode not found
+        '500':
+          description: Internal server error
+
+  /supernodes/{supernodeId}/restart:
+    post:
+      summary: Restart a specific supernode
+      parameters:
+        - name: supernodeId
+          in: path
+          required: true
+          description: ID of the supernode
+          schema:
+            type: string
+            example: "5001"
+      responses:
+        '200':
+          description: Supernode restarted successfully
+        '404':
+          description: Supernode not found
+        '500':
+          description: Internal server error
+
+  /analytics/network:
+    get:
+      summary: Get network-wide metrics
+      responses:
+        '200':
+          description: Metrics retrieved successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  data:
+                    type: object
+        '500':
+          description: Internal server error
+
+  /analytics/query:
+    post:
+      summary: Process a natural language query for analytics
+      requestBody:
+        required: true
+        content:
+          application/json:
+            schema:
+              type: object
+              properties:
+                query:
+                  type: string
+                  description: Natural language query
+                  example: "What is the current network status?"
+      responses:
+        '200':
+          description: Query processed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  response:
+                    type: string
+        '400':
+          description: Invalid query
+        '500':
+          description: Internal server error
+
+  /health:
+    get:
+      summary: Check the health of the API
+      responses:
+        '200':
+          description: API is healthy
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  message:
+                    type: string
+                  timestamp:
+                    type: string
+                    format: date-time
+        '500':
+          description: Internal server error
+
+  /synchronize:
+    post:
+      summary: Synchronize all nodes and supernodes
+      responses:
+        '200':
+          description: Synchronization completed successfully
+          content:
+            application/json:
+              schema:
+                type: object
+                properties:
+                  success:
+                    type: boolean
+                  results:
+                    type: array
+                    items:
+                      type: object
+                      properties:
+                        endpoint:
+                          type: string
+                        status:
+                          type: string
+                        details:
+                          type: object
+        '500':
+          description: Internal server error
