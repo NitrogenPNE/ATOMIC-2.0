@@ -1,0 +1,841 @@
+{
+  "logs": [
+    {
+      "timestamp": "2024-11-25T16:23:32.492Z",
+      "uptime": 491109.359,
+      "memoryUsage": "73.86%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:23:42.495Z",
+      "uptime": 491119.375,
+      "memoryUsage": "73.77%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:23:52.507Z",
+      "uptime": 491129.375,
+      "memoryUsage": "73.75%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:02.511Z",
+      "uptime": 491139.375,
+      "memoryUsage": "73.65%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:12.513Z",
+      "uptime": 491149.39,
+      "memoryUsage": "73.64%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:22.531Z",
+      "uptime": 491159.39,
+      "memoryUsage": "73.63%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:32.541Z",
+      "uptime": 491169.406,
+      "memoryUsage": "73.61%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:42.547Z",
+      "uptime": 491179.406,
+      "memoryUsage": "73.61%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:24:52.554Z",
+      "uptime": 491189.421,
+      "memoryUsage": "73.60%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:02.568Z",
+      "uptime": 491199.437,
+      "memoryUsage": "73.66%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:12.582Z",
+      "uptime": 491209.437,
+      "memoryUsage": "73.65%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:22.578Z",
+      "uptime": 491219.437,
+      "memoryUsage": "73.66%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:32.591Z",
+      "uptime": 491229.453,
+      "memoryUsage": "73.66%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:42.601Z",
+      "uptime": 491239.468,
+      "memoryUsage": "73.65%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:25:52.608Z",
+      "uptime": 491249.468,
+      "memoryUsage": "73.68%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:02.618Z",
+      "uptime": 491259.484,
+      "memoryUsage": "73.82%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:12.626Z",
+      "uptime": 491269.484,
+      "memoryUsage": "74.58%",
+      "freeMemory": "2.88 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:22.635Z",
+      "uptime": 491279.5,
+      "memoryUsage": "74.64%",
+      "freeMemory": "2.87 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:32.647Z",
+      "uptime": 491289.515,
+      "memoryUsage": "74.70%",
+      "freeMemory": "2.87 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:42.651Z",
+      "uptime": 491299.515,
+      "memoryUsage": "73.95%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:26:52.652Z",
+      "uptime": 491309.515,
+      "memoryUsage": "73.82%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:02.664Z",
+      "uptime": 491319.531,
+      "memoryUsage": "73.78%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:12.674Z",
+      "uptime": 491329.546,
+      "memoryUsage": "73.90%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:22.682Z",
+      "uptime": 491339.546,
+      "memoryUsage": "73.95%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:32.686Z",
+      "uptime": 491349.546,
+      "memoryUsage": "74.62%",
+      "freeMemory": "2.87 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:42.694Z",
+      "uptime": 491359.562,
+      "memoryUsage": "74.76%",
+      "freeMemory": "2.86 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:27:52.700Z",
+      "uptime": 491369.562,
+      "memoryUsage": "74.99%",
+      "freeMemory": "2.83 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:02.702Z",
+      "uptime": 491379.562,
+      "memoryUsage": "73.76%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:12.704Z",
+      "uptime": 491389.562,
+      "memoryUsage": "73.61%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:22.714Z",
+      "uptime": 491399.578,
+      "memoryUsage": "73.61%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:32.726Z",
+      "uptime": 491409.593,
+      "memoryUsage": "73.61%",
+      "freeMemory": "2.99 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:42.727Z",
+      "uptime": 491419.593,
+      "memoryUsage": "73.66%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:28:52.741Z",
+      "uptime": 491429.609,
+      "memoryUsage": "73.66%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:02.751Z",
+      "uptime": 491439.609,
+      "memoryUsage": "73.79%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:12.761Z",
+      "uptime": 491449.625,
+      "memoryUsage": "73.72%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:22.763Z",
+      "uptime": 491459.625,
+      "memoryUsage": "73.84%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:32.775Z",
+      "uptime": 491469.64,
+      "memoryUsage": "73.84%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:42.781Z",
+      "uptime": 491479.64,
+      "memoryUsage": "73.82%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:29:52.794Z",
+      "uptime": 491489.656,
+      "memoryUsage": "73.96%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:02.803Z",
+      "uptime": 491499.671,
+      "memoryUsage": "74.75%",
+      "freeMemory": "2.86 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:12.810Z",
+      "uptime": 491509.671,
+      "memoryUsage": "74.80%",
+      "freeMemory": "2.85 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:22.820Z",
+      "uptime": 491519.687,
+      "memoryUsage": "75.09%",
+      "freeMemory": "2.82 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:32.825Z",
+      "uptime": 491529.687,
+      "memoryUsage": "73.92%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:42.827Z",
+      "uptime": 491539.687,
+      "memoryUsage": "73.86%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:30:52.826Z",
+      "uptime": 491549.687,
+      "memoryUsage": "73.92%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:02.839Z",
+      "uptime": 491559.703,
+      "memoryUsage": "74.00%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:12.842Z",
+      "uptime": 491569.703,
+      "memoryUsage": "73.91%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:22.846Z",
+      "uptime": 491579.718,
+      "memoryUsage": "74.69%",
+      "freeMemory": "2.87 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:32.855Z",
+      "uptime": 491589.718,
+      "memoryUsage": "74.95%",
+      "freeMemory": "2.84 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:42.861Z",
+      "uptime": 491599.734,
+      "memoryUsage": "73.93%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:31:52.869Z",
+      "uptime": 491609.734,
+      "memoryUsage": "73.84%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:02.878Z",
+      "uptime": 491619.75,
+      "memoryUsage": "73.83%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:12.879Z",
+      "uptime": 491629.75,
+      "memoryUsage": "73.90%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:22.889Z",
+      "uptime": 491639.75,
+      "memoryUsage": "73.79%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:32.899Z",
+      "uptime": 491649.765,
+      "memoryUsage": "73.88%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:42.912Z",
+      "uptime": 491659.781,
+      "memoryUsage": "74.04%",
+      "freeMemory": "2.94 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:32:52.913Z",
+      "uptime": 491669.781,
+      "memoryUsage": "73.82%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:02.926Z",
+      "uptime": 491679.796,
+      "memoryUsage": "73.74%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:12.937Z",
+      "uptime": 491689.796,
+      "memoryUsage": "73.84%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:22.952Z",
+      "uptime": 491699.812,
+      "memoryUsage": "73.67%",
+      "freeMemory": "2.98 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:32.958Z",
+      "uptime": 491709.828,
+      "memoryUsage": "73.90%",
+      "freeMemory": "2.96 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:42.958Z",
+      "uptime": 491719.828,
+      "memoryUsage": "73.95%",
+      "freeMemory": "2.95 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    },
+    {
+      "timestamp": "2024-11-25T16:33:52.971Z",
+      "uptime": 491729.843,
+      "memoryUsage": "73.77%",
+      "freeMemory": "2.97 GB",
+      "totalMemory": "11.33 GB",
+      "loadAverage": [
+        0,
+        0,
+        0
+      ],
+      "cpuUsage": "1.33%"
+    }
+  ],
+  "logRetentionPolicy": {
+    "retentionPeriodDays": 90,
+    "maxLogFileSizeMB": 50,
+    "autoArchive": true,
+    "archivePath": "C:\\ATOMIC 2.0\\NationalDefenseHQNode\\Monitoring\\ArchivedLogs"
+  },
+  "logStructure": {
+    "timestamp": "YYYY-MM-DDTHH:mm:ssZ",
+    "logLevel": [
+      "INFO",
+      "WARNING",
+      "ERROR",
+      "CRITICAL"
+    ],
+    "message": "string",
+    "source": "string",
+    "details": "object"
+  }
+}

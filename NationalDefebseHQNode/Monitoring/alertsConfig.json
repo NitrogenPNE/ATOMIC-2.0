@@ -1,0 +1,54 @@
+{
+    "alerts": {
+        "thresholds": {
+            "cpuLoad": {
+                "warning": 70,
+                "critical": 90
+            },
+            "memoryUsage": {
+                "warning": 75,
+                "critical": 95
+            },
+            "diskSpace": {
+                "warning": 80,
+                "critical": 95
+            },
+            "networkLatency": {
+                "warning": 200,
+                "critical": 500
+            }
+        },
+        "notifications": {
+            "enabled": true,
+            "email": {
+                "enabled": true,
+                "recipients": [
+                    "security@nationaldefense.atomic",
+                    "ops@nationaldefense.atomic"
+                ]
+            },
+            "sms": {
+                "enabled": false,
+                "recipients": []
+            },
+            "dashboard": {
+                "enabled": true
+            }
+        },
+        "escalation": {
+            "criticalAlerts": {
+                "enabled": true,
+                "autoShutdown": true,
+                "notifyHQ": true
+            },
+            "warningAlerts": {
+                "enabled": true,
+                "logOnly": false,
+                "notifyOps": true
+            }
+        },
+        "alertRetention": {
+            "days": 30
+        }
+    }
+}
