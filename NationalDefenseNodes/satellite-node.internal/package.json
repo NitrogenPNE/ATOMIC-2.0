@@ -1,0 +1,27 @@
+{
+    "name": "satellite-node",
+        "version": "1.0.0",
+            "description": "ATOMIC National Defense Satellite Node for secure communication and blockchain integration.",
+                "main": "index.js",
+                    "scripts": {
+        "start": "node index.js",
+            "test": "echo \"No test specified\" && exit 1"
+    },
+    "author": "ATOMIC, Ltd.",
+        "license": "ATOMIC-Limited-1.0",
+            "dependencies": {
+        "axios": "^1.4.0",
+            "fs-extra": "^11.1.0",
+                "winston": "^3.8.2"
+    },
+    "keywords": [
+        "ATOMIC",
+        "NationalDefense",
+        "Satellite",
+        "Node",
+        "Blockchain"
+    ],
+        "engines": {
+        "node": ">=16.0.0"
+    }
+}

@@ -1,0 +1,37 @@
+{
+    "name": "satellite-alpha-node",
+        "version": "1.0.0",
+            "description": "ATOMIC Satellite Alpha Node for secure communication and blockchain integration.",
+                "main": "index.js",
+                    "scripts": {
+        "start": "node index.js",
+            "test": "echo \"No tests specified\" && exit 1"
+    },
+    "keywords": [
+        "ATOMIC",
+        "Satellite",
+        "Node",
+        "Blockchain",
+        "Quantum-Crypto",
+        "PoA",
+        "Proof-of-Access"
+    ],
+        "author": "Shawn Blackmore",
+            "license": "ATOMIC-Limited-1.0",
+                "dependencies": {
+        "axios": "^1.4.0",
+            "crypto": "^1.0.1",
+                "fs-extra": "^11.1.0",
+                    "path": "^0.12.7",
+                        "winston": "^3.9.0",
+                            "lodash": "^4.17.21",
+                                "libsodium-wrappers": "^0.7.10"
+    },
+    "repository": {
+        "type": "git",
+            "url": "https://repository.atomic/satellite-alpha-node.git"
+    },
+    "engines": {
+        "node": ">=16.0.0"
+    }
+}

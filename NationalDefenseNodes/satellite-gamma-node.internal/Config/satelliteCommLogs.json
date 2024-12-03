@@ -1,0 +1,24 @@
+{
+    "logs": [
+        {
+            "timestamp": "2024-12-02T14:30:00Z",
+            "direction": "uplink",
+            "satelliteId": "SAT-003",
+            "message": "Secure message to DefenseComm-Gamma",
+            "status": "success"
+        },
+        {
+            "timestamp": "2024-12-02T15:00:00Z",
+            "direction": "downlink",
+            "satelliteId": "SAT-003",
+            "message": "Acknowledgment received",
+            "status": "success"
+        }
+    ],
+        "metadata": {
+        "nodeId": "satellite-gamma-node.internal",
+            "description": "Log file for communication uplink and downlink with the DefenseComm-Gamma satellite.",
+                "createdAt": "2024-12-02T00:00:00Z",
+                    "lastUpdated": "2024-12-02T15:00:00Z"
+    }
+}

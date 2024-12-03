@@ -1,0 +1,61 @@
+{
+    "communication": {
+        "defaultPort": 8080,
+        "protocol": "TCP",
+        "timeoutMs": 10000,
+        "retries": 3,
+        "handshakeKey": "secure-handshake-key-alpha"
+    },
+    "satellites": [
+        {
+            "id": "SAT-001",
+            "name": "DefenseComm-Alpha",
+            "endpoint": "node://satellite-alpha-node.internal"
+        },
+        {
+            "id": "SAT-002",
+            "name": "DefenseComm-Beta",
+            "endpoint": "node://satellite-beta-node.internal"
+        },
+        {
+            "id": "SAT-003",
+            "name": "DefenseComm-Gamma",
+            "endpoint": "node://satellite-gamma-node.internal"
+        }
+    ],
+    "security": {
+        "encryptionAlgorithm": "AES-256",
+        "hashAlgorithm": "SHA-256",
+        "tlsVersion": "1.3",
+        "proofOfAccess": {
+            "tokenValidationModule": "../../atomic-blockchain/Utilities/validationUtils.js",
+            "authTokenStorage": "../../atomic-blockchain/Tokens/tokenRegistry.json",
+            "minimumAccessScore": 0.8
+        },
+        "keyManagement": {
+            "publicKeyPath": "../../atomic-blockchain/Keys/publicKey.pem",
+            "privateKeyPath": "../../atomic-blockchain/Keys/privateKey.pem"
+        }
+    },
+    "logging": {
+        "logDirectory": "./Logs/Communication",
+        "logFile": "satelliteCommLogs.json",
+        "logLevel": "info"
+    },
+    "monitoring": {
+        "heartbeatIntervalMs": 30000,
+        "maxMissedHeartbeats": 3,
+        "alertOnFailure": true,
+        "alertRecipients": [
+            "node://monitoring-node.internal",
+            "node://admin-node.internal"
+        ]
+    },
+    "blockchainIntegration": {
+        "enabled": true,
+        "transactionValidationModule": "../../atomic-blockchain/core/transaction.js",
+        "blockValidationModule": "../../atomic-blockchain/core/block.js",
+        "shardValidationModule": "../../atomic-blockchain/core/shardManager.js",
+        "proofOfAccessValidation": true
+    }
+}
