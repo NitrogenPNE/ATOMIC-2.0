@@ -1,0 +1,20 @@
+{
+    "NodeDetails": {
+        "NodeType": "MonitoringNode",
+        "NodeClass": "HQ",
+        "NodeID": "monitoring-node-001",
+        "Description": "Dedicated monitoring node for internal alerting and metrics aggregation."
+    },
+    "WebhookSettings": {
+        "WebhookURL": "http://localhost:8080/webhook",
+        "AuthKey": "your-secure-auth-key"
+    },
+    "AlertSettings": {
+        "CriticalAlertsOnly": false,
+        "LogAlerts": true
+    },
+    "LoggingSettings": {
+        "EnableDetailedLogs": true,
+        "LogRetentionDays": 30
+    }
+}

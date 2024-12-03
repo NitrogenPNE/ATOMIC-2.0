@@ -1,0 +1,18 @@
+{
+    "version":  "1.0.0",
+    "license":  "ATOMIC-Limited-1.0",
+    "dependencies":  {
+                         "body-parser":  "^1.20.2",
+                         "winston":  "^3.8.2",
+                         "axios":  "^1.0.0",
+                         "express":  "^4.18.2",
+                         "libsodium-wrappers":  "^0.7.10"
+                     },
+    "name":  "message-receiver-node",
+    "scripts":  {
+                    "start":  "node index.js"
+                },
+    "description":  "ATOMIC Message Receiver Node for secure blockchain-based communication",
+    "author":  "ATOMIC, Ltd.",
+    "main":  "index.js"
+}

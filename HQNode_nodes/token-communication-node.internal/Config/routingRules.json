@@ -1,0 +1,49 @@
+{
+    "communication": {
+        "defaultPort": 8080,
+        "protocol": "TCP",
+        "timeoutMs": 10000,
+        "retries": 3,
+        "handshakeKey": "secure-handshake-key" // Optional for initial setup
+    },
+    "satellites": [
+        {
+            "id": "SAT-001",
+            "name": "DefenseComm-Alpha",
+            "endpoint": "node://satellite-alpha-node.internal",
+            "authorizedTokens": [ "43c6f029-1eeb-40ce-8bb6-77d57cb861a3" ]
+        },
+        {
+            "id": "SAT-002",
+            "name": "DefenseComm-Beta",
+            "endpoint": "node://satellite-beta-node.internal",
+            "authorizedTokens": [ "5da2e04f-4b58-42fa-a1b4-89e72b55049b" ]
+        },
+        {
+            "id": "SAT-003",
+            "name": "DefenseComm-Gamma",
+            "endpoint": "node://satellite-gamma-node.internal",
+            "authorizedTokens": [ "88f2a04b-9c11-4a8e-815d-b62d47eb44f5" ]
+        }
+    ],
+    "logging": {
+        "logDirectory": "./Logs/Communication",
+        "logFile": "satelliteCommLogs.json",
+        "logLevel": "info"
+    },
+    "monitoring": {
+        "heartbeatIntervalMs": 30000,
+        "maxMissedHeartbeats": 3,
+        "alertOnFailure": true,
+        "alertRecipients": [
+            "node://monitoring-node.internal",
+            "node://admin-node.internal"
+        ]
+    },
+    "blockchainIntegration": {
+        "enabled": true,
+        "transactionValidationModule": "../../atomic-blockchain/core/transaction.js",
+        "blockValidationModule": "../../atomic-blockchain/core/block.js",
+        "shardValidationModule": "../../atomic-blockchain/core/shardManager.js"
+    }
+}

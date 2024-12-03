@@ -1,0 +1,89 @@
+{
+    "NodeDetails": {
+        "NodeType": "SMSGatewayNode",
+        "NodeClass": "HQ",
+        "NodeID": "sms-gateway-node-001",
+        "Organization": "ATOMIC HQ",
+        "Region": "North America",
+        "Description": "Secure gateway node for token-based message communication.",
+        "CreatedAt": "2024-12-01T12:00:00Z",
+        "UpdatedAt": "2024-12-02T12:00:00Z"
+    },
+    "GatewaySettings": {
+        "GatewayURL": "https://internal-sms-gateway.atomic/send",
+        "BlockchainNodeURL": "http://localhost:8545",
+        "APIKey": {
+            "EnvironmentVariable": "SMS_API_KEY",
+            "Fallback": "auto-generate"
+        },
+        "RetryPolicy": {
+            "MaxRetries": 3,
+            "RetryIntervalMs": 5000
+        }
+    },
+    "MessageSettings": {
+        "EncryptionAlgorithm": "AES-256-GCM",
+        "ShardID": "sms-gateway",
+        "Frequency": 500,
+        "AllowedMessageSizeKB": 256,
+        "Logging": {
+            "LogMessages": true,
+            "LogRetentionDays": 30
+        }
+    },
+    "TokenValidation": {
+        "Enabled": true,
+        "ValidationService": "../../../Pricing/TokenManagement/tokenValidation",
+        "RequiredTokenClass": "HQ",
+        "ValidationTimeoutMs": 3000
+    },
+    "Alerting": {
+        "Enabled": true,
+        "NodeAlerts": {
+            "Enabled": true,
+            "Recipients": [
+                "node://monitoring-node.internal",
+                "node://admin-node.internal"
+            ],
+            "CriticalOnly": false
+        },
+        "WebhookAlerts": {
+            "Enabled": true,
+            "WebhookURL": "node://monitoring-node.internal/webhook",
+            "EventTypes": [ "Critical", "Warning" ]
+        }
+    },
+    "PerformanceMonitoring": {
+        "Enabled": true,
+        "Metrics": {
+            "CPUUsageThreshold": 80,
+            "MemoryUsageThreshold": 75,
+            "TransactionValidationRateThreshold": 98,
+            "LatencyThresholdMs": 200
+        },
+        "AlertingOnThresholdBreach": true
+    },
+    "LoggingSettings": {
+        "EnableDetailedLogs": true,
+        "LogRetentionDays": 365,
+        "LogRotationPolicy": {
+            "MaxSizeMB": 100,
+            "RotationInterval": "7d"
+        },
+        "LogFiles": {
+            "SystemLogs": "../Logs/system.log",
+            "CommunicationLogs": "../Logs/communication.log",
+            "AlertLogs": "../Logs/alerts.log"
+        }
+    },
+    "ErrorHandling": {
+        "RetryPolicy": {
+            "MaxRetryAttempts": 3,
+            "RetryIntervalSeconds": 10
+        },
+        "ActionOnFailure": {
+            "NonCritical": "Log and Notify",
+            "Critical": "Escalate to Monitoring Node and Halt Operations"
+        }
+    }
+}
