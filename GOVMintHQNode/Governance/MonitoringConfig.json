@@ -1,0 +1,105 @@
+{
+    "MonitoringSettings": {
+        "EnableMonitoring": true,
+        "MonitoringInterval": "1m",
+        "Metrics": {
+            "CPUUsageThreshold": 80,
+            "MemoryUsageThreshold": 75,
+            "DiskUsageThreshold": 85,
+            "ShardValidationRateThreshold": 95,
+            "TransactionValidationRateThreshold": 98,
+            "LatencyThresholdMs": 200
+        },
+        "NodeHealth": {
+            "StatusChecks": ["Active", "Healthy", "Connected"],
+            "HeartbeatInterval": "30s",
+            "MaxMissedHeartbeats": 3,
+            "RecoveryAction": "Notify and Attempt Automatic Restart"
+        },
+        "ShardMonitoring": {
+            "EnableShardMonitoring": true,
+            "RedundancyScoreThreshold": 0.8,
+            "IntegrityCheckFrequency": "10m",
+            "FaultTolerancePolicy": {
+                "MaxNodeFailures": 2,
+                "RetryInterval": "15s",
+                "FailureAction": "Escalate to Internal Admin Node and Trigger Failover"
+            }
+        },
+        "TransactionMonitoring": {
+            "EnableTransactionMonitoring": true,
+            "MaxTransactionFailuresPerMinute": 10,
+            "SuspiciousActivityThreshold": {
+                "HighFrequency": 50,
+                "LargeTransactionValue": 1000000,
+                "UnusualCurrency": true
+            },
+            "ActionOnViolation": "Log and Notify Compliance Node"
+        },
+        "Alerting": {
+            "NodeAlerts": {
+                "Enabled": true,
+                "Recipients": [
+                    "node://monitoring-node.internal",
+                    "node://admin-node.internal"
+                ],
+                "CriticalOnly": false
+            },
+            "WebhookAlerts": {
+                "Enabled": true,
+                "WebhookURL": "http://monitoring-node.internal/webhook",
+                "EventTypes": ["Critical", "Warning"]
+            },
+            "SMSAlerts": {
+                "Enabled": true,
+                "Recipients": [
+                    "node://sms-gateway-node.internal"
+                ],
+                "CriticalOnly": true
+            },
+            "FallbackPolicy": {
+                "ReattemptsAllowed": 3,
+                "ReattemptIntervalSeconds": 10,
+                "OnFailure": "Escalate to Internal System Administrator Node"
+            }
+        }
+    },
+    "LoggingSettings": {
+        "EnableDetailedLogs": true,
+        "LogRetentionDays": 365,
+        "LogRotationPolicy": {
+            "MaxSizeMB": 100,
+            "RotationInterval": "7d"
+        },
+        "LogFiles": {
+            "SystemLogs": "./system.log",
+            "PerformanceLogs": "./performance.log",
+            "AlertLogs": "./alerts.log"
+        }
+    },
+    "Auditing": {
+        "EnableAuditing": true,
+        "AuditFrequency": "30d",
+        "AuditLogsPath": "./audit.log",
+        "RetentionPolicy": {
+            "RetentionPeriodDays": 365,
+            "BackupFrequency": "7d",
+            "BackupLocation": "../Backup/audit-backups/"
+        },
+        "ComplianceChecks": {
+            "AMLComplianceCheckInterval": "10m",
+            "KYCComplianceCheckInterval": "15m",
+            "ReportingFrequency": "1d"
+        }
+    },
+    "ErrorHandling": {
+        "RetryPolicy": {
+            "MaxRetryAttempts": 3,
+            "RetryInterval": "10s"
+        },
+        "ActionOnFailure": {
+            "NonCritical": "Log and Notify Internal Monitoring Node",
+            "Critical": "Escalate to Internal Admin Node and Halt Operations"
+        }
+    }
+}

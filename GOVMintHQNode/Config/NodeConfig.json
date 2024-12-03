@@ -1,0 +1,181 @@
+{
+    "NodeDetails": {
+        "NodeType": "GOVMintHQNode",
+        "NodeClass": "HQ",
+        "NodeID": "govmint-node-001",
+        "Organization": "Government of Sovereign Republic",
+        "Region": "North America",
+        "Description": "Primary node for minting government-backed cryptocurrency and integrating with ATOMIC blockchain.",
+        "CreatedAt": "2024-12-01T12:00:00Z",
+        "UpdatedAt": "2024-12-02T12:00:00Z"
+    },
+    "NetworkSettings": {
+        "PeerDiscovery": {
+            "Enabled": true,
+            "PeerDiscoveryModule": "../../atomic-blockchain/core/enhancedPeerDiscovery.js",
+            "MaxPeers": 100,
+            "DiscoveryInterval": 60000,
+            "NodeTypes": [ "RegionalMintNode", "ValidationNode", "FallbackNode", "CrossBorderNode" ],
+            "FallbackPeers": [
+                "ws://regional1.atomic.network:6000",
+                "ws://regional2.atomic.network:6000",
+                "ws://validation1.atomic.network:6000",
+                "ws://fallback1.atomic.network:6000"
+            ]
+        },
+        "Consensus": {
+            "ConsensusModule": "../../atomic-blockchain/core/quantumConsensus.js",
+            "ConsensusType": "Quantum-Resistant Proof of Access",
+            "ValidationTimeoutSeconds": 30,
+            "MinimumPeerAgreementPercentage": 67
+        },
+        "ShardManagement": {
+            "ShardManagerModule": "../../atomic-blockchain/core/shardManager.js",
+            "MaxShardsPerNode": 10000,
+            "RedundancyPolicy": {
+                "RequiredShards": "All",
+                "RedundancyScoreThreshold": 0.8,
+                "FaultTolerance": 2
+            }
+        }
+    },
+    "MintingSettings": {
+        "MintingModule": "../CryptoMinting/mintCurrency.js",
+        "CurrencyUnit": "GOVCoin",
+        "Decimals": 6,
+        "MaxSupply": 100000000000,
+        "CurrentSupply": 25000000000,
+        "MintingPolicies": {
+            "PolicyFile": "./MintingPolicies.json",
+            "RequireApproval": true,
+            "ApprovalAuthorities": [
+                "CentralBankGovernor",
+                "FinanceMinistry"
+            ]
+        },
+        "Security": {
+            "Encryption": {
+                "Algorithm": "Quantum-Resistant Lattice-Based",
+                "KeyLength": 4096,
+                "PublicKeyPath": "../../atomic-blockchain/config/keys/publicKey.pem",
+                "PrivateKeyPath": "../../atomic-blockchain/config/keys/privateKey.pem"
+            },
+            "MultiFactorAuthentication": {
+                "Enabled": true,
+                "Methods": [ "Biometric", "SmartCard", "OTP" ]
+            }
+        }
+    },
+    "ComplianceSettings": {
+        "AMLModule": "../Governance/AMLRules.json",
+        "KYCModule": "../Governance/KYCRules.json",
+        "ComplianceMonitoringInterval": "10m",
+        "AuditFrequency": "30d",
+        "ViolationActions": {
+            "Minor": "Log and Notify",
+            "Major": "Notify and Escalate",
+            "Critical": "Block Transaction and Notify"
+        }
+    },
+    "LoggingAndAuditing": {
+        "EnableDetailedLogs": true,
+        "LogRetentionDays": 365,
+        "AuditLogs": "./audit.log",
+        "SystemLogs": "./system.log",
+        "TransactionLogs": "./transaction.log"
+    },
+    "Interoperability": {
+        "SupportedAPIs": [
+            {
+                "Name": "CrossBorderTransactionAPI",
+                "Path": "../InteroperabilityAPI/APIs/CrossBorderAPI.js"
+            },
+            {
+                "Name": "TransactionAPI",
+                "Path": "../InteroperabilityAPI/APIs/TransactionAPI.js"
+            }
+        ],
+        "CurrencyExchangeSupport": {
+            "Enabled": true,
+            "SupportedCurrencies": [
+                "USD",
+                "EUR",
+                "CAD",
+                "JPY",
+                "GBP",
+                "INR",
+                "AUD",
+                "CNY",
+                "CHF",
+                "ZAR",
+                "BRL",
+                "KRW",
+                "MXN",
+                "TRY",
+                "SGD",
+                "RUB",
+                "SAR",
+                "SEK",
+                "PLN"
+            ],
+            "ExchangeRateProvider": "https://api.exchangeratesapi.io/latest?access_key=YOUR_ACCESS_KEY",
+            "UpdateInterval": "5m",
+            "CustomCurrencies": [
+                {
+                    "CurrencyCode": "GOVCoin",
+                    "Description": "Nationally minted cryptocurrency backed by sovereign reserves.",
+                    "Exchangeable": true,
+                    "ExchangeRateProvider": "https://govcoin-api.atomic/exchange"
+                },
+                {
+                    "CurrencyCode": "GovEUR",
+                    "Description": "Government-minted Euro token for cross-border trade.",
+                    "Exchangeable": true,
+                    "ExchangeRateProvider": "https://govcoin-api.atomic/exchange"
+                }
+            ],
+            "FallbackProviders": [
+                {
+                    "Name": "CurrencyLayer",
+                    "URL": "https://api.currencylayer.com/live?access_key=YOUR_ACCESS_KEY",
+                    "Priority": 1
+                },
+                {
+                    "Name": "Open Exchange Rates",
+                    "URL": "https://openexchangerates.org/api/latest.json?app_id=YOUR_APP_ID",
+                    "Priority": 2
+                }
+            ],
+            "ErrorHandling": {
+                "RetryCount": 3,
+                "RetryInterval": "10s",
+                "FallbackOnFailure": true
+            }
+        }
+
+    },
+    "PerformanceMonitoring": {
+        "EnableMonitoring": true,
+        "MonitoringModule": "../Governance/MonitoringConfig.json",
+        "Metrics": {
+            "CPUUsageThreshold": 80,
+            "MemoryUsageThreshold": 75,
+            "ShardValidationRate": "95%"
+        },
+        "Alerting": {
+            "EmailAlerts": {
+                "Enabled": true,
+                "Recipients": [ "admin@government-node.atomic" ]
+            },
+            "SMSAlerts": {
+                "Enabled": true,
+                "Recipients": [ "+1234567890" ]
+            }
+        }
+    },
+    "FallbackPolicy": {
+        "ReattemptsAllowed": 3,
+        "ReattemptIntervalSeconds": 10,
+        "FailureAction": "Notify and escalate to system administrator"
+    }
+}
