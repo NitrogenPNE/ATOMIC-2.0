@@ -1,4 +1,4 @@
-Technical Sheet: GOVMintingHQNode - ATOMIC Blockchain (Adapted Version)
+Technical Sheet: GOVMintingHQNode - ATOMIC Blockchain 
 
 1. Overview
 Name: GOVMintingHQNode - ATOMIC Blockchain
