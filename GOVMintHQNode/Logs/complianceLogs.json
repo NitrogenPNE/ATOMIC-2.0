@@ -1,0 +1,28 @@
+[
+    {
+        "timestamp": "2024-12-01T10:15:30.000Z",
+        "transactionId": "txn-12345",
+        "partnerNode": "node-abc123",
+        "sender": "wallet-123",
+        "receiver": "wallet-456",
+        "amount": 1000,
+        "currency": "USD",
+        "status": "Success",
+        "amlCheck": true,
+        "kycCheck": true,
+        "notes": "Transaction compliant with AML/KYC."
+    },
+    {
+        "timestamp": "2024-12-01T11:20:15.000Z",
+        "transactionId": "txn-67890",
+        "partnerNode": "node-xyz789",
+        "sender": "wallet-789",
+        "receiver": "wallet-101112",
+        "amount": 500,
+        "currency": "EUR",
+        "status": "Failed",
+        "amlCheck": false,
+        "kycCheck": true,
+        "notes": "Transaction failed AML compliance due to suspicious patterns."
+    }
+]
