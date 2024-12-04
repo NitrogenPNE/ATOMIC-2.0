@@ -1,0 +1,1 @@
+﻿{"version":"1.0.0","name":"third-party-analytics.internal","description":"Node service for third-party-analytics.internal","scripts":{"start":"node index.js"},"dependencies":{},"main":"index.js"}

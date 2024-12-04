@@ -1,0 +1,1 @@
+﻿{"version":"1.0.0","name":"transaction-monitoring-node.internal","description":"Node service for transaction-monitoring-node.internal","scripts":{"start":"node index.js"},"dependencies":{},"main":"index.js"}

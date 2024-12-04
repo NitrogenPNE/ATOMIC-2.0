@@ -1,0 +1,1 @@
+﻿{"version":"1.0.0","name":"sms-gateway-node.internal","description":"Node service for sms-gateway-node.internal","scripts":{"start":"node index.js"},"dependencies":{},"main":"index.js"}

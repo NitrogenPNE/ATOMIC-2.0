@@ -1,0 +1,11 @@
+{
+    "version":  "1.0.0",
+    "name":  "validation-node1.internal",
+    "description":  "Node for validation-node1.internal in the GOVMint system.",
+    "scripts":  {
+                    "start":  "node index.js"
+                },
+    "author":  "GOVMintHQNode Team",
+    "license":  "ATOMIC-Limited-1.0",
+    "main":  "index.js"
+}
