@@ -3,26 +3,18 @@
 // SPDX-License-Identifier: ATOMIC-Limited-1.0
 // ------------------------------------------------------------------------------
 // ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Enhanced Peer Discovery
+// Military-Grade Enhanced Peer Discovery for GOVMintHQNode
 //
 // Description:
-// Implements dynamic peer discovery, token-based validation, and secure authentication
-// with atomic-level metadata for ATOMIC’s military-grade network.
-//
-// Enhancements:
-// - Token-based peer validation for Proof-of-Access.
-// - Quantum-resistant peer validation using Kyber/Dilithium.
-// - Shard-based peer capability verification with atomic metadata.
-// - Role-based prioritization for HQ, Corporate, and Branch Nodes.
+// Implements secure peer discovery with token-based Proof-of-Access, 
+// quantum-resistant encryption, and peer prioritization.
 //
 // ------------------------------------------------------------------------------
 
 const dns = require("dns");
 const winston = require("winston");
-const { validatePeer, validateShardCapability } = require("../utils/validationUtils");
-const { establishQuantumSecureConnection } = require("../utils/quantumCryptoUtils");
+const { validatePeer, validateShardCapability } = require("../Utilities/validationUtils");
+const { establishQuantumSecureConnection } = require("../Utilities/quantumCryptoUtils");
 const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
 // **Logger Setup**
@@ -40,14 +32,13 @@ const logger = winston.createLogger({
 
 // **Peer Discovery Configuration**
 const PEER_DISCOVERY_CONFIG = {
-    dnsSeed: process.env.DNS_SEED || "nodes.atomic.network",
-    maxPeers: process.env.MAX_PEERS || 50,
+    dnsSeed: process.env.DNS_SEED || "nodes.atomic.gov",
+    maxPeers: process.env.MAX_PEERS || 100,
     validationTimeout: 5000, // Timeout for peer validation in ms
     fallbackPeers: [
-        { address: "ws://node1.atomic.network:6000", priority: 1 },
-        { address: "ws://node2.atomic.network:6000", priority: 2 },
-        { address: "ws://node3.atomic.network:6000", priority: 3 },
-    ], // Hardcoded fallback nodes with priorities
+        { address: "ws://hq.supernode.gov:7000", role: "HQPeer", priority: 1 }, // Prioritize HQPeers
+        { address: "ws://secondary.node.gov:7001", role: "SecondaryPeer", priority: 0 },
+    ], // Fallback peers for GOVMintHQNode
 };
 
 // **Discovered Peers**
@@ -67,20 +58,25 @@ async function discoverPeers() {
         // Validate discovered peers
         const validPeers = await validatePeers(peers);
         validPeers.forEach((peer) =>
-            discoveredPeers.set(peer, { role: "Generic", atomicCapabilities: null, lastChecked: Date.now() })
+            discoveredPeers.set(peer.address, {
+                role: peer.role || "Generic",
+                atomicCapabilities: peer.atomicCapabilities || null,
+                priority: peer.priority || 0,
+                lastChecked: Date.now(),
+            })
         );
 
         logger.info(`Discovered ${validPeers.length} valid peers.`);
-        return Array.from(discoveredPeers.keys());
+        return prioritizePeers();
     } catch (error) {
         logger.error("Error during peer discovery:", error);
 
         // Use fallback peers if discovery fails
         logger.warn("Using fallback peers...");
-        PEER_DISCOVERY_CONFIG.fallbackPeers.forEach(({ address }) =>
-            discoveredPeers.set(address, { role: "Fallback", atomicCapabilities: null, lastChecked: Date.now() })
+        PEER_DISCOVERY_CONFIG.fallbackPeers.forEach(({ address, role, priority }) =>
+            discoveredPeers.set(address, { role, atomicCapabilities: null, priority, lastChecked: Date.now() })
         );
-        return Array.from(discoveredPeers.keys());
+        return prioritizePeers();
     }
 }
 
@@ -106,7 +102,7 @@ function resolveDNS(dnsSeed) {
 /**
  * Validate a list of peers for compliance with ATOMIC standards.
  * @param {Array<string>} peers - List of peer addresses.
- * @returns {Promise<Array<string>>} - List of valid peers.
+ * @returns {Promise<Array<Object>>} - List of valid peers with metadata.
  */
 async function validatePeers(peers) {
     logger.info("Validating discovered peers...");
@@ -114,15 +110,15 @@ async function validatePeers(peers) {
 
     for (const peer of peers) {
         try {
-            const isQuantumSecure = await establishQuantumSecureConnection(peer); // Ensure quantum security
-            const shardCapable = await validateShardCapability(peer, ["protons", "neutrons", "electrons"]); // Atomic validation
-            const hasValidToken = await validateTokenForPeer(peer); // Token-based Proof-of-Access validation
+            const isQuantumSecure = await establishQuantumSecureConnection(peer);
+            const shardCapable = await validateShardCapability(peer, ["protons", "neutrons", "electrons"]);
+            const hasValidToken = await validateTokenForPeer(peer);
 
-            const isValid = isQuantumSecure && shardCapable && hasValidToken &&
-                (await validatePeer(peer, PEER_DISCOVERY_CONFIG.validationTimeout));
-
-            if (isValid) {
-                validPeers.push(peer);
+            if (isQuantumSecure && shardCapable && hasValidToken) {
+                // Assign role and priority dynamically (e.g., HQPeer > SecondaryPeer > Generic)
+                const role = assignPeerRole(peer);
+                const priority = role === "HQPeer" ? 1 : 0;
+                validPeers.push({ address: peer, role, priority });
             } else {
                 logger.warn(`Invalid or non-compliant peer detected and skipped: ${peer}`);
             }
@@ -142,8 +138,8 @@ async function validatePeers(peers) {
 async function validateTokenForPeer(peer) {
     try {
         logger.info(`Validating token for peer: ${peer}`);
-        const tokenId = await getTokenIdFromPeer(peer); // Fetch token ID associated with the peer
-        const encryptedToken = await getEncryptedTokenFromPeer(peer); // Fetch encrypted token
+        const tokenId = await getTokenIdFromPeer(peer);
+        const encryptedToken = await getEncryptedTokenFromPeer(peer);
         const validation = await validateToken(tokenId, encryptedToken);
         return validation.valid;
     } catch (error) {
@@ -153,33 +149,27 @@ async function validateTokenForPeer(peer) {
 }
 
 /**
- * Add a new peer to the discovered set manually.
- * @param {string} peerAddress - Address of the peer to add.
- * @param {string} role - Role of the node (e.g., HQ, Corporate, Branch).
- * @param {Object} atomicCapabilities - Atomic metadata capabilities of the peer.
- * @returns {boolean} - True if the peer was added, false if it already exists.
+ * Assign a role to a peer based on metadata or fallback defaults.
+ * @param {string} peer - Peer address.
+ * @returns {string} - Assigned role (e.g., HQPeer, SecondaryPeer).
  */
-function addPeerManually(peerAddress, role = "Generic", atomicCapabilities = { protons: true, neutrons: true, electrons: true }) {
-    if (discoveredPeers.has(peerAddress)) {
-        logger.warn(`Peer ${peerAddress} is already in the network.`);
-        return false;
-    }
-
-    discoveredPeers.set(peerAddress, { role, atomicCapabilities, lastChecked: Date.now() });
-    logger.info(`Peer ${peerAddress} added manually as role: ${role} with capabilities:`, atomicCapabilities);
-    return true;
+function assignPeerRole(peer) {
+    // Example role assignment logic
+    if (peer.includes("hq")) return "HQPeer";
+    return "SecondaryPeer";
 }
 
 /**
- * Remove a peer from the network.
- * @param {string} peerAddress - Address of the peer to remove.
+ * Prioritize peers based on their roles.
+ * @returns {Array<Object>} - List of peers sorted by priority.
  */
-function removePeer(peerAddress) {
-    if (discoveredPeers.delete(peerAddress)) {
-        logger.info(`Peer ${peerAddress} removed from the network.`);
-    } else {
-        logger.warn(`Attempted to remove unknown peer: ${peerAddress}`);
-    }
+function prioritizePeers() {
+    return Array.from(discoveredPeers.entries())
+        .map(([address, metadata]) => ({
+            address,
+            ...metadata,
+        }))
+        .sort((a, b) => b.priority - a.priority);
 }
 
 /**
@@ -187,15 +177,10 @@ function removePeer(peerAddress) {
  * @returns {Array<Object>} - List of peer addresses with metadata.
  */
 function getDiscoveredPeers() {
-    return Array.from(discoveredPeers.entries()).map(([address, metadata]) => ({
-        address,
-        ...metadata,
-    }));
+    return prioritizePeers();
 }
 
 module.exports = {
     discoverPeers,
-    addPeerManually,
-    removePeer,
     getDiscoveredPeers,
 };

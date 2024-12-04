@@ -3,19 +3,28 @@
 // SPDX-License-Identifier: ATOMIC-Limited-1.0
 // ------------------------------------------------------------------------------
 // ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Quantum-Resistant Consensus
+// Military-Grade Quantum-Resistant Consensus for GOVMintHQNode
 //
 // Description:
-// Implements a quantum-resistant consensus mechanism to validate shard blocks
+// Implements an optimized, quantum-resistant consensus mechanism to validate shard blocks
 // and ensure the integrity of the ATOMIC blockchain.
 //
-// Author: Shawn Blackmore
+// Enhancements:
+// - Weighted quorum based on node priority.
+// - Peer prioritization for critical nodes.
+// - Optimized peer agreement requests with batching.
+//
 // ------------------------------------------------------------------------------
 
-const { generateLatticeKeyPair, signData, verifySignature } = require("../Utilities/quantumCryptoUtils");
-const { verifyRedundancy, calculateRedundancyScore } = require("../Utilities/redundancyVerifier");
+const {
+    generateLatticeKeyPair,
+    signData,
+    verifySignature,
+} = require("../Utilities/quantumCryptoUtils");
+const {
+    verifyRedundancy,
+    calculateRedundancyScore,
+} = require("../Utilities/redundancyVerifier");
 const { broadcastToPeers, receiveFromPeers } = require("./peerNetwork");
 const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
@@ -94,11 +103,11 @@ async function validateProposedBlock(proposedBlock, lastBlock, peers) {
             return false;
         }
 
-        // Request peer agreement
+        // Request weighted peer agreement
         console.log("Requesting peer agreement...");
-        const peerAgreements = await requestPeerAgreement(proposedBlock, peers);
-        const minAgreement = Math.max(3, Math.ceil(peers.length * 0.67)); // Ensure a minimum quorum
-        if (peerAgreements < minAgreement) {
+        const peerAgreements = await requestWeightedPeerAgreement(proposedBlock, peers);
+        const requiredWeight = calculateQuorumWeight(peers);
+        if (peerAgreements < requiredWeight) {
             console.warn("Consensus agreement failed: Insufficient peer support.");
             return false;
         }
@@ -111,17 +120,18 @@ async function validateProposedBlock(proposedBlock, lastBlock, peers) {
 }
 
 /**
- * Request agreement from peers for a proposed block.
+ * Request weighted agreement from peers for a proposed block.
  * @param {Object} proposedBlock - The block proposed for consensus.
  * @param {Array} peers - The list of peers in the network.
- * @returns {Promise<number>} - The number of peers that agreed to the block.
+ * @returns {Promise<number>} - The total weighted agreement score.
  */
-async function requestPeerAgreement(proposedBlock, peers) {
+async function requestWeightedPeerAgreement(proposedBlock, peers) {
+    const peerPriorities = prioritizePeers(peers);
     const agreements = await Promise.all(
-        peers.map(async (peer) => {
+        peerPriorities.map(async (peer) => {
             try {
                 const response = await broadcastToPeers("validateBlock", { block: proposedBlock }, peer);
-                return response.agree ? 1 : 0;
+                return response.agree ? peer.weight : 0;
             } catch (error) {
                 console.warn(`Failed to get agreement from peer ${peer.id}:`, error.message);
                 return 0;
@@ -130,6 +140,30 @@ async function requestPeerAgreement(proposedBlock, peers) {
     );
 
     return agreements.reduce((sum, agreement) => sum + agreement, 0);
+}
+
+/**
+ * Calculate the quorum weight required for consensus.
+ * @param {Array} peers - The list of peers in the network.
+ * @returns {number} - The minimum weight required to achieve quorum.
+ */
+function calculateQuorumWeight(peers) {
+    const totalWeight = peers.reduce((sum, peer) => sum + peer.weight, 0);
+    return Math.max(3, Math.ceil(totalWeight * 0.67)); // Ensure a minimum 67% weighted agreement
+}
+
+/**
+ * Prioritize peers for consensus based on role and reliability.
+ * @param {Array} peers - The list of peers in the network.
+ * @returns {Array} - Sorted peers with priority weights.
+ */
+function prioritizePeers(peers) {
+    return peers
+        .map((peer) => ({
+            ...peer,
+            weight: peer.role === "HQNode" ? 3 : peer.role === "CorporateNode" ? 2 : 1,
+        }))
+        .sort((a, b) => b.weight - a.weight);
 }
 
 module.exports = { executeQuantumConsensus };
