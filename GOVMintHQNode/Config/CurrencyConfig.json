@@ -1,0 +1,107 @@
+﻿{
+    "SupportedCurrencies": [
+        {
+            "currencyCode": "USD",
+            "name": "United States Dollar",
+            "symbol": "$",
+            "decimalPlaces": 2,
+            "status": "Active",
+            "exchangeRate": {
+                "base": "USD",
+                "rate": 1.0
+            }
+        },
+        {
+            "currencyCode": "EUR",
+            "name": "Euro",
+            "symbol": "€",
+            "decimalPlaces": 2,
+            "status": "Active",
+            "exchangeRate": {
+                "base": "USD",
+                "rate": 1.2
+            }
+        },
+        {
+            "currencyCode": "GBP",
+            "name": "British Pound",
+            "symbol": "£",
+            "decimalPlaces": 2,
+            "status": "Active",
+            "exchangeRate": {
+                "base": "USD",
+                "rate": 1.3
+            }
+        },
+        {
+            "currencyCode": "BTC",
+            "name": "Bitcoin",
+            "symbol": "₿",
+            "decimalPlaces": 8,
+            "status": "Active",
+            "exchangeRate": {
+                "base": "USD",
+                "rate": 50000.0
+            }
+        },
+        {
+            "currencyCode": "ETH",
+            "name": "Ethereum",
+            "symbol": "Ξ",
+            "decimalPlaces": 8,
+            "status": "Active",
+            "exchangeRate": {
+                "base": "USD",
+                "rate": 4000.0
+            }
+        }
+    ],
+    "ExchangeRateAPI": {
+        "primaryProvider": {
+            "name": "ExchangeRate-API",
+            "url": "https://api.exchangerate-api.com/v4/latest/USD",
+            "retryLimit": 3,
+            "timeoutSeconds": 10
+        },
+        "fallbackProviders": [
+            {
+                "name": "OpenExchangeRates",
+                "url": "https://openexchangerates.org/api/latest.json",
+                "apiKey": "your-api-key-here"
+            },
+            {
+                "name": "Fixer",
+                "url": "https://data.fixer.io/api/latest",
+                "apiKey": "your-api-key-here"
+            }
+        ],
+        "refreshIntervalMinutes": 60
+    },
+    "ErrorHandling": {
+        "onFailure": {
+            "retryDelaySeconds": 5,
+            "fallbackToNextProvider": true
+        },
+        "notifications": {
+            "enabled": true,
+            "recipients": [
+                "node://monitoring-node.internal",
+                "node://admin-node.internal"
+            ]
+        }
+    },
+    "Limits": {
+        "default": {
+            "minTransactionAmount": 10,
+            "maxTransactionAmount": 100000
+        },
+        "VIP": {
+            "minTransactionAmount": 10,
+            "maxTransactionAmount": 500000
+        }
+    },
+    "DataRetention": {
+        "transactionHistoryDays": 365,
+        "maxStorageUsageGB": 100
+    }
+}

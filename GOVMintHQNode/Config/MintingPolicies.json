@@ -1,0 +1,85 @@
+{
+    "MintingPolicies": {
+        "General": {
+            "EnableMinting": true,
+            "MintingFrequency": "24h",
+            "AuthorizedNodes": [
+                "node://govmint-minting-node.internal",
+                "node://govmint-admin-node.internal",
+                "node://govmint-governance-node.internal"
+            ],
+            "MintingLimitPerCycle": {
+                "USD": 1000000,
+                "EUR": 800000,
+                "GBP": 700000,
+                "BTC": 100,
+                "ETH": 1000
+            }
+        },
+        "Validation": {
+            "EnableValidation": true,
+            "ValidationNodes": [
+                "node://validation-node1.internal",
+                "node://validation-node2.internal"
+            ],
+            "ApprovalThreshold": 0.75
+        },
+        "TransactionLimits": {
+            "MinTransactionValue": {
+                "USD": 10,
+                "EUR": 10,
+                "GBP": 10,
+                "BTC": 0.001,
+                "ETH": 0.01
+            },
+            "MaxTransactionValue": {
+                "USD": 100000,
+                "EUR": 80000,
+                "GBP": 70000,
+                "BTC": 10,
+                "ETH": 100
+            }
+        },
+        "ComplianceChecks": {
+            "AML": {
+                "Enabled": true,
+                "ComplianceNodes": [
+                    "node://aml-compliance-node.internal",
+                    "node://kyc-compliance-node.internal"
+                ],
+                "SuspiciousTransactionThreshold": {
+                    "LargeValue": 100000,
+                    "HighFrequency": 50
+                }
+            },
+            "KYC": {
+                "Enabled": true,
+                "RequiredDocuments": [
+                    "Passport",
+                    "NationalID",
+                    "ProofOfAddress"
+                ]
+            }
+        },
+        "Alerting": {
+            "EnableAlerts": true,
+            "AlertRecipients": [
+                "node://admin-node.internal",
+                "node://compliance-node.internal"
+            ],
+            "CriticalAlertThreshold": {
+                "UnauthorizedMintingAttempts": 3
+            }
+        },
+        "AuditTrail": {
+            "EnableAuditing": true,
+            "AuditFrequency": "7d",
+            "AuditLogsPath": "../Logs/MintingAuditLogs.json",
+            "RetentionPolicy": {
+                "RetentionPeriodDays": 365,
+                "BackupFrequency": "30d",
+                "BackupLocation": "../Backup/MintingAudits/"
+            }
+        }
+    }
+}

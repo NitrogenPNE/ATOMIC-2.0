@@ -17,10 +17,10 @@
             "DiscoveryInterval": 60000,
             "NodeTypes": [ "RegionalMintNode", "ValidationNode", "FallbackNode", "CrossBorderNode" ],
             "FallbackPeers": [
-                "ws://regional1.atomic.network:6000",
-                "ws://regional2.atomic.network:6000",
-                "ws://validation1.atomic.network:6000",
-                "ws://fallback1.atomic.network:6000"
+                "node://regional1.internal",
+                "node://regional2.internal",
+                "node://validation1.internal",
+                "node://fallback1.internal"
             ]
         },
         "Consensus": {
@@ -49,8 +49,8 @@
             "PolicyFile": "./MintingPolicies.json",
             "RequireApproval": true,
             "ApprovalAuthorities": [
-                "CentralBankGovernor",
-                "FinanceMinistry"
+                "node://govmint-governance-node.internal",
+                "node://govmint-admin-node.internal"
             ]
         },
         "Security": {
@@ -118,20 +118,18 @@
                 "SEK",
                 "PLN"
             ],
-            "ExchangeRateProvider": "https://api.exchangeratesapi.io/latest?access_key=YOUR_ACCESS_KEY",
+            "ExchangeRateProvider": "https://govcoin-api.internal/exchange",
             "UpdateInterval": "5m",
             "CustomCurrencies": [
                 {
                     "CurrencyCode": "GOVCoin",
                     "Description": "Nationally minted cryptocurrency backed by sovereign reserves.",
-                    "Exchangeable": true,
-                    "ExchangeRateProvider": "https://govcoin-api.atomic/exchange"
+                    "Exchangeable": true
                 },
                 {
                     "CurrencyCode": "GovEUR",
                     "Description": "Government-minted Euro token for cross-border trade.",
-                    "Exchangeable": true,
-                    "ExchangeRateProvider": "https://govcoin-api.atomic/exchange"
+                    "Exchangeable": true
                 }
             ],
             "FallbackProviders": [
@@ -152,7 +150,6 @@
                 "FallbackOnFailure": true
             }
         }
-
     },
     "PerformanceMonitoring": {
         "EnableMonitoring": true,
@@ -163,13 +160,21 @@
             "ShardValidationRate": "95%"
         },
         "Alerting": {
-            "EmailAlerts": {
+            "NodeAlerts": {
                 "Enabled": true,
-                "Recipients": [ "admin@government-node.atomic" ]
+                "Recipients": [
+                    "node://monitoring-node.internal",
+                    "node://admin-node.internal"
+                ]
+            },
+            "WebhookAlerts": {
+                "Enabled": true,
+                "WebhookURL": "http://monitoring-node.internal/webhook",
+                "EventTypes": [ "Critical", "Warning", "Info" ]
             },
             "SMSAlerts": {
                 "Enabled": true,
-                "Recipients": [ "+1234567890" ]
+                "Recipients": [ "node://sms-gateway-node.internal" ]
             }
         }
     },

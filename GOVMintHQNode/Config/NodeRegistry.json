@@ -1,0 +1,18 @@
+{
+    "nodes": [
+        {
+            "name": "Treasury Node",
+            "type": "Treasury",
+            "address": "node://treasury-node.internal",
+            "description": "Handles cryptocurrency treasury operations.",
+            "createdAt": "2024-12-01T12:00:00Z"
+        },
+        {
+            "name": "Validation Node 1",
+            "type": "Validation",
+            "address": "node://validation-node1.internal",
+            "description": "Primary validation node for transactions.",
+            "createdAt": "2024-12-01T12:30:00Z"
+        }
+    ]
+}

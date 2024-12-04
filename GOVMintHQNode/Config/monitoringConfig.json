@@ -1,0 +1,104 @@
+{
+    "MonitoringSettings": {
+        "NodeMetrics": {
+            "Uptime": {
+                "enabled": true,
+                "intervalSeconds": 60,
+                "alertThreshold": {
+                    "downtimeSeconds": 300,
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            },
+            "ShardThroughput": {
+                "enabled": true,
+                "intervalSeconds": 30,
+                "alertThreshold": {
+                    "minimumThroughput": 100, 
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            },
+            "TransactionLatency": {
+                "enabled": true,
+                "intervalSeconds": 10,
+                "alertThreshold": {
+                    "maximumLatencyMs": 200,
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            },
+            "ResourceUtilization": {
+                "CPU": {
+                    "enabled": true,
+                    "intervalSeconds": 20,
+                    "alertThreshold": {
+                        "maxUsagePercent": 85,
+                        "emailNotification": true,
+                        "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                    }
+                },
+                "Memory": {
+                    "enabled": true,
+                    "intervalSeconds": 20,
+                    "alertThreshold": {
+                        "maxUsagePercent": 90,
+                        "emailNotification": true,
+                        "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                    }
+                },
+                "Disk": {
+                    "enabled": true,
+                    "intervalSeconds": 20,
+                    "alertThreshold": {
+                        "maxUsagePercent": 95,
+                        "emailNotification": true,
+                        "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                    }
+                }
+            }
+        },
+        "NetworkMetrics": {
+            "Latency": {
+                "enabled": true,
+                "intervalSeconds": 15,
+                "alertThreshold": {
+                    "maximumLatencyMs": 150,
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            },
+            "PacketLoss": {
+                "enabled": true,
+                "intervalSeconds": 15,
+                "alertThreshold": {
+                    "maxLossPercent": 2,
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            },
+            "PeerConnections": {
+                "enabled": true,
+                "intervalSeconds": 60,
+                "alertThreshold": {
+                    "minimumConnections": 10,
+                    "emailNotification": true,
+                    "webhookUrl": "https://monitoring-alerts.atomic-secure.com/alerts"
+                }
+            }
+        },
+        "Alerts": {
+            "EmailRecipients": [
+                "admin@atomic-secure.com",
+                "monitoring-team@atomic-secure.com"
+            ],
+            "WebhookEndpoints": [
+                "https://api.alerts.atomic-secure.com/v1/webhook"
+            ]
+        },
+        "DataRetention": {
+            "RetentionPeriodDays": 90,
+            "MaxStorageUsageGB": 50
+        }
+    }
+}

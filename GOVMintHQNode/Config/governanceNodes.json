@@ -1,0 +1,181 @@
+{{
+    "governanceNodes": [
+        {
+            "nodeId": "treasury-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_1\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "validation-node1.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_2\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "validation-node2.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_3\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "admin-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_4\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "aml-database-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_5\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "audit-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_6\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "backup-recovery-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_7\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "compliance-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_8\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "currency-exchange-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_9\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "external-monitoring-system.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_10\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "governance-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_11\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-admin-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_12\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-blockchain-integration-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_13\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-communication-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_14\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-governance-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_15\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-minting-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_16\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-monitoring-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_17\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-sms-gateway-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_18\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-token-minting-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_19\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "govmint-token-registry-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_20\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "internal-admin-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_21\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "interoperability-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_22\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "key-management-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_23\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "kyc-governance-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_24\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "kyc-monitoring-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_25\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "kyc-review-team.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_26\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "monitoring-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_27\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "regional-mint-node1.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_28\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "regional-mint-node2.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_29\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "regional-mint-node3.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_30\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "sanctions-list-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_31\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "shard-validation-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_32\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "terror-watchlist-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_33\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "third-party-analytics.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_34\n-----END PUBLIC KEY-----",
+            "status": "active"
+        },
+        {
+            "nodeId": "transaction-monitoring-node.internal",
+            "publicKey": "-----BEGIN PUBLIC KEY-----\nREPLACE_WITH_ACTUAL_PUBLIC_KEY_35\n-----END PUBLIC KEY-----",
+            "status": "active"
+        }
+    ]
+}
+
+
