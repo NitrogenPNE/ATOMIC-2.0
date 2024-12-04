@@ -1,158 +1,124 @@
-"use strict"; // Enforce strict mode
+"use strict";
 
 // SPDX-License-Identifier: ATOMIC-Limited-1.0
 // ------------------------------------------------------------------------------
 // ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-// All Rights Reserved.
-//
-// Module: Shard Metadata Manager
+// GOVMintingHQNode - Shard Metadata Manager with Disaster Recovery
 //
 // Description:
-// This script handles the management and synchronization of shard metadata.
-// Metadata includes shard distributions, frequency logs, redundancy mappings,
-// and atomic hierarchy (neutrons, protons, electrons).
+// Enhanced shard metadata manager with disaster recovery mechanisms for 
+// shard integrity validation and resynchronization.
 //
 // Enhancements:
-// - Integration of neutron, proton, and electron data in metadata.
-// - Secure storage with blockchain logging.
-// - Improved synchronization for multi-node consistency.
+// - Scheduled shard integrity audits.
+// - Distributed recovery via peer communication.
+// - Redundant shard restoration from backups.
 //
-// Author: Shawn Blackmore
 // ------------------------------------------------------------------------------
 
 const fs = require("fs-extra");
 const path = require("path");
-const { logShardMetadata } = require("../ledgerManager");
-const { createBlockchainEntry } = require("../../SmartContracts/Ledgers/LedgerContract");
+const crypto = require("crypto");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
+const { logInfo, logError } = require("../../Logger/logger");
+const { retrieveShard, repairShard, requestShardFromPeers } = require("../../Utilities/storageManager");
+const schedule = require("node-schedule"); // Add a task scheduler
 
 // Paths for metadata storage
 const METADATA_PATH = path.resolve(__dirname, "../../Ledgers/ShardMetadata");
 
-// Ensure metadata directory exists
-(async () => {
-    try {
-        await fs.ensureDir(METADATA_PATH);
-    } catch (error) {
-        console.error(`Failed to initialize shard metadata directory: ${error.message}`);
-    }
-})();
-
 /**
- * Writes shard metadata to local storage and logs it to the blockchain.
+ * Perform integrity audit on shards and recover any corrupted or missing shards.
+ * @param {string} tokenId - Token ID for Proof-of-Access.
+ * @param {string} encryptedToken - Encrypted token for validation.
  * @param {string} address - Node or user address.
- * @param {Array<Object>} atoms - Array of atomic data (neutrons, protons, electrons).
- * @param {Array<string>} optimalNodes - Array of optimal nodes for shard distribution.
- * @returns {Promise<void>} - Resolves after metadata is written and logged.
+ * @returns {Promise<void>} - Resolves after audit and recovery operations.
  */
-async function writeShardMetadata(address, atoms, optimalNodes) {
+async function auditAndRecoverShards(tokenId, encryptedToken, address) {
     try {
-        const metadata = {
-            address,
-            timestamp: new Date().toISOString(),
-            atomCount: atoms.length,
-            optimalNodes,
-            atoms: atoms.map(atom => ({
-                type: atom.type, // "neutron", "proton", or "electron"
-                frequency: atom.frequency,
-                energyLevel: atom.energyLevel || null, // Specific to neutrons
-                charge: atom.charge || null,           // Specific to protons
-                spin: atom.spin || null,               // Specific to electrons
-                node: atom.node || null,
-            })),
-        };
+        console.log("Validating token for shard audit...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
 
-        const metadataFilePath = path.join(METADATA_PATH, `${address}-shardMetadata.json`);
-        const existingMetadata = (await fs.pathExists(metadataFilePath)) ? await fs.readJson(metadataFilePath) : [];
-        existingMetadata.push(metadata);
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
 
-        await fs.writeJson(metadataFilePath, existingMetadata, { spaces: 2 });
-        console.log(`Shard metadata written locally for address: ${address}`);
-
-        // Log metadata to the blockchain
-        await logShardMetadata(address, metadata);
-        console.log(`Shard metadata logged to blockchain for address: ${address}`);
-    } catch (error) {
-        console.error(`Failed to write shard metadata: ${error.message}`);
-        throw error;
-    }
-}
-
-/**
- * Reads shard metadata for a specific address.
- * @param {string} address - Node or user address.
- * @returns {Promise<Array<Object>>} - Resolves with an array of shard metadata.
- */
-async function readShardMetadata(address) {
-    try {
         const metadataFilePath = path.join(METADATA_PATH, `${address}-shardMetadata.json`);
         if (!(await fs.pathExists(metadataFilePath))) {
             throw new Error(`No shard metadata found for address: ${address}`);
         }
 
         const metadata = await fs.readJson(metadataFilePath);
-        console.log(`Shard metadata retrieved for address: ${address}`);
-        return metadata;
-    } catch (error) {
-        console.error(`Failed to read shard metadata: ${error.message}`);
-        throw error;
-    }
-}
+        let recoveryNeeded = false;
 
-/**
- * Synchronizes shard metadata to ensure consistency across nodes.
- * @param {string} address - Node or user address.
- * @returns {Promise<void>} - Resolves after synchronization.
- */
-async function synchronizeShardMetadata(address) {
-    try {
-        console.log(`Synchronizing shard metadata for address: ${address}...`);
-        const metadata = await readShardMetadata(address);
-
-        // Example synchronization logic:
-        // Broadcast metadata to peers, validate consistency, and update local state
-        console.log(`Synchronizing shard metadata across network for address: ${address}`);
-    } catch (error) {
-        console.error(`Failed to synchronize shard metadata: ${error.message}`);
-        throw error;
-    }
-}
-
-/**
- * Validates the integrity of shard metadata.
- * @param {string} address - Node or user address.
- * @returns {Promise<boolean>} - True if metadata is valid, false otherwise.
- */
-async function validateShardMetadata(address) {
-    try {
-        const metadata = await readShardMetadata(address);
-        if (!metadata || metadata.length === 0) {
-            throw new Error(`No metadata to validate for address: ${address}`);
-        }
-
-        // Example validation logic:
+        // Perform integrity checks on each shard
         for (const entry of metadata) {
-            if (!entry.address || !entry.timestamp || !entry.atoms) {
-                throw new Error(`Invalid metadata structure for address: ${address}`);
+            for (const atom of entry.atoms) {
+                try {
+                    const shard = await retrieveShard(atom.type, atom.node);
+                    const calculatedHash = crypto.createHash("sha256").update(shard).digest("hex");
+
+                    if (calculatedHash !== atom.hash) {
+                        throw new Error(`Hash mismatch for shard ${atom.node}`);
+                    }
+                } catch (error) {
+                    logError(`Integrity check failed for shard ${atom.node}: ${error.message}`);
+                    recoveryNeeded = true;
+
+                    // Attempt local recovery
+                    const recovered = await repairShard(atom.type, atom.node);
+                    if (recovered) {
+                        logInfo(`Shard ${atom.node} successfully recovered locally.`);
+                        continue;
+                    }
+
+                    // Request recovery from peers
+                    logInfo(`Requesting shard recovery from peers for shard ${atom.node}...`);
+                    const peerShard = await requestShardFromPeers(atom.type, atom.node);
+                    if (peerShard) {
+                        logInfo(`Shard ${atom.node} recovered from peers successfully.`);
+                    } else {
+                        logError(`Failed to recover shard ${atom.node} from peers or backups.`);
+                    }
+                }
             }
         }
 
-        console.log(`Shard metadata validated successfully for address: ${address}`);
-        return true;
+        if (!recoveryNeeded) {
+            logInfo(`Shard audit completed successfully for address: ${address}. All shards are intact.`);
+        }
     } catch (error) {
-        console.error(`Failed to validate shard metadata: ${error.message}`);
-        return false;
+        logError("Shard audit and recovery failed.", { error: error.message });
+        throw error;
     }
 }
 
+/**
+ * Schedule periodic shard integrity audits using a task scheduler.
+ * @param {string} address - Node or user address.
+ * @param {string} tokenId - Token ID for Proof-of-Access validation.
+ * @param {string} encryptedToken - Encrypted token for validation.
+ */
+function scheduleShardIntegrityAudits(address, tokenId, encryptedToken) {
+    // Schedule audits to run every hour
+    schedule.scheduleJob("0 * * * *", async () => {
+        try {
+            logInfo(`Starting scheduled shard integrity audit for address: ${address}...`);
+            await auditAndRecoverShards(tokenId, encryptedToken, address);
+        } catch (error) {
+            logError("Scheduled shard integrity audit failed.", { error: error.message });
+        }
+    });
+
+    logInfo(`Scheduled shard integrity audits for address: ${address}.`);
+}
+
 module.exports = {
-    writeShardMetadata,
-    readShardMetadata,
-    synchronizeShardMetadata,
-    validateShardMetadata,
+    auditAndRecoverShards,
+    scheduleShardIntegrityAudits,
 };
 
 // ------------------------------------------------------------------------------
-// End of Module: Shard Metadata Manager
-// Version: 2.0.0 | Updated: 2024-11-28
+// End of Module: Shard Metadata Manager with Disaster Recovery
+// Version: GOVMintHQNode | Updated: 2024-12-03
 // ------------------------------------------------------------------------------
