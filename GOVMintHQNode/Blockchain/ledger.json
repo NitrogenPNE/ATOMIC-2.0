@@ -1,1 +1,140 @@
-{}
+{
+    "LedgerMetadata": {
+        "NodeType": "GOVMintHQNode",
+        "BlockchainVersion": "2.0.0",
+        "ConsensusMechanism": "Quantum-Resistant Proof of Access",
+        "EncryptionAlgorithm": "Lattice-Based Quantum Encryption",
+        "ShardManager": "Integrated",
+        "CreatedAt": "2024-12-01T00:00:00Z",
+        "UpdatedAt": "2024-12-02T12:00:00Z"
+    },
+    "Transactions": [
+        {
+            "TransactionID": "TX-001",
+            "Timestamp": "2024-12-02T12:30:00Z",
+            "Sender": "node://govmint-minting-node.internal",
+            "Receiver": "node://regional-mint-node1.internal",
+            "Amount": 500000,
+            "Currency": "GOVCoin",
+            "ProofOfAccess": {
+                "TokenID": "POA-TOKEN-001",
+                "AssociatedNode": "node://govmint-token-registry-node.internal",
+                "TokenDetails": {
+                    "TokenID": "POA-TOKEN-001",
+                    "EncryptedToken": "ENCRYPTED_DATA_STRING",
+                    "IssuerNode": "node://govmint-token-registry-node.internal",
+                    "IssuedAt": "2024-12-02T12:00:00Z",
+                    "Expiration": "2024-12-03T12:00:00Z"
+                },
+                "ValidationResult": true,
+                "ValidationNode": "node://validation-node1.internal",
+                "Timestamp": "2024-12-02T12:29:45Z"
+            },
+            "ShardMetadata": {
+                "ShardID": "shard-001",
+                "ValidationResult": true,
+                "ValidationNode": "node://shard-validation-node.internal",
+                "IntegrityScore": 98.5,
+                "RedundancyScore": 0.9
+            },
+            "Compliance": {
+                "AMLStatus": "Compliant",
+                "KYCStatus": "Verified",
+                "ComplianceNode": "node://compliance-node.internal",
+                "ReviewedBy": "node://kyc-review-team.internal"
+            },
+            "Status": "Confirmed"
+        },
+        {
+            "TransactionID": "TX-002",
+            "Timestamp": "2024-12-02T13:00:00Z",
+            "Sender": "node://govmint-governance-node.internal",
+            "Receiver": "node://regional-mint-node2.internal",
+            "Amount": 300000,
+            "Currency": "GovEUR",
+            "ProofOfAccess": {
+                "TokenID": "POA-TOKEN-002",
+                "AssociatedNode": "node://govmint-token-registry-node.internal",
+                "TokenDetails": {
+                    "TokenID": "POA-TOKEN-002",
+                    "EncryptedToken": "ENCRYPTED_DATA_STRING",
+                    "IssuerNode": "node://govmint-token-registry-node.internal",
+                    "IssuedAt": "2024-12-02T12:30:00Z",
+                    "Expiration": "2024-12-03T12:30:00Z"
+                },
+                "ValidationResult": true,
+                "ValidationNode": "node://validation-node2.internal",
+                "Timestamp": "2024-12-02T12:59:45Z"
+            },
+            "ShardMetadata": {
+                "ShardID": "shard-002",
+                "ValidationResult": true,
+                "ValidationNode": "node://shard-validation-node.internal",
+                "IntegrityScore": 99.0,
+                "RedundancyScore": 0.88
+            },
+            "Compliance": {
+                "AMLStatus": "Compliant",
+                "KYCStatus": "Verified",
+                "ComplianceNode": "node://compliance-node.internal",
+                "ReviewedBy": "node://kyc-review-team.internal"
+            },
+            "Status": "Confirmed"
+        }
+    ],
+    "Shards": [
+        {
+            "ShardID": "shard-001",
+            "CreatedBy": "node://govmint-minting-node.internal",
+            "AllocatedTo": "node://regional-mint-node1.internal",
+            "IntegrityScore": 98.5,
+            "RedundancyScore": 0.9,
+            "ValidationHistory": [
+                {
+                    "ValidationNode": "node://validation-node1.internal",
+                    "Timestamp": "2024-12-02T12:29:45Z",
+                    "Result": true
+                }
+            ],
+            "FaultTolerancePolicy": {
+                "MaxFailuresAllowed": 2,
+                "RetryAttempts": 3
+            }
+        },
+        {
+            "ShardID": "shard-002",
+            "CreatedBy": "node://govmint-governance-node.internal",
+            "AllocatedTo": "node://regional-mint-node2.internal",
+            "IntegrityScore": 99.0,
+            "RedundancyScore": 0.88,
+            "ValidationHistory": [
+                {
+                    "ValidationNode": "node://validation-node2.internal",
+                    "Timestamp": "2024-12-02T12:59:45Z",
+                    "Result": true
+                }
+            ],
+            "FaultTolerancePolicy": {
+                "MaxFailuresAllowed": 2,
+                "RetryAttempts": 3
+            }
+        }
+    ],
+    "ComplianceAudit": {
+        "LastAuditTimestamp": "2024-12-01T23:00:00Z",
+        "ComplianceChecks": [
+            {
+                "Type": "AML",
+                "Status": "Compliant",
+                "CheckedBy": "node://aml-database-node.internal",
+                "Timestamp": "2024-12-01T22:59:00Z"
+            },
+            {
+                "Type": "KYC",
+                "Status": "Verified",
+                "CheckedBy": "node://kyc-review-team.internal",
+                "Timestamp": "2024-12-01T22:58:00Z"
+            }
+        ]
+    }
+}
