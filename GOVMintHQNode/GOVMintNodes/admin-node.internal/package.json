@@ -1,0 +1,1 @@
+﻿{"version":"1.0.0","name":"admin-node.internal","description":"Node service for admin-node.internal","scripts":{"start":"node index.js"},"dependencies":{},"main":"index.js"}
