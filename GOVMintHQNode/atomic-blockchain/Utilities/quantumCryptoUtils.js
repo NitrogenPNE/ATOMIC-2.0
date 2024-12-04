@@ -1,147 +1,134 @@
 "use strict"; // Enforce strict mode
 
+"use strict";
+
 /**
  * SPDX-License-Identifier: ATOMIC-Limited-1.0
  * -------------------------------------------------------------------------------
  * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
- * Copyright (c) 2023 ATOMIC, Ltd.
- *
- * Module: Quantum-Resistant Cryptographic Utilities
+ * GOVMintingHQNode - Quantum-Resistant Cryptographic Utilities
  *
  * Description:
- * Provides quantum-resistant cryptographic utilities, including key generation,
- * secure token signatures, and enhanced encryption/decryption methods for
- * ATOMIC's Proof-of-Access operations.
- *
- * Enhancements:
- * - Integration with Kyber and Dilithium quantum-safe algorithms.
- * - Support for secure token validation and renewal.
- * - Comprehensive logging for cryptographic operations.
- *
- * Dependencies:
- * - libsodium-wrappers: For quantum-resistant cryptographic operations.
- * - fs-extra: For secure key management.
- * - crypto: For fallback cryptographic utilities.
- * - path: For file path management.
+ * Provides quantum-resistant cryptographic utilities tailored for the GOVMintingHQNode,
+ * integrated with Hardware Security Modules (HSMs) for key management.
  * -------------------------------------------------------------------------------
  */
 
+const AWS = require("aws-sdk"); // Example: Using AWS CloudHSM
 const sodium = require("libsodium-wrappers");
 const fs = require("fs-extra");
 const path = require("path");
+const { logError, logAtomic } = require("./loggingUtils");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
+
+// **HSM Configuration**
+AWS.config.update({ region: "us-east-1" }); // Update to your HSM region
+const cloudHSM = new AWS.CloudHSM();
 
 // **Key Storage Paths**
 const KEY_STORAGE_PATH = path.join(__dirname, "../Keys");
 
 /**
- * Initialize cryptographic utilities and ensure libsodium readiness.
+ * Initialize cryptographic utilities and ensure HSM readiness.
  */
 async function initializeCryptoUtils() {
     await sodium.ready;
     await fs.ensureDir(KEY_STORAGE_PATH);
-    console.info("Quantum-resistant cryptographic utilities initialized.");
+    console.info("Quantum-resistant cryptographic utilities initialized with HSM support.");
 }
 
 /**
- * Generate a quantum-resistant keypair using Kyber or Dilithium algorithms.
+ * Generate a quantum-resistant keypair using HSM.
  * @param {string} type - "kyber" for encryption or "dilithium" for digital signatures.
- * @returns {Object} - Contains publicKey and privateKey in base64 format.
+ * @param {string} tokenId - Token ID for Proof-of-Access validation.
+ * @param {string} encryptedToken - Encrypted token for validation.
+ * @returns {string} - HSM Key ID.
  */
-function generateQuantumKeypair(type) {
-    console.info(`Generating ${type} quantum-resistant keypair...`);
-    let keypair;
+async function generateQuantumKeypair(type, tokenId, encryptedToken) {
+    try {
+        console.info("Validating token for HSM keypair generation...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
 
-    if (type === "kyber") {
-        keypair = sodium.crypto_kx_keypair(); // For encryption
-    } else if (type === "dilithium") {
-        keypair = sodium.crypto_sign_keypair(); // For digital signatures
-    } else {
-        throw new Error("Invalid keypair type. Use 'kyber' or 'dilithium'.");
+        const keySpec = type === "kyber" ? "ECC_NIST_P256" : "RSA_2048";
+        console.info(`Generating HSM-managed ${type} keypair (${keySpec})...`);
+
+        const params = {
+            KeyUsage: "SIGN_VERIFY",
+            CustomerMasterKeySpec: keySpec,
+        };
+
+        const result = await cloudHSM.createKey(params).promise();
+        console.info("HSM Key generated successfully:", result.KeyId);
+
+        return result.KeyId;
+    } catch (error) {
+        logError(`Error generating ${type} keypair with HSM: ${error.message}`);
+        throw error;
     }
-
-    return {
-        publicKey: Buffer.from(keypair.publicKey).toString("base64"),
-        privateKey: Buffer.from(keypair.privateKey).toString("base64"),
-    };
 }
 
 /**
- * Sign data with a quantum-resistant private key (Dilithium).
+ * Sign data with an HSM-managed key.
  * @param {string} data - Data to be signed.
- * @param {string} privateKey - Base64-encoded private key.
- * @returns {string} - Digital signature in base64 format.
+ * @param {string} keyId - HSM Key ID.
+ * @param {string} tokenId - Token ID for Proof-of-Access validation.
+ * @param {string} encryptedToken - Encrypted token for validation.
+ * @returns {string} - Base64-encoded signature.
  */
-function signWithQuantum(data, privateKey) {
-    const privateKeyBuffer = Buffer.from(privateKey, "base64");
-    const signature = sodium.crypto_sign_detached(data, privateKeyBuffer);
-    return Buffer.from(signature).toString("base64");
+async function signWithQuantum(data, keyId, tokenId, encryptedToken) {
+    try {
+        console.info("Validating token for HSM signing...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
+
+        console.info(`Signing data with HSM-managed key: ${keyId}...`);
+        const params = {
+            KeyId: keyId,
+            Message: Buffer.from(data).toString("base64"),
+            MessageType: "RAW",
+            SigningAlgorithm: "RSASSA_PKCS1_V1_5_SHA_256", // Update as needed
+        };
+
+        const result = await cloudHSM.sign(params).promise();
+        console.info("Data signed successfully.");
+        return result.Signature.toString("base64");
+    } catch (error) {
+        logError(`Error signing data with HSM: ${error.message}`);
+        throw error;
+    }
 }
 
 /**
- * Verify a quantum-resistant signature.
+ * Verify a signature using an HSM-managed key.
  * @param {string} data - Original data.
  * @param {string} signature - Base64-encoded signature.
- * @param {string} publicKey - Base64-encoded public key.
+ * @param {string} keyId - HSM Key ID.
  * @returns {boolean} - Whether the signature is valid.
  */
-function verifyQuantumSignature(data, signature, publicKey) {
-    const publicKeyBuffer = Buffer.from(publicKey, "base64");
-    const signatureBuffer = Buffer.from(signature, "base64");
+async function verifyQuantumSignature(data, signature, keyId) {
+    try {
+        console.info(`Verifying signature with HSM-managed key: ${keyId}...`);
 
-    return sodium.crypto_sign_verify_detached(signatureBuffer, data, publicKeyBuffer);
-}
+        const params = {
+            KeyId: keyId,
+            Message: Buffer.from(data).toString("base64"),
+            MessageType: "RAW",
+            Signature: Buffer.from(signature, "base64"),
+            SigningAlgorithm: "RSASSA_PKCS1_V1_5_SHA_256", // Update as needed
+        };
 
-/**
- * Encrypt data using quantum-safe symmetric encryption (AES-GCM).
- * @param {string|Buffer} data - Data to encrypt.
- * @param {Buffer} key - Encryption key.
- * @returns {Object} - Contains encryptedData (base64), iv, and authTag.
- */
-function encryptWithQuantum(data, key) {
-    const iv = sodium.randombytes_buf(12);
-    const cipher = sodium.crypto_aead_aes256gcm_encrypt(data, null, null, iv, key);
-    return {
-        encryptedData: Buffer.from(cipher).toString("base64"),
-        iv: Buffer.from(iv).toString("base64"),
-    };
-}
-
-/**
- * Decrypt data encrypted with quantum-safe symmetric encryption (AES-GCM).
- * @param {Object} encryptedObject - Contains encryptedData (base64), iv, and authTag.
- * @param {Buffer} key - Decryption key.
- * @returns {string} - Decrypted plaintext.
- */
-function decryptWithQuantum(encryptedObject, key) {
-    const { encryptedData, iv } = encryptedObject;
-    const encryptedBuffer = Buffer.from(encryptedData, "base64");
-    const ivBuffer = Buffer.from(iv, "base64");
-
-    return sodium.crypto_aead_aes256gcm_decrypt(null, encryptedBuffer, null, ivBuffer, key).toString("utf-8");
-}
-
-/**
- * Securely store quantum-resistant keys to file.
- * @param {Object} keypair - Contains publicKey and privateKey.
- * @param {string} fileName - File name to store the keys.
- */
-async function storeQuantumKeys(keypair, fileName) {
-    const filePath = path.join(KEY_STORAGE_PATH, `${fileName}.json`);
-    await fs.writeJson(filePath, keypair, { spaces: 2 });
-    console.info(`Stored quantum-resistant keys at: ${filePath}`);
-}
-
-/**
- * Load quantum-resistant keys from file.
- * @param {string} fileName - File name to load the keys from.
- * @returns {Object} - Contains publicKey and privateKey.
- */
-async function loadQuantumKeys(fileName) {
-    const filePath = path.join(KEY_STORAGE_PATH, `${fileName}.json`);
-    if (!(await fs.pathExists(filePath))) {
-        throw new Error(`Key file not found: ${filePath}`);
+        const result = await cloudHSM.verify(params).promise();
+        console.info("Signature verification result:", result.SignatureValid);
+        return result.SignatureValid;
+    } catch (error) {
+        logError(`Error verifying signature with HSM: ${error.message}`);
+        throw error;
     }
-    return await fs.readJson(filePath);
 }
 
 module.exports = {
@@ -149,8 +136,4 @@ module.exports = {
     generateQuantumKeypair,
     signWithQuantum,
     verifyQuantumSignature,
-    encryptWithQuantum,
-    decryptWithQuantum,
-    storeQuantumKeys,
-    loadQuantumKeys,
 };
