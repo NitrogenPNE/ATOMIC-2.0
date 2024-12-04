@@ -1,0 +1,7 @@
+{
+    "templateVersion": "1.0",
+    "defaultSettings": {
+        "uploadPath": "C:\\ATOMIC-SecureStorage\\Uploads",
+        "monitoringInterval": 60
+    }
+}

@@ -1,0 +1,27 @@
+[
+    {
+        "id": "wallet-7890",
+        "type": "wallet",
+        "reason": "Flagged for suspicious activity in cross-border transactions.",
+        "timestamp": "2024-12-01T09:30:00.000Z"
+    },
+    {
+        "id": "node-xyz789",
+        "type": "node",
+        "reason": "Reported for facilitating fraudulent transactions.",
+        "timestamp": "2024-12-01T10:15:00.000Z"
+    },
+    {
+        "id": "user-abc123",
+        "type": "user",
+        "reason": "Failed KYC checks due to incomplete documentation.",
+        "timestamp": "2024-11-30T14:20:00.000Z"
+    },
+    {
+        "id": "wallet-1234",
+        "type": "wallet",
+        "reason": "Linked to an AML violation case.",
+        "timestamp": "2024-11-29T16:45:00.000Z"
+    }
+]
+

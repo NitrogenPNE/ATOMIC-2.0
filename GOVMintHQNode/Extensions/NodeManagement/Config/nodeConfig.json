@@ -1,0 +1,5 @@
+{
+    "nodeId": "HQNode-Default",
+    "monitoringInterval": 60,
+    "alertsEnabled": true
+}
