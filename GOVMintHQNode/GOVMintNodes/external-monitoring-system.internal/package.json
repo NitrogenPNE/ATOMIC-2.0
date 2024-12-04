@@ -1,0 +1,1 @@
+﻿{"version":"1.0.0","name":"external-monitoring-system.internal","description":"Node service for external-monitoring-system.internal","scripts":{"start":"node index.js"},"dependencies":{},"main":"index.js"}

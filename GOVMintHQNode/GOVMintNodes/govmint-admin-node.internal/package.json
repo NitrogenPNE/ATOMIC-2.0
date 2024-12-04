@@ -1,0 +1,11 @@
+{
+    "version":  "1.0.0",
+    "name":  "govmint-admin-node.internal",
+    "description":  "Node for govmint-admin-node.internal in the GOVMint system.",
+    "scripts":  {
+                    "start":  "node index.js"
+                },
+    "author":  "GOVMintHQNode Team",
+    "license":  "ATOMIC-Limited-1.0",
+    "main":  "index.js"
+}
