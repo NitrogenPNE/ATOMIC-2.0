@@ -1,0 +1,11 @@
+{
+    "name": "kyc-monitoring-node.internal",
+    "version": "1.0.0",
+    "description": "kyc-monitoring-node.internal for GOVMintHQNode governance and KYC operations",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js"
+    },
+    "author": "GOVMintHQNode Integration Team",
+    "license": "ATOMIC-Limited-1.0"
+}
