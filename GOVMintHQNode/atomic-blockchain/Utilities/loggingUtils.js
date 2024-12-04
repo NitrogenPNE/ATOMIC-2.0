@@ -1,28 +1,18 @@
-"use strict"; // Enforce strict mode
+"use strict";
 
 // SPDX-License-Identifier: ATOMIC-Limited-1.0
 // ------------------------------------------------------------------------------
 // ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Enhanced Logging Utilities
+// GOVMintingHQNode - Logging Utilities with Compliance Reporting
 //
 // Description:
-// Provides secure, structured logging utilities with real-time monitoring, 
-// encryption, and distributed synchronization for the ATOMIC blockchain.
+// Provides secure, centralized logging utilities with compliance reporting,
+// Proof-of-Access validation, and encryption.
 //
 // Enhancements:
-// - Atomic-level logging categories (neutrons, protons, electrons).
-// - Log encryption and tamper detection.
-// - Centralized aggregation and real-time monitoring.
-// - Advanced system metrics tracking (network, disk, GPU).
-// - Compliance with ISO/IEC 27001 log management standards.
-//
-// Dependencies:
-// - winston: Advanced logging framework.
-// - winston-daily-rotate-file: Log rotation utility.
-// - crypto: For log encryption and integrity checks.
-// - os: System performance metrics.
+// - Compliance metrics logging and reporting.
+// - Centralized log shipping via TLS.
+// - Real-time API-ready compliance data.
 //
 // ------------------------------------------------------------------------------
 
@@ -30,21 +20,20 @@ const winston = require("winston");
 const { format } = require("winston");
 const os = require("os");
 const crypto = require("crypto");
-const fs = require("fs-extra");
 const path = require("path");
+const tls = require("tls");
+const fs = require("fs-extra");
+const schedule = require("node-schedule");
+const { validateToken } = require("../../Pricing/TokenManagement/tokenValidation");
 
-// **Log Configuration**
-const LOG_DIR = "./logs";
+// **Configuration**
+const LOG_DIR = "../logs";
+const COMPLIANCE_REPORT_DIR = "../reports";
+const REMOTE_LOG_SERVER = process.env.LOG_SERVER || "logs.atomic.gov";
+const REMOTE_LOG_PORT = process.env.LOG_PORT || 514; // Default syslog port
 const DEFAULT_LOG_LEVEL = process.env.LOG_LEVEL || "info";
-const ENCRYPTION_KEY = crypto.randomBytes(32); // Replace with a securely stored key
+const ENCRYPTION_KEY = crypto.randomBytes(32); // Replace with securely stored key
 const ENCRYPTION_IV_LENGTH = 16; // AES-GCM IV length
-
-// **Atomic Log Categories**
-const atomicLogLevels = {
-    neutron: "critical", // Highest priority logs (e.g., security breaches, critical errors)
-    proton: "error",     // Medium priority logs (e.g., operation failures)
-    electron: "info",    // Lowest priority logs (e.g., system metrics, general info)
-};
 
 // **Logger Setup**
 const logger = winston.createLogger({
@@ -60,29 +49,37 @@ const logger = winston.createLogger({
             })),
         }),
         new winston.transports.File({
-            filename: `${LOG_DIR}/combined.log`,
+            filename: path.join(LOG_DIR, "combined.log"),
             format: format.json(),
         }),
         new winston.transports.File({
-            filename: `${LOG_DIR}/error.log`,
+            filename: path.join(LOG_DIR, "error.log"),
             level: "error",
             format: format.json(),
         }),
+        new RemoteLogTransport({ level: DEFAULT_LOG_LEVEL }),
     ],
 });
 
-// Add daily log rotation for production environments
-if (process.env.NODE_ENV === "production") {
-    const DailyRotateFile = require("winston-daily-rotate-file");
-    logger.add(
-        new DailyRotateFile({
-            filename: `${LOG_DIR}/application-%DATE%.log`,
-            datePattern: "YYYY-MM-DD",
-            maxSize: "20m",
-            maxFiles: "30d",
-            format: format.json(),
-        })
-    );
+// **Custom Transport for Remote Log Shipping**
+class RemoteLogTransport extends require("winston-transport") {
+    constructor(opts) {
+        super(opts);
+        this.client = tls.connect({
+            host: REMOTE_LOG_SERVER,
+            port: REMOTE_LOG_PORT,
+            rejectUnauthorized: true, // Enforce server certificate validation
+        });
+
+        this.client.on("error", (err) => {
+            logger.error("Failed to connect to remote log server.", { error: err.message });
+        });
+    }
+
+    log(info, callback) {
+        const logMessage = JSON.stringify(info);
+        this.client.write(logMessage + "\n", "utf8", callback);
+    }
 }
 
 /**
@@ -107,76 +104,85 @@ function encryptLog(message) {
 }
 
 /**
- * Log atomic-level events.
+ * Log atomic-level events with compliance metadata and Proof-of-Access validation.
  * @param {string} category - Atomic category ("neutron", "proton", "electron").
  * @param {string} message - The log message.
  * @param {Object} details - Additional metadata for the log.
+ * @param {string} complianceArea - Compliance area (e.g., "key-management", "transaction-validation").
+ * @param {string} tokenId - Token ID for Proof-of-Access validation.
+ * @param {string} encryptedToken - Encrypted token for validation.
  */
-function logAtomic(category, message, details = {}) {
-    const logMessage = `[${category.toUpperCase()}]: ${message}`;
-    const encryptedMessage = encryptLog(logMessage);
+async function logAtomic(category, message, details = {}, complianceArea, tokenId, encryptedToken) {
+    try {
+        console.log("Validating token for logging...");
+        const tokenValidation = await validateToken(tokenId, encryptedToken);
 
-    switch (category) {
-        case "neutron":
-            logger.log("critical", encryptedMessage, details);
-            break;
-        case "proton":
-            logger.log("error", encryptedMessage, details);
-            break;
-        case "electron":
-            logger.log("info", encryptedMessage, details);
-            break;
-        default:
-            logger.log("warn", `Uncategorized: ${encryptedMessage}`, details);
+        if (!tokenValidation.valid) {
+            throw new Error("Token validation failed: Access denied.");
+        }
+
+        const logMessage = `[${category.toUpperCase()}]: ${message}`;
+        const encryptedMessage = encryptLog(logMessage);
+
+        const logEntry = {
+            message: encryptedMessage,
+            complianceArea,
+            ...details,
+        };
+
+        switch (category) {
+            case "neutron":
+                logger.log("critical", logEntry);
+                break;
+            case "proton":
+                logger.log("error", logEntry);
+                break;
+            case "electron":
+                logger.log("info", logEntry);
+                break;
+            default:
+                logger.log("warn", `Uncategorized: ${encryptedMessage}`, details);
+        }
+    } catch (error) {
+        logger.error("Failed to log atomic event due to invalid token.", { error: error.message });
+        throw error;
     }
 }
 
 /**
- * Log system performance metrics.
+ * Generate compliance reports from aggregated logs.
+ * @returns {Promise<void>}
  */
-function logSystemMetrics() {
-    const cpuLoad = os.loadavg()[0]; // 1-minute load average
-    const freeMemory = os.freemem();
-    const totalMemory = os.totalmem();
+async function generateComplianceReport() {
+    try {
+        const logs = await fs.readJson(path.join(LOG_DIR, "combined.log"));
+        const complianceMetrics = logs.reduce((metrics, log) => {
+            const { complianceArea } = log;
+            if (!complianceArea) return metrics;
 
-    logAtomic("electron", "System Metrics", {
-        cpuLoad,
-        freeMemory,
-        totalMemory,
-        memoryUsagePercentage: ((1 - freeMemory / totalMemory) * 100).toFixed(2),
-    });
+            metrics[complianceArea] = (metrics[complianceArea] || 0) + 1;
+            return metrics;
+        }, {});
+
+        const reportPath = path.join(COMPLIANCE_REPORT_DIR, `compliance-report-${Date.now()}.json`);
+        await fs.writeJson(reportPath, { timestamp: new Date().toISOString(), complianceMetrics }, { spaces: 2 });
+
+        logger.info("Compliance report generated successfully.", { reportPath });
+    } catch (error) {
+        logger.error("Failed to generate compliance report.", { error: error.message });
+    }
 }
 
 /**
- * Log an error with metadata.
- * @param {string} error - The error message.
- * @param {Object} details - Additional metadata for the error.
+ * Schedule periodic compliance report generation.
  */
-function logError(error, details = {}) {
-    logAtomic("proton", error, details);
-}
-
-/**
- * Log warnings with context.
- * @param {string} warning - The warning message.
- * @param {Object} details - Additional metadata for the warning.
- */
-function logWarning(warning, details = {}) {
-    logAtomic("proton", warning, details);
-}
-
-/**
- * Retrieve the logger instance for external use.
- * @returns {Object} - Winston logger instance.
- */
-function getLogger() {
-    return logger;
+function scheduleComplianceReports() {
+    schedule.scheduleJob("0 0 * * *", generateComplianceReport); // Generate daily at midnight
+    logger.info("Scheduled daily compliance report generation.");
 }
 
 module.exports = {
     logAtomic,
-    logSystemMetrics,
-    logError,
-    logWarning,
-    getLogger,
+    generateComplianceReport,
+    scheduleComplianceReports,
 };
