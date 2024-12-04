@@ -1,52 +1,53 @@
 "use strict";
 
-// SPDX-License-Identifier: ATOMIC-Limited-1.0
-// ------------------------------------------------------------------------------
-// ATOMIC (Advanced Technologies Optimizing Integrated Chains)
-// Copyright (c) 2023 ATOMIC, Ltd.
-//
-// Module: Transaction API
-//
-// Description:
-// Facilitates transaction processing, integrates with ATOMIC blockchain, and validates
-// shard-level metadata and token-based Proof-of-Access.
-//
-// Features:
-// - Quantum-resistant digital signature verification.
-// - Shard metadata validation for transaction integrity.
-// - Secure token validation for Proof-of-Access compliance.
-//
-// Dependencies:
-// - express: Web framework for REST API.
-// - body-parser: Middleware for parsing JSON payloads.
-// - ../core/transaction.js: Provides core transaction logic.
-// - quantumCryptoUtils.js: Provides encryption utilities.
-// - complianceValidator.js: Validates transaction compliance with AML/KYC policies.
-//
-// ------------------------------------------------------------------------------
+/**
+ * SPDX-License-Identifier: ATOMIC-Limited-1.0
+ * -------------------------------------------------------------------------------
+ * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
+ * GOVMintHQNode - Advanced Transaction API
+ *
+ * Description:
+ * Facilitates transaction processing with integrated quantum-resistant cryptography,
+ * Proof-of-Access (PoA), and compliance with shard-level metadata validation.
+ *
+ * Features:
+ * - Kyber-based quantum-resistant encryption for payloads.
+ * - Dilithium-based digital signatures for transaction integrity.
+ * - Secure key management for cryptographic operations.
+ * - Shard metadata validation and Proof-of-Access enforcement.
+ *
+ * Author: GOVMintHQNode Integration Team
+ * -------------------------------------------------------------------------------
+ */
 
 const express = require("express");
 const bodyParser = require("body-parser");
 const { Transaction } = require("../../../../atomic-blockchain/core/transaction");
-const { enforceCompliance, logTransaction } = require("../utils/complianceValidator");
-const { decryptData, encryptData } = require("../utils/quantumCryptoUtils");
+const { enforceCompliance, logTransaction } = require("../../Utilities/complianceValidator");
+const {
+    kyberEncrypt,
+    kyberDecrypt,
+    dilithiumSign,
+    dilithiumVerify,
+} = require("../../../../atomic-blockchain/Utilities/quantumCryptoUtils");
+const { validateToken } = require("../../../../atomic-blockchain/core/tokenValidation");
+const { getEncryptionKey } = require("../../Utilities/keyManager");
 
-// Configuration
+// **Configuration**
 const app = express();
 app.use(bodyParser.json());
 const PORT = process.env.PORT || 8081;
-const ENCRYPTION_ALGORITHM = "aes-256-quintum"; // Custom ATOMIC encryption
-const ENCRYPTION_KEY = process.env.ENCRYPTION_KEY || "default_secure_key";
 
-// Middleware for transaction validation
+// **Middleware: Validate and Process Transactions**
 async function validateTransactionMiddleware(req, res, next) {
     const { payload, signature } = req.body;
 
     try {
-        // Decrypt payload
-        const decryptedPayload = decryptData(payload, ENCRYPTION_ALGORITHM, ENCRYPTION_KEY);
+        // Step 1: Decrypt the payload with Kyber
+        const encryptionKey = await getEncryptionKey();
+        const decryptedPayload = kyberDecrypt(payload, encryptionKey);
 
-        // Parse and validate transaction
+        // Step 2: Parse and construct the transaction
         const transaction = new Transaction(
             decryptedPayload.inputs,
             decryptedPayload.outputs,
@@ -55,12 +56,23 @@ async function validateTransactionMiddleware(req, res, next) {
             decryptedPayload.militaryClassification
         );
 
+        // Step 3: Validate the transaction
         const isValid = await transaction.validate();
         if (!isValid) {
             return res.status(400).json({ error: "Transaction validation failed." });
         }
 
-        req.transaction = transaction; // Pass validated transaction to handler
+        // Step 4: Verify the digital signature with Dilithium
+        const isSignatureValid = dilithiumVerify(
+            decryptedPayload,
+            signature,
+            decryptedPayload.tokenDetails.publicKey
+        );
+        if (!isSignatureValid) {
+            return res.status(400).json({ error: "Transaction signature verification failed." });
+        }
+
+        req.transaction = transaction; // Pass the validated transaction to the handler
         next();
     } catch (error) {
         console.error("Error during transaction validation:", error.message);
@@ -68,32 +80,33 @@ async function validateTransactionMiddleware(req, res, next) {
     }
 }
 
-// Transaction processing endpoint
+// **Transaction Processing Endpoint**
 app.post("/api/transaction/process", validateTransactionMiddleware, async (req, res) => {
     const transaction = req.transaction;
 
     try {
-        // Enforce compliance
+        // Step 1: Enforce compliance (e.g., AML/KYC)
         const complianceResult = enforceCompliance(transaction);
         if (!complianceResult.valid) {
             return res.status(400).json({ error: complianceResult.error });
         }
 
-        // Log transaction
-        logTransaction({
+        // Step 2: Log the transaction
+        await logTransaction({
             transactionId: transaction.id,
             inputs: transaction.inputs,
             outputs: transaction.outputs,
             metadata: transaction.shardMetadata,
         });
 
-        // Encrypt response
+        // Step 3: Prepare and encrypt the response
         const response = {
             status: "Success",
             transactionId: transaction.id,
             timestamp: new Date().toISOString(),
         };
-        const encryptedResponse = encryptData(response, ENCRYPTION_ALGORITHM, ENCRYPTION_KEY);
+        const encryptionKey = await getEncryptionKey();
+        const encryptedResponse = kyberEncrypt(response, encryptionKey);
 
         return res.status(200).json({ payload: encryptedResponse });
     } catch (error) {
@@ -102,13 +115,15 @@ app.post("/api/transaction/process", validateTransactionMiddleware, async (req, 
     }
 });
 
-// Error handling middleware
+// **Error Handling Middleware**
 app.use((err, req, res, next) => {
     console.error("Unhandled error:", err.message);
     res.status(500).json({ error: "An unexpected error occurred." });
 });
 
-// Start the server
+// **Start the Server**
 app.listen(PORT, () => {
-    console.log(`TransactionAPI running on port ${PORT}`);
+    console.log(`Advanced TransactionAPI running on port ${PORT}`);
 });
+
+module.exports = app;

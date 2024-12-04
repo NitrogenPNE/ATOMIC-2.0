@@ -20,8 +20,9 @@ const path = require("path");
 const winston = require("winston");
 
 // Configuration
-const CONFIG_FILE = path.join(__dirname, "../Config/CurrencyConfig.json");
+const CONFIG_FILE = path.join(__dirname, "../../Config/CurrencyConfig.json");
 const EXCHANGE_RATES_API = process.env.EXCHANGE_RATES_API || "https://api.exchangerate.atomic";
+const API_RETRY_COUNT = parseInt(process.env.API_RETRY_COUNT, 10) || 3;
 
 // Logger setup
 const logger = winston.createLogger({
@@ -43,6 +44,7 @@ const logger = winston.createLogger({
 function loadSupportedCurrencies() {
     try {
         const config = JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8"));
+        logger.info("Supported currencies loaded successfully.");
         return config.SupportedCurrencies || [];
     } catch (error) {
         logger.error("Error loading supported currencies:", error.message);
@@ -51,20 +53,27 @@ function loadSupportedCurrencies() {
 }
 
 /**
- * Fetch exchange rates for supported currencies.
+ * Fetch exchange rates for supported currencies with retries.
  * @returns {Promise<Object>} - Exchange rate data.
  */
 async function fetchExchangeRates() {
     const currencies = loadSupportedCurrencies().join(",");
+    let attempts = 0;
 
-    try {
-        logger.info("Fetching exchange rates...");
-        const response = await axios.get(`${EXCHANGE_RATES_API}?currencies=${currencies}`);
-        logger.info("Exchange rates fetched successfully.");
-        return response.data;
-    } catch (error) {
-        logger.error("Error fetching exchange rates:", error.message);
-        throw new Error("Failed to fetch exchange rates.");
+    while (attempts < API_RETRY_COUNT) {
+        try {
+            logger.info("Fetching exchange rates...");
+            const response = await axios.get(`${EXCHANGE_RATES_API}?currencies=${currencies}`);
+            logger.info("Exchange rates fetched successfully.");
+            return response.data;
+        } catch (error) {
+            attempts++;
+            logger.warn(`Attempt ${attempts} failed to fetch exchange rates: ${error.message}`);
+            if (attempts >= API_RETRY_COUNT) {
+                logger.error("Max retry attempts reached. Failed to fetch exchange rates.");
+                throw new Error("Failed to fetch exchange rates after multiple attempts.");
+            }
+        }
     }
 }
 
@@ -75,8 +84,14 @@ async function fetchExchangeRates() {
  */
 function updateSupportedCurrencies(newCurrencies) {
     try {
+        if (!Array.isArray(newCurrencies)) {
+            throw new Error("Invalid input: newCurrencies must be an array of currency codes.");
+        }
+
         const config = JSON.parse(fs.readFileSync(CONFIG_FILE, "utf8"));
-        const updatedCurrencies = Array.from(new Set([...config.SupportedCurrencies, ...newCurrencies]));
+        const updatedCurrencies = Array.from(
+            new Set([...config.SupportedCurrencies, ...newCurrencies.map((c) => c.toUpperCase())])
+        );
 
         config.SupportedCurrencies = updatedCurrencies;
 
@@ -94,6 +109,11 @@ function updateSupportedCurrencies(newCurrencies) {
  * @returns {boolean} - True if currency is supported, false otherwise.
  */
 function isCurrencySupported(currency) {
+    if (typeof currency !== "string" || currency.length !== 3) {
+        logger.warn(`Invalid currency code provided: ${currency}`);
+        return false;
+    }
+
     const supportedCurrencies = loadSupportedCurrencies();
     return supportedCurrencies.includes(currency.toUpperCase());
 }
