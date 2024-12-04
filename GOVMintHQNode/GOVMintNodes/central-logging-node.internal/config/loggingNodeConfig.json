@@ -1,0 +1,7 @@
+{
+    "nodeId": "central-logging-node",
+    "logRetentionDays": 30,
+    "maxLogFileSizeMB": 50,
+    "port": 9000,
+    "logFilePath": "../logs/central-logs.json"
+}
