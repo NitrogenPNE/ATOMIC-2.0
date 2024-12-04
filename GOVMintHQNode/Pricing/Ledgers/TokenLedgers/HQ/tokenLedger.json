@@ -1,0 +1,13 @@
+{
+  "tokens": [
+    {
+      "tokenId": "734a2547-f1f6-4b3b-af5a-080b23e53e54",
+      "nodeCount": 1,
+      "signature": "804ac6776eaa83f28c170485f671a1f870f69034f1ba1ea9697e30cabc7d4a6e",
+      "issuingNode": {
+        "nodeClass": "HQ",
+        "ipAddress": "192.168.0.49"
+      }
+    }
+  ]
+}

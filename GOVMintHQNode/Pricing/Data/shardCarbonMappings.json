@@ -1,0 +1,31 @@
+{
+    "defaultCarbonEmissionPerShard": {
+        "unit": "gCO2",
+        "value": 202.86,
+        "dataSizePerShard": "9.66 GB",
+        "notes": "Represents the average carbon emissions per shard of 9.66 GB."
+    },
+    "shardMappings": [
+        {
+            "shardId": "shard-001",
+            "carbonEmission": 200.50,
+            "dataSize": "9.50 GB"
+        },
+        {
+            "shardId": "shard-002",
+            "carbonEmission": 205.00,
+            "dataSize": "9.80 GB"
+        },
+        {
+            "shardId": "shard-003",
+            "carbonEmission": 202.86,
+            "dataSize": "9.66 GB"
+        }
+    ],
+    "calculationDetails": {
+        "formula": "Carbon Emission (gCO2) = DataSize (GB) × CarbonIntensity (gCO2/GB)",
+        "defaultCarbonIntensity": "21.01 gCO2/GB",
+        "notes": "Adjust carbon intensity for accurate shard-specific metrics based on actual system performance."
+    },
+    "lastUpdated": "2024-11-29T00:00:00Z"
+}

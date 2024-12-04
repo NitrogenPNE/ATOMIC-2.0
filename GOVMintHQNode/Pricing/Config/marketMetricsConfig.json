@@ -1,0 +1,66 @@
+{
+    "carbonMetrics": {
+        "currentCarbonPricePerKg": 65.00,
+        "currency": "CAD",
+        "source": "Canadian Government Carbon Pricing",
+        "lastUpdated": "2024-11-29T00:00:00Z",
+        "emissionsPerNode": 150.00,
+        "emissionsUnit": "grams",
+        "description": "Carbon emissions associated with a single node operation per bounce."
+    },
+    "energyMetrics": {
+        "averageEnergyConsumptionPerNode": 0.15,
+        "unit": "kWh",
+        "carbonIntensity": 500,
+        "intensityUnit": "gCO2/kWh",
+        "source": "Canadian National Energy Board",
+        "description": "Energy consumption and carbon intensity for operating a node in the network."
+    },
+    "tokenMetrics": {
+        "demandGrowthRate": 3.2,
+        "growthUnit": "percentage",
+        "lastQuarterAverageDemand": 500000,
+        "projectedQuarterlyDemand": 515000,
+        "description": "Metrics related to token demand and growth projections."
+    },
+    "rebateMechanism": {
+        "standardRebatePerNode": 0.25,
+        "rebateUnit": "CAD",
+        "description": "Standard rebate calculated based on carbon savings using ATOMIC nodes compared to traditional systems."
+    },
+    "pricingThresholds": {
+        "priceAlertHigh": 100.00,
+        "priceAlertLow": 30.00,
+        "demandSurgeThreshold": 20.00,
+        "demandSurgeUnit": "percentage",
+        "description": "Thresholds for price alerts and demand surges for token pricing."
+    },
+    "updateFrequency": {
+        "carbonPricing": {
+            "value": 24,
+            "unit": "hours",
+            "description": "Frequency of carbon pricing updates."
+        },
+        "energyMetrics": {
+            "value": 7,
+            "unit": "days",
+            "description": "Frequency of energy metrics updates."
+        },
+        "tokenMetrics": {
+            "value": 1,
+            "unit": "week",
+            "description": "Frequency of token demand updates."
+        }
+    },
+    "regionalSettings": {
+        "primaryRegion": "Canada",
+        "allowedRegions": [ "Canada", "USA", "EU" ],
+        "regionalDemandFactors": {
+            "Canada": 1.0,
+            "USA": 0.95,
+            "EU": 1.1
+        },
+        "description": "Settings to handle region-specific metrics and multipliers for pricing."
+    },
+    "notes": "This configuration contains settings for monitoring and updating market metrics related to carbon, energy, and token demand. Updated for node-based calculations."
+}

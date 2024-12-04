@@ -1,0 +1,128 @@
+{
+    "shardTypes": [
+        {
+            "type": "proton",
+            "description": "High-charge particles used for priority data storage",
+            "maxFrequency": 1000,
+            "allocationStrategy": "priority",
+            "redundancyLevel": 3,
+            "dynamicScaling": {
+                "enabled": true,
+                "scalingFactor": 1.2,
+                "monitoringInterval": "5m"
+            },
+            "encryption": {
+                "enabled": true,
+                "algorithm": "quantum-resistant",
+                "keyLength": 4096
+            }
+        },
+        {
+            "type": "neutron",
+            "description": "Neutral particles for balanced storage",
+            "maxFrequency": 750,
+            "allocationStrategy": "balanced",
+            "redundancyLevel": 2,
+            "dynamicScaling": {
+                "enabled": true,
+                "scalingFactor": 1.1,
+                "monitoringInterval": "10m"
+            },
+            "encryption": {
+                "enabled": true,
+                "algorithm": "quantum-resistant",
+                "keyLength": 4096
+            }
+        },
+        {
+            "type": "electron",
+            "description": "Low-charge particles for auxiliary data",
+            "maxFrequency": 500,
+            "allocationStrategy": "auxiliary",
+            "redundancyLevel": 1,
+            "dynamicScaling": {
+                "enabled": false
+            },
+            "encryption": {
+                "enabled": true,
+                "algorithm": "quantum-resistant",
+                "keyLength": 2048
+            }
+        }
+    ],
+    "allocationRules": {
+        "maxShardsPerNode": 10000,
+        "maxShardsPerToken": 500,
+        "minTokenValidationScore": 80,
+        "quantumValidation": {
+            "required": true,
+            "frequencyThreshold": {
+                "default": 99.9,
+                "dynamicAdjustment": {
+                    "enabled": true,
+                    "minThreshold": 95.0,
+                    "maxThreshold": 99.99
+                }
+            }
+        },
+        "fallbackAllocation": {
+            "enabled": true,
+            "retryInterval": "30s",
+            "maxRetries": 3
+        }
+    },
+    "metadata": {
+        "lastUpdated": "2024-11-30T12:00:00Z",
+        "adminContact": "admin@atomic-secure.com",
+        "updateHistory": [
+            {
+                "updatedBy": "system",
+                "timestamp": "2024-11-30T11:55:00Z",
+                "changes": "Initial configuration."
+            }
+        ],
+        "quantumEncryptionProvider": {
+            "name": "QuantumShield",
+            "version": "2.0.1",
+            "description": "Handles quantum-resistant encryption for all shard data."
+        }
+    },
+    "shardLedger": {
+        "availableShards": [
+            {
+                "shardId": "proton-001",
+                "type": "proton",
+                "currentFrequency": 800,
+                "status": "available",
+                "bounceRate": 1.25,
+                "encryptionMetadata": {
+                    "publicKey": "[DYNAMICALLY_GENERATED]",
+                    "encryptionTimestamp": "2024-11-30T11:55:00Z"
+                }
+            },
+            {
+                "shardId": "neutron-002",
+                "type": "neutron",
+                "currentFrequency": 600,
+                "status": "available",
+                "bounceRate": 1.67,
+                "encryptionMetadata": {
+                    "publicKey": "[DYNAMICALLY_GENERATED]",
+                    "encryptionTimestamp": "2024-11-30T11:50:00Z"
+                }
+            },
+            {
+                "shardId": "electron-003",
+                "type": "electron",
+                "currentFrequency": 300,
+                "status": "available",
+                "bounceRate": 3.33,
+                "encryptionMetadata": {
+                    "publicKey": "[DYNAMICALLY_GENERATED]",
+                    "encryptionTimestamp": "2024-11-30T11:45:00Z"
+                }
+            }
+        ],
+        "allocatedShards": []
+    }
+}

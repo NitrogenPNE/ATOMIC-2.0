@@ -1,0 +1,25 @@
+{
+    "tokenMarketData": {
+        "currentCarbonPricePerKg": 65.00,
+        "shardsPerKgCarbon": 10000,
+        "effectiveShardPrice": 8.06,
+        "currentTokenPrice": 0.000806,
+        "totalShardsAllocated": 500000,
+        "totalTokensMinted": 5000000000,
+        "totalTokensRedeemed": 2500000000,
+        "totalTokensInCirculation": 2500000000,
+        "marketDemand": 1000000,
+        "lastUpdated": "2024-11-29T00:00:00Z"
+    },
+    "pricingDetails": {
+        "baseCarbonPrice": "Carbon pricing set by Canadian regulations in CAD per kg of CO2.",
+        "shardToCarbonMapping": "1 shard is equivalent to 202.86 g of CO2.",
+        "rebateDetails": {
+            "averageSavingsPerGB": 78.99,
+            "rebatePerShard": 5.13
+        },
+        "tokenPricingFormula": "Token Price = Effective Shard Price / Tokens Per Shard",
+        "calculationDescription": "Prices are dynamically calculated based on carbon costs and demand."
+    },
+    "notes": "This configuration tracks live token market data, providing insights into pricing, carbon metrics, and token demand."
+}

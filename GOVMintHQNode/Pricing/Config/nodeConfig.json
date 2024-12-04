@@ -1,0 +1,173 @@
+{
+    {
+        "nodes": {
+            "CorporateHQNodes": [
+                {
+                    "nodeId": "CORP-HQ-1",
+                    "role": "Corporate HQ",
+                    "region": "NA-Central",
+                    "allocatedShards": 10000,
+                    "maxTokens": 20000,
+                    "cpuAllocation": 32,
+                    "memoryAllocation": "64GB",
+                    "storageAllocation": "5TB",
+                    "status": "active",
+                    "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes",
+                    "lastHeartbeat": "2024-11-30T12:15:00Z"
+                },
+                {
+                    "nodeId": "CORP-HQ-2",
+                    "role": "Corporate HQ",
+                    "region": "EU-West",
+                    "allocatedShards": 15000,
+                    "maxTokens": 30000,
+                    "cpuAllocation": 32,
+                    "memoryAllocation": "64GB",
+                    "storageAllocation": "6TB",
+                    "status": "active",
+                    "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes",
+                    "lastHeartbeat": "2024-11-30T12:20:00Z"
+                }
+            ],
+                "NationalDefenceHQNodes": [
+                    {
+                        "nodeId": "NAT-DEF-HQ-1",
+                        "role": "National Defence HQ",
+                        "region": "NA-East",
+                        "allocatedShards": 20000,
+                        "maxTokens": 40000,
+                        "cpuAllocation": 64,
+                        "memoryAllocation": "128GB",
+                        "storageAllocation": "10TB",
+                        "status": "active",
+                        "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\NationalDefenseNodes\\Node1",
+                        "lastHeartbeat": "2024-11-30T12:25:00Z"
+                    },
+                    {
+                        "nodeId": "NAT-DEF-HQ-2",
+                        "role": "National Defence HQ",
+                        "region": "EU-Central",
+                        "allocatedShards": 25000,
+                        "maxTokens": 50000,
+                        "cpuAllocation": 64,
+                        "memoryAllocation": "128GB",
+                        "storageAllocation": "12TB",
+                        "status": "active",
+                        "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\NationalDefenseNodes\\Node2",
+                        "lastHeartbeat": "2024-11-30T12:30:00Z"
+                    }
+                ],
+                    "SuperNodes": [
+                        {
+                            "nodeId": "ATOMIC-HQ",
+                            "role": "ATOMIC HQ SuperNode",
+                            "region": "Global",
+                            "allocatedShards": 50000,
+                            "maxTokens": 100000,
+                            "cpuAllocation": 128,
+                            "memoryAllocation": "256GB",
+                            "storageAllocation": "20TB",
+                            "status": "active",
+                            "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\HQNode",
+                            "lastHeartbeat": "2024-11-30T12:35:00Z"
+                        },
+                        {
+                            "nodeId": "SUPERNODE-2",
+                            "role": "Global SuperNode",
+                            "region": "EU-Central",
+                            "allocatedShards": 60000,
+                            "maxTokens": 120000,
+                            "cpuAllocation": 128,
+                            "memoryAllocation": "256GB",
+                            "storageAllocation": "25TB",
+                            "status": "active",
+                            "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\SuperNodes\\SuperNode2",
+                            "lastHeartbeat": "2024-11-30T12:40:00Z"
+                        }
+                    ]
+        },
+        "workerNodes": [
+            {
+                "nodeId": "DEPARTMENT-NODE-1",
+                "role": "Corporate Worker Node",
+                "region": "NA-East",
+                "allocatedShards": 500,
+                "maxTokens": 1000,
+                "cpuAllocation": 4,
+                "memoryAllocation": "8GB",
+                "storageAllocation": "500GB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes\\DepartmentNode1",
+                "parentNodeId": "CORP-HQ-1",
+                "lastHeartbeat": "2024-11-30T12:50:00Z"
+            },
+            {
+                "nodeId": "DEPARTMENT-NODE-2",
+                "role": "Corporate Worker Node",
+                "region": "NA-West",
+                "allocatedShards": 600,
+                "maxTokens": 1200,
+                "cpuAllocation": 4,
+                "memoryAllocation": "8GB",
+                "storageAllocation": "600GB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes\\DepartmentNode2",
+                "parentNodeId": "CORP-HQ-1",
+                "lastHeartbeat": "2024-11-30T12:55:00Z"
+            },
+            {
+                "nodeId": "BRANCH-NODE-1",
+                "role": "Corporate Worker Node",
+                "region": "EU-North",
+                "allocatedShards": 800,
+                "maxTokens": 1600,
+                "cpuAllocation": 8,
+                "memoryAllocation": "16GB",
+                "storageAllocation": "1TB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes\\BranchNode1",
+                "parentNodeId": "CORP-HQ-2",
+                "lastHeartbeat": "2024-11-30T13:00:00Z"
+            },
+            {
+                "nodeId": "BRANCH-NODE-2",
+                "role": "Corporate Worker Node",
+                "region": "EU-South",
+                "allocatedShards": 900,
+                "maxTokens": 1800,
+                "cpuAllocation": 8,
+                "memoryAllocation": "16GB",
+                "storageAllocation": "1.5TB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\CorporateNodes\\BranchNode2",
+                "parentNodeId": "CORP-HQ-2",
+                "lastHeartbeat": "2024-11-30T13:05:00Z"
+            },
+            {
+                "nodeId": "WORKER-1",
+                "role": "Worker Node",
+                "region": "NA-West",
+                "allocatedShards": 2000,
+                "maxTokens": 4000,
+                "cpuAllocation": 8,
+                "memoryAllocation": "16GB",
+                "storageAllocation": "1TB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\WorkerNodes\\Node1",
+                "lastHeartbeat": "2024-11-30T12:40:00Z"
+            },
+            {
+                "nodeId": "WORKER-2",
+                "role": "Worker Node",
+                "region": "EU-East",
+                "allocatedShards": 3000,
+                "maxTokens": 6000,
+                "cpuAllocation": 16,
+                "memoryAllocation": "32GB",
+                "storageAllocation": "2TB",
+                "status": "active",
+                "directory": "C:\\ATOMIC-SecureStorage\\ATOMIC 2.0\\WorkerNodes\\Node2",
+                "lastHeartbeat": "2024-11-30T12:45:00Z"
+            }
+        ]
+    }

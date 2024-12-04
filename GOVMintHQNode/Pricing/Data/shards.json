@@ -1,0 +1,48 @@
+{
+    "defaultShardMetadata": {
+        "dataSize": "9.66 GB",
+        "carbonEmission": "202.86 gCO2",
+        "description": "Default shard size and associated carbon emissions based on average system performance."
+    },
+    "shards": [
+        {
+            "shardId": "shard-001",
+            "status": "allocated",
+            "ownerId": "user-12345",
+            "dataSize": "9.50 GB",
+            "carbonEmission": "200.50 gCO2",
+            "createdAt": "2024-11-28T15:00:00Z",
+            "pricePerToken": 0.0008,
+            "totalTokensAllocated": 9500,
+            "notes": "Allocated shard with adjusted emissions and pricing."
+        },
+        {
+            "shardId": "shard-002",
+            "status": "available",
+            "ownerId": null,
+            "dataSize": "9.80 GB",
+            "carbonEmission": "205.00 gCO2",
+            "createdAt": "2024-11-28T15:30:00Z",
+            "pricePerToken": 0.00081,
+            "totalTokensAllocated": 9800,
+            "notes": "Shard available for allocation."
+        },
+        {
+            "shardId": "shard-003",
+            "status": "reserved",
+            "ownerId": "user-67890",
+            "dataSize": "9.66 GB",
+            "carbonEmission": "202.86 gCO2",
+            "createdAt": "2024-11-28T16:00:00Z",
+            "pricePerToken": 0.000806,
+            "totalTokensAllocated": 9660,
+            "notes": "Reserved shard with default emissions and pricing."
+        }
+    ],
+    "pricingDetails": {
+        "baseCarbonPrice": "65.00 CAD/kg",
+        "shardToTokenRatio": 10000,
+        "notes": "Pricing linked to carbon emissions and system metrics."
+    },
+    "lastUpdated": "2024-11-29T00:00:00Z"
+}

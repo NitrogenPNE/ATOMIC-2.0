@@ -1,0 +1,228 @@
+{
+  "metadata": {
+    "description": "Historical data on token usage, including minting, redemption, and allocation.",
+    "totalTokensMinted": 4,
+    "totalTokensInCirculation": 10,
+    "lastUpdated": "2024-12-01T16:07:25.125Z"
+  },
+  "usageHistory": [
+    {
+      "transactionId": "txn-0001",
+      "timestamp": "2024-11-28T10:30:00Z",
+      "userId": "user-12345",
+      "action": "mint",
+      "tokens": 10000,
+      "notes": "Initial minting for user subscription."
+    },
+    {
+      "transactionId": "txn-0002",
+      "timestamp": "2024-11-28T11:00:00Z",
+      "userId": "user-67890",
+      "action": "redeem",
+      "tokens": 5000,
+      "notes": "Tokens redeemed for shard allocation."
+    },
+    {
+      "transactionId": "txn-0003",
+      "timestamp": "2024-11-28T12:15:00Z",
+      "userId": "user-12345",
+      "action": "allocate",
+      "tokens": 8000,
+      "shardId": "shard-001",
+      "notes": "Tokens allocated for shard storage."
+    },
+    {
+      "transactionId": "txn-0004",
+      "timestamp": "2024-11-28T13:45:00Z",
+      "userId": "user-23456",
+      "action": "mint",
+      "tokens": 20000,
+      "notes": "Minted for corporate storage needs."
+    },
+    {
+      "transactionId": "txn-0005",
+      "timestamp": "2024-11-28T15:20:00Z",
+      "userId": "user-67890",
+      "action": "redeem",
+      "tokens": 10000,
+      "notes": "Redemption for shard renewal."
+    },
+    {
+      "transactionId": "txn-0006",
+      "timestamp": "2024-11-30T10:15:00Z",
+      "userId": "user-34567",
+      "action": "mint",
+      "tokens": 5000,
+      "notes": "Minting for additional node allocation."
+    },
+    {
+      "tokens": [
+        {
+          "tokenId": "1aac4a70-d276-4dd1-bb66-4155909bd92d",
+          "nodeCount": 1,
+          "signature": "babc1b4708b86e896a31dbddefeac2d7bcbd276c204b650b754b23a9a39a5c84"
+        }
+      ],
+      "tokenPrice": null,
+      "totalCost": "NaN",
+      "timestamp": "2024-12-01T04:00:18.628Z"
+    },
+    {
+      "tokens": [
+        {
+          "tokenId": "d70c561a-052c-424d-97dd-33f9a4a65847",
+          "nodeCount": 1,
+          "signature": "2084e954df3f8499cb9327227c11d7a2492188b12513b666a2a6cc07ecc0146f"
+        }
+      ],
+      "tokenPrice": 10.725,
+      "totalCost": "10.72",
+      "timestamp": "2024-12-01T04:03:54.372Z"
+    },
+    {
+      "tokens": [
+        {
+          "tokenId": "91edb17f-9082-4aef-8ea8-5e98a74fca45",
+          "nodeCount": 1,
+          "signature": "f7fa906cb57e532742012a86eae80612a2dc2b62bb77ee94237059e3f7fadea3"
+        }
+      ],
+      "tokenPrice": 10.725,
+      "totalCost": "10.72",
+      "timestamp": "2024-12-01T04:06:35.720Z"
+    },
+    {
+      "tokens": [
+        {
+          "tokenId": "2df4c26c-bbec-4428-8ceb-8e1a894cc95e",
+          "nodeCount": 1,
+          "signature": "cbfab90d158c98bcced1b2ead3aec8a342f8e93f310e4948ea9b6f1af5e51d76"
+        }
+      ],
+      "tokenPrice": 10.725,
+      "totalCost": "10.72",
+      "timestamp": "2024-12-01T04:07:10.441Z"
+    },
+    {
+      "transactionId": "txn-7b3a974e-f5ad-4aa3-a5bb-938e686b2525",
+      "timestamp": "2024-12-01T04:09:07.454Z",
+      "action": "mint",
+      "tokens": 1,
+      "details": {
+        "tokens": [
+          {
+            "tokenId": "da2a0c7a-81e5-45e4-866b-a62b3807c44b",
+            "nodeCount": 1,
+            "signature": "d92effbaa8d481de14a3971166de4454e376affd4475a8856a6bd7ecbb06fb90"
+          }
+        ],
+        "tokenPrice": 10.725,
+        "totalCost": "10.72",
+        "timestamp": "2024-12-01T04:09:07.454Z"
+      }
+    },
+    {
+      "transactionId": "txn-edc8133a-2f5f-489c-b667-102a120091d2",
+      "timestamp": "2024-12-01T15:44:27.350Z",
+      "action": "mint",
+      "tokens": 1,
+      "tokenClass": "HQ",
+      "details": {
+        "tokens": [
+          {
+            "tokenId": "c108e2cc-6b37-4779-be55-686d069085df",
+            "nodeCount": 1,
+            "tokenClass": "HQ",
+            "timestamp": "2024-12-01T15:44:27.350Z",
+            "signature": "164a4defb3483d86c60f9b39c72c7de327e01badcc911fdc3510ca6805d38b54"
+          }
+        ],
+        "tokenPrice": 10.725,
+        "totalCost": "10.72",
+        "timestamp": "2024-12-01T15:44:27.350Z"
+      }
+    },
+    {
+      "transactionId": "txn-4cb5c819-5bf2-4a54-98b7-7ee0f325b829",
+      "timestamp": "2024-12-01T15:48:02.082Z",
+      "action": "mint",
+      "tokens": 1,
+      "details": {
+        "tokens": [
+          {
+            "tokenId": "734a2547-f1f6-4b3b-af5a-080b23e53e54",
+            "nodeCount": 1,
+            "signature": "804ac6776eaa83f28c170485f671a1f870f69034f1ba1ea9697e30cabc7d4a6e",
+            "issuingNode": {
+              "nodeClass": "HQ",
+              "ipAddress": "192.168.0.49"
+            }
+          }
+        ],
+        "tokenPrice": 10.725,
+        "totalCost": "10.72",
+        "timestamp": "2024-12-01T15:48:02.082Z",
+        "issuingNode": {
+          "nodeClass": "HQ",
+          "ipAddress": "192.168.0.49"
+        }
+      }
+    },
+    {
+      "transactionId": "txn-34abd9c7-e0e9-4811-9c2f-9800408acf41",
+      "timestamp": "2024-12-01T15:55:06.490Z",
+      "action": "mint",
+      "tokens": 1,
+      "details": {
+        "tokens": [
+          {
+            "tokenId": "5ec7ff5f-a8d6-47bb-9998-63d7262250ff",
+            "nodeCount": 1,
+            "tokenClass": "HQ",
+            "timestamp": "2024-12-01T15:55:06.490Z",
+            "signature": "9502510cf3cfab0093127203a0008f408a5fd45ffab236bbc4393adf7d0159b3",
+            "issuingNode": {
+              "nodeClass": "HQ",
+              "ipAddress": "192.168.0.49"
+            }
+          }
+        ],
+        "tokenPrice": 10.725,
+        "totalCost": "10.72",
+        "timestamp": "2024-12-01T15:55:06.490Z",
+        "issuingNode": {
+          "nodeClass": "HQ",
+          "ipAddress": "192.168.0.49"
+        }
+      }
+    },
+    {
+      "transactionId": "txn-fa101681-cf21-4d86-94e5-95b4c3fefd64",
+      "timestamp": "2024-12-01T16:07:24.917Z",
+      "action": "mint",
+      "tokens": 1,
+      "details": {
+        "tokens": [
+          {
+            "tokenId": "43c6f029-1eeb-40ce-8bb6-77d57cb861a3",
+            "nodeCount": 1,
+            "tokenClass": "HQ",
+            "timestamp": "2024-12-01T16:07:24.917Z",
+            "signature": "33164c93652398024d3fd67ded39ce3b81ab87e0bf9c0e3a99c276a4dd90a0fa",
+            "issuingNode": {
+              "nodeClass": "HQ",
+              "serialNumber": "PLNGP00WBGQ0R2"
+            }
+          }
+        ],
+        "tokenPrice": 10.725,
+        "totalCost": "10.72",
+        "timestamp": "2024-12-01T16:07:24.917Z",
+        "issuingNode": {
+          "nodeClass": "HQ",
+          "serialNumber": "PLNGP00WBGQ0R2"
+        }
+      }
+    }
+  ]
+}
