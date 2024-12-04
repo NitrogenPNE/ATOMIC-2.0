@@ -1,0 +1,63 @@
+{
+    "roles": {
+        "admin": {
+            "permissions": [
+                "manage_nodes",
+                "view_logs",
+                "query_blocks",
+                "submit_transactions",
+                "audit_shards",
+                "modify_acl"
+            ],
+            "inherits": [ "operator" ]
+        },
+        "operator": {
+            "permissions": [
+                "query_blocks",
+                "submit_transactions",
+                "audit_shards"
+            ],
+            "inherits": [ "read-only" ]
+        },
+        "read-only": {
+            "permissions": [
+                "query_blocks",
+                "query_transactions",
+                "view_health"
+            ]
+        }
+    },
+    "users": [
+        {
+            "id": "user1",
+            "apiKey": "abc123-def456-ghi789",
+            "role": "admin",
+            "ipWhitelist": [ "192.168.1.100" ],
+            "expiryDate": "2025-01-01T00:00:00Z"
+        },
+        {
+            "id": "user2",
+            "apiKey": "xyz987-uvw654-rst321",
+            "role": "operator",
+            "ipWhitelist": [ "192.168.1.101", "10.0.0.50" ],
+            "expiryDate": "2024-12-31T23:59:59Z"
+        },
+        {
+            "id": "user3",
+            "apiKey": "mnop123-qrst456-uvwx789",
+            "role": "read-only",
+            "ipWhitelist": [],
+            "expiryDate": null
+        }
+    ],
+    "defaultRole": "read-only",
+    "aclPolicy": {
+        "emptyIpWhitelistBehavior": "deny",
+        "unknownUserBehavior": "deny",
+        "logging": {
+            "enabled": true,
+            "logFilePath": "/var/log/atomic-acl.log",
+            "failedAttemptsTracking": true
+        }
+    }
+}

@@ -1,0 +1,156 @@
+{
+    "blockchain": {
+        "network": "internalnet",
+        "genesisBlockHash": "0000000000000000000000000000000000000000000000000000000000000000",
+        "nodeId": "CORP-NODE-001",
+        "maxPeers": 50,
+        "consensusAlgorithm": "Proof-of-Access",
+        "blockTimeSeconds": 10,
+        "transactionPoolLimit": 5000,
+        "dynamicBlockTime": {
+            "enabled": true,
+            "minBlockTimeSeconds": 5,
+            "maxBlockTimeSeconds": 20
+        },
+        "atomicUnits": {
+            "neutrons": {
+                "path": "./data/atomic/neutrons",
+                "validationFrequencyMs": 30000
+            },
+            "protons": {
+                "path": "./data/atomic/protons",
+                "validationFrequencyMs": 30000
+            },
+            "electrons": {
+                "path": "./data/atomic/electrons",
+                "validationFrequencyMs": 30000
+            }
+        },
+        "sharding": {
+            "enabled": true,
+            "bitShardsPath": "./data/shards/bitShards",
+            "byteShardsPath": "./data/shards/byteShards",
+            "kbShardsPath": "./data/shards/kbShards",
+            "mbShardsPath": "./data/shards/mbShards",
+            "gbShardsPath": "./data/shards/gbShards",
+            "tbAtomsPath": "./data/shards/tbAtoms",
+            "auditPath": "./data/audit",
+            "shardAuditIntervalMs": 300000
+        }
+    },
+    "api": {
+        "port": 9090,
+        "host": "127.0.0.1",
+        "rateLimiting": {
+            "enabled": true,
+            "windowMs": 60000,
+            "maxRequestsPerWindow": {
+                "default": 100,
+                "admin": 500,
+                "operator": 200
+            }
+        },
+        "endpoints": {
+            "shardRetrieval": "/api/shards/retrieve",
+            "atomicUnitManagement": "/api/atoms",
+            "nodeCommunication": "/api/nodes"
+        },
+        "cors": {
+            "enabled": true,
+            "allowedOrigins": [
+                "http://corp-app.internal",
+                "http://trusted-service.internal"
+            ]
+        }
+    },
+    "hqSupernode": {
+        "address": "ws://hq.supernode.internal:7000",
+        "syncIntervalMs": 30000
+    },
+    "storage": {
+        "dataDir": "./data",
+        "maxStorageBytes": 1000000000000,
+        "autoCleanup": {
+            "enabled": true,
+            "triggerThreshold": 0.8,
+            "priorityOrder": [ "neutrons", "protons", "electrons", "bitShards", "byteShards", "logs" ]
+        }
+    },
+    "logging": {
+        "level": "info",
+        "file": "./logs/atomic-internal.log",
+        "rotate": {
+            "enabled": true,
+            "frequency": "daily",
+            "maxSizeMb": 100,
+            "retainDays": 30
+        },
+        "aggregation": {
+            "enabled": true,
+            "service": "ELK",
+            "url": "https://elk.internal/logs"
+        },
+        "cliOutput": {
+            "enabled": true,
+            "format": "colorized"
+        },
+        "atomicLogs": {
+            "neutronLog": "./logs/neutrons.log",
+            "protonLog": "./logs/protons.log",
+            "electronLog": "./logs/electrons.log"
+        }
+    },
+    "security": {
+        "encryption": {
+            "type": "quantum-resistant",
+            "algorithms": [ "lattice-based", "hybrid-RSA" ],
+            "keyManagement": {
+                "publicKeyPath": "./keys/publicKey.pem",
+                "privateKeyPath": "./keys/privateKey.pem",
+                "rotationIntervalDays": 180
+            }
+        },
+        "apiKeys": {
+            "enabled": true,
+            "keys": [ "corporate-key-1", "corporate-key-2" ],
+            "keyExpiryDays": 30
+        },
+        "authentication": {
+            "enabled": true,
+            "aclPath": "./config/acl.json",
+            "twoFactor": true,
+            "auditLogPath": "./logs/authentication-audit.log"
+        },
+        "atomicValidation": {
+            "neutronValidation": {
+                "enabled": true,
+                "threshold": 50
+            },
+            "protonValidation": {
+                "enabled": true,
+                "threshold": 100
+            },
+            "electronValidation": {
+                "enabled": true,
+                "threshold": 150
+            }
+        }
+    },
+    "network": {
+        "peerDiscovery": {
+            "enabled": false,
+            "fallbackEnabled": true,
+            "bootstrapNodes": [
+                "ws://node1.corp.internal:6001",
+                "ws://node2.corp.internal:6002",
+                "ws://node3.corp.internal:6003"
+            ]
+        },
+        "maxConnections": 500,
+        "heartbeatIntervalMs": 15000
+    },
+    "environment": {
+        "mode": "internal",
+        "region": "Global"
+    }
+}
