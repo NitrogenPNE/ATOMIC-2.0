@@ -1,0 +1,46 @@
+{
+    "name": "atomic-byte-kb-node",
+    "version": "1.0.0",
+    "description": "A Byte-to-KB Bonding Node for the Atomic Fission system, designed to facilitate efficient data management within a decentralized storage architecture. This module supports the transformation and management of byte-level data into kilobytes.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node index.js",
+        "test": "jest",
+        "lint": "eslint ."
+    },
+    "keywords": [
+        "atomic",
+        "byte-bonding",
+        "kb-bonding",
+        "ledger-management",
+        "decentralized-storage",
+        "blockchain",
+        "data-fission",
+        "javascript"
+    ],
+    "dependencies": {
+        "fs-extra": "^11.1.1",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "eslint": "^8.0.0"
+    },
+    "author": "Shawn Blackmore",
+    "license": "ATOMIC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atomic-ledger/atomic-byte-kb-node.git"
+    },
+    "homepage": "https://github.com/atomic-ledger/atomic-byte-kb-node#readme",
+    "bugs": {
+        "url": "https://github.com/atomic-ledger/atomic-byte-kb-node/issues"
+    },
+    "engines": {
+        "node": ">=12.x"
+    },
+    "files": [
+        "index.js"
+    ],
+    "private": false
+}

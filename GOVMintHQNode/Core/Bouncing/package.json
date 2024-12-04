@@ -1,0 +1,48 @@
+{
+    "name": "atomic-bounce-rate-node",
+    "version": "1.0.0",
+    "description": "Bounce Rate Node for the ATOMIC Fission system, managing mining ledger updates and real-time file monitoring.",
+    "main": "server.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "test": "jest",
+        "monitor": "node utils/fileMonitor.js",
+        "lint": "eslint ."
+    },
+    "dependencies": {
+        "express": "^4.18.2",
+        "fs-extra": "^11.1.1",
+        "chokidar": "^3.5.3",
+        "path": "^0.12.7"
+    },
+    "devDependencies": {
+        "jest": "^29.0.0",
+        "eslint": "^8.0.0"
+    },
+    "author": "Shawn Blackmore",
+    "license": "ATOMIC-Limited-1.0",
+    "keywords": [
+        "ATOMIC",
+        "Bounce Rate",
+        "Mining Ledger",
+        "File Monitoring",
+        "Fission Storage",
+        "Real-Time Sync"
+    ],
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atomic-ltd/bounce-rate-node.git"
+    },
+    "bugs": {
+        "url": "https://github.com/atomic-ltd/bounce-rate-node/issues"
+    },
+    "homepage": "https://www.atomic.ca/bounce-rate-node",
+    "engines": {
+        "node": ">=12.x"
+    },
+    "files": [
+        "server/",
+        "utils/"
+    ],
+    "private": false
+}

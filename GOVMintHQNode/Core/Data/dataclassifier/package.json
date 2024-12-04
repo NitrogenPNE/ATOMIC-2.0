@@ -1,0 +1,48 @@
+{
+    "name": "data-classifier",
+    "version": "1.0.0",
+    "description": "Node-based data classification logic for AtomFission.",
+    "main": "index.js",
+    "scripts": {
+        "start": "node server/server.js",
+        "test": "jest --coverage",
+        "test:watch": "jest --watch",
+        "lint": "eslint .",
+        "dev": "nodemon server/server.js"
+    },
+    "dependencies": {
+        "express": "^4.18.2"
+    },
+    "devDependencies": {
+        "jest": "^29.7.0",
+        "eslint": "^8.0.0",
+        "nodemon": "^2.0.20"
+    },
+    "jest": {
+        "testEnvironment": "node",
+        "verbose": true
+    },
+    "author": "Shawn Blackmore",
+    "license": "ATOMIC",
+    "repository": {
+        "type": "git",
+        "url": "https://github.com/atomic-ltd/data-classifier.git"
+    },
+    "bugs": {
+        "url": "https://github.com/atomic-ltd/data-classifier/issues"
+    },
+    "homepage": "https://atomic.ca/projects/data-classifier",
+    "engines": {
+        "node": ">=14.0.0"
+    },
+    "keywords": [
+        "data",
+        "classification",
+        "node",
+        "atomfission"
+    ],
+    "files": [
+        "index.js",
+        "server/"
+    ]
+}
