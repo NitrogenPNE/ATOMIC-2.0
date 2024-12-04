@@ -8,13 +8,18 @@
             "DiskUsageThreshold": 85,
             "ShardValidationRateThreshold": 95,
             "TransactionValidationRateThreshold": 98,
-            "LatencyThresholdMs": 200
+            "NetworkBandwidthUsageThresholdMbps": 1000,
+            "LatencyThresholdMs": 200,
+            "NodeResponseTimeThresholdMs": 100
         },
         "NodeHealth": {
-            "StatusChecks": ["Active", "Healthy", "Connected"],
+            "StatusChecks": [ "Active", "Healthy", "Connected", "Responsive" ],
             "HeartbeatInterval": "30s",
             "MaxMissedHeartbeats": 3,
-            "RecoveryAction": "Notify and Attempt Automatic Restart"
+            "RecoveryAction": {
+                "Primary": "Notify and Attempt Automatic Restart",
+                "Secondary": "Escalate to Admin Node After 3 Failures"
+            }
         },
         "ShardMonitoring": {
             "EnableShardMonitoring": true,
@@ -23,7 +28,12 @@
             "FaultTolerancePolicy": {
                 "MaxNodeFailures": 2,
                 "RetryInterval": "15s",
-                "FailureAction": "Escalate to Internal Admin Node and Trigger Failover"
+                "FailureAction": "Escalate to Internal Admin Node and Trigger Failover",
+                "RedundancyRecoveryAction": "Replicate Affected Shards to Backup Nodes"
+            },
+            "ValidationLogging": {
+                "EnableDetailedShardLogs": true,
+                "LogPath": "./shard-monitoring.log"
             }
         },
         "TransactionMonitoring": {
@@ -34,7 +44,11 @@
                 "LargeTransactionValue": 1000000,
                 "UnusualCurrency": true
             },
-            "ActionOnViolation": "Log and Notify Compliance Node"
+            "ActionOnViolation": "Log, Notify Compliance Node, and Trigger Investigative Review",
+            "RealTimeMonitoring": {
+                "EnableRealTimeTransactionAlerts": true,
+                "WebhookURL": "http://transaction-monitoring-node.internal/webhook"
+            }
         },
         "Alerting": {
             "NodeAlerts": {
@@ -43,12 +57,13 @@
                     "node://monitoring-node.internal",
                     "node://admin-node.internal"
                 ],
-                "CriticalOnly": false
+                "CriticalOnly": false,
+                "AlertSuppressionInterval": "5m"
             },
             "WebhookAlerts": {
                 "Enabled": true,
                 "WebhookURL": "http://monitoring-node.internal/webhook",
-                "EventTypes": ["Critical", "Warning"]
+                "EventTypes": [ "Critical", "Warning", "Info" ]
             },
             "SMSAlerts": {
                 "Enabled": true,
@@ -61,6 +76,13 @@
                 "ReattemptsAllowed": 3,
                 "ReattemptIntervalSeconds": 10,
                 "OnFailure": "Escalate to Internal System Administrator Node"
+            },
+            "ExternalIntegration": {
+                "EnableIntegration": true,
+                "ServiceEndpoints": [
+                    "http://external-monitoring-system.internal",
+                    "http://third-party-analytics.internal"
+                ]
             }
         }
     },
@@ -74,7 +96,8 @@
         "LogFiles": {
             "SystemLogs": "./system.log",
             "PerformanceLogs": "./performance.log",
-            "AlertLogs": "./alerts.log"
+            "AlertLogs": "./alerts.log",
+            "TransactionLogs": "./transactions.log"
         }
     },
     "Auditing": {
@@ -89,17 +112,34 @@
         "ComplianceChecks": {
             "AMLComplianceCheckInterval": "10m",
             "KYCComplianceCheckInterval": "15m",
+            "NodeComplianceVerificationFrequency": "1h",
             "ReportingFrequency": "1d"
+        },
+        "AutomatedAuditing": {
+            "EnableAutomatedAuditing": true,
+            "AnomalyDetection": {
+                "EnableAnomalyDetection": true,
+                "Thresholds": {
+                    "UnexpectedNodeBehavior": 0.85,
+                    "UnusualShardAccessPatterns": 0.9
+                }
+            }
         }
     },
     "ErrorHandling": {
         "RetryPolicy": {
             "MaxRetryAttempts": 3,
-            "RetryInterval": "10s"
+            "RetryInterval": "10s",
+            "ExponentialBackoff": true
         },
         "ActionOnFailure": {
             "NonCritical": "Log and Notify Internal Monitoring Node",
-            "Critical": "Escalate to Internal Admin Node and Halt Operations"
+            "Critical": "Escalate to Internal Admin Node, Halt Operations, and Initiate Recovery Protocol"
+        },
+        "CrashRecovery": {
+            "EnableCrashRecovery": true,
+            "RecoveryLogPath": "./recovery.log",
+            "RecoveryAttempts": 3
         }
     }
 }

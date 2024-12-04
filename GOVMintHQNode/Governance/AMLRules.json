@@ -1,0 +1,114 @@
+{
+    "AMLComplianceRules": {
+        "TransactionLimits": {
+            "USD": {
+                "min": 10,
+                "max": 100000
+            },
+            "EUR": {
+                "min": 10,
+                "max": 90000
+            },
+            "GBP": {
+                "min": 10,
+                "max": 85000
+            },
+            "BTC": {
+                "min": 0.0001,
+                "max": 10
+            },
+            "ETH": {
+                "min": 0.001,
+                "max": 100
+            }
+        },
+        "HighRiskCountries": [
+            "North Korea",
+            "Iran",
+            "Syria",
+            "Cuba",
+            "Venezuela"
+        ],
+        "SanctionedEntities": [
+            {
+                "name": "Example Corp",
+                "country": "North Korea"
+            },
+            {
+                "name": "Sample Entity",
+                "country": "Iran"
+            }
+        ],
+        "DailyTransactionLimits": {
+            "default": 500000,
+            "VIP": 1000000
+        },
+        "KYCRequirements": {
+            "Individual": {
+                "requiredFields": [
+                    "Full Name",
+                    "Date of Birth",
+                    "National ID/Passport",
+                    "Address",
+                    "Phone Number"
+                ],
+                "documents": [
+                    "Utility Bill",
+                    "Bank Statement"
+                ]
+            },
+            "Corporate": {
+                "requiredFields": [
+                    "Company Name",
+                    "Registration Number",
+                    "Tax ID",
+                    "Authorized Representative"
+                ],
+                "documents": [
+                    "Incorporation Certificate",
+                    "Corporate Bank Statement"
+                ]
+            }
+        },
+        "SuspiciousActivityFlags": {
+            "LargeTransfers": {
+                "threshold": 100000
+            },
+            "FrequentSmallTransfers": {
+                "threshold": 50,
+                "windowHours": 24
+            },
+            "RapidIncreaseInVolume": {
+                "factor": 2,
+                "windowHours": 24
+            }
+        },
+        "NodeReferences": {
+            "SanctionsListNode": "node://sanctions-list-node.internal",
+            "TerrorWatchlistNode": "node://terror-watchlist-node.internal",
+            "AMLDatabaseNode": "node://aml-database-node.internal",
+            "KYCReviewNode": "node://kyc-review-team.internal"
+        }
+    },
+    "ComplianceAlerts": {
+        "SeverityLevels": {
+            "Low": "Monitor",
+            "Medium": "Investigate",
+            "High": "Block Transaction"
+        },
+        "Notifications": {
+            "InternalComplianceTeam": "node://kyc-governance-node.internal",
+            "InternalAdminNode": "node://internal-admin-node.internal"
+        },
+        "ActionsOnViolation": {
+            "Low": "Log and Notify Monitoring Node",
+            "Medium": "Notify Compliance Team and Flag for Review",
+            "High": "Block Transaction and Notify Admin Node"
+        },
+        "AlertEscalationPolicy": {
+            "MaxRetryAttempts": 3,
+            "RetryIntervalSeconds": 15,
+            "EscalationNode": "node://kyc-monitoring-node.internal"
+        }
+    }
+}

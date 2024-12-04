@@ -1,0 +1,91 @@
+{
+    "KYCRules": {
+        "GeneralSettings": {
+            "EnableKYC": true,
+            "KYCCheckInterval": "15m",
+            "AllowedCountries": [ "US", "CA", "UK", "AU", "DE" ],
+            "RestrictedCountries": [ "NK", "IR", "SY", "CU", "RU" ],
+            "MinAge": 18,
+            "RequireGovernmentIssuedID": true,
+            "RequireProofOfAddress": true,
+            "AdditionalDocuments": [ "BankStatement", "UtilityBill" ]
+        },
+        "VerificationMethods": {
+            "DocumentVerification": {
+                "Enabled": true,
+                "AcceptedDocumentTypes": [ "Passport", "DriverLicense", "NationalID" ],
+                "OCRProvider": "https://ocr.atomic.verify",
+                "ValidationThreshold": 95
+            },
+            "BiometricVerification": {
+                "Enabled": true,
+                "FacialRecognition": true,
+                "FingerprintMatching": false,
+                "LivenessDetection": true,
+                "Threshold": 0.9
+            },
+            "DatabaseChecks": {
+                "Enabled": true,
+                "BlacklistDatabases": [
+                    "node://sanctions-list-node.internal",
+                    "node://terror-watchlist-node.internal"
+                ],
+                "PEPCheck": true,
+                "AMLDatabase": "node://aml-database-node.internal"
+            }
+        },
+        "ReviewProcesses": {
+            "ManualReview": {
+                "Enabled": true,
+                "ReviewTeam": "node://kyc-review-team.internal",
+                "EscalationPolicy": {
+                    "ThresholdScore": 80,
+                    "Action": "Escalate to Compliance Node"
+                }
+            },
+            "AutoApproval": {
+                "Enabled": true,
+                "ThresholdScore": 95
+            }
+        },
+        "Notifications": {
+            "EnableNotifications": true,
+            "Recipients": [
+                "node://compliance-node.internal",
+                "node://kyc-monitoring-node.internal"
+            ],
+            "NotificationTriggers": [ "KYCApproval", "KYCRejection", "Escalation" ]
+        },
+        "LoggingSettings": {
+            "EnableKYCLogs": true,
+            "LogPath": "../Logs/KYCLogs.log",
+            "RetentionPolicy": {
+                "RetentionPeriodDays": 365,
+                "BackupFrequency": "7d",
+                "BackupLocation": "../Backup/kyc-logs/"
+            }
+        },
+        "Compliance": {
+            "PeriodicAudit": {
+                "Enabled": true,
+                "AuditInterval": "30d",
+                "AuditorNode": "node://audit-node.internal"
+            },
+            "ReportingFrequency": "1d",
+            "ReportRecipients": [
+                "node://kyc-governance-node.internal",
+                "node://internal-admin-node.internal"
+            ]
+        },
+        "ErrorHandling": {
+            "RetryPolicy": {
+                "MaxRetryAttempts": 3,
+                "RetryInterval": "10s"
+            },
+            "OnFailure": {
+                "Critical": "Escalate to Internal Admin Node",
+                "NonCritical": "Log and Notify Monitoring Node"
+            }
+        }
+    }
+}
