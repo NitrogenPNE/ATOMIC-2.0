@@ -4,27 +4,16 @@
  * SPDX-License-Identifier: ATOMIC-Limited-1.0
  * -------------------------------------------------------------------------------
  * ATOMIC (Advanced Technologies Optimizing Integrated Chains)
- * Copyright (c) 2023 ATOMIC, Ltd.
- * All Rights Reserved.
- *
- * Module: Ledger Manager for ATOMIC Blockchain
+ * Ledger Manager for GOVMintingHQNode
  *
  * Description:
- * Provides an interface for logging shard-related operations and metadata to the
- * ATOMIC blockchain. Ensures tamper-proof auditing and secure recording of shard
- * and token-related activities, incorporating Proof-of-Access (PoA) and token verification.
+ * Logs and manages shard metadata and token-related activities with Proof-of-Access (PoA),
+ * ensuring compliance with GOVMintingHQNode requirements.
  *
  * Enhancements:
- * - Token validation integration for shard and token ledger updates.
- * - Secure logging of shard operations with PoA compliance.
- * - Retrieval of atomic-level shard details.
- *
- * Dependencies:
- * - SmartContracts/LedgerContract.js: Blockchain ledger interaction utilities.
- * - tokenValidation.js: Validates tokens for Proof-of-Access.
- * - logger.js: Centralized logging utilities.
- *
- * Author: Shawn Blackmore
+ * - Token validation with Proof-of-Access (PoA).
+ * - Advanced atomic metadata integration (protons, neutrons, electrons).
+ * - Secure, auditable ledger entries with tamper-proof blockchain updates.
  * -------------------------------------------------------------------------------
  */
 
@@ -34,8 +23,8 @@ const { createBlockchainEntry, verifyBlockchainEntry } = require("../../SmartCon
 const { validateToken } = require("../../TokenManagement/tokenValidation");
 const { logInfo, logError } = require("../../Utilities/logger");
 
-// Paths to blockchain ledger files
-const LEDGER_PATH = path.resolve(__dirname, "../../Ledgers/Blockchain");
+// **Constants**
+const LEDGER_PATH = path.resolve(__dirname, "../../Ledgers/GOVMintLedger");
 
 // Ensure ledger directory exists
 (async () => {
@@ -47,11 +36,11 @@ const LEDGER_PATH = path.resolve(__dirname, "../../Ledgers/Blockchain");
 })();
 
 /**
- * Logs shard creation details into the blockchain ledger with atomic metadata and token validation.
- * @param {string} tokenId - Token ID associated with the operation.
- * @param {string} encryptedToken - Encrypted token for Proof-of-Access validation.
- * @param {string} address - Node or user address associated with the shard.
- * @param {Array} atomicData - Array of atomic data (neutrons, protons, electrons).
+ * Logs shard creation for GOVMintingHQNode with atomic metadata and token validation.
+ * @param {string} tokenId - Token ID for Proof-of-Access.
+ * @param {string} encryptedToken - Encrypted token for validation.
+ * @param {string} address - Node or user address.
+ * @param {Array<Object>} atomicData - List of atomic data (protons, neutrons, electrons).
  * @returns {Promise<void>} - Resolves after logging.
  */
 async function logShardCreation(tokenId, encryptedToken, address, atomicData) {
@@ -69,23 +58,23 @@ async function logShardCreation(tokenId, encryptedToken, address, atomicData) {
             timestamp: new Date().toISOString(),
             atomCount: atomicData.length,
             atoms: atomicData.map(atom => ({
-                type: atom.type, // neutron, proton, or electron
+                type: atom.type, // proton, neutron, or electron
                 bit: atom.bit,
                 frequency: atom.frequency,
-                energyLevel: atom.energyLevel, // Optional field for advanced metadata
+                energyLevel: atom.energyLevel, // Optional: Hierarchical metadata
             })),
         };
 
-        // Create a blockchain entry
+        // Create blockchain entry
         const ledgerEntry = await createBlockchainEntry("SHARD_CREATION", logData);
 
-        // Save to local ledger
+        // Save locally
         const ledgerFilePath = path.join(LEDGER_PATH, `${address}.json`);
         const existingLedger = (await fs.pathExists(ledgerFilePath)) ? await fs.readJson(ledgerFilePath) : [];
         existingLedger.push(ledgerEntry);
 
         await fs.writeJson(ledgerFilePath, existingLedger, { spaces: 2 });
-        logInfo(`Shard creation logged for address: ${address}`);
+        logInfo(`Shard creation logged for GOVMintingHQNode: ${address}`);
     } catch (error) {
         logError(`Failed to log shard creation: ${error.message}`);
         throw error;
@@ -93,11 +82,11 @@ async function logShardCreation(tokenId, encryptedToken, address, atomicData) {
 }
 
 /**
- * Logs shard metadata details into the blockchain ledger, with token validation and particle hierarchy.
- * @param {string} tokenId - Token ID associated with the operation.
- * @param {string} encryptedToken - Encrypted token for Proof-of-Access validation.
+ * Logs shard metadata updates with Proof-of-Access validation.
+ * @param {string} tokenId - Token ID for Proof-of-Access.
+ * @param {string} encryptedToken - Encrypted token for validation.
  * @param {string} address - Node or user address.
- * @param {Object} shardMetadata - Metadata about shard frequencies or distributions.
+ * @param {Object} shardMetadata - Metadata for shards, including redundancy and bounce rates.
  * @returns {Promise<void>} - Resolves after logging.
  */
 async function logShardMetadata(tokenId, encryptedToken, address, shardMetadata) {
@@ -116,16 +105,16 @@ async function logShardMetadata(tokenId, encryptedToken, address, shardMetadata)
             shardMetadata,
         };
 
-        // Create a blockchain entry
+        // Create blockchain entry
         const ledgerEntry = await createBlockchainEntry("SHARD_METADATA", logData);
 
-        // Save to local ledger
+        // Save locally
         const ledgerFilePath = path.join(LEDGER_PATH, `${address}-metadata.json`);
         const existingLedger = (await fs.pathExists(ledgerFilePath)) ? await fs.readJson(ledgerFilePath) : [];
         existingLedger.push(ledgerEntry);
 
         await fs.writeJson(ledgerFilePath, existingLedger, { spaces: 2 });
-        logInfo(`Shard metadata logged for address: ${address}`);
+        logInfo(`Shard metadata logged for GOVMintingHQNode: ${address}`);
     } catch (error) {
         logError(`Failed to log shard metadata: ${error.message}`);
         throw error;
@@ -133,16 +122,16 @@ async function logShardMetadata(tokenId, encryptedToken, address, shardMetadata)
 }
 
 /**
- * Verifies the integrity of a ledger entry, ensuring it complies with atomic structure.
+ * Verifies a ledger entry's integrity and compliance.
  * @param {string} address - Node or user address.
  * @param {string} entryId - Blockchain entry ID.
- * @returns {Promise<boolean>} - True if the entry is valid, false otherwise.
+ * @returns {Promise<boolean>} - True if valid, false otherwise.
  */
 async function verifyLedgerEntry(address, entryId) {
     try {
         const ledgerFilePath = path.join(LEDGER_PATH, `${address}.json`);
         if (!(await fs.pathExists(ledgerFilePath))) {
-            throw new Error(`Ledger file for address ${address} does not exist.`);
+            throw new Error(`Ledger file for ${address} does not exist.`);
         }
 
         const ledger = await fs.readJson(ledgerFilePath);
@@ -152,9 +141,8 @@ async function verifyLedgerEntry(address, entryId) {
             throw new Error(`Entry with ID ${entryId} not found.`);
         }
 
-        // Verify entry integrity on the blockchain
         const isValid = await verifyBlockchainEntry(entryId);
-        logInfo(`Verification for entry ${entryId} resulted in: ${isValid}`);
+        logInfo(`Verification result for ${entryId}: ${isValid}`);
         return isValid;
     } catch (error) {
         logError(`Failed to verify ledger entry: ${error.message}`);
@@ -163,7 +151,7 @@ async function verifyLedgerEntry(address, entryId) {
 }
 
 /**
- * Retrieves atomic-level details for a specific shard.
+ * Retrieve shard details from the ledger for auditing or validation.
  * @param {string} address - Node or user address.
  * @param {string} shardId - ID of the shard.
  * @returns {Promise<Object>} - Details of the shard.
@@ -172,7 +160,7 @@ async function getShardDetails(address, shardId) {
     try {
         const ledgerFilePath = path.join(LEDGER_PATH, `${address}.json`);
         if (!(await fs.pathExists(ledgerFilePath))) {
-            throw new Error(`Ledger file for address ${address} does not exist.`);
+            throw new Error(`Ledger file for ${address} does not exist.`);
         }
 
         const ledger = await fs.readJson(ledgerFilePath);
@@ -195,9 +183,3 @@ module.exports = {
     verifyLedgerEntry,
     getShardDetails,
 };
-
-// ------------------------------------------------------------------------------
-// End of Module: Ledger Manager for ATOMIC Blockchain
-// Version: 3.0.0 | Updated: 2024-11-29
-// Enhancements: Integrated token verification for Proof-of-Access (PoA).
-// ------------------------------------------------------------------------------
